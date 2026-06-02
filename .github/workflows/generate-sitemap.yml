@@ -1,0 +1,30 @@
+name: Generate XML Sitemap
+
+on:
+  push:
+    branches:
+      - main  # Triggers the automation whenever you push new code
+
+jobs:
+  sitemap_generator:
+    runs-on: ubuntu-latest
+    name: Generate Sitemap
+    steps:
+    - name: Checkout the Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 
+
+    - name: Generate Sitemap XML
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://gitgudder.wiki/  # Your custom domain structure
+
+    - name: Commit and Push Updated Sitemap
+      run: |
+        git config --global user.name "Sitemap Bot"
+        git config --global user.email "sitemap-bot@github.com"
+        git add sitemap.xml
+        # Only commit if changes were actually made to prevent infinite loops
+        git diff-index --quiet HEAD || git commit -m "Automated sitemap update"
+        git push
