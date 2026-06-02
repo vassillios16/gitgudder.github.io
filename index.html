@@ -8,9 +8,43 @@
     <meta property="og:title" content="Git Gudder — Wiki Network & Guides">
     <meta property="og:description" content="The ultimate hub for Elden Ring, Guides, Walkthroughs, custom overhauls, and FromSoftware mods.">
     <title>Git Gudder — Wiki Hub</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Git Gudder",
+      "url": "https://gitgudder.wiki/",
+      "description": "A multi-game wiki network archiving mechanics, item databases, and meta calculators for Elden Ring, The Convergence Mod, and Duskbloods.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://gitgudder.wiki/elden-ring/items/weapons/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "Elden Ring Wiki",
+          "url": "https://gitgudder.wiki/elden-ring/index.html"
+        },
+        {
+          "@type": "WebPage",
+          "name": "The Convergence Mod Wiki",
+          "url": "https://gitgudder.wiki/#convergence"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Duskbloods Archive",
+          "url": "https://gitgudder.wiki/#duskbloods"
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --gold: #C9A84C;
@@ -34,16 +68,9 @@
             --radius-lg: 8px;
         }
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        
         body {
             background-color: var(--bg-deepest);
             color: var(--text-primary);
@@ -52,6 +79,8 @@
             line-height: 1.7;
             min-height: 100vh;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         body::before {
@@ -63,58 +92,87 @@
             z-index: 0;
         }
 
-        * {
-            position: relative;
-            z-index: 1;
-        }
+        * { position: relative; z-index: 1; }
 
-        /* HEADER */
+        /* --- HEADER NAVIGATION LAYOUT --- */
         .site-header {
             border-bottom: 1px solid var(--border);
             background: linear-gradient(to bottom, #0D0B07, var(--bg-deep));
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
         }
 
-        .top-bar {
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 40px;
-            border-bottom: 1px solid rgba(201,168,76,0.08);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .brand-logo-top {
+            height: 55px;
+            width: auto;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+        .brand-logo-top:hover { transform: scale(1.03); }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        .top-bar-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
             font-family: 'Fira Code', monospace;
-            font-size: 11px;
-            color: var(--text-muted);
+            font-size: 12px;
             letter-spacing: 0.08em;
         }
 
-        .top-bar-left {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .top-bar-left a {
-            color: var(--text-muted);
+        .top-bar-links a {
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: color 0.2s;
+            transition: color 0.2s, text-shadow 0.2s;
+            white-space: nowrap;
         }
 
-        .top-bar-left a:hover, .top-bar-left a.active {
+        .top-bar-links a:hover, .top-bar-links a.active {
             color: var(--gold);
+            text-shadow: 0 0 8px var(--gold-glow);
+        }
+
+        /* --- GLOBAL SEARCH WRAPPER & DROPDOWN --- */
+        .search-area {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
         }
 
         .search-wrap {
             display: flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.03);
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.6);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 5px 12px;
-            transition: border-color 0.2s;
+            padding: 8px 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
         .search-wrap:focus-within {
-            border-color: var(--gold-dim);
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(201, 168, 76, 0.15);
         }
 
         .search-wrap input {
@@ -123,49 +181,48 @@
             outline: none;
             color: var(--text-primary);
             font-family: 'Fira Code', monospace;
-            font-size: 11px;
-            width: 200px;
-        }
-
-        .search-wrap input::placeholder {
-            color: var(--text-muted);
-        }
-
-        .search-icon {
-            color: var(--text-muted);
             font-size: 13px;
-        }
-
-        .main-nav {
-            padding: 24px 40px 10px 40px;
-        }
-
-        .nav-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
             width: 100%;
         }
 
-        .brand {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .search-wrap input::placeholder { color: var(--text-muted); }
+        .search-icon { color: var(--gold-dim); font-size: 14px; user-select: none; }
+
+        /* Real-time Result Overlay Window */
+        .search-results-dropdown {
+            position: absolute;
+            top: 105%;
+            left: 0;
+            right: 0;
+            background: #14110C;
+            border: 1px solid var(--gold-dim);
+            border-radius: var(--radius);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(201,168,76,0.08);
             text-decoration: none;
-        }
-
-        .brand-logo {
-            height: 65px;
-            width: auto;
             display: block;
+            transition: background 0.2s;
         }
 
-        /* HERO & HUB PORTAL GENERAL */
+        .search-result-item:hover { background: rgba(201,168,76,0.08); }
+        .search-result-title { font-family: 'Cinzel', serif; font-size: 14px; color: var(--gold-light); display: block; }
+        .search-result-category { font-family: 'Fira Code', monospace; font-size: 10px; color: var(--text-muted); text-transform: uppercase; }
+
+        /* --- HERO --- */
         .hero {
             padding: 60px 40px 20px;
             text-align: center;
             background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(201,168,76,0.04) 0%, transparent 70%);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .hero-eyebrow {
@@ -174,107 +231,68 @@
             letter-spacing: 0.25em;
             text-transform: uppercase;
             color: var(--gold-dim);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
         }
 
-        .hero-eyebrow::before, .hero-eyebrow::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 1px;
-            background: var(--gold-dim);
-        }
+        .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 40px; height: 1px; background: var(--gold-dim); }
+        .hero-subtitle { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 400; color: var(--gold-light); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 35px; }
 
-        .hero-subtitle {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(14px, 2.5vw, 18px);
-            font-weight: 400;
-            color: var(--gold-light);
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
-
-        /* ANNOUNCEMENT RED BOX styles */
         .announcement {
-            background: linear-gradient(135deg, rgba(139,34,34,0.3), rgba(139,34,34,0.15));
+            background: linear-gradient(135deg, rgba(139,34,34,0.25), rgba(139,34,34,0.1));
             border: 1px solid rgba(196,68,68,0.3);
             border-radius: var(--radius-lg);
-            padding: 14px 20px;
-            max-width: 680px;
-            margin: 0 auto 36px;
-            display: flex; 
-            align-items: center; 
-            gap: 14px;
+            padding: 16px 22px;
+            max-width: 720px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
             text-align: left;
         }
-        
-        .announcement-icon { 
-            font-size: 22px; 
-            flex-shrink: 0; 
-        }
-        
-        .announcement-text { 
-            font-size: 14px; 
-            color: var(--parchment-dim); 
-            line-height: 1.5; 
-        }
-        
-        .announcement-text strong { 
-            color: var(--parchment); 
-            font-weight: 600; 
-        }
-        
-        .announcement-text a { 
-            color: var(--red-light); 
-            text-decoration: none; 
-        }
-        
-        .announcement-text a:hover { 
-            text-decoration: underline; 
-        }
 
-        /* HUB SELECTION GRID */
+        .announcement-icon { font-size: 22px; flex-shrink: 0; }
+        .announcement-text { font-size: 14px; color: var(--parchment-dim); line-height: 1.5; }
+        .announcement-text strong { color: var(--parchment); font-weight: 600; }
+        .announcement-text a { color: var(--red-light); text-decoration: none; font-weight: 600; }
+        .announcement-text a:hover { text-decoration: underline; }
+
+        /* --- 3-COLUMN ROWS (UNIVERSE HUB SELECTORS) --- */
         .hub-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 1000px;
-            margin: 40px auto 0 auto;
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
             width: 100%;
+            padding: 0 40px;
         }
 
         .hub-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
-            padding: 35px 30px;
+            padding: 40px 30px;
             text-align: left;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            min-height: 240px;
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+            min-height: 260px;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
             overflow: hidden;
         }
 
         .active-card:hover {
             transform: translateY(-4px);
             border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(201,168,76,0.05);
+            box-shadow: 0 10px 30px rgba(201,168,76,0.08);
         }
 
-        .locked-card {
-            opacity: 0.35;
-            border-style: dashed;
-            background: rgba(16, 14, 9, 0.2);
-            cursor: not-allowed;
-        }
+        .locked-card { opacity: 0.35; border-style: dashed; background: rgba(16, 14, 9, 0.2); cursor: not-allowed; }
 
         .card-status {
             font-family: 'Fira Code', monospace;
@@ -287,278 +305,130 @@
             margin-bottom: 14px;
         }
 
-        .status-live { background: rgba(201,168,76,0.15); color: var(--gold-light); border: 1px solid var(--border); }
-        .status-soon { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
+        .status-live { background: rgba(201,168,76,0.12); color: var(--gold-light); border: 1px solid var(--border); }
+        .status-soon { background: rgba(255, 255, 255, 0.05); color: var(--text-secondary); }
         .status-future { background: transparent; color: var(--text-muted); border: 1px solid rgba(255,255,255,0.05); }
 
-        .hub-card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 22px;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
+        .hub-card h3 { font-family: 'Cinzel', serif; font-size: 22px; color: var(--text-primary); margin-bottom: 8px; }
+        .hub-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+        .card-btn { margin-top: 20px; font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
 
-        .hub-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
+        /* --- ROADMAP INFO FRAME --- */
+        .coming-soon { max-width: 1200px; margin: 0 auto; padding: 40px 40px 80px; text-align: center; width: 100%; }
+        .info-block { background: linear-gradient(135deg, rgba(201,168,76,0.03), rgba(16,14,9,0.4)); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px 24px; margin: 0 auto; display: flex; align-items: center; gap: 16px; text-align: left; }
+        .info-icon { font-size: 22px; flex-shrink: 0; }
+        .info-text { font-size: 14px; color: var(--parchment-dim); line-height: 1.6; }
+        .info-text strong { color: var(--gold-light); font-weight: 600; }
 
-        .card-btn {
-            margin-top: 20px;
-            font-family: 'Cinzel', serif;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--gold);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        /* --- FOOTER --- */
+        footer { border-top: 1px solid var(--border); background: var(--bg-deep); padding: 50px 40px; margin-top: auto; }
+        .footer-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 35px; }
+        .footer-brand img { height: auto; width: 100%; max-width: 160px; margin-bottom: 16px; opacity: 0.85; display: block; }
+        .footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.7; max-width: 300px; }
+        .footer-col h4 { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 16px; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col ul a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+        .footer-col ul a:hover { color: var(--gold); }
+        
+        .footer-bottom { max-width: 1120px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(201,168,76,0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        .footer-legal { font-family: 'Fira Code', monospace; font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+        .footer-legal a { color: var(--text-muted); text-decoration: none; }
+        .footer-legal a:hover { color: var(--gold); }
 
-        /* LOWER INFO HOOD BLOCK styles */
-        .coming-soon {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px 20px 80px;
-            text-align: center;
-        }
-
-        .info-block {
-            background: linear-gradient(135deg, rgba(201,168,76,0.05), rgba(16,14,9,0.4));
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 16px 24px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-align: left;
-        }
-
-        .info-icon {
-            font-size: 22px;
-            flex-shrink: 0;
-        }
-
-        .info-text {
-            font-size: 14px;
-            color: var(--parchment-dim);
-            line-height: 1.6;
-        }
-
-        .info-text strong {
-            color: var(--gold-light);
-            font-weight: 600;
-        }
-
-        /* FOOTER */
-        footer {
-            border-top: 1px solid var(--border);
-            background: var(--bg-deep);
-            padding: 44px 40px;
-        }
-
-        .footer-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 32px;
-        }
-
-        .footer-brand img {
-            height: 36px;
-            width: auto;
-            margin-bottom: 14px;
-            opacity: 0.8;
-            display: block;
-        }
-
-        .footer-brand p {
-            font-size: 13px;
-            color: var(--text-muted);
-            line-height: 1.7;
-            max-width: 300px;
-        }
-
-        .footer-col h4 {
-            font-family: 'Cinzel', serif;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--gold-dim);
-            margin-bottom: 14px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .footer-col ul a {
-            font-size: 13px;
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-col ul a:hover {
-            color: var(--gold);
-        }
-
-        .footer-bottom {
-            max-width: 900px;
-            margin: 0 auto;
-            padding-top: 24px;
-            border-top: 1px solid rgba(201,168,76,0.08);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .footer-legal {
-            font-family: 'Fira Code', monospace;
-            font-size: 11px;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .footer-legal a {
-            color: var(--text-muted);
-            text-decoration: none;
-        }
-
-        .footer-legal a:hover {
-            color: var(--gold);
-        }
-
-        /* ANIMATIONS */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(14px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero > * {
-            animation: fadeUp 0.55s ease both;
-        }
-
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        .hero > * { animation: fadeUp 0.55s ease both; }
         .hero > *:nth-child(1) { animation-delay: 0.05s; }
         .hero > *:nth-child(2) { animation-delay: 0.12s; }
         .hero > *:nth-child(3) { animation-delay: 0.18s; }
-        .hero > *:nth-child(4) { animation-delay: 0.24s; }
 
-        @media (max-width: 700px) {
-            .top-bar {
-                display: none;
-            }
-            .main-nav {
-                justify-content: center;
-                padding: 20px 20px 10px 20px;
-            }
-            .hero {
-                padding: 40px 20px 20px;
-            }
-            .coming-soon {
-                padding: 20px 20px 48px;
-            }
-            footer {
-                padding: 40px 20px;
-            }
-            .footer-inner {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
+        /* --- MOBILE LAYOUT TRANSLATION --- */
+        @media (max-width: 900px) {
+            .header-container { flex-direction: column; gap: 16px; }
+            .header-right { flex-direction: column; gap: 16px; width: 100%; }
+            .search-area { max-width: 100%; }
+            .hub-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 20px; }
+            .hero { padding: 40px 20px 10px; }
+            .coming-soon { padding: 20px 20px 50px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
         }
     </style>
 </head>
 <body>
+
     <header class="site-header">
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <a href="index.html" class="active">Hub Portal</a>
-                <a href="/elden-ring/index.html">Elden Ring</a>
-                <a href="#convergence">Convergence Mod</a>
-                <a href="#duskbloods">Duskbloods</a>
-            </div>
-            <div class="search-wrap">
-                <span class="search-icon">⌕</span>
-                <input type="search" placeholder="Search network…" aria-label="Search database">
-            </div>
-        </div>
-        <nav class="main-nav" role="navigation" aria-label="Primary navigation">
-            <div class="nav-container">
-                <a href="index.html" class="brand" aria-label="Git Gudder — Home Hub">
-                    <img src="git_gudder_logo.png" alt="Git Gudder" class="brand-logo">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html" aria-label="Git Gudder Home">
+                    <img src="git_gudder_logo.png" alt="Git Gudder Wiki Network" class="brand-logo-top">
                 </a>
             </div>
-        </nav>
+            <div class="header-right">
+                <div class="top-bar-links">
+                    <a href="index.html" class="active">Hub Portal</a>
+                    <a href="/elden-ring/index.html">Elden Ring</a>
+                    <a href="#convergence">Convergence Mod</a>
+                    <a href="#duskbloods">Duskbloods</a>
+                </div>
+                <div class="search-area">
+                    <div class="search-wrap">
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+                        <input type="search" id="wikiSearchInput" placeholder="Search weapons, items, rules..." aria-label="Search network archive">
+                    </div>
+                    <div class="search-results-dropdown" id="searchResultsWindow"></div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-eyebrow">Because why Git Gud when you can Git Gudder?</div>
-		
-		        <div class="announcement" role="note">
-            <span class="announcement-icon" aria-hidden="true">🔔</span>
-            <p class="announcement-text">
-                <strong>Elden Ring: Tarnished Edition coming to Nintendo Switch 2.</strong> We're building out guides specifically for new players entering the Lands Between for the first time.
-                <a href="https://www.youtube.com/channel/UC1IruQVYff00NZS6rrgrlBQ" target="_blank" rel="noopener noreferrer">Watch the video →</a>
-            </p>
-        </div>
-		
-        <p class="hero-subtitle">Select your universe to begin</p>
-        
+    <main>
+        <section class="hero">
+            <div class="hero-eyebrow">Because why Git Gud when you can Git Gudder?</div>
+            
+            <div class="announcement" role="note">
+                <span class="announcement-icon" aria-hidden="true">🔔</span>
+                <p class="announcement-text">
+                    <strong>Elden Ring: Tarnished Edition coming to Nintendo Switch 2.</strong> We're building out guides specifically for new players entering the Lands Between for the first time. <a href="https://www.youtube.com/channel/UC1IruQVYff00NZS6rrgrlBQ" target="_blank" rel="noopener noreferrer">Watch the video →</a>
+                </p>
+            </div>
+            <h1 class="hero-subtitle">Select your universe to begin</h1>
 
-		
-        <div class="hub-grid">
-            <a href="/elden-ring/index.html" class="hub-card active-card" id="elden-ring">
-                <div class="card-content">
-                    <span class="card-status status-live">Live Wiki</span>
-                    <h3>Elden Ring</h3>
-                    <p>Complete base game frameworks, item databases, optimized character builds, and strategic boss walkthroughs.</p>
-                    <span class="card-btn">Enter Database ⚔</span>
+            <div class="hub-grid">
+                <a href="/elden-ring/index.html" class="hub-card active-card" id="elden-ring">
+                    <div class="card-content">
+                        <span class="card-status status-live">Live Wiki</span>
+                        <h3>Elden Ring</h3>
+                        <p>Complete base game frameworks, item databases, optimized character builds, and strategic boss walkthroughs.</p>
+                        <span class="card-btn">Enter Database ⚔</span>
+                    </div>
+                </a>
+
+                <div class="hub-card locked-card" id="convergence">
+                    <div class="card-content">
+                        <span class="card-status status-soon">In Development</span>
+                        <h3>The Convergence Mod</h3>
+                        <p>Comprehensive layout logs mapping out custom class systems, reworked spell variables, and revamped progression mechanics.</p>
+                    </div>
                 </div>
-            </a>
 
-            <div class="hub-card locked-card" id="convergence">
-                <div class="card-content">
-                    <span class="card-status status-soon">In Development</span>
-                    <h3>The Convergence Mod</h3>
-                    <p>Comprehensive layout logs mapping out custom class systems, reworked spell variables, and revamped progression mechanics.</p>
+                <div class="hub-card locked-card" id="duskbloods">
+                    <div class="card-content">
+                        <span class="card-status status-future">Future Expansion</span>
+                        <h3>Duskbloods &amp; Beyond</h3>
+                        <p>Expanding the technical gaming archive into broader custom overhauls and FromSoftware's next primary IPs.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="hub-card locked-card" id="duskbloods">
-                <div class="card-content">
-                    <span class="card-status status-future">Future Expansion</span>
-                    <h3>Duskbloods &amp; Beyond</h3>
-                    <p>Expanding the technical gaming archive into broader custom overhauls and FromSoftware's next primary IPs.</p>
-                </div>
+        <section class="coming-soon">
+            <div class="info-block" role="note">
+                <span class="info-icon" aria-hidden="true">💡</span>
+                <p class="info-text">
+                    <strong>Current Architectural Phase:</strong> We are working on the Elden Ring Tarnished Edition database first. This will include all item information, checklists and locations, guides and walkthroughs, AR calculators and maps. The Convergence Mod wiki will be added once the mod moves to Early Access, and the Duskbloods wiki will be added once the game officially releases.
+                </p>
             </div>
-        </div>
-    </section>
-
-    <section class="coming-soon">
-        <div class="info-block" role="note">
-            <span class="info-icon" aria-hidden="true">💡</span>
-            <p class="info-text">
-                <strong>Current Architectural Phase:</strong> We are working on the Elden Ring Tarnished Edition database first. This will include all item information, checklists and locations, guides and walkthroughs, AR calculators and maps. The Convergence Mod wiki will be added once the mod moves to Early Access, and the Duskbloods wiki will be added once the game officially releases.
-            </p>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer role="contentinfo">
         <div class="footer-inner">
@@ -588,5 +458,69 @@
             <p class="footer-legal">Built for the player community</p>
         </div>
     </footer>
+
+    <script>
+        // 1. Centralized Site Page Index (Add your newly generated weapon pages here!)
+        const searchDatabase = [
+            { title: "Elden Ring Main Wiki Portal", url: "/elden-ring/index.html", tags: "elden ring base game homepage home map hub", category: "Game Hub" },
+            { title: "Privacy Policy", url: "/privacy.html", tags: "legal privacy rules compliance security cookies data", category: "Site Meta" },
+            { title: "Terms of Use", url: "/terms.html", tags: "legal terms conditions usage copyright rules disclaimer", category: "Site Meta" },
+            
+            // --- Sample Weapon Entries (As you automate your HTML generator, simply append entries here!) ---
+            { title: "Reduvia (Dagger)", url: "/elden-ring/items/weapons/weapon-reduvia.html", tags: "reduvia dagger bleed blood scaling arcane weapon knife", category: "Elden Ring Weapons" },
+            { title: "Black Knife (Dagger)", url: "/elden-ring/items/weapons/weapon-black-knife.html", tags: "black knife dagger holy scaling destine death weapon assassin", category: "Elden Ring Weapons" },
+            { title: "Dagger (Base)", url: "/elden-ring/items/weapons/weapon-dagger.html", tags: "dagger simple pierce critical base starter weapons knife", category: "Elden Ring Weapons" }
+        ];
+
+        const searchInput = document.getElementById('wikiSearchInput');
+        const resultsWindow = document.getElementById('searchResultsWindow');
+
+        // 2. Real-Time Input Query Filtering Logic
+        searchInput.addEventListener('input', function() {
+            const query = searchInput.value.toLowerCase().trim();
+            resultsWindow.innerHTML = ''; // Wipe out old results
+
+            if (query === '') {
+                resultsWindow.style.display = 'none';
+                return;
+            }
+
+            // Cross-reference user input against Title, Category, and Tag properties
+            const matches = searchDatabase.filter(item => {
+                return item.title.toLowerCase().includes(query) || 
+                       item.category.toLowerCase().includes(query) || 
+                       item.tags.toLowerCase().includes(query);
+            });
+
+            if (matches.length > 0) {
+                matches.forEach(match => {
+                    const anchor = document.createElement('a');
+                    anchor.href = match.url;
+                    anchor.className = 'search-result-item';
+                    
+                    anchor.innerHTML = `
+                        <span class="search-result-title">${match.title}</span>
+                        <span class="search-result-category">${match.category}</span>
+                    `;
+                    resultsWindow.appendChild(anchor);
+                });
+                resultsWindow.style.display = 'block';
+            } else {
+                resultsWindow.innerHTML = `
+                    <div style="padding: 12px 16px; font-size: 13px; color: #665E4A; font-family: 'Fira Code', monospace;">
+                        No matching entries found.
+                    </div>
+                `;
+                resultsWindow.style.display = 'block';
+            }
+        });
+
+        // 3. Close the popup container if a user clicks outside the header element area
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !resultsWindow.contains(e.target)) {
+                resultsWindow.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
