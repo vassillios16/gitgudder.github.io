@@ -1,72 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
-  <url>
-    <loc>https://gitgudder.wiki/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Top-level section indexes (add as you build them out) -->
-  <url>
-    <loc>https://gitgudder.wiki/bosses/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://gitgudder.wiki/builds/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://gitgudder.wiki/walkthrough/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://gitgudder.wiki/items/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gitgudder.wiki/lore/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gitgudder.wiki/maps/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://gitgudder.wiki/videos/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Add individual pages below as you create them, e.g.: -->
-  <!--
-  <url>
-    <loc>https://gitgudder.wiki/bosses/malenia/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  -->
-
+<url>
+<loc>https://gitgudder.wiki/</loc>
+<lastmod>2026-06-02T09:17:59-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/elden-ring.html</loc>
+<lastmod>2026-06-02T11:07:22-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/melee-weapons.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-black-knife.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-blade-of-calling.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-bloodstained-dagger.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-celebrants-sickle.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-cinquedea.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-crystal-knife.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-dagger.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-erdsteel-dagger.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-glintstone-kris.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-great-knife.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-ivory-sickle.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-main-gauche.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-misericorde.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-parrying-dagger.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-reduvia.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-scorpions-stinger.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
+<url>
+<loc>https://gitgudder.wiki/weapon-wakizashi.html</loc>
+<lastmod>2026-06-02T11:04:30-04:00</lastmod>
+</url>
 </urlset>
