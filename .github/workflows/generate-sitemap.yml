@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Triggers the automation whenever you push new code
+workflow_dispatch: # 👈 This unlocks the manual trigger button!
 
 jobs:
   sitemap_generator:
