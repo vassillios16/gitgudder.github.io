@@ -1,0 +1,9 @@
+# robots.txt for https://gitgudder.wiki/
+# https://www.robotstxt.org/
+
+# Allow all crawlers full access
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://gitgudder.wiki/sitemap.xml
