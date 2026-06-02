@@ -1,448 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Git Gudder — the Elden Ring wiki with boss guides, builds, walkthroughs, lore, and video guides for every Tarnished.">
-<meta name="keywords" content="Elden Ring wiki, Elden Ring guide, Elden Ring Tarnished Edition, boss guide, builds, walkthrough, git gud">
-<meta property="og:title" content="Git Gudder — Elden Ring Wiki & Guides">
-<meta property="og:description" content="Boss guides, builds, walkthroughs, lore, and video guides for Elden Ring.">
-<title>Git Gudder — Elden Ring Wiki & Guides</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --gold: #C9A84C;
-    --gold-light: #E8C96A;
-    --gold-dim: #8A6E2F;
-    --gold-glow: rgba(201,168,76,0.15);
-    --parchment: #F0E6C8;
-    --parchment-dim: #C8B88A;
-    --bg-deepest: #0A0906;
-    --bg-deep: #100E09;
-    --bg-mid: #181410;
-    --bg-surface: #201C16;
-    --bg-card: #241F18;
-    --text-primary: #E8DCC0;
-    --text-secondary: #A89878;
-    --text-muted: #665E4A;
-    --border: rgba(201,168,76,0.2);
-    --red-accent: #8B2222;
-    --red-light: #C44444;
-    --radius: 4px;
-    --radius-lg: 8px;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background-color: var(--bg-deepest);
-    color: var(--text-primary);
-    font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 17px;
-    line-height: 1.7;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.06) 0%, transparent 70%),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-  }
-  * { position: relative; z-index: 1; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Git Gudder — the ultimate wiki network for FromSoftware universes, mods, and custom overhauls.">
+    <meta name="keywords" content="Elden Ring wiki, Elden Ring guide, Elden Ring Tarnished Edition, Elden Ring Convergence mod, boss guide, builds, walkthrough, Duskbloods, FromSoftware guides, git gud">
+    <meta property="og:title" content="Git Gudder — Wiki Network & Guides">
+    <meta property="og:description" content="The ultimate hub for Elden Ring, Guides, Walkthroughs, custom overhauls, and FromSoftware mods.">
+    <title>Git Gudder — Wiki Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A84C;
+            --gold-light: #E8C96A;
+            --gold-dim: #8A6E2F;
+            --gold-glow: rgba(201,168,76,0.15);
+            --parchment: #F0E6C8;
+            --parchment-dim: #C8B88A;
+            --bg-deepest: #0A0906;
+            --bg-deep: #100E09;
+            --bg-mid: #181410;
+            --bg-surface: #201C16;
+            --bg-card: #241F18;
+            --text-primary: #E8DCC0;
+            --text-secondary: #A89878;
+            --text-muted: #665E4A;
+            --border: rgba(201,168,76,0.2);
+            --red-accent: #8B2222;
+            --red-light: #C44444;
+            --radius: 4px;
+            --radius-lg: 8px;
+        }
 
-  /* HEADER */
-  .site-header {
-    border-bottom: 1px solid var(--border);
-    background: linear-gradient(to bottom, #0D0B07, var(--bg-deep));
-  }
-  .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 40px;
-    border-bottom: 1px solid rgba(201,168,76,0.08);
-    font-family: 'Fira Code', monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-    letter-spacing: 0.08em;
-  }
-  .top-bar-left { display: flex; align-items: center; gap: 24px; }
-  .top-bar-left a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-  .top-bar-left a:hover { color: var(--gold); }
-  .search-wrap {
-    display: flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 5px 12px;
-    transition: border-color 0.2s;
-  }
-  .search-wrap:focus-within { border-color: var(--gold-dim); }
-  .search-wrap input {
-    background: none; border: none; outline: none;
-    color: var(--text-primary);
-    font-family: 'Fira Code', monospace;
-    font-size: 11px; width: 200px;
-  }
-  .search-wrap input::placeholder { color: var(--text-muted); }
-  .search-icon { color: var(--text-muted); font-size: 13px; }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  .main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-  }
-  .brand { display: flex; align-items: center; padding: 10px 0; text-decoration: none; }
-  .brand-logo { height: 60px; width: auto; display: block; }
+        html {
+            scroll-behavior: smooth;
+        }
 
-  .nav-links { display: flex; align-items: center; list-style: none; }
-  .nav-links a {
-    display: block;
-    padding: 22px 15px;
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.2s;
-    border-bottom: 2px solid transparent;
-  }
-  .nav-links a:hover { color: var(--gold); border-bottom-color: var(--gold); }
-  .nav-links a.active { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+        body {
+            background-color: var(--bg-deepest);
+            color: var(--text-primary);
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 17px;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-  /* HERO */
-  .hero {
-    padding: 80px 40px 72px;
-    text-align: center;
-    background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(201,168,76,0.04) 0%, transparent 70%);
-    border-bottom: 1px solid var(--border);
-  }
-  .hero-eyebrow {
-    font-family: 'Fira Code', monospace;
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    margin-bottom: 20px;
-    display: flex; align-items: center; justify-content: center; gap: 12px;
-  }
-  .hero-eyebrow::before, .hero-eyebrow::after {
-    content: ''; display: block; width: 40px; height: 1px; background: var(--gold-dim);
-  }
-  .hero h1 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(30px, 5vw, 54px);
-    font-weight: 700;
-    color: var(--gold-light);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    line-height: 1.1;
-    margin-bottom: 10px;
-  }
-  .hero-subtitle {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(12px, 2vw, 15px);
-    font-weight: 400;
-    color: var(--text-secondary);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-  }
-  .announcement {
-    background: linear-gradient(135deg, rgba(139,34,34,0.3), rgba(139,34,34,0.15));
-    border: 1px solid rgba(196,68,68,0.3);
-    border-radius: var(--radius-lg);
-    padding: 14px 20px;
-    max-width: 680px;
-    margin: 0 auto 36px;
-    display: flex; align-items: center; gap: 14px;
-    text-align: left;
-  }
-  .announcement-icon { font-size: 22px; flex-shrink: 0; }
-  .announcement-text { font-size: 14px; color: var(--parchment-dim); line-height: 1.5; }
-  .announcement-text strong { color: var(--parchment); font-weight: 600; }
-  .announcement-text a { color: var(--red-light); text-decoration: none; }
-  .announcement-text a:hover { text-decoration: underline; }
-  .hero-desc {
-    max-width: 520px;
-    margin: 0 auto 40px;
-    font-size: 16px;
-    color: var(--text-secondary);
-    font-style: italic;
-    line-height: 1.85;
-  }
-  .hero-ctas {
-    display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;
-  }
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--gold); color: #0A0906;
-    font-family: 'Cinzel', serif;
-    font-size: 12px; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 13px 30px; border-radius: var(--radius);
-    text-decoration: none; transition: background 0.2s, transform 0.15s;
-  }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
-  .btn-secondary {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: transparent; color: var(--gold);
-    border: 1px solid var(--gold-dim);
-    font-family: 'Cinzel', serif;
-    font-size: 12px; font-weight: 600;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 12px 26px; border-radius: var(--radius);
-    text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.15s;
-  }
-  .btn-secondary:hover { border-color: var(--gold); background: var(--gold-glow); transform: translateY(-1px); }
-  .yt-badge {
-    display: inline-block;
-    background: rgba(255,60,60,0.18);
-    border: 1px solid rgba(255,60,60,0.3);
-    color: #FF9090;
-    font-family: 'Fira Code', monospace;
-    font-size: 10px; font-weight: 500;
-    letter-spacing: 0.1em; padding: 3px 8px;
-    border-radius: 2px; text-transform: uppercase;
-    vertical-align: middle;
-  }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.06) 0%, transparent 70%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
 
-  /* COMING SOON */
-  .coming-soon {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 72px 40px 88px;
-    text-align: center;
-  }
-  .section-eyebrow {
-    font-family: 'Fira Code', monospace;
-    font-size: 11px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--gold-dim);
-    margin-bottom: 14px;
-  }
-  .coming-soon h2 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(20px, 3vw, 28px);
-    font-weight: 700; color: var(--text-primary);
-    letter-spacing: 0.05em; text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .coming-soon > p {
-    font-size: 16px; color: var(--text-secondary);
-    max-width: 460px; margin: 0 auto 44px; line-height: 1.85;
-  }
-  .topic-pills {
-    display: flex; flex-wrap: wrap; gap: 10px;
-    justify-content: center; margin-bottom: 52px;
-  }
-  .pill {
-    display: inline-flex; align-items: center; gap: 7px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 20px; padding: 7px 16px;
-    font-family: 'Cinzel', serif;
-    font-size: 12px; letter-spacing: 0.06em;
-    color: var(--text-secondary); text-transform: uppercase;
-  }
-  .pill-icon { font-size: 14px; }
-  .rune-divider {
-    text-align: center; color: var(--gold-dim);
-    font-family: 'Cinzel', serif;
-    font-size: 16px; letter-spacing: 0.3em; opacity: 0.45;
-    margin-bottom: 40px;
-  }
-  .lore-block {
-    background: linear-gradient(135deg, var(--bg-surface), var(--bg-mid));
-    border-left: 2px solid var(--gold-dim);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    padding: 22px 28px; text-align: left;
-    font-style: italic; color: var(--text-secondary);
-    font-size: 15px; line-height: 1.9;
-  }
-  .lore-attribution {
-    font-style: normal;
-    font-family: 'Fira Code', monospace;
-    font-size: 10px; color: var(--text-muted);
-    margin-top: 10px; letter-spacing: 0.1em;
-  }
+        * {
+            position: relative;
+            z-index: 1;
+        }
 
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--border);
-    background: var(--bg-deep);
-    padding: 44px 40px;
-  }
-  .footer-inner {
-    max-width: 900px; margin: 0 auto;
-    display: grid; grid-template-columns: 2fr 1fr 1fr;
-    gap: 48px; margin-bottom: 32px;
-  }
-  .footer-brand img { height: 36px; width: auto; margin-bottom: 14px; opacity: 0.8; display: block; }
-  .footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.7; max-width: 300px; }
-  .footer-col h4 {
-    font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold-dim); margin-bottom: 14px;
-  }
-  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .footer-col ul a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-  .footer-col ul a:hover { color: var(--gold); }
-  .footer-bottom {
-    max-width: 900px; margin: 0 auto;
-    padding-top: 24px;
-    border-top: 1px solid rgba(201,168,76,0.08);
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 12px;
-  }
-  .footer-legal { font-family: 'Fira Code', monospace; font-size: 11px; color: var(--text-muted); line-height: 1.6; }
-  .footer-legal a { color: var(--text-muted); text-decoration: none; }
-  .footer-legal a:hover { color: var(--gold); }
+        /* HEADER */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(to bottom, #0D0B07, var(--bg-deep));
+        }
 
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(14px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .hero > * { animation: fadeUp 0.55s ease both; }
-  .hero > *:nth-child(1) { animation-delay: 0.05s; }
-  .hero > *:nth-child(2) { animation-delay: 0.12s; }
-  .hero > *:nth-child(3) { animation-delay: 0.18s; }
-  .hero > *:nth-child(4) { animation-delay: 0.24s; }
-  .hero > *:nth-child(5) { animation-delay: 0.30s; }
-  .hero > *:nth-child(6) { animation-delay: 0.38s; }
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 40px;
+            border-bottom: 1px solid rgba(201,168,76,0.08);
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+        }
 
-  @media (max-width: 700px) {
-    .top-bar { display: none; }
-    .nav-links { display: none; }
-    .main-nav { justify-content: center; padding: 0 20px; }
-    .hero { padding: 52px 20px 48px; }
-    .coming-soon { padding: 48px 20px 64px; }
-    footer { padding: 40px 20px; }
-    .footer-inner { grid-template-columns: 1fr; gap: 28px; }
-  }
-</style>
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .top-bar-left a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .top-bar-left a:hover, .top-bar-left a.active {
+            color: var(--gold);
+        }
+
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 5px 12px;
+            transition: border-color 0.2s;
+        }
+
+        .search-wrap:focus-within {
+            border-color: var(--gold-dim);
+        }
+
+        .search-wrap input {
+            background: none;
+            border: none;
+            outline: none;
+            color: var(--text-primary);
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            width: 200px;
+        }
+
+        .search-wrap input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-icon {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .main-nav {
+            padding: 24px 40px 10px 40px;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            height: 65px;
+            width: auto;
+            display: block;
+        }
+
+        /* HERO & HUB PORTAL GENERAL */
+        .hero {
+            padding: 60px 40px 20px;
+            text-align: center;
+            background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(201,168,76,0.04) 0%, transparent 70%);
+        }
+
+        .hero-eyebrow {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold-dim);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .hero-eyebrow::before, .hero-eyebrow::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: var(--gold-dim);
+        }
+
+        .hero-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(14px, 2.5vw, 18px);
+            font-weight: 400;
+            color: var(--gold-light);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        /* ANNOUNCEMENT RED BOX styles */
+        .announcement {
+            background: linear-gradient(135deg, rgba(139,34,34,0.3), rgba(139,34,34,0.15));
+            border: 1px solid rgba(196,68,68,0.3);
+            border-radius: var(--radius-lg);
+            padding: 14px 20px;
+            max-width: 680px;
+            margin: 0 auto 36px;
+            display: flex; 
+            align-items: center; 
+            gap: 14px;
+            text-align: left;
+        }
+        
+        .announcement-icon { 
+            font-size: 22px; 
+            flex-shrink: 0; 
+        }
+        
+        .announcement-text { 
+            font-size: 14px; 
+            color: var(--parchment-dim); 
+            line-height: 1.5; 
+        }
+        
+        .announcement-text strong { 
+            color: var(--parchment); 
+            font-weight: 600; 
+        }
+        
+        .announcement-text a { 
+            color: var(--red-light); 
+            text-decoration: none; 
+        }
+        
+        .announcement-text a:hover { 
+            text-decoration: underline; 
+        }
+
+        /* HUB SELECTION GRID */
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 40px auto 0 auto;
+            width: 100%;
+        }
+
+        .hub-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 35px 30px;
+            text-align: left;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 240px;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+            overflow: hidden;
+        }
+
+        .active-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(201,168,76,0.05);
+        }
+
+        .locked-card {
+            opacity: 0.35;
+            border-style: dashed;
+            background: rgba(16, 14, 9, 0.2);
+            cursor: not-allowed;
+        }
+
+        .card-status {
+            font-family: 'Fira Code', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 2px 8px;
+            border-radius: 2px;
+            width: fit-content;
+            margin-bottom: 14px;
+        }
+
+        .status-live { background: rgba(201,168,76,0.15); color: var(--gold-light); border: 1px solid var(--border); }
+        .status-soon { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
+        .status-future { background: transparent; color: var(--text-muted); border: 1px solid rgba(255,255,255,0.05); }
+
+        .hub-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .hub-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .card-btn {
+            margin-top: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* LOWER INFO HOOD BLOCK styles */
+        .coming-soon {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 20px 80px;
+            text-align: center;
+        }
+
+        .info-block {
+            background: linear-gradient(135deg, rgba(201,168,76,0.05), rgba(16,14,9,0.4));
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 16px 24px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-align: left;
+        }
+
+        .info-icon {
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .info-text {
+            font-size: 14px;
+            color: var(--parchment-dim);
+            line-height: 1.6;
+        }
+
+        .info-text strong {
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            background: var(--bg-deep);
+            padding: 44px 40px;
+        }
+
+        .footer-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 32px;
+        }
+
+        .footer-brand img {
+            height: 36px;
+            width: auto;
+            margin-bottom: 14px;
+            opacity: 0.8;
+            display: block;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold-dim);
+            margin-bottom: 14px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-col ul a {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 24px;
+            border-top: 1px solid rgba(201,168,76,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-legal {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .footer-legal a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .footer-legal a:hover {
+            color: var(--gold);
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero > * {
+            animation: fadeUp 0.55s ease both;
+        }
+
+        .hero > *:nth-child(1) { animation-delay: 0.05s; }
+        .hero > *:nth-child(2) { animation-delay: 0.12s; }
+        .hero > *:nth-child(3) { animation-delay: 0.18s; }
+        .hero > *:nth-child(4) { animation-delay: 0.24s; }
+
+        @media (max-width: 700px) {
+            .top-bar {
+                display: none;
+            }
+            .main-nav {
+                justify-content: center;
+                padding: 20px 20px 10px 20px;
+            }
+            .hero {
+                padding: 40px 20px 20px;
+            }
+            .coming-soon {
+                padding: 20px 20px 48px;
+            }
+            footer {
+                padding: 40px 20px;
+            }
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <a href="index.html" class="active">Hub Portal</a>
+                <a href="#elden-ring">Elden Ring</a>
+                <a href="#convergence">Convergence Mod</a>
+                <a href="#duskbloods">Duskbloods</a>
+            </div>
+            <div class="search-wrap">
+                <span class="search-icon">⌕</span>
+                <input type="search" placeholder="Search network…" aria-label="Search database">
+            </div>
+        </div>
+        <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+            <div class="nav-container">
+                <a href="index.html" class="brand" aria-label="Git Gudder — Home Hub">
+                    <img src="git_gudder_logo.png" alt="Git Gudder" class="brand-logo">
+                </a>
+            </div>
+        </nav>
+    </header>
 
-<header class="site-header">
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <a href="#">Home</a>
-      <a href="#">Bosses</a>
-      <a href="#">Builds</a>
-      <a href="#">Walkthrough</a>
-      <a href="#">Items</a>
-      <a href="#">Videos</a>
-    </div>
-    <div class="search-wrap">
-      <span class="search-icon">⌕</span>
-      <input type="search" placeholder="Search Elden Ring…" aria-label="Search wiki">
-    </div>
-  </div>
+    <section class="hero">
+        <div class="hero-eyebrow">Because why Git Gud when you can Git Gudder?</div>
+		
+		        <div class="announcement" role="note">
+            <span class="announcement-icon" aria-hidden="true">🔔</span>
+            <p class="announcement-text">
+                <strong>Elden Ring: Tarnished Edition coming to Nintendo Switch 2.</strong> We're building out guides specifically for new players entering the Lands Between for the first time.
+                <a href="https://www.youtube.com/channel/UC1IruQVYff00NZS6rrgrlBQ" target="_blank" rel="noopener noreferrer">Watch the video →</a>
+            </p>
+        </div>
+		
+        <p class="hero-subtitle">Select your universe to begin</p>
+        
 
-  <nav class="main-nav" role="navigation" aria-label="Primary navigation">
-    <a href="/" class="brand" aria-label="Git Gudder — Elden Ring Wiki">
-      <img src="git_gudder_logo.png" alt="Git Gudder" class="brand-logo">
-    </a>
-    <ul class="nav-links" role="list">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Bosses</a></li>
-      <li><a href="#">Builds</a></li>
-      <li><a href="#">Walkthrough</a></li>
-      <li><a href="#">Items</a></li>
-      <li><a href="#">Lore</a></li>
-      <li><a href="#">Maps</a></li>
-      <li><a href="#">Videos</a></li>
-    </ul>
-  </nav>
-</header>
+		
+        <div class="hub-grid">
+            <a href="elden-ring.html" class="hub-card active-card" id="elden-ring">
+                <div class="card-content">
+                    <span class="card-status status-live">Live Wiki</span>
+                    <h3>Elden Ring</h3>
+                    <p>Complete base game frameworks, item databases, optimized character builds, and strategic boss walkthroughs.</p>
+                    <span class="card-btn">Enter Database ⚔</span>
+                </div>
+            </a>
 
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero-eyebrow">Elden Ring Wiki &amp; Guide</div>
-  <h1 id="hero-title">GIT GUDDER</h1>
-  <p class="hero-subtitle">Because why Git Gud when you can Git Gudder?</p>
+            <div class="hub-card locked-card" id="convergence">
+                <div class="card-content">
+                    <span class="card-status status-soon">In Development</span>
+                    <h3>The Convergence Mod</h3>
+                    <p>Comprehensive layout logs mapping out custom class systems, reworked spell variables, and revamped progression mechanics.</p>
+                </div>
+            </div>
 
-  <div class="announcement" role="note">
-    <span class="announcement-icon" aria-hidden="true">🔔</span>
-    <p class="announcement-text">
-      <strong>Elden Ring: Tarnished Edition coming to Nintendo Switch 2.</strong> We're building out guides specifically for new players entering the Lands Between for the first time.
-      <a href="#">Watch the video →</a>
-    </p>
-  </div>
+            <div class="hub-card locked-card" id="duskbloods">
+                <div class="card-content">
+                    <span class="card-status status-future">Future Expansion</span>
+                    <h3>Duskbloods &amp; Beyond</h3>
+                    <p>Expanding the technical gaming archive into broader custom overhauls and FromSoftware's next primary IPs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <p class="hero-desc">Your no-nonsense companion for Elden Ring — from your first steps in Limgrave to taking down the Elden Beast. Boss strategies, optimised builds, and video walkthroughs, all in one place.</p>
+    <section class="coming-soon">
+        <div class="info-block" role="note">
+            <span class="info-icon" aria-hidden="true">💡</span>
+            <p class="info-text">
+                <strong>Current Architectural Phase:</strong> We are working on the Elden Ring Tarnished Edition database first. This will include all item information, checklists and locations, guides and walkthroughs, AR calculators and maps. The Convergence Mod wiki will be added once the mod moves to Early Access, and the Duskbloods wiki will be added once the game officially releases.
+            </p>
+        </div>
+    </section>
 
-  <div class="hero-ctas">
-    <a href="#" class="btn-primary">⚔ Start Your Journey</a>
-    <a href="#" class="btn-secondary">▶ Watch Guides <span class="yt-badge">YouTube</span></a>
-  </div>
-</section>
-
-<section class="coming-soon" aria-labelledby="cs-title">
-  <p class="section-eyebrow">Wiki launching soon</p>
-  <h2 id="cs-title">Content Coming in Hot</h2>
-  <p>We're actively building out the wiki. Subscribe on YouTube to catch new guides as they drop, and check back soon for in-depth coverage across every corner of the Lands Between.</p>
-
-  <div class="topic-pills" role="list" aria-label="Upcoming content topics">
-    <span class="pill" role="listitem"><span class="pill-icon" aria-hidden="true">💀</span> Boss Strategies</span>
-    <span class="pill" role="listitem"><span class="pill-icon" aria-hidden="true">🛡</span> Character Builds</span>
-    <span class="pill" role="listitem"><span class="pill-icon" aria-hidden="true">🗺</span> Walkthroughs</span>
-    <span class="pill" role="listitem"><span class="pill-icon" aria-hidden="true">⚗</span> Items &amp; Weapons</span>
-    <span class="pill" role="listitem"><span class="pill-icon" aria-hidden="true">📜</span> Lore &amp; Story</span>
-    <span class="pill" role="listitem"><span class="pill-icon" aria-hidden="true">🌍</span> Location Guides</span>
-    <span class="pill" role="listitem"><span class="pill-icon" aria-hidden="true">🩸</span> Shadow of the Erdtree</span>
-    <span class="pill" role="listitem"><span class="pill-icon" aria-hidden="true">🏆</span> Achievements</span>
-  </div>
-
-  <div class="rune-divider" aria-hidden="true">✦ · ✦ · ✦</div>
-
-  <blockquote class="lore-block">
-    "Arise now, ye Tarnished. Ye dead, who yet live. The call of long-lost grace speaks to us all."
-    <p class="lore-attribution">— Elden Ring opening cinematic, FromSoftware, 2022</p>
-  </blockquote>
-</section>
-
-<footer role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="git_gudder_logo.png" alt="Git Gudder">
-      <p>A fan-run Elden Ring wiki and guide channel. Not affiliated with FromSoftware or Bandai Namco. All game content and materials are trademarks of their respective owners.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Elden Ring</h4>
-      <ul>
-        <li><a href="#">Bosses</a></li>
-        <li><a href="#">Builds</a></li>
-        <li><a href="#">Walkthrough</a></li>
-        <li><a href="#">Items</a></li>
-        <li><a href="#">Shadow of the Erdtree</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Site</h4>
-      <ul>
-        <li><a href="#">YouTube Channel</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Sitemap</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-legal">© 2026 Git Gudder · Fan site, not affiliated with FromSoftware or Bandai Namco · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-    <p class="footer-legal">Built for the Tarnished community</p>
-  </div>
-</footer>
-
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="git_gudder_logo.png" alt="Git Gudder">
+                <p>A specialized, multi-game compilation wiki networks workspace. Fan-run and independent of FromSoftware or Bandai Namco publishers.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Active Databases</h4>
+                <ul>
+                    <li><a href="elden-ring.html">Elden Ring Wiki</a></li>
+                    <li><a href="#convergence">The Convergence Mod</a></li>
+                    <li><a href="#duskbloods">Duskbloods Archive</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Network Links</h4>
+                <ul>
+                    <li><a href="https://www.youtube.com/channel/UC1IruQVYff00NZS6rrgrlBQ" target="_blank" rel="noopener noreferrer">YouTube Channel</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-legal">© 2026 Git Gudder · Fan compilation portal · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+            <p class="footer-legal">Built for the player community</p>
+        </div>
+    </footer>
 </body>
 </html>
