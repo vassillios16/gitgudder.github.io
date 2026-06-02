@@ -94,7 +94,7 @@
 
         * { position: relative; z-index: 1; }
 
-        /* --- HEADER NAVIGATION LAYOUT --- */
+        /* --- INTEGRATED CENTERING HEADER --- */
         .site-header {
             border-bottom: 1px solid var(--border);
             background: linear-gradient(to bottom, #0D0B07, var(--bg-deep));
@@ -109,26 +109,35 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
+            justify-content: center;
             width: 100%;
         }
 
+        .header-center-cluster {
+            display: inline-flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .header-left-logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
         .brand-logo-top {
-            height: 55px;
+            height: 75px;
             width: auto;
             display: block;
             transition: transform 0.2s ease;
         }
         .brand-logo-top:hover { transform: scale(1.03); }
 
-        .header-right {
+        .header-right-stacked {
             display: flex;
-            align-items: center;
-            gap: 35px;
-            flex-grow: 1;
-            justify-content: flex-end;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
         }
 
         .top-bar-links {
@@ -156,7 +165,7 @@
         .search-area {
             position: relative;
             width: 100%;
-            max-width: 320px;
+            max-width: 340px;
         }
 
         .search-wrap {
@@ -183,12 +192,12 @@
             font-family: 'Fira Code', monospace;
             font-size: 13px;
             width: 100%;
+            text-align: left;
         }
 
         .search-wrap input::placeholder { color: var(--text-muted); }
         .search-icon { color: var(--gold-dim); font-size: 14px; user-select: none; }
 
-        /* Real-time Result Overlay Window */
         .search-results-dropdown {
             position: absolute;
             top: 105%;
@@ -202,6 +211,7 @@
             z-index: 1000;
             box-shadow: 0 8px 24px rgba(0,0,0,0.8);
             display: none;
+            text-align: left;
         }
 
         .search-result-item {
@@ -260,7 +270,7 @@
         .announcement-text a { color: var(--red-light); text-decoration: none; font-weight: 600; }
         .announcement-text a:hover { text-decoration: underline; }
 
-        /* --- 3-COLUMN ROWS (UNIVERSE HUB SELECTORS) --- */
+        /* --- 3-COLUMN ROWS --- */
         .hub-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -341,10 +351,12 @@
         .hero > *:nth-child(2) { animation-delay: 0.12s; }
         .hero > *:nth-child(3) { animation-delay: 0.18s; }
 
-        /* --- MOBILE LAYOUT TRANSLATION --- */
+        /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 900px) {
-            .header-container { flex-direction: column; gap: 16px; }
-            .header-right { flex-direction: column; gap: 16px; width: 100%; }
+            .site-header { padding: 20px 20px 15px 20px; }
+            .header-center-cluster { flex-direction: column; align-items: center; gap: 16px; width: 100%; }
+            .header-right-stacked { align-items: center; width: 100%; }
+            .top-bar-links { justify-content: center; gap: 20px; }
             .search-area { max-width: 100%; }
             .hub-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 20px; }
             .hero { padding: 40px 20px 10px; }
@@ -357,24 +369,25 @@
 
     <header class="site-header">
         <div class="header-container">
-            <div class="header-left">
-                <a href="index.html" aria-label="Git Gudder Home">
-                    <img src="git_gudder_logo.png" alt="Git Gudder Wiki Network" class="brand-logo-top">
-                </a>
-            </div>
-            <div class="header-right">
-                <div class="top-bar-links">
-                    <a href="index.html" class="active">Hub Portal</a>
-                    <a href="/elden-ring/index.html">Elden Ring</a>
-                    <a href="#convergence">Convergence Mod</a>
-                    <a href="#duskbloods">Duskbloods</a>
+            <div class="header-center-cluster">
+                <div class="header-left-logo">
+                    <a href="index.html" aria-label="Git Gudder Home">
+                        <img src="git_gudder_logo.png" alt="Git Gudder Wiki Network" class="brand-logo-top">
+                    </a>
                 </div>
-                <div class="search-area">
-                    <div class="search-wrap">
-                        <span class="search-icon" aria-hidden="true">⌕</span>
-                        <input type="search" id="wikiSearchInput" placeholder="Search weapons, items, rules..." aria-label="Search network archive">
+                <div class="header-right-stacked">
+                    <div class="top-bar-links">
+                        <a href="/elden-ring/index.html">Elden Ring</a>
+                        <a href="#convergence">Convergence Mod</a>
+                        <a href="#duskbloods">Duskbloods</a>
                     </div>
-                    <div class="search-results-dropdown" id="searchResultsWindow"></div>
+                    <div class="search-area">
+                        <div class="search-wrap">
+                            <span class="search-icon" aria-hidden="true">⌕</span>
+                            <input type="search" id="wikiSearchInput" placeholder="Search weapons, items, rules..." aria-label="Search network archive">
+                        </div>
+                        <div class="search-results-dropdown" id="searchResultsWindow"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -460,36 +473,85 @@
     </footer>
 
     <script>
-        // 1. Centralized Site Page Index (Add your newly generated weapon pages here!)
-        const searchDatabase = [
-            { title: "Elden Ring Main Wiki Portal", url: "/elden-ring/index.html", tags: "elden ring base game homepage home map hub", category: "Game Hub" },
-            { title: "Privacy Policy", url: "/privacy.html", tags: "legal privacy rules compliance security cookies data", category: "Site Meta" },
-            { title: "Terms of Use", url: "/terms.html", tags: "legal terms conditions usage copyright rules disclaimer", category: "Site Meta" },
-            
-            // --- Sample Weapon Entries (As you automate your HTML generator, simply append entries here!) ---
-            { title: "Reduvia (Dagger)", url: "/elden-ring/items/weapons/weapon-reduvia.html", tags: "reduvia dagger bleed blood scaling arcane weapon knife", category: "Elden Ring Weapons" },
-            { title: "Black Knife (Dagger)", url: "/elden-ring/items/weapons/weapon-black-knife.html", tags: "black knife dagger holy scaling destine death weapon assassin", category: "Elden Ring Weapons" },
-            { title: "Dagger (Base)", url: "/elden-ring/items/weapons/weapon-dagger.html", tags: "dagger simple pierce critical base starter weapons knife", category: "Elden Ring Weapons" }
+        let globalSearchCache = null;
+
+        // Static pages that aren't dynamic weapon sub-links
+        const staticPages = [
+            { title: "Elden Ring Main Wiki Portal", url: "/elden-ring/index.html", category: "Game Hub" },
+            { title: "Privacy Policy", url: "/privacy.html", category: "Site Meta" },
+            { title: "Terms of Use", url: "/terms.html", category: "Site Meta" }
         ];
+
+        // Fetches your main Elden Ring layout page, parses out all linking pages, and indexes them cleanly!
+        async function buildSearchIndex() {
+            if (globalSearchCache) return globalSearchCache;
+
+            let compiledIndex = [...staticPages];
+            try {
+                // Fetch your live elden ring landing catalog page
+                const response = await fetch('/elden-ring/index.html');
+                if (!response.ok) throw new Error('Catalog page missing');
+                
+                const htmlText = await response.text();
+                
+                // Parse the page into a live virtual DOM tree
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+                
+                // Extract every single hyperlink anchor anchor element
+                const hyperlinks = doc.querySelectorAll('a');
+                hyperlinks.forEach(link => {
+                    const urlPath = link.getAttribute('href');
+                    let displayTitle = link.textContent.trim();
+
+                    // If it's a valid relative sub-page link and not an anchor scroll target
+                    if (urlPath && !urlPath.startsWith('#') && !urlPath.startsWith('http') && urlPath.includes('.html')) {
+                        
+                        // Formatting names to cleanly show up in search drop menus
+                        if (displayTitle === "" || displayTitle.includes("←")) return;
+                        
+                        // Normalize directory formatting path layers if they are missing
+                        let finalUrl = urlPath;
+                        if (!finalUrl.startsWith('/') && !finalUrl.startsWith('../')) {
+                            finalUrl = '/elden-ring/' + finalUrl;
+                        }
+
+                        // Avoid duplicate page index allocations
+                        if (!compiledIndex.some(existingItem => existingItem.url === finalUrl)) {
+                            compiledIndex.push({
+                                title: displayTitle,
+                                url: finalUrl,
+                                category: finalUrl.includes('/weapons/') ? "Elden Ring Weapons" : "Elden Ring Guide"
+                            });
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn("Dynamic page crawler fallback active: ", error);
+            }
+
+            globalSearchCache = compiledIndex;
+            return compiledIndex;
+        }
 
         const searchInput = document.getElementById('wikiSearchInput');
         const resultsWindow = document.getElementById('searchResultsWindow');
 
-        // 2. Real-Time Input Query Filtering Logic
-        searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', async function() {
             const query = searchInput.value.toLowerCase().trim();
-            resultsWindow.innerHTML = ''; // Wipe out old results
+            resultsWindow.innerHTML = '';
 
             if (query === '') {
                 resultsWindow.style.display = 'none';
                 return;
             }
 
-            // Cross-reference user input against Title, Category, and Tag properties
-            const matches = searchDatabase.filter(item => {
+            // Await the fully crawled web index payload mapping array
+            const activeDatabase = await buildSearchIndex();
+
+            const matches = activeDatabase.filter(item => {
                 return item.title.toLowerCase().includes(query) || 
-                       item.category.toLowerCase().includes(query) || 
-                       item.tags.toLowerCase().includes(query);
+                       item.category.toLowerCase().includes(query);
             });
 
             if (matches.length > 0) {
@@ -515,7 +577,6 @@
             }
         });
 
-        // 3. Close the popup container if a user clicks outside the header element area
         document.addEventListener('click', function(e) {
             if (!searchInput.contains(e.target) && !resultsWindow.contains(e.target)) {
                 resultsWindow.style.display = 'none';
