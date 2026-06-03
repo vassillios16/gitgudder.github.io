@@ -1,14 +1,369 @@
-/* style.css - Main Root Directory */
+/* ==========================================================================
+   GIT GUDDER NETWORK WIKI MASTER STYLESHEET
+   ========================================================================== */
+
+/* --- Core Theme Variables --- */
 :root {
     --gold: #C9A84C;
     --gold-light: #E8C96A;
+    --gold-dim: #8A6E2F;
+    --gold-glow: rgba(201,168,76,0.15);
+    --parchment: #F0E6C8;
+    --parchment-dim: #C8B88A;
     --bg-deepest: #0A0906;
-    /* ... rest of your design variables ... */
+    --bg-deep: #100E09;
+    --bg-mid: #181410;
+    --bg-surface: #201C16;
+    --bg-card: #241F18;
+    --text-primary: #E8DCC0;
+    --text-secondary: #A89878;
+    --text-muted: #665E4A;
+    --border: rgba(201,168,76,0.2);
+    --red-accent: #8B2222;
+    --red-light: #C44444;
+    --radius: 4px;
+    --radius-lg: 8px;
+}
+
+/* --- Document Resets & Global Ambient Background --- */
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html { 
+    scroll-behavior: smooth; 
 }
 
 body {
     background-color: var(--bg-deepest);
+    color: var(--text-primary);
     font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header and search styling rules go here */
+/* Ambient Radial Glow and Film Grain Filter Overlay */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.06) 0%, transparent 70%), 
+                     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+}
+
+* { position: relative; z-index: 1; }
+
+/* ==========================================================================
+   COMPONENTS: SHARED SYSTEM NAVIGATION HEADER
+   ========================================================================== */
+.site-header {
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(to bottom, #0D0B07, var(--bg-deep));
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-center-cluster {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.header-left-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.brand-logo-top {
+    height: 75px;
+    width: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+.brand-logo-top:hover { transform: scale(1.03); }
+
+.header-right-stacked {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.top-bar-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+.top-bar-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+    white-space: nowrap;
+}
+
+.top-bar-links a:hover, .top-bar-links a.active {
+    color: var(--gold);
+    text-shadow: 0 0 8px var(--gold-glow);
+}
+
+/* ==========================================================================
+   COMPONENTS: DYNAMIC SEARCH BAR & RESULT WINDOWS
+   ========================================================================== */
+.search-area {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+}
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-wrap:focus-within {
+    border-color: var(--gold);
+    box-shadow: 0 0 10px rgba(201, 168, 76, 0.15);
+}
+
+.search-wrap input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    width: 100%;
+    text-align: left;
+}
+
+.search-wrap input::placeholder { color: var(--text-muted); }
+.search-icon { color: var(--gold-dim); font-size: 14px; user-select: none; }
+
+.search-results-dropdown {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    right: 0;
+    background: #14110C;
+    border: 1px solid var(--gold-dim);
+    border-radius: var(--radius);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+    display: none;
+    text-align: left;
+}
+
+.search-result-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s;
+}
+
+.search-result-item:hover { background: rgba(201,168,76,0.08); }
+.search-result-title { font-family: 'Cinzel', serif; font-size: 14px; color: var(--gold-light); display: block; }
+.search-result-category { font-family: 'Fira Code', monospace; font-size: 10px; color: var(--text-muted); text-transform: uppercase; }
+
+/* ==========================================================================
+   LAYOUTS: HERO & INTERNALS
+   ========================================================================== */
+.hero {
+    padding: 60px 40px 20px;
+    text-align: center;
+    background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(201,168,76,0.04) 0%, transparent 70%);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-eyebrow {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 40px; height: 1px; background: var(--gold-dim); }
+.hero-subtitle { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 400; color: var(--gold-light); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 35px; }
+
+.announcement {
+    background: linear-gradient(135deg, rgba(139,34,34,0.25), rgba(139,34,34,0.1));
+    border: 1px solid rgba(196,68,68,0.3);
+    border-radius: var(--radius-lg);
+    padding: 16px 22px;
+    max-width: 720px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+}
+
+.announcement-icon { font-size: 22px; flex-shrink: 0; }
+.announcement-text { font-size: 14px; color: var(--parchment-dim); line-height: 1.5; }
+    .announcement-text strong { color: var(--parchment); font-weight: 600; }
+.announcement-text a { color: var(--red-light); text-decoration: none; font-weight: 600; }
+.announcement-text a:hover { text-decoration: underline; }
+
+/* Global Grid Structures */
+.hub-grid, .wiki-grid {
+    display: grid;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.hub-grid { grid-template-columns: repeat(3, 1fr); }
+.wiki-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 600px; }
+
+/* Modular Cards (Hub Cards & Wiki Sub-directory Cards) */
+.hub-card, .wiki-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 260px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.active-card:hover, .wiki-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(201,168,76,0.08);
+}
+
+.locked-card { opacity: 0.35; border-style: dashed; background: rgba(16, 14, 9, 0.2); cursor: not-allowed; }
+
+.card-status {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 2px 8px;
+    border-radius: 2px;
+    width: fit-content;
+    margin-bottom: 14px;
+}
+
+.status-live { background: rgba(201,168,76,0.12); color: var(--gold-light); border: 1px solid var(--border); }
+.status-soon { background: rgba(255, 255, 255, 0.05); color: var(--text-secondary); }
+.status-future { background: transparent; color: var(--text-muted); border: 1px solid rgba(255,255,255,0.05); }
+
+.hub-card h3, .wiki-card h3 { font-family: 'Cinzel', serif; font-size: 22px; color: var(--text-primary); margin-bottom: 8px; }
+.wiki-card h3 { color: var(--gold-light); }
+.hub-card p, .wiki-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+.card-btn { margin-top: 20px; font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
+
+.sub-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding-top: 16px;
+}
+.sub-links a { font-family: 'Fira Code', monospace; font-size: 13px; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+.sub-links a:hover { color: var(--gold); }
+
+/* --- ARCHITECTURAL ROADMAP METRICS --- */
+.coming-soon, .content-section { max-width: 1200px; margin: 0 auto; padding: 40px 40px 80px; text-align: center; width: 100%; }
+.content-section { max-width: 1000px; padding: 60px 20px 80px; }
+
+.info-block { background: linear-gradient(135deg, rgba(201,168,76,0.03), rgba(16,14,9,0.4)); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px 24px; margin: 0 auto; display: flex; align-items: center; gap: 16px; text-align: left; }
+.info-icon { font-size: 22px; flex-shrink: 0; }
+.info-text { font-size: 14px; color: var(--parchment-dim); line-height: 1.6; }
+.info-text strong { color: var(--gold-light); font-weight: 600; }
+
+.page-title { font-family: 'Cinzel', serif; font-size: 32px; color: var(--text-primary); margin-bottom: 10px; letter-spacing: 0.05em; }
+.page-subtitle { font-size: 16px; color: var(--text-secondary); font-style: italic; margin-bottom: 40px; }
+
+/* ==========================================================================
+   COMPONENTS: FOOTER
+   ========================================================================== */
+footer { border-top: 1px solid var(--border); background: var(--bg-deep); padding: 50px 40px; }
+.footer-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 35px; text-align: left; }
+.footer-brand img { height: auto; width: 100%; max-width: 160px; margin-bottom: 16px; opacity: 0.85; display: block; }
+.footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.7; max-width: 300px; }
+.footer-col h4 { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 16px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-col ul a:hover { color: var(--gold); }
+
+.footer-bottom { max-width: 1120px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(201,168,76,0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-legal { font-family: 'Fira Code', monospace; font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+.footer-legal a { color: var(--text-muted); text-decoration: none; }
+.footer-legal a:hover { color: var(--gold); }
+
+/* ==========================================================================
+   ANIMATIONS & RESPONSIVE LAYOUT CONSTRAINTS
+   ========================================================================== */
+@keyframes fadeUp { 
+    from { opacity: 0; transform: translateY(12px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+.hero > * { animation: fadeUp 0.55s ease both; }
+.hero > *:nth-child(1) { animation-delay: 0.05s; }
+.hero > *:nth-child(2) { animation-delay: 0.12s; }
+.hero > *:nth-child(3) { animation-delay: 0.18s; }
+
+@media (max-width: 900px) {
+    .site-header { padding: 20px 20px 15px 20px; }
+    .header-center-cluster { flex-direction: column; align-items: center; gap: 16px; width: 100%; }
+    .header-right-stacked { align-items: center; width: 100%; }
+    .top-bar-links { justify-content: center; gap: 20px; }
+    .search-area { max-width: 100%; }
+    .hub-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 20px; }
+    .wiki-grid { grid-template-columns: 1fr; }
+    .hero { padding: 40px 20px 10px; }
+    .coming-soon, .content-section { padding: 20px 20px 50px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    footer { padding: 40px 20px; }
+}
