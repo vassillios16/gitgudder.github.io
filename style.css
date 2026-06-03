@@ -1,0 +1,14 @@
+/* style.css - Main Root Directory */
+:root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --bg-deepest: #0A0906;
+    /* ... rest of your design variables ... */
+}
+
+body {
+    background-color: var(--bg-deepest);
+    font-family: 'Crimson Pro', Georgia, serif;
+}
+
+/* Header and search styling rules go here */
