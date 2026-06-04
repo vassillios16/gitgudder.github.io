@@ -62,7 +62,7 @@ body::before {
 * { position: relative; z-index: 1; }
 
 /* ==========================================================================
-   COMPONENTS: SHARED SYSTEM NAVIGATION HEADER
+   COMPONENTS: SHARED SYSTEM NAVIGATION HEADER (HORIZONTAL CLUSTERING)
    ========================================================================== */
 .site-header {
     border-bottom: 1px solid var(--border);
@@ -79,6 +79,7 @@ body::before {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -239,24 +240,30 @@ body::before {
 
 .announcement-icon { font-size: 22px; flex-shrink: 0; }
 .announcement-text { font-size: 14px; color: var(--parchment-dim); line-height: 1.5; }
-    .announcement-text strong { color: var(--parchment); font-weight: 600; }
+.announcement-text strong { color: var(--parchment); font-weight: 600; }
 .announcement-text a { color: var(--red-light); text-decoration: none; font-weight: 600; }
 .announcement-text a:hover { text-decoration: underline; }
 
-/* Global Grid Structures */
+/* Global Grid Layout Configurations */
 .hub-grid, .wiki-grid {
     display: grid;
     gap: 24px;
-    max-width: 1200px;
     margin: 20px auto 0 auto;
     width: 100%;
     padding: 0 40px;
 }
 
-.hub-grid { grid-template-columns: repeat(3, 1fr); }
-.wiki-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 600px; }
+.hub-grid { 
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 1200px;
+}
 
-/* Modular Cards (Hub Cards & Wiki Sub-directory Cards) */
+.wiki-grid { 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    max-width: 1200px; /* Expands dynamically to fit multiple rows as columns fill out */
+}
+
+/* Modular Structural Information Cards */
 .hub-card, .wiki-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -270,6 +277,10 @@ body::before {
     min-height: 260px;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
     overflow: hidden;
+}
+
+.wiki-card {
+    justify-content: flex-start; /* Ensures content flows down from top elements inside wiki subfolders */
 }
 
 .active-card:hover, .wiki-card:hover {
@@ -296,11 +307,14 @@ body::before {
 .status-future { background: transparent; color: var(--text-muted); border: 1px solid rgba(255,255,255,0.05); }
 
 .hub-card h3, .wiki-card h3 { font-family: 'Cinzel', serif; font-size: 22px; color: var(--text-primary); margin-bottom: 8px; }
-.wiki-card h3 { color: var(--gold-light); }
+.wiki-card h3 { color: var(--gold-light); margin-bottom: 12px; }
+
 .hub-card p, .wiki-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.wiki-card p { margin-bottom: 20px; }
 
 .card-btn { margin-top: 20px; font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
 
+/* Sub-directory link formatting trees */
 .sub-links {
     margin-top: auto;
     display: flex;
@@ -312,7 +326,7 @@ body::before {
 .sub-links a { font-family: 'Fira Code', monospace; font-size: 13px; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
 .sub-links a:hover { color: var(--gold); }
 
-/* --- ARCHITECTURAL ROADMAP METRICS --- */
+/* --- INTERNAL SUBPAGE REGIONS --- */
 .coming-soon, .content-section { max-width: 1200px; margin: 0 auto; padding: 40px 40px 80px; text-align: center; width: 100%; }
 .content-section { max-width: 1000px; padding: 60px 20px 80px; }
 
@@ -325,9 +339,9 @@ body::before {
 .page-subtitle { font-size: 16px; color: var(--text-secondary); font-style: italic; margin-bottom: 40px; }
 
 /* ==========================================================================
-   COMPONENTS: FOOTER
+   COMPONENTS: SYSTEM FOOTER
    ========================================================================== */
-footer { border-top: 1px solid var(--border); background: var(--bg-deep); padding: 50px 40px; }
+footer { border-top: 1px solid var(--border); background: var(--bg-deep); padding: 50px 40px; margin-top: auto; }
 .footer-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 35px; text-align: left; }
 .footer-brand img { height: auto; width: 100%; max-width: 160px; margin-bottom: 16px; opacity: 0.85; display: block; }
 .footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.7; max-width: 300px; }
@@ -342,13 +356,9 @@ footer { border-top: 1px solid var(--border); background: var(--bg-deep); paddin
 .footer-legal a:hover { color: var(--gold); }
 
 /* ==========================================================================
-   ANIMATIONS & RESPONSIVE LAYOUT CONSTRAINTS
+   ANIMATIONS & RESPONSIVE LAYOUT MEDIA CONSTRAINTS
    ========================================================================== */
-@keyframes fadeUp { 
-    from { opacity: 0; transform: translateY(12px); } 
-    to { opacity: 1; transform: translateY(0); } 
-}
-
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 .hero > * { animation: fadeUp 0.55s ease both; }
 .hero > *:nth-child(1) { animation-delay: 0.05s; }
 .hero > *:nth-child(2) { animation-delay: 0.12s; }
@@ -360,10 +370,8 @@ footer { border-top: 1px solid var(--border); background: var(--bg-deep); paddin
     .header-right-stacked { align-items: center; width: 100%; }
     .top-bar-links { justify-content: center; gap: 20px; }
     .search-area { max-width: 100%; }
-    .hub-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 20px; }
-    .wiki-grid { grid-template-columns: 1fr; }
+    .hub-grid, .wiki-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 20px; }
     .hero { padding: 40px 20px 10px; }
     .coming-soon, .content-section { padding: 20px 20px 50px; }
     .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-    footer { padding: 40px 20px; }
 }
