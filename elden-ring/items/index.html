@@ -1,1 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elden Ring 100% Item Checklist — Track every item in the Lands Between. Browser-saved progress.">
+    <title>100% Item Checklist — Git Gudder Elden Ring Wiki</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        /* ================================================================
+           CHECKLIST PAGE STYLES
+           ================================================================ */
+
+        .checklist-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px 80px;
+            width: 100%;
+        }
+
+        /* --- Hero area --- */
+        .checklist-hero {
+            padding: 50px 0 30px;
+            text-align: center;
+        }
+
+        .progress-ring-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 28px 0 0;
+            flex-wrap: wrap;
+        }
+
+        .progress-ring-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            flex-shrink: 0;
+        }
+
+        .progress-ring-container svg {
+            transform: rotate(-90deg);
+        }
+
+        .progress-ring-bg { fill: none; stroke: rgba(201,168,76,0.1); stroke-width: 8; }
+        .progress-ring-fill {
+            fill: none;
+            stroke: var(--gold);
+            stroke-width: 8;
+            stroke-linecap: round;
+            stroke-dasharray: 314;
+            stroke-dashoffset: 314;
+            transition: stroke-dashoffset 0.6s ease;
+            filter: drop-shadow(0 0 6px rgba(201,168,76,0.4));
+        }
+
+        .progress-ring-label {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-pct {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold-light);
+            line-height: 1;
+        }
+
+        .progress-sub {
+            font-family: 'Fira Code', monospace;
+            font-size: 9px;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            margin-top: 4px;
+        }
+
+        .progress-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: left;
+        }
+
+        .stat-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .stat-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            width: 80px;
+        }
+
+        .stat-bar {
+            width: 160px;
+            height: 4px;
+            background: rgba(201,168,76,0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .stat-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+            border-radius: 2px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .stat-count {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-secondary);
+            min-width: 60px;
+        }
+
+        /* --- Controls bar --- */
+        .checklist-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 14px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ctrl-btn {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            padding: 7px 16px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: rgba(0,0,0,0.4);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+
+        .ctrl-btn:hover {
+            border-color: var(--gold-dim);
+            color: var(--gold);
+            background: rgba(201,168,76,0.05);
+        }
+
+        .ctrl-btn.danger:hover {
+            border-color: var(--red-light);
+            color: var(--red-light);
+            background: rgba(196,68,68,0.05);
+        }
+
+        .search-input-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 7px 14px;
+            transition: border-color 0.2s;
+        }
+
+        .search-input-wrap:focus-within {
+            border-color: var(--gold-dim);
+        }
+
+        .search-input-wrap input {
+            background: none;
+            border: none;
+            outline: none;
+            color: var(--text-primary);
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            width: 180px;
+        }
+
+        .search-input-wrap input::placeholder { color: var(--text-muted); }
+
+        /* --- Tab navigation --- */
+        .tab-nav {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            overflow-x: auto;
+            padding-bottom: 0;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            scrollbar-width: none;
+        }
+
+        .tab-nav::-webkit-scrollbar { display: none; }
+
+        .tab-btn {
+            flex-shrink: 0;
+            padding: 10px 16px;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            margin-bottom: -1px;
+        }
+
+        .tab-btn:hover { color: var(--text-secondary); }
+
+        .tab-btn.active {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+            text-shadow: 0 0 8px rgba(201,168,76,0.2);
+        }
+
+        .tab-badge {
+            font-family: 'Fira Code', monospace;
+            font-size: 9px;
+            padding: 1px 5px;
+            border-radius: 10px;
+            background: rgba(201,168,76,0.08);
+            color: var(--text-muted);
+            border: 1px solid rgba(201,168,76,0.12);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .tab-btn.active .tab-badge {
+            background: rgba(201,168,76,0.15);
+            color: var(--gold-dim);
+        }
+
+        /* --- Tab content panels --- */
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        /* --- Category sections --- */
+        .cat-section {
+            margin-bottom: 28px;
+        }
+
+        .cat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(201,168,76,0.08);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .cat-header:hover .cat-title { color: var(--gold); }
+
+        .cat-title {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+
+        .cat-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cat-progress {
+            font-family: 'Fira Code', monospace;
+            font-size: 10px;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+        }
+
+        .cat-progress.done { color: var(--gold-dim); }
+
+        .cat-mini-bar {
+            width: 60px;
+            height: 3px;
+            background: rgba(201,168,76,0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .cat-mini-fill {
+            height: 100%;
+            background: var(--gold-dim);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .cat-toggle-icon {
+            font-size: 10px;
+            color: var(--text-muted);
+            transition: transform 0.2s;
+            margin-left: 8px;
+        }
+
+        .cat-section.collapsed .cat-toggle-icon { transform: rotate(-90deg); }
+
+        /* --- Item grid --- */
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 4px;
+        }
+
+        .cat-section.collapsed .item-grid { display: none; }
+
+        /* --- Individual item row --- */
+        .item-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 10px;
+            border-radius: var(--radius);
+            transition: background 0.15s;
+            cursor: pointer;
+        }
+
+        .item-row:hover {
+            background: rgba(201,168,76,0.04);
+        }
+
+        .item-row.checked {
+            opacity: 0.45;
+        }
+
+        .item-row.highlighted {
+            background: rgba(201,168,76,0.08);
+            outline: 1px solid rgba(201,168,76,0.2);
+        }
+
+        .item-checkbox {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            appearance: none;
+            -webkit-appearance: none;
+            border: 1px solid var(--gold-dim);
+            border-radius: 2px;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .item-checkbox:checked {
+            background: var(--gold-dim);
+            border-color: var(--gold);
+        }
+
+        .item-checkbox:checked::after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 1px;
+            width: 5px;
+            height: 8px;
+            border: 2px solid var(--bg-deepest);
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg);
+        }
+
+        .item-name {
+            font-size: 13px;
+            color: var(--text-primary);
+            transition: color 0.15s;
+            flex: 1;
+            line-height: 1.3;
+        }
+
+        .item-row.checked .item-name {
+            color: var(--text-muted);
+            text-decoration: line-through;
+            text-decoration-color: var(--text-muted);
+        }
+
+        /* No results message */
+        .no-results {
+            padding: 40px;
+            text-align: center;
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+        }
+
+        /* Confirmation modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            max-width: 360px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .modal-title {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .modal-body {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .modal-btn {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .modal-btn.cancel {
+            background: transparent;
+            color: var(--text-secondary);
+        }
+
+        .modal-btn.cancel:hover {
+            border-color: var(--gold-dim);
+            color: var(--gold);
+        }
+
+        .modal-btn.confirm {
+            background: rgba(139,34,34,0.3);
+            border-color: rgba(196,68,68,0.4);
+            color: var(--red-light);
+        }
+
+        .modal-btn.confirm:hover {
+            background: rgba(139,34,34,0.5);
+        }
+
+        @media (max-width: 900px) {
+            .checklist-layout { padding: 0 16px 60px; }
+            .checklist-hero { padding: 30px 0 20px; }
+            .progress-ring-wrap { gap: 24px; }
+            .stat-bar { width: 100px; }
+            .tab-btn { padding: 10px 12px; font-size: 10px; }
+            .item-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+            .search-input-wrap input { width: 120px; }
+            .checklist-controls { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="global-header"></header>
+
+    <div class="checklist-layout">
+
+        <!-- HERO -->
+        <div class="checklist-hero">
+            <div class="hero-eyebrow">Elden Ring — Tarnished Edition</div>
+            <h1 class="page-title">100% Item Checklist</h1>
+            <p class="page-subtitle">Track every collectible in the Lands Between. Progress saves to your browser.</p>
+
+            <div class="progress-ring-wrap">
+                <div class="progress-ring-container" title="Overall completion">
+                    <svg viewBox="0 0 120 120" width="120" height="120">
+                        <circle class="progress-ring-bg" cx="60" cy="60" r="50"/>
+                        <circle class="progress-ring-fill" id="mainRingFill" cx="60" cy="60" r="50"/>
+                    </svg>
+                    <div class="progress-ring-label">
+                        <span class="progress-pct" id="mainPct">0%</span>
+                        <span class="progress-sub">COMPLETE</span>
+                    </div>
+                </div>
+                <div class="progress-stats" id="tabStats"></div>
+            </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <div class="checklist-controls">
+            <div class="control-group">
+                <button class="ctrl-btn" onclick="checkAll()">Check All Visible</button>
+                <button class="ctrl-btn" onclick="uncheckAll()">Uncheck All Visible</button>
+                <button class="ctrl-btn danger" onclick="openResetModal()">Reset Progress</button>
+            </div>
+            <div class="control-group">
+                <div class="search-input-wrap">
+                    <span style="color:var(--gold-dim);font-size:13px;">⌕</span>
+                    <input type="search" id="itemSearch" placeholder="Filter items..." autocomplete="off">
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB NAV -->
+        <nav class="tab-nav" id="tabNav"></nav>
+
+        <!-- TAB PANELS -->
+        <div id="tabPanels"></div>
+
+    </div>
+
+    <!-- RESET MODAL -->
+    <div class="modal-overlay" id="resetModal">
+        <div class="modal-box">
+            <div class="modal-title">Reset All Progress?</div>
+            <div class="modal-body">This will clear every checked item across all categories. This cannot be undone.</div>
+            <div class="modal-actions">
+                <button class="modal-btn cancel" onclick="closeResetModal()">Cancel</button>
+                <button class="modal-btn confirm" onclick="confirmReset()">Reset Everything</button>
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+
+    <script>
+    // ============================================================
+    // DATA
+    // ============================================================
+    const CHECKLIST_DATA = {"Armour Sets": [{"cat": "Cloth & Common", "items": ["Guilty", "Traveler's", "Commoner's", "Aristocrat", "Soldier Noble", "Old Aristocrat", "Page", "High Page", "Guardian", "Festive", "Blue Festive", "Prisoner", "Hornsent", "Bloodsoaked", "Mushroom"]}, {"cat": "Sorcerer & Scholar", "items": ["Astrologer", "Juvenile Scholar", "Raya Lucarian Sorcerer", "Lazuli Sorcerer", "Battlemage", "Errant Sorcerer", "Spellblade", "Alberich's", "Preceptor's", "Azur's Glintstone", "Lusat's Glintstone", "Queen of the Full Moon", "Snow Witch", "High Priest", "Fia's", "Prophet", "Traveling Maiden", "Finger Maiden", "Dryleaf", "Sage", "Goldmask's"]}, {"cat": "Perfumer & Nobles", "items": ["Perfumer", "Perfumer Traveler", "Depraved Perfumer", "Ruler's", "Consort", "House Marais", "Fur", "Shaman", "Godskin Apostle", "Godskin Noble", "Sanguine Noble", "Ansbach's"]}, {"cat": "Leather & Light", "items": ["Leather", "Blue Cloth", "Noble", "Nomadic Merchant", "Bandit", "Confessor", "War Surgeon", "Thiollier's", "Omenkiller", "Raptor's", "Gravebird", "Dancer's"]}, {"cat": "Foot Soldiers", "items": ["Raya Lucarian Foot Soldier", "Leyndell Foot Soldier", "Godrick Foot Soldier", "Haligtree Foot Soldier", "Radahn Foot Soldier", "Mausoleum Foot Soldier", "Highwayman", "Common Soldier", "Vulgar Militia", "Shadow Militia", "Duelist", "Rotten Duelist", "Nox Monk", "Nox Swordstress", "Night Maiden", "Champion", "Highland", "Gloried", "Iron Rivet", "Igon's", "Ascetic's"]}, {"cat": "Soldiers & Militia", "items": ["Chain", "Godrick Soldier", "Raya Lucarian Soldier", "Radahn Soldier", "Leyndell Soldier", "Haligtree Soldier", "Mausoleum Soldier", "Messmer Soldier"]}, {"cat": "Iron & Eastern", "items": ["Iron", "Exile", "Kaiden", "Land of Reeds", "White Reed", "Ronin's", "Eccentric", "Freyja's", "Marionette", "Blue SIlver", "Fire Monk", "Blackflame Monk", "Black Knife", "Night", "Zamor", "Malenia's", "Elden Lord", "Messmer's"]}, {"cat": "Knights", "items": ["Knight", "Vagabond Knight", "Carian Knight", "Godrick Knight", "Cuckoo Knight", "Redmane Knight", "Gelmir Knight", "Leyndell Knight", "Haligtree Knight", "Mausoleum Knight", "Black Knight", "Bloodhound Knight", "Cleanrot", "Fire Knight", "Death Knight", "Divine Bird Warrior", "Horned Warrior", "Divine Beast"]}, {"cat": "Named & Unique Sets", "items": ["Oathseeker", "Raging Wolf", "Hoslow's", "Twinned", "Drake Knight", "Blaidd's", "Briar", "Fingerprint", "Rakshasa", "Royal Remains", "All-Knowing", "Royal Knight", "Rellana's", "Maliketh's"]}, {"cat": "Heavy & Boss Sets", "items": ["Banished Knight", "Night's Cavalry", "Solitude", "Veteran's", "Scaled", "Beast Champion", "Tree Sentinel", "Malformed Dragon", "Crucible Axe", "Crucible Tree", "Gaius's", "General Radahn's", "Young Lion's"]}, {"cat": "Colossal & DLC Sets", "items": ["Lionel's", "Bull-Goat", "Verdigris", "Omen", "Fire Prelate"]}], "Armour Pieces": [{"cat": "Helm", "items": ["Blackguard's Iron Mask", "Black Dumpling", "Mushroom Crown", "St. Trina's Blossom", "Circlet of Light", "Karalos Glintstone Crown", "Olivinus Glintstone Crown", "Twinsage Glintstone Crown", "Witch's Glintstone Crown", "Mask of Confidence", "Greathood", "Crimson Tear Scarab", "Cerulean Tear Scarab", "Ash-of-War Scarab", "Glintstone Scarab", "Incantation Scarab", "Imp Head (Cat)", "Imp Head (Wolf)", "Imp Head (Corpse)", "Imp head (Long-Tongued)", "Imp Head (Elder)", "Imp Head (Lion)", "Imp Head (Fanged)", "Nox Mirrorhelm", "Iji's Mirrorhelm", "Silver Tear Mask", "Envoy Crown", "Octopus Head", "Jar", "Greatjar", "Albinauric Mask", "Crimson Hood", "Pelt of Ralva", "Marionette Soldier Birdhelm", "Greathelm", "Winged Serpent Helm", "Deathmask Helm", "Salza's Hood", "Diallos's Mask", "Crucible Hammer Helm", "Pumpkin Helm", "Divine Beast Head"]}, {"cat": "Chest", "items": ["Commoner's Simple Garb", "Guardian Garb (Full Bloom)", "Deathbed Dress", "Corhyn's Robe", "Upper-Class Robe", "Fell Omen Cloak", "Lord of Blood's Robe", "Gravebird's Blackquill Armour", "Tree Surcoat", "Eye Surcoat", "Dirty Chainmail", "Leda's Armor"]}], "Melee Weapons": [{"cat": "Daggers", "items": ["Dagger", "Parrying Dagger", "Misericorde", "Great Knife", "Bloodstained Dagger", "Erdsteel Dagger", "Fire Knight's Shortsword", "Wakizashi", "Main-gauche", "Celebrant's Sickle", "Ivory Sickle", "Crystal Knife", "Scorpion's Stinger", "Cinquedea", "Glintstone Kris", "Reduvia", "Blade of Calling", "Black Knife"]}, {"cat": "Throwing Blades", "items": ["Smithscript Dagger"]}, {"cat": "Straight Swords", "items": ["Short Sword", "Longsword", "Broadsword", "Weathered Straight Sword", "Lordsworn's Straight Sword", "Noble's Slender Sword", "Cane Sword", "Stone-Sheathed Sword", "Warhawk's Talon", "Lazuli Glintstone Sword", "Carian Knight's Sword", "Crystal Sword", "Rotten Crystal Sword", "Miquellan Knight's Sword", "Ornamental Straight Sword", "Golden Epitaph", "Sword of St Trina", "Velvet Sword of St Trina", "Regalia of Eochaid", "Coded Sword", "Sword of Night and Flame", "Sword of Darkness", "Sword of Light"]}, {"cat": "Light Greatswords", "items": ["Milady", "Leda's Sword", "Rellana's Twinblade"]}, {"cat": "Greatswords", "items": ["Bastard Sword", "Claymore", "Iron Greatsword", "Lordsworn's Greatsword", "Knight's Greatsword", "Banished Knight's Greatsword", "Lizard Greatsword", "Forked Greatsword", "Flamberge", "Gargoyle's Greatsword", "Gargoyle's Blackblade", "Inseperable Sword", "Sword of Milos", "Marais Excutioner's Sword", "Greatsword of Solitude", "Ordovis's Greatsword", "Alabaster Lord's Sword", "Death's Poker", "Helphen's Steeple", "Blasphemous Blade", "Golden Order Greatsword", "Dark Moon Greatsword", "Greatsword of Damnation", "Sacred Relic Sword"]}, {"cat": "Colossal Swords", "items": ["Zweihander", "Greatsword", "Watchdog's Greatsword", "Fire Knight's Greatsword", "Troll's Golden Sword", "Troll Knight's Sword", "Moonrithyll's Knight Sword", "Royal Greatsword", "Grafted Blade Greatsword", "Ruins Greatsword", "Ancient Meteoric Ore Greatsword", "Starscourge Greatsword", "Greatsword of Radahn (Lord)", "Greatsword of Radahn (Light)", "Godslayer's Greatsword", "Maliketh's Black Blade"]}, {"cat": "Thrusting Swords", "items": ["Rapier", "Estoc", "Noble's Estoc", "Cleanrot Knight's Sword", "Rogier's Rapier", "Antspur Rapier", "Frozen Needle", "Carian Sorcery Sword"]}, {"cat": "Heavy Thrusting Swords", "items": ["Great Epee", "Queelign's Greatsword", "Godskin Stitcher", "Bloody Helice", "Dragon King's Cragblade", "Sword Lance"]}, {"cat": "Curved Swords", "items": ["Scimitar", "Falchion", "Shamshir", "Grossmesser", "Bandit's Curved Sword", "Shotel", "Scavenger's Curved Sword", "Mantis Blade", "Beastman's Curved Sword", "Flowing Curved Sword", "Serpent-God's Curved Sword", "Magma Blade", "Spirit Sword", "Nox Flowing Sword", "Wing of Astel", "Falx", "Dancing Blade of Ranah", "Horned Warrior's Sword", "Eclipse Shotel"]}, {"cat": "Curved Greatswords", "items": ["Dismounter", "Omen Cleaver", "Monk's Flameblade", "Beastman's Cleaver", "Freyja's Greatsword", "Bloodhound's Fang", "Onyx Lord's Greatsword", "Zamor Curved Sword", "Magma Wyrm's Scalesword", "Horned Warrior's Greatsword", "Morgott's Cursed Sword"]}, {"cat": "Backhand Blades", "items": ["Backhand Blade", "Smithscript Cirque", "Curseblade's Cirque"]}, {"cat": "Katanas", "items": ["Uchigatana", "Nagakiba", "Serpentbone Blade", "Meteoric Ore Blade", "Moonveil", "Sword of Night", "Rivers of Blood", "Dragonscale Blade", "Star-Lined Sword", "Hand of Malenia"]}, {"cat": "Great Katanas", "items": ["Great Katana", "Dragon Hunter's Great Katana", "Rakshasa's Great Katana"]}, {"cat": "Twinblades", "items": ["Twinblade", "Twinned Knight Swords", "Black Steel Twinblade", "Godskin Peeler", "Gargoyle's Twinblade", "Gargoyle's Black Blades", "Eleonora's Poleblade", "Euporia"]}, {"cat": "Axes", "items": ["Hand Axe", "Forked Hatchet", "Forked-Tongue Hatchet", "Battle Axe", "Mesmmer Soldier's Axe", "Warped Axe", "Jawbone Axe", "Iron Cleaver", "Highland Axe", "Smithscript Axe", "Celebrant's Cleaver", "Sacrificial Axe", "Icerind Hatchet", "Ripple Blade", "Stormhawk Axe", "Rosus Axe", "Death Knight's Twin Axes"]}, {"cat": "Greataxes", "items": ["Greataxe", "Crescent Moon Axe", "Longhaft Axe", "Executioner's Greataxe", "Great Omenkiller Cleaver", "Rusted Anchor", "Butchering Knife", "Bonny Butchering Knife", "Gargoyle's Great Axe", "Gargoyle's Black Axe", "Death Knight's Longhaft Axe", "Winged Greathorn", "Axe of Godrick", "Putrescence Cleaver"]}, {"cat": "Hammers", "items": ["Club", "Curved Club", "Spiked Club", "Stone Club", "Mace", "Morning Star", "Warpick", "Hammer", "Monk's Flamemace", "Varre's Bouquet", "Envoy's Horn", "Nox Flowing Hammer", "Ringed Finger", "Scepter of the All-Knowing", "Flowerstone Gavel", "Marika's Hammer"]}, {"cat": "Flails", "items": ["Flail", "Nightrider Flail", "Chainlink Flail", "Family Heads", "Serpent Flail", "Bastard's Stars"]}, {"cat": "Great Hammers", "items": ["Large Club", "Curved Great Club", "Great Mace", "Pickaxe", "Brick Hammer", "Battle Hammer", "Rotten Battle Hammer", "Celebrant's Skull", "Great Stars", "Black Steel Greathammer", "Smithscript Greathammer", "Greathorn Hammer", "Envoy's Long Horn", "Cranial Vessel Candlestand", "Beastclaw Greathammer", "Devourer's Scepter"]}, {"cat": "Colossal Weapons", "items": ["Duelist Greataxe", "Rotten Greataxe", "Golem's Halberd", "Giant-Crusher", "Prelate's Inferno Crozier", "Great Club", "Troll's Hammer", "Dragon Greatclaw", "Bloodfiend's Arm", "Watchdog's Staff", "Staff of the Avatar", "Rotten Staff", "Envoy's Greathorn", "Ghiza's Wheel", "Fallingstar Beast Jaw", "Anvil Hammer", "Devonia's Hammer", "Axe of Godfrey", "Shadow Sunflower Blossom", "Gazing Finger"]}, {"cat": "Spears", "items": ["Short Spear", "Iron Spear", "Spear", "Partisan", "Pike", "Swift Spear", "Spiked Spear", "Cross-Naginata", "Clayman's Harpoon", "Bloodfiend's Fork", "Celebrant's Rib-Rake", "Torchpole", "Smithscript Spear", "Inquisitor's Girandole", "Crystal Spear", "Rotten Crystal Spear", "Cleanrot Spear", "Death Ritual Spear", "Bolt of Gransax"]}, {"cat": "Great Spears", "items": ["Lance", "Messmer Soldier's Spear", "Treespear", "Serpent-Hunter", "Siluria's Tree", "Vyke's War Spear", "Barbed Staff-Spear", "Bloodfiend's Sacred Spear", "Mohgwyn's Sacred Spear", "Spear of the Impaler"]}, {"cat": "Halberds", "items": ["Halberd", "Banished Knight's Halberd", "Lucerne", "Glaive", "Vulgar Militia Shotel", "Vulgar Militia Saw", "Guardian's Swordspear", "Gargoyle's Halberd", "Gargoyle's Black Halberd", "Nightrider Glaive", "Pest's Glaive", "Ripple Crescent Halberd", "Golden Halberd", "Dragon Halberd", "Loretta's War Sickle", "Commander's Standard", "Spirit Glaive", "Poleblade of the Bud"]}, {"cat": "Reapers", "items": ["Scythe", "Grave Scythe", "Halo Scythe", "Winged Scythe", "Obsidian Lamina"]}, {"cat": "Whips", "items": ["Whip", "Thorned Whip", "Urumi", "Hoslow's Petal Whip", "Tooth Whip", "Magma Whip Candlestick", "Giant's Red Braid"]}, {"cat": "Fists", "items": ["Caestus", "Spiked Caestus", "Katar", "Pata", "Iron Ball", "Star Fist", "Clinging Bone", "Veteran's Prosthesis", "Cipher Pata", "Poisoned Hand", "Madding Hand", "Golem Fist", "Thiollier's Hidden Needle", "Grafted Dragon"]}, {"cat": "Hand-to-Hand", "items": ["Dryleaf Arts", "Dane's Footwork"]}, {"cat": "Claws", "items": ["Hookclaws", "Bloodhound Claws", "Venomous Fang", "Raptor Talons", "Claws of Night"]}, {"cat": "Beast Claws", "items": ["Beast Claw", "Red Bear's Claw"]}, {"cat": "Perfume Bottles", "items": ["Firespark", "Lightning", "Chilling", "Frenzyflame", "Deadly Poison"]}], "Ranged Weapons": [{"cat": "Light Bows", "items": ["Shortbow", "Composite Bow", "Red Branch Shortbow", "Misbegotten Shortbow", "Harp Bow", "Bone Bow"]}, {"cat": "Bows", "items": ["Longbow", "Albinauric Bow", "Black Bow", "Ansbach's Longbow", "Pulley Bow", "Horn Bow", "Serpent Bow", "Erdtree Bow"]}, {"cat": "Greatbows", "items": ["Greatbow", "Golem Greatbow", "Erdtree Greatbow", "Igon's Greatbow", "Lion Greatbow"]}, {"cat": "Crossbows", "items": ["Soldier's Crossbow", "Light Crossbow", "Heavy Crossbow", "Arbalest", "Crepus's Black-Key Crossbow", "Pulley Crossbow", "Repeating Crossbow", "Spread Crossbow", "Full Moon Crossbow"]}, {"cat": "Ballistae", "items": ["Hand Ballista", "Jar Cannon", "Rabbath's Cannon"]}, {"cat": "Glintstone Staves", "items": ["Astrologer's Staff", "Glintstone Staff", "Academy Glintstone Staff", "Digger's Staff", "Demi-Human Queen's Staff", "Azur's Glintstone Staff", "Lusat's Glintstone Staff", "Carian Glintstone Staff", "Carian Glintblade Staff", "Carian Regal Scepter", "Albinauric Staff", "Staff of Loss", "Gelmir Glintstone Staff", "Crystal Staff", "Rotten Crystal Staff", "Meteorite Staff", "Staff of the Guilty", "Prince of Death's Staff", "Maternal Staff", "Staff of the Great Beyond"]}, {"cat": "Sacred Seals", "items": ["Finger Seal", "Erdtree Seal", "Golden Order Seal", "Dryleaf Seal", "Fire Knight's Seal", "Spiraltree Seal", "Gravel Stone Seal", "Giant's Seal", "Godslayer's Seal", "Clawmark Seal", "Frenzied Flame Seal", "Dragon Communion Seal"]}], "Shields": [{"cat": "Torches", "items": ["Torch", "Beast-Repellent Torch", "Steel-Wire Torch", "Sentry's Torch", "Ghostflame Torch", "St Trina's Torch", "Nanaya's Torch", "Lamenting Visage"]}, {"cat": "Small Shields", "items": ["Rickety Shield", "Riveted Wooden Shield", "Blue-White Wooden Shield", "Scripture Wooden Shield", "Red Thorn Roundshield", "Pillory Shield", "Buckler", "Iron Roundshield", "Gilded Iron Shield", "Man-Serpent's Shield", "Ice Crest Shield", "Rift Shield", "Perfumer's Shield", "Shield of the Guilty", "Spiralhorn Shield", "Smoldering Shield", "Coil Shield", "Smithscript Shield", "Shield of Night"]}, {"cat": "Medium Shields", "items": ["Hawk Crest Wooden Shield", "Horse Crest Wooden Shield", "Candletree Wooden Shield", "Flame Crest Wooden Shield", "Marred Wooden Shield", "Sun Realm Shield", "Round Shield", "Large Leather Shield", "Black Leather Shield", "Marred Leather Shield", "Heater Shield", "Blue Crest Heater Shield", "Red Crest Heater Shield", "Beast Crest Heater Shield", "Inverted Hawk Heater Shield", "Eclipse Crest Heater Shield", "Kite Shield", "Blue-Gold Kite Shield", "Scorpion Kite Shield", "Twinbird Kite Shield", "Brass Shield", "Messmer Soldier Shield", "Banished Knight's Shield", "Wolf Crest Shield", "Serpent Crest Shield", "Albinauric Shield", "Beastman's Jar-Shield", "Carian Knight's Shield", "Silver Mirrorshield", "Great Turtle Shield", "Golden Lion Shield"]}, {"cat": "Greatshields", "items": ["Wooden Greatshield", "Lordsworn's Shield", "Briar Greatshield", "Spiked Palisade Shield", "Icon Shield", "Golden Beast Crest Shield", "Manor Towershield", "Crossed-Tree Towershield", "Inverted Hawk Towershield", "Dragon Towershield", "Distinguished Greatshield", "Gilded Greatshield", "Cuckoo Greatshield", "Redmane Greatshield", "Golden Greatshield", "Haligtree Crest Greatshield", "Black Steel Greatshield", "Crucible Hornshield", "Dragonclaw Shield", "Fingerprint Stone Shield", "Eclipse Crest Greatshield", "Ant's Skull Plate", "Erdtree Greatshield", "Jellyfish Shield", "Visage Shield", "One-Eyed Shield", "Verdigris Greatshield"]}, {"cat": "Thrusting Shields", "items": ["Dueling Shield", "Carian Thrusting Shield"]}], "Talismans": [{"cat": "HP, FP & Stamina", "items": ["Crimson Amber Medallion", "Crimson Seed Talisman", "Blessed Dew Talisman", "Cerulean Amber Medallion", "Cerulean Seed Talisman", "Blessed Blue Dew Talisman", "Talisman of Lord's Bestowal", "Viridian Amber Medallion", "Green Turtle Talisman", "Two-Headed Turtle Talisman", "Arsenal Charm", "Great-Jar's Arsenal", "Erdtree's Favour", "Radagon's Scarseal", "Radagon's Soreseal", "Marika's Soreseal", "Marika's Scarseal", "Starscourge Heirloom", "Prosthesis-Wearer Heirloom", "Stargazer Heirloom", "Two Fingers Heirloom", "Outer God Heirloom"]}, {"cat": "Defense & Resistance", "items": ["Dragoncrest Shield Talisman", "Dragoncrest Greatshield Talisman", "Spelldrake Talisman", "Flamedrake Talisman", "Boltdrake Talisman", "Haligdrake Talisman", "Golden Braid", "Pearldrake Talisman", "Immunizing Horn Charm", "Stalwart Horn Charm", "Clarifying Horn Charm", "Mottled Necklace", "Prince of Death's Pustule", "Prince of Death's Cyst", "Ailment Talisman"]}, {"cat": "Weapon Type Bonuses", "items": ["Dagger Talisman", "Curved Sword Talisman", "Twinblade Talisman", "Axe Talisman", "Hammer Talisman", "Spear Talisman", "Lance Talisman", "Claw Talisman", "Two-Handed Sword Talisman", "Greatshield Talisman", "Pearl Shield Talisman", "Retaliatory Crossed-Tree", "Lacerating Crossed-Tree", "Arrow's Sting Talisman", "Arrow's Reach Talisman", "Arrow's Soaring Sting Talisman", "Sharpshot Talisman"]}, {"cat": "Spellcasting", "items": ["Graven-School Talisman", "Graven-Mass Talisman", "Fathful Canvas Talisman", "Flock's Canvas Talisman", "Primal Glinstone Blade", "Moon of Nokstella", "Old Lord's Talisman", "Radagon Icon", "Beloved Stardust"]}, {"cat": "Combat & Specialty", "items": ["Roar Medallion", "Companion Jar", "Perfumer's Talisman", "Carian Filigreed Crest", "Warrior Jar Shard", "Shard of Alexander", "Godfrey Icon", "Rellana's Cameo", "Shattered Stone Talisman", "Smithing Talisman", "Enraged Divine Beast", "Talisman of the Dread"]}, {"cat": "Status & Elemental", "items": ["Bull-Goat's Talisman", "Blue Dancer Charm", "Verdigris Discus", "Fire Scorpion Charm", "Lightning Scorpion Charm", "Magic Scorpion Charm", "Sacred Scorpion Charm", "Crucible Scale Talisman", "Crucible Feather Talisman", "Crucible Knot Talisman", "Fine Crucible Feather", "Talisman of all Crucibles"]}, {"cat": "On-Hit & Recovery", "items": ["Red-Feathered Branchsword", "Blue-Feathered Branchsword", "Ritual Sword Talisman", "Ritual Shield Talisman", "Assassin's Crimson Dagger", "Assassin's Cerulean Dagger", "Winged Sword Insignia", "Rotten Winged Sword Insignia", "Millicent's Prosthesis", "Godskin Swadlling Cloth", "Kindred of Rot's Exultation", "Lord of Blood's Exultation", "Aged One's Exultation", "St Trina's Smile", "Blade of Mercy", "Taker's Cameo", "Ancestral Spirit's Horn", "Crusade Insignia", "Dried Bouquet", "Gold Scarab", "Silver Scarab"]}, {"cat": "Stealth, Utility & Misc", "items": ["Crepus's Vial", "Concealing Veil", "Longtail Cat Talisman", "Furled Finger's Trick-Mirror", "Host's Trick-Mirror", "Shabriri's Woe", "Daedicar's Woe", "Sacrificial Twig"]}], "Ashes of War": [{"cat": "Heavy", "items": ["Stamp (Upward Cut)", "Stamp (Sweep)", "Wild Strikes", "Lion's Claw", "Savage Lion's Claw", "Cragblade", "Kick", "Endure", "Ground Slam", "Earthshaker", "Hoarah Loux's Earthshaker", "War Cry", "Barbaric Roar", "Braggart's Roar", "Troll's Roar"]}, {"cat": "Keen", "items": ["Spinning Slash", "Impaling Thrust", "Blind Spot", "Swift Slash", "Piercing Fang", "Repeating Thrust", "Double Slash", "Sword Dance", "Unsheathe", "Overhead Stance", "Quickstep", "Bloodhound Step", "Raptor of the Mists", "Beast's Roar", "Savage Claws", "Raging Beast", "Piercing Throw", "Scattershot Throw"]}, {"cat": "Quality", "items": ["Square Off", "Wing Stance", "Charge Forth", "Giant Hunt", "Storm Blade", "Storm Assault", "Stormcaller", "Storm Stomp", "Vacuum Slice", "Phantom Slash", "Determination", "Royal Knight's Resolve", "Spinning Strikes"]}, {"cat": "Magic", "items": ["Glintstone Pebble", "Glintblade Phalanx", "Carian Greatsword", "Carian Grandeur", "Carian Sovereignty", "Spinning Weapon", "Loretta's Slash", "Gravitas", "Spinning Gravity Thrust", "Waves of Darkness"]}, {"cat": "Flame & Lightning", "items": ["Flaming Strike", "Flame of the Redmanes", "Eruption", "Prelate's Charge", "Black Flame Tornado", "Flame Skewer", "Flame Spear", "Thunderbolt", "Lightning Slash", "Blinkbolt", "Lightning Ram"]}, {"cat": "Sacred", "items": ["Sacred Blade", "Prayerful Strike", "Sacred Ring of Light", "Sacred Order", "Shared Order", "Golden Land", "Golden Slam", "Golden Vow", "Vow of the Indomitable", "Holy Ground", "Aspects of the Crucible: Wings"]}, {"cat": "Poison, Blood & Cold", "items": ["Poisonous Mist", "Poison Moth Flight", "The Poison Flower Blooms Twice", "Blood Blade", "Bloody Slash", "Blood Tax", "Seppuku", "Ice Spear", "Chilling Mist", "Ghostflame Call", "Hoarfrost Stomp", "Divine Beast Frost Stomp"]}, {"cat": "Occult", "items": ["Spectral Lance", "Lifesteal Fist", "White Shadow's Lure", "Assassin's Gambit", "Shriek of Sorrow"]}, {"cat": "No Affinity (HtH & Perfume)", "items": ["Palm Blast", "Dryleaf Whirlwind", "Wall of Sparks", "Rolling Sparks"]}, {"cat": "No Affinity (Ranged)", "items": ["Mighty Shot", "Through and Through", "Igon's Drake Hunt", "Barrage", "Sky Shot", "Enchanted Shot", "Rain of Arrows"]}, {"cat": "No Affinity (Shield)", "items": ["Parry", "Golden Parry", "Storm Wall", "Shield Bash", "Shield Crash", "Barricade Shield", "Thops's Barrier", "Carian Retaliation", "Shield Strike", "No Skill"]}], "Spirit Ashes": [{"cat": "Common Ashes", "items": ["Wandering Noble", "Noble Sorcerer", "Nomad", "Putrid Corpse", "Skeletal Militiaman", "Skeletal Bandit", "Albinauric", "Winged Misbegotten", "Demi-Human", "Clayman", "Oracle Envoy", "Man-Fly", "Lone Wolf", "Rotten Stray", "Giant Rat", "Warhawk", "Land Squirt", "Spirit Jellyfish", "Miranda Sprout", "Spider Scorpion", "Fingercreeper", "Fanged Imp", "Bigmouth Imp", "Gravebird", "Soldjars of Fortune"]}, {"cat": "Soldier & Warrior Ashes", "items": ["Archer", "Greatshield Soldier", "Page", "Vulgar Militia", "Marionette Soldier", "Avionette Soldier", "Kaiden Sellsword", "Mad Pumpkin Head", "Fire Monk", "Ancestral Follower", "Horned Warrior", "Azula Beastman", "Man-Serpent", "Crystalian", "Kindred of Rot", "Bloodfiend Hexer", "Glintstone Sorcerer", "Twinsage Sorcerer", "Inquisitor", "Godrick Soldier", "Raya Lucaria Soldier", "Leyndell Soldier", "Radahn Soldier", "Haligtree Soldier", "Mausoleum Soldier", "Messmer Soldier"]}, {"cat": "Elite & Named Ashes", "items": ["Stormhawk Deenh", "Banished Knight Oleg", "Banished Knight Engvall", "Bloodhound Knight Floh", "Black Knight Captain Huw", "Black Knight Commander Andreas", "Fire Knight Queelign", "Fire Knight Hilde", "Swordhand of Night Jolán", "Jolán and Anna", "Battlemage Hugues", "Latenna the Albinauric", "Perfumer Tricia", "Depraved Perfumer Carmaan", "Omenkiller Rollo", "Blackflame Monk Amon", "Curseblade Meera", "Demi-Human Swordsman Yosh", "Ancient Dragon Knight Kristoff", "Redmane Knight Ogha", "Lhutel the Headless", "Cleanrot Knight Finlay", "Black Knife Tiche", "Divine Bird Warrior Ornis", "Taylew the Golem Smith", "Ancient Dragon Florissax", "Mimic Tear"]}, {"cat": "Puppets", "items": ["Finger Maiden Therolina", "Jarwight", "Dolores the Sleeping Arrow", "Nightmaiden & Swordstress", "Nepheli Loux", "Dung Eater"]}], "Sorceries": [{"cat": "Academy of Raya Lucaria", "items": ["Glintstone Pebble", "Swift Glintstone Shard", "Great Glintstone Shard", "Glintstone Cometshard", "Comet", "Shard Spiral", "Glintstone Stars", "Star Shower", "Glintstone Arc", "Crystal Barrage", "Crystal Burst", "Cannon of Haima", "Gavel of Haima", "Shatter Earth", "Rock Blaster", "Scholar's Armament", "Scholar's Shield", "Starlight", "Terra Magica", "Thops's Barrier", "Comet Azur", "Stars of Ruin", "Founding Rain of Stars"]}, {"cat": "Carian Royal Family", "items": ["Magic Glintblade", "Glintblade Trio", "Glintblade Phalanx", "Carian Phalanx", "Greatblade Phalanx", "Magic Downpour", "Loretta's Greatbow", "Loretta's Mastery", "Rennala's Full Moon", "Ranni's Dark Moon", "Rellana's Twin Moons", "Carian Slicer", "Carian Greatsword", "Carian Piercer", "Adula's Moonblade", "Lucidity", "Carian Retaliation", "Miriam's Vanishing"]}, {"cat": "Sellia & Gelmir", "items": ["Ambush Shard", "Night Shard", "Night Comet", "Night Maiden's Mist", "Uneseen Blade", "Unseen Form", "Eternal Darkness", "Magma Shot", "Roiling Magma", "Gelmir's Fury", "Rykard's Rancor"]}, {"cat": "Snow & Crystal", "items": ["Glintstone Icecrag", "Freezing Mist", "Frozen Armament", "Zamor Ice Storm", "Shattering Crystal", "Crystal Torrent", "Crystal Release"]}, {"cat": "Gravity, Fingers, Briars", "items": ["Gravity Well", "Collapsing Stars", "Gravitational Missile", "Rock Sling", "Blades of Stone", "Meteorite", "Meteorite of Astel", "Glintstone Nail", "Glintstone Nails", "Fleeting Microcosm", "Cherishing Fingers", "Oracle Bubbles", "Great Oracular Bubble", "Briars of Sin", "Briars of Punishment", "Mantle of Thorns", "Impenetrable Thorns"]}, {"cat": "Servants of Death", "items": ["Rancorcall", "Ancient Death Rancor", "Mass of Putrescence", "Explosive Ghostflame", "Rings of Spectral Light", "Fia's Mist", "Tibia's Summons", "Vortex of Putrescence"]}], "Incantations": [{"cat": "Two Fingers", "items": ["Urgent Heal", "Heal", "Great Heal", "Lord's Heal", "Cure Poison", "Lord's Aid", "Magic Fortification", "Flame Fortification", "Lightning Fortification", "Divine Fortification", "Lord's Divine Fortification", "Rejection", "Shadow Bait", "Darkness", "Assassin's Approach"]}, {"cat": "Erdtree & Golden Order", "items": ["Golden Vow", "Barrier of Gold", "Golden Lightning Fortification", "Protection of the Erdtree", "Wrath of Gold", "Wrath from Far", "Heal from Afar", "Erdtree Heal", "Blessing's Boon", "Blessing of the Erdtree", "Minor Erdtree", "Aspects of the Crucible: Breath", "Aspects of the Crucible: Horns", "Aspects of the Crucible: Tail", "Aspects of the Crucible: Thorns", "Aspects of the Crucible: Bloom", "Land of Shadow", "Elden Stars", "Black Blade", "Discus of Light", "Triple Rings of Light", "Radagon's Rings of Light", "Multilayered Ring of Light", "Litany of Proper Death", "Order Healing", "Order's Blade", "Immutable Shield", "Law of Causality", "Law of Regression"]}, {"cat": "Miquella", "items": ["Light of Miquella"]}, {"cat": "Dragon Cult", "items": ["Lightning Spear", "Knight's Lightning Spear", "Lightning Strike", "Honed Bolt", "Ancient Dragon's Lightning Spear", "Ancient Dragon's Lightning Strike", "Lansseax's Glaive", "Fortissax's Lightning Spear", "Frozen Lightning Spear", "Death Lightning", "Electrify Armament", "Electrocharge", "Dragonbolt Blessing", "Vyke's Dragonbolt", "Dragonbolt of Florissax"]}, {"cat": "Shadow Realm", "items": ["Golden Arcs", "Giant Golden Arc", "Spira", "Watchful Spirit", "Divine Bird Feathers", "Divine Beast Tornado"]}, {"cat": "Fire Monk & Fire Giant", "items": ["Catch Flame", "O, Flame!", "Flame Sling", "Giantsflame Take Thee", "Flame, Fall Upon Them", "Flame of the Fell God", "Surge, O Flame!", "Whirl, O Flame!", "Burn, O Flame!", "Flame, Cleanse Me", "Flame, Protect Me", "Flame, Grant Me Strength", "Fire's Deadly Sin"]}, {"cat": "Messmer", "items": ["Fire Serpent", "Rain of Fire", "Messmer's Orb"]}, {"cat": "Godskin & Gurranq", "items": ["Black Flame", "Scouring Black Flame", "Black Flame Ritual", "Black Flame Blade", "Black Flame's Protection", "Noble Presence", "Beast Claw", "Gurranq's Beast Claw", "Bestial Sling", "Stone of Gurranq", "Bestial Constitution", "Bestial Vitality", "Roar of Rugalea"]}, {"cat": "Blood & Rot", "items": ["Swarm of Flies", "Rotten Butterflies", "Bloodflame Talons", "Furious Blade of Ansbach", "Bloodboon", "Bloodflame Blade", "Poison Mist", "Poison Armament", "Pest Threads", "Pest-Thread Spears", "Scarlet Aeonia"]}, {"cat": "Three Fingers", "items": ["The Flame of Frenzy", "Midra's Flame of Frenzy", "Unendurable Frenzy", "Frenzied Burst", "Howl of Shabriri", "Inescapable Frenzy"]}, {"cat": "Dragon Communion", "items": ["Dragonfire", "Agheel's Flame", "Magma Breath", "Theodorix's Magma", "Glintstone Breath", "Smarag's Glintstone Breath", "Rotten Breath", "Ekzykes's Decay", "Dragonice", "Borealis's Mist", "Ghostflame Breath", "Placidusax's Ruin", "Dragonclaw", "Dragonmaw", "Greyoll's Roar", "Bayle's Flame Lightning", "Bayle's Tyranny"]}], "Consumables": [{"cat": "Crystal Tears", "items": ["Crimson Crystal Tear (Left)", "Crimson Crystal Tear (Right)", "Crimsonspill Crystal Tear", "Crimsonburst Crystal Tear", "Crimsonburst Dried Tear", "Cerulean Crystal Tear (Left)", "Cerulean Crystal Tear (Right)", "Greenspill Crystal Tear", "Greenburst Crystal Tear", "Strength-Knot Crystal Tear", "Dexterity-Knot Crystal Tear", "Intelligence-Knot Crystal Tear", "Faith-Knot Crystal Tear", "Opaline Hardtear", "Speckled Hardtear", "Leaden Hardtear", "Deflecting Hardtear", "Magic-Shrouding Cracked Tear", "Flame-Shrouding Cracked Tear", "Lightning-Shrouding Cracked Tear", "Holy-Shrouding Cracked Tear", "Stonebarb Cracked Tear", "Spiked Cracked Tear", "Thorny Cracked Tear", "Crimson-Sapping Cracked Tear", "Cerulean-Sapping Cracked Tear", "Bloodsucking Cracked Tear", "Twiggy Cracked Tear", "Winged Crystal Tear", "Windy Crystal Tear", "Glovewort Crystal Tear", "Crimson Bubbletear", "Crimsonwhorl Bubbletear", "Opaline Bubbletear", "Cerulean Hidden Tear", "Viridian Hidden Tear", "Purifying Crystal Tear", "Ruptured Crystal Tear (Left)", "Ruptured Crystal Tear (Right)", "Oil-Soaked Tear"]}, {"cat": "Tools", "items": ["Wraith Calling Bell", "Ancestral Infant's Head", "Omen Bairn", "Regal Omen Bairn", "Horned Bairn", "Perfumed Oil of Ranah", "Bondstone", "Mimic's Veil", "Margit's Shackle", "Mohg's Shackle", "Blasphemous Claw", "Lantern", "Telescope", "Prattling Pate \"Hello\"", "Prattling Pate \"Thank You\"", "Prattling Pate \"Apologies\"", "Prattling Pate \"Wonderful\"", "Prattling Pate \"Please Help\"", "Prattling Pate \"My Beloved\"", "Prattling Pate \"Let's Get To It\"", "Prattling Pate \"You're Beautiful\"", "Prattling Pate \"Lamentation\"", "Rock Heart", "Priestess Heart", "Lamenter's Mask", "Spirit Calling Bell"]}, {"cat": "Crafting Items", "items": ["Crafting Kit", "Whetstone Knife", "Glintstone Whetblade", "Iron Whetblade", "Red-Hot Whetblade", "Black Whetblade", "Sanctified Whetblade", "Tailoring Tools", "Golden Tailoring Tools"]}, {"cat": "Gestures", "items": ["Point Forwards", "Point Upwards", "Point Downwards", "Wait!", "Calm Down!", "Wave", "Beckon", "Casual Greeting", "Warm Welcome", "Bravo!", "Strength!", "Jump for Joy", "Triumphant Delight", "Fancy Spin", "Nod in Thought", "Finger Snap", "Rallying Cry", "Heartening Cry", "May the Best Win", "Bow", "Polite Bow", "As You Wish", "My Thanks", "Curtsy", "Reverential Bow", "My Lord", "Let Us Go Together", "O Mother", "What Do You Want?", "By My Sword", "Hoslow's Oath", "Fire Spur Me", "The Ring", "Ring of Miquella", "Erudition", "Prayer", "Desperate Prayer", "Rapture", "Inner Order", "Outer Order", "Golden Order Totality", "The Two Fingers", "Extreme Repentance", "Grovel for Mercy", "Crossed Legs", "Dozing Cross-Legged", "Rest", "Sitting Sideways", "Dejection", "Patches' Crouch", "Balled Up", "Spread Out"]}], "Cookbooks & More": [{"cat": "Upgrades", "items": ["Golden Seed", "Sacred Tear", "Scadutree Fragment", "Revered Spirit Ash", "Cracked Pot", "Ritual Pot", "Hefty Cracked Pot", "Perfume Bottle", "Memory Stone", "Talisman Pouch"]}, {"cat": "Bell Bearings", "items": ["Bone Peddler's", "Meat Peddler's", "Medicine Peddler's", "Gravity Stone Peddler's", "Smithing-Stone Miner's [1]", "Smithing-Stone Miner's [2]", "Smithing-Stone Miner's [3]", "Smithing-Stone Miner's [4]", "Somberstone Miner's [1]", "Somberstone Miner's [2]", "Somberstone Miner's [3]", "Somberstone Miner's [4]", "Somberstone Miner's [5]", "Glovewort Picker's [1]", "Glovewort Picker's [2]", "Glovewort Picker's [3]", "Ghost-Glovewort Picker's [1]", "Ghost-Glovewort Picker's [2]", "Ghost-Glovewort Picker's [3]", "Herbalist's", "Mushroom-Seller's [1]", "Mushroom-Seller's [2]", "Greasemonger's", "Moldmonger's", "Spellmachinist's", "String-Seller's"]}, {"cat": "Cookbooks", "items": ["Nomadic Warrior's Cookbook [1]", "Nomadic Warrior's Cookbook [2]", "Nomadic Warrior's Cookbook [3]", "Nomadic Warrior's Cookbook [4]", "Nomadic Warrior's Cookbook [5]", "Nomadic Warrior's Cookbook [6]", "Nomadic Warrior's Cookbook [7]", "Nomadic Warrior's Cookbook [8]", "Nomadic Warrior's Cookbook [9]", "Nomadic Warrior's Cookbook [10]", "Nomadic Warrior's Cookbook [11]", "Nomadic Warrior's Cookbook [12]", "Nomadic Warrior's Cookbook [13]", "Nomadic Warrior's Cookbook [14]", "Nomadic Warrior's Cookbook [15]", "Nomadic Warrior's Cookbook [16]", "Nomadic Warrior's Cookbook [17]", "Nomadic Warrior's Cookbook [18]", "Nomadic Warrior's Cookbook [19]", "Nomadic Warrior's Cookbook [20]", "Nomadic Warrior's Cookbook [21]", "Nomadic Warrior's Cookbook [22]", "Nomadic Warrior's Cookbook [23]", "Nomadic Warrior's Cookbook [24]", "Armorer's Cookbook [1]", "Armorer's Cookbook [2]", "Armorer's Cookbook [3]", "Armorer's Cookbook [4]", "Armorer's Cookbook [5]", "Armorer's Cookbook [6]", "Armorer's Cookbook [7]", "Glintstone Craftsman's Cookbook [1]", "Glintstone Craftsman's Cookbook [2]", "Glintstone Craftsman's Cookbook [3]", "Glintstone Craftsman's Cookbook [4]", "Glintstone Craftsman's Cookbook [5]", "Glintstone Craftsman's Cookbook [6]", "Glintstone Craftsman's Cookbook [7]", "Glintstone Craftsman's Cookbook [8]", "Missionary's Cookbook [1]", "Missionary's Cookbook [2]", "Missionary's Cookbook [3]", "Missionary's Cookbook [4]", "Missionary's Cookbook [5]", "Missionary's Cookbook [6]", "Missionary's Cookbook [7]", "Ancient Dragon Apostle's Cookbook [1]", "Ancient Dragon Apostle's Cookbook [2]", "Ancient Dragon Apostle's Cookbook [3]", "Ancient Dragon Apostle's Cookbook [4]", "Perfumer's Cookbook [1]", "Perfumer's Cookbook [2]", "Perfumer's Cookbook [3]", "Perfumer's Cookbook [4]", "Fevour's Cookbook [1]", "Fevour's Cookbook [2]", "Fevour's Cookbook [3]", "Frenzied's Cookbook [1]", "Frenzied's Cookbook [2]"]}, {"cat": "Shadow Realm Cookbooks", "items": ["Great Potentate's Cookbook [1]", "Great Potentate's Cookbook [2]", "Great Potentate's Cookbook [3]", "Great Potentate's Cookbook [4]", "Great Potentate's Cookbook [5]", "Great Potentate's Cookbook [6]", "Great Potentate's Cookbook [7]", "Great Potentate's Cookbook [8]", "Great Potentate's Cookbook [9]", "Great Potentate's Cookbook [10]", "Great Potentate's Cookbook [11]", "Great Potentate's Cookbook [12]", "Great Potentate's Cookbook [13]", "Great Potentate's Cookbook [14]", "Loyal Knight's Cookbook", "Fire Knight's Cookbook [1]", "Fire Knight's Cookbook [2]", "Battlefield Priest's Cookbook [1]", "Battlefield Priest's Cookbook [2]", "Battlefield Priest's Cookbook [3]", "Battlefield Priest's Cookbook [4]", "Ancient Dragon Knight's Cookbook [1]", "Ancient Dragon Knight's Cookbook [2]", "St. Trina's Disciple's Cookbook [1]", "St. Trina's Disciple's Cookbook [2]", "St. Trina's Disciple's Cookbook [3]", "Mad Craftsman's Cookbook [1]", "Mad Craftsman's Cookbook [2]", "Mad Craftsman's Cookbook [3]", "Grave Keeper's Cookbook [1]", "Grave Keeper's Cookbook [2]", "Tibia's Cookbook", "Finger-Weaver's Cookbook [1]", "Finger-Weaver's Cookbook [2]", "Forager Brood's Cookbook [1]", "Forager Brood's Cookbook [2]", "Forager Brood's Cookbook [3]", "Forager Brood's Cookbook [4]", "Forager Brood's Cookbook [5]", "Forager Brood's Cookbook [6]", "Forager Brood's Cookbook [7]", "Igon's Cookbook [1]", "Igon's Cookbook [2]", "Antiquity Scholar's Cookbook [1]", "Antiquity Scholar's Cookbook [2]"]}]};
+
+    const TAB_ICONS = {
+        'Armour Sets': '🛡️',
+        'Armour Pieces': '👑',
+        'Melee Weapons': '⚔️',
+        'Ranged Weapons': '🏹',
+        'Shields': '🛡',
+        'Talismans': '🔮',
+        'Ashes of War': '✨',
+        'Spirit Ashes': '👻',
+        'Sorceries': '📖',
+        'Incantations': '🕊️',
+        'Consumables': '💧',
+        'Cookbooks & More': '📜',
+    };
+
+    const STORAGE_KEY = 'gitgudder_er_checklist_v1';
+    let checked = {};
+
+    // ============================================================
+    // STORAGE
+    // ============================================================
+    function loadChecked() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            checked = raw ? JSON.parse(raw) : {};
+        } catch(e) {
+            checked = {};
+        }
+    }
+
+    function saveChecked() {
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
+        } catch(e) {}
+    }
+
+    function itemKey(tab, cat, item) {
+        return `${tab}||${cat}||${item}`;
+    }
+
+    // ============================================================
+    // BUILD UI
+    // ============================================================
+    function buildUI() {
+        const tabNav = document.getElementById('tabNav');
+        const tabPanels = document.getElementById('tabPanels');
+        const tabs = Object.keys(CHECKLIST_DATA);
+
+        tabs.forEach((tab, ti) => {
+            // Tab button
+            const btn = document.createElement('button');
+            btn.className = 'tab-btn' + (ti === 0 ? ' active' : '');
+            btn.dataset.tab = tab;
+            const total = CHECKLIST_DATA[tab].reduce((a, c) => a + c.items.length, 0);
+            btn.innerHTML = `${TAB_ICONS[tab] || ''} ${tab} <span class="tab-badge" id="badge-${slugify(tab)}">${total}</span>`;
+            btn.addEventListener('click', () => switchTab(tab));
+            tabNav.appendChild(btn);
+
+            // Panel
+            const panel = document.createElement('div');
+            panel.className = 'tab-panel' + (ti === 0 ? ' active' : '');
+            panel.id = 'panel-' + slugify(tab);
+            panel.innerHTML = buildPanelHTML(tab);
+            tabPanels.appendChild(panel);
+        });
+    }
+
+    function slugify(s) {
+        return s.replace(/[^a-zA-Z0-9]/g, '_');
+    }
+
+    function buildPanelHTML(tab) {
+        const cats = CHECKLIST_DATA[tab];
+        return cats.map(({cat, items}) => {
+            const catSlug = slugify(tab + '_' + cat);
+            const rows = items.map(item => {
+                const key = itemKey(tab, cat, item);
+                const isChecked = !!checked[key];
+                return `<div class="item-row${isChecked ? ' checked' : ''}" data-key="${escHtml(key)}" onclick="toggleItem(this)">
+                    <input type="checkbox" class="item-checkbox"${isChecked ? ' checked' : ''} onclick="event.stopPropagation();toggleItem(this.parentElement)">
+                    <span class="item-name">${escHtml(item)}</span>
+                </div>`;
+            }).join('');
+
+            return `<div class="cat-section" id="cat-${catSlug}">
+                <div class="cat-header" onclick="toggleCat(this.parentElement)">
+                    <span class="cat-title">${escHtml(cat)}</span>
+                    <span class="cat-meta">
+                        <span class="cat-progress" id="cprog-${catSlug}">0 / ${items.length}</span>
+                        <span class="cat-mini-bar"><span class="cat-mini-fill" id="cbar-${catSlug}" style="width:0%"></span></span>
+                        <span class="cat-toggle-icon">▾</span>
+                    </span>
+                </div>
+                <div class="item-grid">${rows}</div>
+            </div>`;
+        }).join('');
+    }
+
+    function escHtml(s) {
+        return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ============================================================
+    // INTERACTIONS
+    // ============================================================
+    function toggleItem(row) {
+        const key = row.dataset.key;
+        const cb = row.querySelector('.item-checkbox');
+        const isNowChecked = !checked[key];
+        if (isNowChecked) {
+            checked[key] = true;
+            row.classList.add('checked');
+            cb.checked = true;
+        } else {
+            delete checked[key];
+            row.classList.remove('checked');
+            cb.checked = false;
+        }
+        saveChecked();
+        updateProgressFromKey(key);
+    }
+
+    function toggleCat(section) {
+        section.classList.toggle('collapsed');
+    }
+
+    function switchTab(tab) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + slugify(tab)));
+    }
+
+    // ============================================================
+    // PROGRESS
+    // ============================================================
+    function updateProgressFromKey(key) {
+        // Figure out which tab/cat this key belongs to
+        const [tab, cat] = key.split('||');
+        updateCatProgress(tab, cat);
+        updateTabBadge(tab);
+        updateOverallProgress();
+    }
+
+    function updateCatProgress(tab, cat) {
+        const catData = CHECKLIST_DATA[tab]?.find(c => c.cat === cat);
+        if (!catData) return;
+        const total = catData.items.length;
+        const done = catData.items.filter(item => checked[itemKey(tab, cat, item)]).length;
+        const slug = slugify(tab + '_' + cat);
+        const prog = document.getElementById('cprog-' + slug);
+        const bar = document.getElementById('cbar-' + slug);
+        if (prog) {
+            prog.textContent = `${done} / ${total}`;
+            prog.className = 'cat-progress' + (done === total && total > 0 ? ' done' : '');
+        }
+        if (bar) bar.style.width = total ? `${(done/total)*100}%` : '0%';
+    }
+
+    function updateTabBadge(tab) {
+        const cats = CHECKLIST_DATA[tab] || [];
+        const total = cats.reduce((a, c) => a + c.items.length, 0);
+        const done = cats.reduce((a, c) => a + c.items.filter(item => checked[itemKey(tab, c.cat, item)]).length, 0);
+        const badge = document.getElementById('badge-' + slugify(tab));
+        if (badge) badge.textContent = `${done}/${total}`;
+    }
+
+    function updateOverallProgress() {
+        const tabs = Object.keys(CHECKLIST_DATA);
+        let total = 0, done = 0;
+        tabs.forEach(tab => {
+            CHECKLIST_DATA[tab].forEach(c => {
+                total += c.items.length;
+                done += c.items.filter(item => checked[itemKey(tab, c.cat, item)]).length;
+            });
+        });
+        const pct = total ? Math.round((done/total)*100) : 0;
+        const fill = document.getElementById('mainRingFill');
+        const pctLabel = document.getElementById('mainPct');
+        if (fill) {
+            const circumference = 314;
+            fill.style.strokeDashoffset = circumference - (circumference * pct / 100);
+        }
+        if (pctLabel) pctLabel.textContent = pct + '%';
+
+        // Update sidebar stats
+        updateSideStats();
+    }
+
+    function updateSideStats() {
+        const tabs = Object.keys(CHECKLIST_DATA);
+        const statsEl = document.getElementById('tabStats');
+        if (!statsEl) return;
+        statsEl.innerHTML = tabs.map(tab => {
+            const cats = CHECKLIST_DATA[tab];
+            const total = cats.reduce((a, c) => a + c.items.length, 0);
+            const done = cats.reduce((a, c) => a + c.items.filter(item => checked[itemKey(tab, c.cat, item)]).length, 0);
+            const pct = total ? (done/total)*100 : 0;
+            return `<div class="stat-row">
+                <span class="stat-label">${(TAB_ICONS[tab]||'')} ${tab.length > 12 ? tab.slice(0,12)+'…' : tab}</span>
+                <span class="stat-bar"><span class="stat-bar-fill" style="width:${pct}%"></span></span>
+                <span class="stat-count">${done}/${total}</span>
+            </div>`;
+        }).join('');
+    }
+
+    function refreshAllProgress() {
+        Object.keys(CHECKLIST_DATA).forEach(tab => {
+            CHECKLIST_DATA[tab].forEach(c => {
+                updateCatProgress(tab, c.cat);
+            });
+            updateTabBadge(tab);
+        });
+        updateOverallProgress();
+    }
+
+    // ============================================================
+    // SEARCH / FILTER
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchEl = document.getElementById('itemSearch');
+        if (searchEl) {
+            searchEl.addEventListener('input', function() {
+                filterItems(this.value.trim().toLowerCase());
+            });
+        }
+    });
+
+    function filterItems(query) {
+        const allRows = document.querySelectorAll('.item-row');
+        const allSections = document.querySelectorAll('.cat-section');
+
+        if (!query) {
+            allRows.forEach(r => { r.style.display = ''; r.classList.remove('highlighted'); });
+            allSections.forEach(s => s.style.display = '');
+            document.querySelectorAll('.no-results').forEach(el => el.remove());
+            return;
+        }
+
+        allSections.forEach(section => {
+            let anyVisible = false;
+            section.querySelectorAll('.item-row').forEach(row => {
+                const name = row.querySelector('.item-name').textContent.toLowerCase();
+                const match = name.includes(query);
+                row.style.display = match ? '' : 'none';
+                row.classList.toggle('highlighted', match);
+                if (match) anyVisible = true;
+            });
+            section.style.display = anyVisible ? '' : 'none';
+            // Remove collapsed so visible matches show
+            if (anyVisible) section.classList.remove('collapsed');
+        });
+    }
+
+    // ============================================================
+    // BULK ACTIONS
+    // ============================================================
+    function checkAll() {
+        const activePanel = document.querySelector('.tab-panel.active');
+        if (!activePanel) return;
+        activePanel.querySelectorAll('.item-row').forEach(row => {
+            if (row.style.display === 'none') return;
+            const key = row.dataset.key;
+            checked[key] = true;
+            row.classList.add('checked');
+            row.querySelector('.item-checkbox').checked = true;
+        });
+        saveChecked();
+        refreshAllProgress();
+    }
+
+    function uncheckAll() {
+        const activePanel = document.querySelector('.tab-panel.active');
+        if (!activePanel) return;
+        activePanel.querySelectorAll('.item-row').forEach(row => {
+            if (row.style.display === 'none') return;
+            const key = row.dataset.key;
+            delete checked[key];
+            row.classList.remove('checked');
+            row.querySelector('.item-checkbox').checked = false;
+        });
+        saveChecked();
+        refreshAllProgress();
+    }
+
+    function openResetModal() {
+        document.getElementById('resetModal').classList.add('open');
+    }
+
+    function closeResetModal() {
+        document.getElementById('resetModal').classList.remove('open');
+    }
+
+    function confirmReset() {
+        checked = {};
+        saveChecked();
+        closeResetModal();
+        // Uncheck all checkboxes in DOM
+        document.querySelectorAll('.item-row').forEach(row => {
+            row.classList.remove('checked');
+            row.querySelector('.item-checkbox').checked = false;
+        });
+        refreshAllProgress();
+    }
+
+    // Close modal on overlay click
+    document.getElementById('resetModal').addEventListener('click', function(e) {
+        if (e.target === this) closeResetModal();
+    });
+
+    // ============================================================
+    // LAYOUT COMPONENT LOADING (matches existing site pattern)
+    // ============================================================
+    async function loadLayoutComponents() {
+        try {
+            const [hRes, fRes] = await Promise.all([fetch('/header.html'), fetch('/footer.html')]);
+            if (hRes.ok) {
+                document.getElementById('global-header').innerHTML = await hRes.text();
+                adjustPaths('global-header');
+                initSearchEngine();
+            }
+            if (fRes.ok) {
+                document.getElementById('global-footer').innerHTML = await fRes.text();
+                adjustPaths('global-footer');
+            }
+        } catch(e) {}
+    }
+
+    function adjustPaths(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.querySelectorAll('img').forEach(img => {
+            if ((img.getAttribute('src') || '').includes('git_gudder_logo')) img.src = '/git_gudder_logo.png';
+        });
+        el.querySelectorAll('a').forEach(a => {
+            const h = a.getAttribute('href');
+            if (h && !h.startsWith('http') && !h.startsWith('#') && !h.startsWith('/')) {
+                a.setAttribute('href', '/' + h);
+            }
+        });
+    }
+
+    function initSearchEngine() {
+        const input = document.getElementById('wikiSearchInput');
+        const dropdown = document.getElementById('searchResultsWindow');
+        if (!input || !dropdown) return;
+        input.addEventListener('input', function() {
+            const q = this.value.trim().toLowerCase();
+            dropdown.style.display = q ? 'block' : 'none';
+            if (!q) { dropdown.innerHTML = ''; return; }
+            dropdown.innerHTML = `<div style="padding:12px 16px;font-size:13px;color:#665E4A;font-family:'Fira Code',monospace;">Use main site search for pages.</div>`;
+        });
+        document.addEventListener('click', e => {
+            if (!input.contains(e.target) && !dropdown.contains(e.target)) dropdown.style.display = 'none';
+        });
+    }
+
+    // ============================================================
+    // INIT
+    // ============================================================
+    loadChecked();
+    buildUI();
+    refreshAllProgress();
+    loadLayoutComponents();
+    </script>
+</body>
+</html>
