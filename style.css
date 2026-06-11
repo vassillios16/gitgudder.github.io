@@ -356,6 +356,107 @@ footer { border-top: 1px solid var(--border); background: var(--bg-deep); paddin
 .footer-legal a:hover { color: var(--gold); }
 
 /* ==========================================================================
+   COMPONENTS: ELDEN RING NAV DROPDOWN
+   ========================================================================== */
+.nav-dropdown-wrap {
+    position: relative;
+    z-index: 50;
+}
+
+.nav-dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.dropdown-caret {
+    font-size: 10px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.nav-dropdown-wrap:hover .dropdown-caret,
+.nav-dropdown-wrap.open .dropdown-caret { transform: rotate(180deg); }
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #14110C;
+    border: 1px solid var(--gold-dim);
+    border-radius: var(--radius);
+    min-width: 190px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+    z-index: 200;
+}
+
+.nav-dropdown-wrap:hover .nav-dropdown-menu,
+.nav-dropdown-wrap:focus-within .nav-dropdown-menu,
+.nav-dropdown-wrap.open .nav-dropdown-menu { display: block; }
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    transition: color 0.2s, background 0.2s;
+    white-space: nowrap;
+}
+
+.nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown-menu a:hover { color: var(--gold); background: rgba(201,168,76,0.06); }
+
+/* ==========================================================================
+   COMPONENTS: SUBPAGE SECTION NAVIGATION (Guides / Items / AR Buffs tabs)
+   ========================================================================== */
+.subpage-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+    padding-bottom: 2px;
+}
+
+.subpage-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.subpage-nav-links a {
+    display: block;
+    padding: 12px 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s, border-bottom-color 0.2s;
+    border-bottom: 2px solid transparent;
+}
+
+.subpage-nav-links a:hover,
+.subpage-nav-links a.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    text-shadow: 0 0 8px var(--gold-glow);
+}
+
+/* ==========================================================================
    ANIMATIONS & RESPONSIVE LAYOUT MEDIA CONSTRAINTS
    ========================================================================== */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }

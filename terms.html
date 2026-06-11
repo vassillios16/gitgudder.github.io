@@ -3,34 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Use — Git Gudder Wiki Network">
     <title>Terms of Use — Git Gudder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
     <style>
-        body { background-color: #0A0906; color: #E8DCC0; font-family: Georgia, serif; line-height: 1.7; padding: 40px; max-width: 800px; margin: 0 auto; }
-        h1, h2 { color: #C9A84C; font-family: 'Cinzel', serif; }
-        a { color: #C9A84C; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        hr { border: 0; border-top: 1px solid rgba(201,168,76,0.2); margin: 30px 0; }
+        .legal-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+        .legal-content h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .legal-content .effective-date {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            margin-bottom: 40px;
+            display: block;
+        }
+        .legal-content h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            color: var(--gold-light);
+            margin: 36px 0 10px;
+        }
+        .legal-content p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .legal-content hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
+        }
+        .legal-content a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .legal-content a:hover { text-decoration: underline; }
+        @media (max-width: 600px) { .legal-content { padding: 40px 20px 60px; } }
     </style>
 </head>
 <body>
-    <h1>Terms of Use</h1>
-    <p><strong>Effective Date:</strong> June 2, 2026</p>
-    <p>By browsing the Git Gudder network (gitgudder.wiki), you agree to comply with and be bound by the following operational terms.</p>
-    
-    <hr>
-    
-    <h2>1. Disclaimer & Accuracy</h2>
-    <p>Git Gudder is an independent, fan-run compilation project. While we strive to automate and verify our item frameworks, calculators, and values, all details are provided "as-is." Game data, patches, and variables can change rapidly; we make no guarantees regarding complete database accuracy.</p>
-    
-    <h2>2. Intellectual Property Notice</h2>
-    <p>Git Gudder is entirely non-commercial and claims no ownership over the intellectual properties of the games archived here. All visual designs, item descriptions, character models, and gameplay concepts belong solely to their respective copyright holders (including FromSoftware, Bandai Namco, or mod development groups).</p>
-    
-    <h2>3. Prohibited Conduct</h2>
-    <p>You agree not to use automated bots, scrapers, or scripts to flood our GitHub Pages server nodes or intentionally disrupt site stability or performance frameworks.</p>
-    
-    <h2>4. Limitation of Liability</h2>
-    <p>In no event shall Git Gudder or its developers be held liable for any data discrepancies, broken checkmarks, or in-game progression frustrations caused by relying on our guide frameworks.</p>
-    
-    <p><a href="/index.html">← Return to Main Hub Portal</a></p>
+
+    <header class="site-header" id="global-header"></header>
+
+    <main>
+        <div class="legal-content">
+            <h1>Terms of Use</h1>
+            <span class="effective-date">Effective Date: June 2, 2026</span>
+
+            <p>By browsing the Git Gudder network (gitgudder.wiki), you agree to comply with and be bound by the following terms.</p>
+
+            <hr>
+
+            <h2>1. Disclaimer &amp; Accuracy</h2>
+            <p>Git Gudder is an independent, fan-run compilation project. While we strive to verify our item frameworks, calculators, and guide values, all details are provided "as-is." Game data, patches, and variables can change rapidly; we make no guarantees regarding complete database accuracy at all times.</p>
+
+            <h2>2. Intellectual Property Notice</h2>
+            <p>Git Gudder is entirely non-commercial and claims no ownership over the intellectual properties of the games archived here. All visual designs, item descriptions, character models, and gameplay concepts belong solely to their respective copyright holders — including FromSoftware, Bandai Namco, and any relevant mod development groups.</p>
+
+            <h2>3. Prohibited Conduct</h2>
+            <p>You agree not to use automated bots, scrapers, or scripts to excessively crawl or flood our hosting infrastructure, or to intentionally disrupt site stability or performance.</p>
+
+            <h2>4. Limitation of Liability</h2>
+            <p>In no event shall Git Gudder or its contributors be held liable for any data discrepancies or in-game progression outcomes caused by relying on our guide content.</p>
+
+            <hr>
+
+            <p><a href="/">← Return to Main Hub</a></p>
+        </div>
+    </main>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+
+    <script src="/site.js"></script>
 </body>
 </html>

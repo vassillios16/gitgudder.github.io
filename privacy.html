@@ -3,34 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy — Git Gudder Wiki Network">
     <title>Privacy Policy — Git Gudder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
     <style>
-        body { background-color: #0A0906; color: #E8DCC0; font-family: Georgia, serif; line-height: 1.7; padding: 40px; max-width: 800px; margin: 0 auto; }
-        h1, h2 { color: #C9A84C; font-family: 'Cinzel', serif; }
-        a { color: #C9A84C; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        hr { border: 0; border-top: 1px solid rgba(201,168,76,0.2); margin: 30px 0; }
+        .legal-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+        .legal-content h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .legal-content .effective-date {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            margin-bottom: 40px;
+            display: block;
+        }
+        .legal-content h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            color: var(--gold-light);
+            margin: 36px 0 10px;
+        }
+        .legal-content p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .legal-content hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
+        }
+        .legal-content a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .legal-content a:hover { text-decoration: underline; }
+        @media (max-width: 600px) { .legal-content { padding: 40px 20px 60px; } }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> June 2, 2026</p>
-    <p>Welcome to Git Gudder (gitgudder.wiki). Your privacy is important to us. This Privacy Policy explains how we handle information across our multi-game wiki network.</p>
-    
-    <hr>
-    
-    <h2>1. Information We Collect</h2>
-    <p>Git Gudder is a static informational archive. We do not require user accounts, nor do we intentionally collect personal identifying information (PII) from our visitors.</p>
-    
-    <h2>2. Third-Party Services & Analytics</h2>
-    <p>Because our site is hosted using GitHub Pages, GitHub may automatically collect server logs containing basic connection metrics (such as visitor IP addresses and browser types) for operational security and performance tracking. We do not have direct access to or ownership over this server data.</p>
-    
-    <h2>3. External Links</h2>
-    <p>Our wiki database contains numerous links to external communities, official game pages, and third-party networks (such as YouTube). We are not responsible for the privacy structures or content of those external destinations.</p>
-    
-    <h2>4. Changes to This Policy</h2>
-    <p>We reserve the right to modify this structural outline at any time to reflect layout modifications across our gaming network tracks.</p>
-    
-    <p><a href="/index.html">← Return to Main Hub Portal</a></p>
+
+    <header class="site-header" id="global-header"></header>
+
+    <main>
+        <div class="legal-content">
+            <h1>Privacy Policy</h1>
+            <span class="effective-date">Effective Date: June 2, 2026</span>
+
+            <p>Welcome to Git Gudder (gitgudder.wiki). Your privacy is important to us. This Privacy Policy explains how we handle information across our multi-game wiki network.</p>
+
+            <hr>
+
+            <h2>1. Information We Collect</h2>
+            <p>Git Gudder is a static informational archive. We do not require user accounts, nor do we intentionally collect personal identifying information (PII) from our visitors.</p>
+            <p>The 100% Item Checklist stores your progress data locally in your own browser via <code>localStorage</code>. This data never leaves your device and is not transmitted to us.</p>
+
+            <h2>2. Hosting & Analytics</h2>
+            <p>This site is hosted via Cloudflare Pages. Cloudflare may automatically collect aggregated server logs containing basic connection metrics (such as visitor IP addresses and browser types) for operational security and performance purposes. We do not have direct access to individual-level server data. No third-party analytics scripts are loaded on this site.</p>
+
+            <h2>3. External Links</h2>
+            <p>Our wiki database contains links to external communities, official game pages, and third-party platforms (such as YouTube). We are not responsible for the privacy practices or content of those external destinations.</p>
+
+            <h2>4. Changes to This Policy</h2>
+            <p>We reserve the right to modify this policy at any time to reflect changes to our hosting or site structure. The effective date above will be updated accordingly.</p>
+
+            <hr>
+
+            <p><a href="/">← Return to Main Hub</a></p>
+        </div>
+    </main>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+
+    <script src="/site.js"></script>
 </body>
 </html>

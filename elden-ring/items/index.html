@@ -12,47 +12,6 @@
     <link rel="stylesheet" href="/style.css">
 
     <style>
-        /* --- SUBPAGE NAV (matches elden-ring/index.html) --- */
-        .subpage-nav-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
-            padding-bottom: 2px;
-        }
-
-        .subpage-nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style: none;
-            gap: 10px;
-        }
-
-        .subpage-nav-links a {
-            display: block;
-            padding: 12px 20px;
-            font-family: 'Cinzel', serif;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s, border-bottom-color 0.2s;
-            border-bottom: 2px solid transparent;
-        }
-
-        .subpage-nav-links a:hover,
-        .subpage-nav-links a.active {
-            color: var(--gold);
-            border-bottom-color: var(--gold);
-            text-shadow: 0 0 8px rgba(201,168,76,0.15);
-        }
-
         /* ================================================================
            CHECKLIST PAGE STYLES
            ================================================================ */
@@ -671,7 +630,7 @@
     <div class="checklist-layout">
 
         <!-- SUBPAGE NAV -->
-        <nav class="subpage-nav-container">
+        <nav class="subpage-nav-container" style="margin-top:20px;margin-bottom:10px;">
             <ul class="subpage-nav-links">
                 <li><a href="/elden-ring/guides/index.html">Guides</a></li>
                 <li><a href="/elden-ring/items/index.html" class="active">Items Checklist</a></li>
@@ -1188,59 +1147,12 @@
     });
 
     // ============================================================
-    // LAYOUT COMPONENT LOADING (matches existing site pattern)
-    // ============================================================
-    async function loadLayoutComponents() {
-        try {
-            const [hRes, fRes] = await Promise.all([fetch('/header.html'), fetch('/footer.html')]);
-            if (hRes.ok) {
-                document.getElementById('global-header').innerHTML = await hRes.text();
-                adjustPaths('global-header');
-                initSearchEngine();
-            }
-            if (fRes.ok) {
-                document.getElementById('global-footer').innerHTML = await fRes.text();
-                adjustPaths('global-footer');
-            }
-        } catch(e) {}
-    }
-
-    function adjustPaths(id) {
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.querySelectorAll('img').forEach(img => {
-            if ((img.getAttribute('src') || '').includes('git_gudder_logo')) img.src = '/git_gudder_logo.png';
-        });
-        el.querySelectorAll('a').forEach(a => {
-            const h = a.getAttribute('href');
-            if (h && !h.startsWith('http') && !h.startsWith('#') && !h.startsWith('/')) {
-                a.setAttribute('href', '/' + h);
-            }
-        });
-    }
-
-    function initSearchEngine() {
-        const input = document.getElementById('wikiSearchInput');
-        const dropdown = document.getElementById('searchResultsWindow');
-        if (!input || !dropdown) return;
-        input.addEventListener('input', function() {
-            const q = this.value.trim().toLowerCase();
-            dropdown.style.display = q ? 'block' : 'none';
-            if (!q) { dropdown.innerHTML = ''; return; }
-            dropdown.innerHTML = `<div style="padding:12px 16px;font-size:13px;color:#665E4A;font-family:'Fira Code',monospace;">Use main site search for pages.</div>`;
-        });
-        document.addEventListener('click', e => {
-            if (!input.contains(e.target) && !dropdown.contains(e.target)) dropdown.style.display = 'none';
-        });
-    }
-
-    // ============================================================
     // INIT
     // ============================================================
     loadChecked();
     buildUI();
     refreshAllProgress();
-    loadLayoutComponents();
     </script>
+    <script src="/site.js"></script>
 </body>
 </html>

@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
 
     <script type="application/ld+json">
     {
@@ -367,31 +368,7 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-container">
-            <div class="header-center-cluster">
-                <div class="header-left-logo">
-                    <a href="index.html" aria-label="Git Gudder Home">
-                        <img src="git_gudder_logo.png" alt="Git Gudder Wiki Network" class="brand-logo-top">
-                    </a>
-                </div>
-                <div class="header-right-stacked">
-                    <div class="top-bar-links">
-                        <a href="/elden-ring/index.html">Elden Ring</a>
-                        <a href="#convergence">Convergence Mod</a>
-                        <a href="#duskbloods">Duskbloods</a>
-                    </div>
-                    <div class="search-area">
-                        <div class="search-wrap">
-                            <span class="search-icon" aria-hidden="true">⌕</span>
-                            <input type="search" id="wikiSearchInput" placeholder="Search weapons, items, rules..." aria-label="Search network archive">
-                        </div>
-                        <div class="search-results-dropdown" id="searchResultsWindow"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <header class="site-header" id="global-header"></header>
 
     <main>
         <section class="hero">
@@ -443,145 +420,8 @@
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <img src="git_gudder_logo.png" alt="Git Gudder">
-                <p>A specialized, multi-game compilation wiki networks workspace. Fan-run and independent of FromSoftware or Bandai Namco publishers.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Active Databases</h4>
-                <ul>
-                    <li><a href="/elden-ring/index.html">Elden Ring Wiki</a></li>
-                    <li><a href="#convergence">The Convergence Mod</a></li>
-                    <li><a href="#duskbloods">Duskbloods Archive</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Network Links</h4>
-                <ul>
-                    <li><a href="https://www.youtube.com/channel/UC1IruQVYff00NZS6rrgrlBQ" target="_blank" rel="noopener noreferrer">YouTube Channel</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Use</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="footer-legal">© 2026 Git Gudder · Fan compilation portal · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
-            <p class="footer-legal">Built for the player community</p>
-        </div>
-    </footer>
+    <footer role="contentinfo" id="global-footer"></footer>
 
-    <script>
-        let globalSearchCache = null;
-
-        // Static pages that aren't dynamic weapon sub-links
-        const staticPages = [
-            { title: "Elden Ring Main Wiki Portal", url: "/elden-ring/index.html", category: "Game Hub" },
-            { title: "Privacy Policy", url: "/privacy.html", category: "Site Meta" },
-            { title: "Terms of Use", url: "/terms.html", category: "Site Meta" }
-        ];
-
-        // Fetches your main Elden Ring layout page, parses out all linking pages, and indexes them cleanly!
-        async function buildSearchIndex() {
-            if (globalSearchCache) return globalSearchCache;
-
-            let compiledIndex = [...staticPages];
-            try {
-                // Fetch your live elden ring landing catalog page
-                const response = await fetch('/elden-ring/index.html');
-                if (!response.ok) throw new Error('Catalog page missing');
-                
-                const htmlText = await response.text();
-                
-                // Parse the page into a live virtual DOM tree
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlText, 'text/html');
-                
-                // Extract every single hyperlink anchor anchor element
-                const hyperlinks = doc.querySelectorAll('a');
-                hyperlinks.forEach(link => {
-                    const urlPath = link.getAttribute('href');
-                    let displayTitle = link.textContent.trim();
-
-                    // If it's a valid relative sub-page link and not an anchor scroll target
-                    if (urlPath && !urlPath.startsWith('#') && !urlPath.startsWith('http') && urlPath.includes('.html')) {
-                        
-                        // Formatting names to cleanly show up in search drop menus
-                        if (displayTitle === "" || displayTitle.includes("←")) return;
-                        
-                        // Normalize directory formatting path layers if they are missing
-                        let finalUrl = urlPath;
-                        if (!finalUrl.startsWith('/') && !finalUrl.startsWith('../')) {
-                            finalUrl = '/elden-ring/' + finalUrl;
-                        }
-
-                        // Avoid duplicate page index allocations
-                        if (!compiledIndex.some(existingItem => existingItem.url === finalUrl)) {
-                            compiledIndex.push({
-                                title: displayTitle,
-                                url: finalUrl,
-                                category: finalUrl.includes('/weapons/') ? "Elden Ring Weapons" : "Elden Ring Guide"
-                            });
-                        }
-                    }
-                });
-            } catch (error) {
-                console.warn("Dynamic page crawler fallback active: ", error);
-            }
-
-            globalSearchCache = compiledIndex;
-            return compiledIndex;
-        }
-
-        const searchInput = document.getElementById('wikiSearchInput');
-        const resultsWindow = document.getElementById('searchResultsWindow');
-
-        searchInput.addEventListener('input', async function() {
-            const query = searchInput.value.toLowerCase().trim();
-            resultsWindow.innerHTML = '';
-
-            if (query === '') {
-                resultsWindow.style.display = 'none';
-                return;
-            }
-
-            // Await the fully crawled web index payload mapping array
-            const activeDatabase = await buildSearchIndex();
-
-            const matches = activeDatabase.filter(item => {
-                return item.title.toLowerCase().includes(query) || 
-                       item.category.toLowerCase().includes(query);
-            });
-
-            if (matches.length > 0) {
-                matches.forEach(match => {
-                    const anchor = document.createElement('a');
-                    anchor.href = match.url;
-                    anchor.className = 'search-result-item';
-                    
-                    anchor.innerHTML = `
-                        <span class="search-result-title">${match.title}</span>
-                        <span class="search-result-category">${match.category}</span>
-                    `;
-                    resultsWindow.appendChild(anchor);
-                });
-                resultsWindow.style.display = 'block';
-            } else {
-                resultsWindow.innerHTML = `
-                    <div style="padding: 12px 16px; font-size: 13px; color: #665E4A; font-family: 'Fira Code', monospace;">
-                        No matching entries found.
-                    </div>
-                `;
-                resultsWindow.style.display = 'block';
-            }
-        });
-
-        document.addEventListener('click', function(e) {
-            if (!searchInput.contains(e.target) && !resultsWindow.contains(e.target)) {
-                resultsWindow.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="/site.js"></script>
 </body>
 </html>
