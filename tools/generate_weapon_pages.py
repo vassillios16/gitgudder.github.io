@@ -7,14 +7,16 @@ Output: elden-ring/items/weapons/weapon-<slug>.html
 import json
 import os
 import re
+import unicodedata
 
 WEAPONS_JSON = os.path.join(os.path.dirname(__file__), "..", "elden-ring", "items", "weapons", "data", "weapons.json")
 OUT_DIR      = os.path.join(os.path.dirname(__file__), "..", "elden-ring", "items", "weapons")
 
 
 def slugify(name):
-    s = name.lower()
-    s = re.sub(r"['’‘`]", "", s)
+    s = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii")
+    s = s.lower()
+    s = re.sub(r"[‘’’`]", "", s)
     s = re.sub(r"[^a-z0-9]+", "-", s)
     return s.strip("-")
 

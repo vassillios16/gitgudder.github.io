@@ -78,12 +78,14 @@ def load_fmg(path):
         entries = wrapper["Fmg"]["Entries"]
         if "WeaponName" in fmg_name:
             for e in entries:
-                if e["Text"] and e["Text"] != "[ERROR]":
-                    names[str(e["ID"])] = e["Text"]
+                text = e.get("Text")
+                if text and text != "[ERROR]":
+                    names[str(e["ID"])] = text
         elif "WeaponCaption" in fmg_name:
             for e in entries:
-                if e["Text"] and e["Text"] != "[ERROR]":
-                    captions[str(e["ID"])] = e["Text"]
+                text = e.get("Text")
+                if text and text != "[ERROR]":
+                    captions[str(e["ID"])] = text
     return names, captions
 
 
