@@ -83,7 +83,9 @@
 
       const index = await getIndex();
       const matches = index.filter(item =>
-        item.title.toLowerCase().includes(q) || item.category.toLowerCase().includes(q)
+        item.title.toLowerCase().includes(q) ||
+        (item.category || '').toLowerCase().includes(q) ||
+        (item.description || '').toLowerCase().includes(q)
       );
 
       if (matches.length) {

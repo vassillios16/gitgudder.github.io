@@ -52,7 +52,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Celebrant's Cleaver",
@@ -62,7 +63,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Death Knight's Twin Axes",
@@ -72,7 +74,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Forked Hatchet",
@@ -82,7 +85,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Forked-Tongue Hatchet",
@@ -92,7 +96,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Hand Axe",
@@ -102,7 +107,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Highland Axe",
@@ -112,7 +118,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Icerind Hatchet",
@@ -122,7 +129,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Iron Cleaver",
@@ -132,7 +140,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Jawbone Axe",
@@ -142,7 +151,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Messmer Soldier's Axe",
@@ -152,7 +162,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ripple Blade",
@@ -162,7 +173,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rosus' Axe",
@@ -172,7 +184,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sacrificial Axe",
@@ -182,7 +195,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Smithscript Axe",
@@ -192,7 +206,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Stormhawk Axe",
@@ -202,7 +217,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Warped Axe",
@@ -212,7 +228,8 @@
       "weapon",
       "axe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Backhand Blade",
@@ -222,7 +239,8 @@
       "weapon",
       "backhand blade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Curseblade's Cirque",
@@ -232,7 +250,8 @@
       "weapon",
       "backhand blade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Smithscript Cirque",
@@ -242,7 +261,8 @@
       "weapon",
       "backhand blade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Hand Ballista",
@@ -252,7 +272,8 @@
       "weapon",
       "ballista",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Jar Cannon",
@@ -262,7 +283,8 @@
       "weapon",
       "ballista",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rabbath's Cannon",
@@ -272,7 +294,8 @@
       "weapon",
       "ballista",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Beast Claw",
@@ -282,7 +305,8 @@
       "weapon",
       "beast claw",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Red Bear's Claw",
@@ -292,7 +316,8 @@
       "weapon",
       "beast claw",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Albinauric Bow",
@@ -302,7 +327,8 @@
       "weapon",
       "bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ansbach's Longbow",
@@ -312,7 +338,8 @@
       "weapon",
       "bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Black Bow",
@@ -322,7 +349,8 @@
       "weapon",
       "bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Erdtree Bow",
@@ -332,7 +360,8 @@
       "weapon",
       "bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Horn Bow",
@@ -342,7 +371,8 @@
       "weapon",
       "bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Longbow",
@@ -352,7 +382,8 @@
       "weapon",
       "bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Pulley Bow",
@@ -362,7 +393,8 @@
       "weapon",
       "bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Serpent Bow",
@@ -372,7 +404,8 @@
       "weapon",
       "bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bloodhound Claws",
@@ -382,7 +415,8 @@
       "weapon",
       "claw",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Claws of Night",
@@ -392,7 +426,8 @@
       "weapon",
       "claw",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Hookclaws",
@@ -402,7 +437,8 @@
       "weapon",
       "claw",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Raptor Talons",
@@ -412,7 +448,8 @@
       "weapon",
       "claw",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Venomous Fang",
@@ -422,7 +459,8 @@
       "weapon",
       "claw",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ancient Meteoric Ore Greatsword",
@@ -432,7 +470,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Fire Knight's Greatsword",
@@ -442,7 +481,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Godslayer's Greatsword",
@@ -452,7 +492,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Grafted Blade Greatsword",
@@ -462,7 +503,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Greatsword",
@@ -472,7 +514,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Greatsword of Radahn (Light)",
@@ -482,7 +525,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Greatsword of Radahn (Lord)",
@@ -492,7 +536,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Maliketh's Black Blade",
@@ -502,7 +547,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Moonrithyll's Knight Sword",
@@ -512,7 +558,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Royal Greatsword",
@@ -522,7 +569,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ruins Greatsword",
@@ -532,7 +580,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Starscourge Greatsword",
@@ -542,7 +591,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Troll Knight's Sword",
@@ -552,7 +602,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Troll's Golden Sword",
@@ -562,7 +613,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Watchdog's Greatsword",
@@ -572,7 +624,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Zweihander",
@@ -582,7 +635,8 @@
       "weapon",
       "colossal sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Anvil Hammer",
@@ -592,7 +646,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Axe of Godfrey",
@@ -602,7 +657,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bloodfiend's Arm",
@@ -612,7 +668,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Devonia's Hammer",
@@ -622,7 +679,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dragon Greatclaw",
@@ -632,7 +690,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Duelist Greataxe",
@@ -642,7 +701,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Envoy's Greathorn",
@@ -652,7 +712,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Fallingstar Beast Jaw",
@@ -662,7 +723,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gazing Finger",
@@ -672,7 +734,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ghiza's Wheel",
@@ -682,7 +745,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Giant-Crusher",
@@ -692,7 +756,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golem's Halberd",
@@ -702,7 +767,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Great Club",
@@ -712,7 +778,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Prelate's Inferno Crozier",
@@ -722,7 +789,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rotten Greataxe",
@@ -732,7 +800,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rotten Staff",
@@ -742,7 +811,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Shadow Sunflower Blossom",
@@ -752,7 +822,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Staff of the Avatar",
@@ -762,7 +833,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Troll's Hammer",
@@ -772,7 +844,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Watchdog's Staff",
@@ -782,7 +855,8 @@
       "weapon",
       "colossal weapon",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Arbalest",
@@ -792,7 +866,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Crepus's Black-Key Crossbow",
@@ -802,7 +877,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Full Moon Crossbow",
@@ -812,7 +888,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Heavy Crossbow",
@@ -822,7 +899,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Light Crossbow",
@@ -832,7 +910,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Pulley Crossbow",
@@ -842,7 +921,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Repeating Crossbow",
@@ -852,7 +932,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Soldier's Crossbow",
@@ -862,7 +943,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spread Crossbow",
@@ -872,7 +954,8 @@
       "weapon",
       "crossbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Beastman's Cleaver",
@@ -882,7 +965,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bloodhound's Fang",
@@ -892,7 +976,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dismounter",
@@ -902,7 +987,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Freyja's Greatsword",
@@ -912,7 +998,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Horned Warrior's Greatsword",
@@ -922,7 +1009,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Magma Wyrm's Scalesword",
@@ -932,7 +1020,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Monk's Flameblade",
@@ -942,7 +1031,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Morgott's Cursed Sword",
@@ -952,7 +1042,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Omen Cleaver",
@@ -962,7 +1053,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Onyx Lord's Greatsword",
@@ -972,7 +1064,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Zamor Curved Sword",
@@ -982,7 +1075,8 @@
       "weapon",
       "curved greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bandit's Curved Sword",
@@ -992,7 +1086,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Beastman's Curved Sword",
@@ -1002,7 +1097,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dancing Blade of Ranah",
@@ -1012,7 +1108,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Eclipse Shotel",
@@ -1022,7 +1119,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Falchion",
@@ -1032,7 +1130,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Falx",
@@ -1042,7 +1141,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Flowing Curved Sword",
@@ -1052,7 +1152,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Grossmesser",
@@ -1062,7 +1163,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Horned Warrior's Sword",
@@ -1072,7 +1174,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Magma Blade",
@@ -1082,7 +1185,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Mantis Blade",
@@ -1092,7 +1196,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Nox Flowing Sword",
@@ -1102,7 +1207,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Scavenger's Curved Sword",
@@ -1112,7 +1218,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Scimitar",
@@ -1122,7 +1229,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Serpent-God's Curved Sword",
@@ -1132,7 +1240,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Shamshir",
@@ -1142,7 +1251,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Shotel",
@@ -1152,7 +1262,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spirit Sword",
@@ -1162,7 +1273,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Wing of Astel",
@@ -1172,7 +1284,8 @@
       "weapon",
       "curved sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Black Knife",
@@ -1182,7 +1295,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Blade of Calling",
@@ -1192,7 +1306,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bloodstained Dagger",
@@ -1202,7 +1317,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Celebrant's Sickle",
@@ -1212,7 +1328,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Cinquedea",
@@ -1222,7 +1339,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Crystal Knife",
@@ -1232,7 +1350,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dagger",
@@ -1242,7 +1361,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Erdsteel Dagger",
@@ -1252,7 +1372,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Fire Knight's Shortsword",
@@ -1262,7 +1383,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Glintstone Kris",
@@ -1272,7 +1394,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Great Knife",
@@ -1282,7 +1405,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ivory Sickle",
@@ -1292,7 +1416,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Main-gauche",
@@ -1302,7 +1427,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Misericorde",
@@ -1312,7 +1438,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Parrying Dagger",
@@ -1322,7 +1449,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Reduvia",
@@ -1332,7 +1460,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Scorpion's Stinger",
@@ -1342,7 +1471,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Wakizashi",
@@ -1352,7 +1482,8 @@
       "weapon",
       "dagger",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Caestus",
@@ -1362,7 +1493,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Cipher Pata",
@@ -1372,7 +1504,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Clinging Bone",
@@ -1382,7 +1515,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golem Fist",
@@ -1392,7 +1526,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Grafted Dragon",
@@ -1402,7 +1537,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Iron Ball",
@@ -1412,7 +1548,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Katar",
@@ -1422,7 +1559,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Madding Hand",
@@ -1432,7 +1570,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Pata",
@@ -1442,7 +1581,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Poisoned Hand",
@@ -1452,7 +1592,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spiked Caestus",
@@ -1462,7 +1603,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Star Fist",
@@ -1472,7 +1614,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Thiollier's Hidden Needle",
@@ -1482,7 +1625,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Veteran's Prosthesis",
@@ -1492,7 +1636,8 @@
       "weapon",
       "fist",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bastard's Stars",
@@ -1502,7 +1647,8 @@
       "weapon",
       "flail",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Chainlink Flail",
@@ -1512,7 +1658,8 @@
       "weapon",
       "flail",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Family Heads",
@@ -1522,7 +1669,8 @@
       "weapon",
       "flail",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Flail",
@@ -1532,7 +1680,8 @@
       "weapon",
       "flail",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Nightrider Flail",
@@ -1542,7 +1691,8 @@
       "weapon",
       "flail",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Serpent Flail",
@@ -1552,7 +1702,8 @@
       "weapon",
       "flail",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Academy Glintstone Staff",
@@ -1562,7 +1713,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Albinauric Staff",
@@ -1572,7 +1724,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Astrologer's Staff",
@@ -1582,7 +1735,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Azur's Glintstone Staff",
@@ -1592,7 +1746,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Carian Glintblade Staff",
@@ -1602,7 +1757,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Carian Glintstone Staff",
@@ -1612,7 +1768,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Carian Regal Scepter",
@@ -1622,7 +1779,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Crystal Staff",
@@ -1632,7 +1790,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Demi-Human Queen's Staff",
@@ -1642,7 +1801,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Digger's Staff",
@@ -1652,7 +1812,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gelmir Glintstone Staff",
@@ -1662,7 +1823,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Glintstone Staff",
@@ -1672,7 +1834,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lusat's Glintstone Staff",
@@ -1682,7 +1845,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Maternal Staff",
@@ -1692,7 +1856,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Meteorite Staff",
@@ -1702,7 +1867,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Prince of Death's Staff",
@@ -1712,7 +1878,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rotten Crystal Staff",
@@ -1722,7 +1889,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Staff of Loss",
@@ -1732,7 +1900,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Staff of the Great Beyond",
@@ -1742,7 +1911,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Staff of the Guilty",
@@ -1752,7 +1922,8 @@
       "weapon",
       "glintstone staff",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Battle Hammer",
@@ -1762,7 +1933,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Beastclaw Greathammer",
@@ -1772,7 +1944,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Black Steel Greathammer",
@@ -1782,7 +1955,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Brick Hammer",
@@ -1792,7 +1966,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Celebrant's Skull",
@@ -1802,7 +1977,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Cranial Vessel Candlestand",
@@ -1812,7 +1988,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Curved Great Club",
@@ -1822,7 +1999,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Devourer's Scepter",
@@ -1832,7 +2010,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Envoy's Long Horn",
@@ -1842,7 +2021,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Great Mace",
@@ -1852,7 +2032,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Great Stars",
@@ -1862,7 +2043,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Greathorn Hammer",
@@ -1872,7 +2054,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Large Club",
@@ -1882,7 +2065,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Pickaxe",
@@ -1892,7 +2076,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rotten Battle Hammer",
@@ -1902,7 +2087,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Smithscript Greathammer",
@@ -1912,7 +2098,8 @@
       "weapon",
       "great hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dragon-Hunter's Great Katana",
@@ -1922,7 +2109,8 @@
       "weapon",
       "great katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Great Katana",
@@ -1932,7 +2120,8 @@
       "weapon",
       "great katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rakshasa's Great Katana",
@@ -1942,7 +2131,8 @@
       "weapon",
       "great katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Barbed Staff-Spear",
@@ -1952,7 +2142,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bloodfiend's Sacred Spear",
@@ -1962,7 +2153,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lance",
@@ -1972,7 +2164,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Messmer Soldier's Spear",
@@ -1982,7 +2175,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Mohgwyn's Sacred Spear",
@@ -1992,7 +2186,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Serpent-Hunter",
@@ -2002,7 +2197,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Siluria's Tree",
@@ -2012,7 +2208,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spear of the Impaler",
@@ -2022,7 +2219,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Treespear",
@@ -2032,7 +2230,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Vyke's War Spear",
@@ -2042,7 +2241,8 @@
       "weapon",
       "great spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Axe of Godrick",
@@ -2052,7 +2252,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bonny Butchering Knife",
@@ -2062,7 +2263,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Butchering Knife",
@@ -2072,7 +2274,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Crescent Moon Axe",
@@ -2082,7 +2285,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Death Knight's Longhaft Axe",
@@ -2092,7 +2296,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Executioner's Greataxe",
@@ -2102,7 +2307,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gargoyle's Black Axe",
@@ -2112,7 +2318,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gargoyle's Great Axe",
@@ -2122,7 +2329,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Great Omenkiller Cleaver",
@@ -2132,7 +2340,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Greataxe",
@@ -2142,7 +2351,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Longhaft Axe",
@@ -2152,7 +2362,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Putrescence Cleaver",
@@ -2162,7 +2373,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rusted Anchor",
@@ -2172,7 +2384,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Winged Greathorn",
@@ -2182,7 +2395,8 @@
       "weapon",
       "greataxe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Erdtree Greatbow",
@@ -2192,7 +2406,8 @@
       "weapon",
       "greatbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golem Greatbow",
@@ -2202,7 +2417,8 @@
       "weapon",
       "greatbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Greatbow",
@@ -2212,7 +2428,8 @@
       "weapon",
       "greatbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Igon's Greatbow",
@@ -2222,7 +2439,8 @@
       "weapon",
       "greatbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lion Greatbow",
@@ -2232,7 +2450,8 @@
       "weapon",
       "greatbow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ant's Skull Plate",
@@ -2242,7 +2461,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Black Steel Greatshield",
@@ -2252,7 +2472,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Briar Greatshield",
@@ -2262,7 +2483,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Crossed-Tree Towershield",
@@ -2272,7 +2494,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Crucible Hornshield",
@@ -2282,7 +2505,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Cuckoo Greatshield",
@@ -2292,7 +2516,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Distinguished Greatshield",
@@ -2302,7 +2527,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dragon Towershield",
@@ -2312,7 +2538,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dragonclaw Shield",
@@ -2322,7 +2549,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Eclipse Crest Greatshield",
@@ -2332,7 +2560,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Erdtree Greatshield",
@@ -2342,7 +2571,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Fingerprint Stone Shield",
@@ -2352,7 +2582,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gilded Greatshield",
@@ -2362,7 +2593,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golden Beast Crest Shield",
@@ -2372,7 +2604,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golden Greatshield",
@@ -2382,7 +2615,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Haligtree Crest Greatshield",
@@ -2392,7 +2626,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Icon Shield",
@@ -2402,7 +2637,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Inverted Hawk Towershield",
@@ -2412,7 +2648,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Jellyfish Shield",
@@ -2422,7 +2659,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lordsworn's Shield",
@@ -2432,7 +2670,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Manor Towershield",
@@ -2442,7 +2681,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "One-Eyed Shield",
@@ -2452,7 +2692,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Redmane Greatshield",
@@ -2462,7 +2703,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spiked Palisade Shield",
@@ -2472,7 +2714,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Verdigris Greatshield",
@@ -2482,7 +2725,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Visage Shield",
@@ -2492,7 +2736,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Wooden Greatshield",
@@ -2502,7 +2747,8 @@
       "weapon",
       "greatshield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Alabaster Lord's Sword",
@@ -2512,7 +2758,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Banished Knight's Greatsword",
@@ -2522,7 +2769,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bastard Sword",
@@ -2532,7 +2780,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Blasphemous Blade",
@@ -2542,7 +2791,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Claymore",
@@ -2552,7 +2802,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dark Moon Greatsword",
@@ -2562,7 +2813,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Death's Poker",
@@ -2572,7 +2824,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Flamberge",
@@ -2582,7 +2835,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Forked Greatsword",
@@ -2592,7 +2846,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gargoyle's Blackblade",
@@ -2602,7 +2857,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gargoyle's Greatsword",
@@ -2612,7 +2868,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golden Order Greatsword",
@@ -2622,7 +2879,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Greatsword of Damnation",
@@ -2632,7 +2890,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Greatsword of Solitude",
@@ -2642,7 +2901,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Helphen's Steeple",
@@ -2652,7 +2912,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Inseparable Sword",
@@ -2662,7 +2923,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Iron Greatsword",
@@ -2672,7 +2934,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Knight's Greatsword",
@@ -2682,7 +2945,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lizard Greatsword",
@@ -2692,7 +2956,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lordsworn's Greatsword",
@@ -2702,7 +2967,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Marais Executioner's Sword",
@@ -2712,7 +2978,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ordovis's Greatsword",
@@ -2722,7 +2989,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sacred Relic Sword",
@@ -2732,7 +3000,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sword of Milos",
@@ -2742,7 +3011,8 @@
       "weapon",
       "greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Banished Knight's Halberd",
@@ -2752,7 +3022,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Commander's Standard",
@@ -2762,7 +3033,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dragon Halberd",
@@ -2772,7 +3044,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gargoyle's Black Halberd",
@@ -2782,7 +3055,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gargoyle's Halberd",
@@ -2792,7 +3066,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Glaive",
@@ -2802,7 +3077,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golden Halberd",
@@ -2812,7 +3088,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Guardian's Swordspear",
@@ -2822,7 +3099,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Halberd",
@@ -2832,7 +3110,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Loretta's War Sickle",
@@ -2842,7 +3121,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lucerne",
@@ -2852,7 +3132,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Nightrider Glaive",
@@ -2862,7 +3143,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Pest's Glaive",
@@ -2872,7 +3154,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Poleblade of the Bud",
@@ -2882,7 +3165,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ripple Crescent Halberd",
@@ -2892,7 +3176,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spirit Glaive",
@@ -2902,7 +3187,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Vulgar Militia Saw",
@@ -2912,7 +3198,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Vulgar Militia Shotel",
@@ -2922,7 +3209,8 @@
       "weapon",
       "halberd",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Club",
@@ -2932,7 +3220,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Curved Club",
@@ -2942,7 +3231,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Envoy's Horn",
@@ -2952,7 +3242,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Flowerstone Gavel",
@@ -2962,7 +3253,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Hammer",
@@ -2972,7 +3264,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Mace",
@@ -2982,7 +3275,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Marika's Hammer",
@@ -2992,7 +3286,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Monk's Flamemace",
@@ -3002,7 +3297,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Morning Star",
@@ -3012,7 +3308,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Nox Flowing Hammer",
@@ -3022,7 +3319,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ringed Finger",
@@ -3032,7 +3330,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Scepter of the All-Knowing",
@@ -3042,7 +3341,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spiked Club",
@@ -3052,7 +3352,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Stone Club",
@@ -3062,7 +3363,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Varre's Bouquet",
@@ -3072,7 +3374,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Warpick",
@@ -3082,7 +3385,8 @@
       "weapon",
       "hammer",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dane's Footwork",
@@ -3092,7 +3396,8 @@
       "weapon",
       "hand-to-hand",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dryleaf Arts",
@@ -3102,7 +3407,8 @@
       "weapon",
       "hand-to-hand",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bloody Helice",
@@ -3112,7 +3418,8 @@
       "weapon",
       "heavy thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dragon King's Cragblade",
@@ -3122,7 +3429,8 @@
       "weapon",
       "heavy thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Godskin Stitcher",
@@ -3132,7 +3440,8 @@
       "weapon",
       "heavy thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Great Epee",
@@ -3142,7 +3451,8 @@
       "weapon",
       "heavy thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Queelign's Greatsword",
@@ -3152,7 +3462,8 @@
       "weapon",
       "heavy thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sword Lance",
@@ -3162,7 +3473,8 @@
       "weapon",
       "heavy thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dragonscale Blade",
@@ -3172,7 +3484,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Hand of Malenia",
@@ -3182,7 +3495,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Meteoric Ore Blade",
@@ -3192,7 +3506,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Moonveil",
@@ -3202,7 +3517,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Nagakiba",
@@ -3212,7 +3528,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rivers of Blood",
@@ -3222,7 +3539,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Serpentbone Blade",
@@ -3232,7 +3550,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Star-Lined Sword",
@@ -3242,7 +3561,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sword of Night",
@@ -3252,7 +3572,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Uchigatana",
@@ -3262,7 +3583,8 @@
       "weapon",
       "katana",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bone Bow",
@@ -3272,7 +3594,8 @@
       "weapon",
       "light bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Composite Bow",
@@ -3282,7 +3605,8 @@
       "weapon",
       "light bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Harp Bow",
@@ -3292,7 +3616,8 @@
       "weapon",
       "light bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Misbegotten Shortbow",
@@ -3302,7 +3627,8 @@
       "weapon",
       "light bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Red Branch Shortbow",
@@ -3312,7 +3638,8 @@
       "weapon",
       "light bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Shortbow",
@@ -3322,7 +3649,8 @@
       "weapon",
       "light bow",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Leda's Sword",
@@ -3332,7 +3660,8 @@
       "weapon",
       "light greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Milady",
@@ -3342,7 +3671,8 @@
       "weapon",
       "light greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rellana's Twin Blades",
@@ -3352,7 +3682,8 @@
       "weapon",
       "light greatsword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Albinauric Shield",
@@ -3362,7 +3693,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Banished Knight's Shield",
@@ -3372,7 +3704,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Beast Crest Heater Shield",
@@ -3382,7 +3715,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Beastman's Jar-Shield",
@@ -3392,7 +3726,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Black Leather Shield",
@@ -3402,7 +3737,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Blue Crest Heater Shield",
@@ -3412,7 +3748,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Blue-Gold Kite Shield",
@@ -3422,7 +3759,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Brass Shield",
@@ -3432,7 +3770,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Candletree Wooden Shield",
@@ -3442,7 +3781,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Carian Knight's Shield",
@@ -3452,7 +3792,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Eclipse Crest Heater Shield",
@@ -3462,7 +3803,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Flame Crest Wooden Shield",
@@ -3472,7 +3814,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golden Lion Shield",
@@ -3482,7 +3825,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Great Turtle Shell",
@@ -3492,7 +3836,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Hawk Crest Wooden Shield",
@@ -3502,7 +3847,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Heater Shield",
@@ -3512,7 +3858,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Horse Crest Wooden Shield",
@@ -3522,7 +3869,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Inverted Hawk Heater Shield",
@@ -3532,7 +3880,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Kite Shield",
@@ -3542,7 +3891,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Large Leather Shield",
@@ -3552,7 +3902,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Marred Leather Shield",
@@ -3562,7 +3913,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Marred Wooden Shield",
@@ -3572,7 +3924,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Messmer Soldier Shield",
@@ -3582,7 +3935,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Red Crest Heater Shield",
@@ -3592,7 +3946,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Round Shield",
@@ -3602,7 +3957,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Scorpion Kite Shield",
@@ -3612,7 +3968,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Serpent Crest Shield",
@@ -3622,7 +3979,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Silver Mirrorshield",
@@ -3632,7 +3990,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sun Realm Shield",
@@ -3642,7 +4001,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Twinbird Kite Shield",
@@ -3652,7 +4012,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Wolf Crest Shield",
@@ -3662,7 +4023,8 @@
       "weapon",
       "medium shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Chilling Perfume Bottle",
@@ -3672,7 +4034,8 @@
       "weapon",
       "perfume bottle",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Deadly Poison Perfume Bottle",
@@ -3682,7 +4045,8 @@
       "weapon",
       "perfume bottle",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Firespark Perfume Bottle",
@@ -3692,7 +4056,8 @@
       "weapon",
       "perfume bottle",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Frenzyflame Perfume Bottle",
@@ -3702,7 +4067,8 @@
       "weapon",
       "perfume bottle",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lightning Perfume Bottle",
@@ -3712,7 +4078,8 @@
       "weapon",
       "perfume bottle",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Clawmark Seal",
@@ -3722,7 +4089,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dragon Communion Seal",
@@ -3732,7 +4100,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dryleaf Seal",
@@ -3742,7 +4111,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Erdtree Seal",
@@ -3752,7 +4122,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Finger Seal",
@@ -3762,7 +4133,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Fire Knight's Seal",
@@ -3772,7 +4144,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Frenzied Flame Seal",
@@ -3782,7 +4155,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Giant's Seal",
@@ -3792,7 +4166,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Godslayer's Seal",
@@ -3802,7 +4177,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golden Order Seal",
@@ -3812,7 +4188,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gravel Stone Seal",
@@ -3822,7 +4199,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spiraltree Seal",
@@ -3832,7 +4210,8 @@
       "weapon",
       "sacred seal",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Grave Scythe",
@@ -3842,7 +4221,8 @@
       "weapon",
       "scythe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Halo Scythe",
@@ -3852,7 +4232,8 @@
       "weapon",
       "scythe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Obsidian Lamina",
@@ -3862,7 +4243,8 @@
       "weapon",
       "scythe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Scythe",
@@ -3872,7 +4254,8 @@
       "weapon",
       "scythe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Winged Scythe",
@@ -3882,7 +4265,8 @@
       "weapon",
       "scythe",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Blue-White Wooden Shield",
@@ -3892,7 +4276,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Buckler",
@@ -3902,7 +4287,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Coil Shield",
@@ -3912,7 +4298,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gilded Iron Shield",
@@ -3922,7 +4309,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ice Crest Shield",
@@ -3932,7 +4320,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Iron Roundshield",
@@ -3942,7 +4331,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Man-Serpent's Shield",
@@ -3952,7 +4342,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Perfumer's Shield",
@@ -3962,7 +4353,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Pillory Shield",
@@ -3972,7 +4364,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Red Thorn Roundshield",
@@ -3982,7 +4375,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rickety Shield",
@@ -3992,7 +4386,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rift Shield",
@@ -4002,7 +4397,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Riveted Wooden Shield",
@@ -4012,7 +4408,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Scripture Wooden Shield",
@@ -4022,7 +4419,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Shield of Night",
@@ -4032,7 +4430,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Shield of the Guilty",
@@ -4042,7 +4441,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Smithscript Shield",
@@ -4052,7 +4452,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Smoldering Shield",
@@ -4062,7 +4463,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spiralhorn Shield",
@@ -4072,7 +4474,8 @@
       "weapon",
       "small shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Smithscript Dagger",
@@ -4082,7 +4485,8 @@
       "weapon",
       "smithscript (dagger)",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bloodfiend's Fork",
@@ -4092,7 +4496,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Bolt of Gransax",
@@ -4102,7 +4507,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Celebrant's Rib-Rake",
@@ -4112,7 +4518,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Clayman's Harpoon",
@@ -4122,7 +4529,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Cleanrot Spear",
@@ -4132,7 +4540,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Cross-Naginata",
@@ -4142,7 +4551,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Crystal Spear",
@@ -4152,7 +4562,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Death Ritual Spear",
@@ -4162,7 +4573,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Inquisitor's Girandole",
@@ -4172,7 +4584,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Iron Spear",
@@ -4182,7 +4595,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Partisan",
@@ -4192,7 +4606,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Pike",
@@ -4202,7 +4617,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rotten Crystal Spear",
@@ -4212,7 +4628,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Short Spear",
@@ -4222,7 +4639,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Smithscript Spear",
@@ -4232,7 +4650,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spear",
@@ -4242,7 +4661,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Spiked Spear",
@@ -4252,7 +4672,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Swift Spear",
@@ -4262,7 +4683,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Torchpole",
@@ -4272,7 +4694,8 @@
       "weapon",
       "spear",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Broadsword",
@@ -4282,7 +4705,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Cane Sword",
@@ -4292,7 +4716,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Carian Knight's Sword",
@@ -4302,7 +4727,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Coded Sword",
@@ -4312,7 +4738,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Crystal Sword",
@@ -4322,7 +4749,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Golden Epitaph",
@@ -4332,7 +4760,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lazuli Glintstone Sword",
@@ -4342,7 +4771,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Longsword",
@@ -4352,7 +4782,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lordsworn's Straight Sword",
@@ -4362,7 +4793,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Miquellan Knight's Sword",
@@ -4372,7 +4804,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Noble's Slender Sword",
@@ -4382,7 +4815,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ornamental Straight Sword",
@@ -4392,7 +4826,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Regalia of Eochaid",
@@ -4402,7 +4837,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rotten Crystal Sword",
@@ -4412,7 +4848,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Short Sword",
@@ -4422,7 +4859,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Stone-Sheathed Sword",
@@ -4432,7 +4870,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sword of Darkness",
@@ -4442,7 +4881,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sword of Light",
@@ -4452,7 +4892,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sword of Night and Flame",
@@ -4462,7 +4903,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sword of St. Trina",
@@ -4472,7 +4914,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Velvet Sword of St. Trina",
@@ -4482,7 +4925,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Warhawk's Talon",
@@ -4492,7 +4936,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Weathered Straight Sword",
@@ -4502,7 +4947,8 @@
       "weapon",
       "straight sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Carian Thrusting Shield",
@@ -4512,7 +4958,8 @@
       "weapon",
       "thrusting shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Dueling Shield",
@@ -4522,7 +4969,8 @@
       "weapon",
       "thrusting shield",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Antspur Rapier",
@@ -4532,7 +4980,8 @@
       "weapon",
       "thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Carian Sorcery Sword",
@@ -4542,7 +4991,8 @@
       "weapon",
       "thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Cleanrot Knight's Sword",
@@ -4552,7 +5002,8 @@
       "weapon",
       "thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Estoc",
@@ -4562,7 +5013,8 @@
       "weapon",
       "thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Frozen Needle",
@@ -4572,7 +5024,8 @@
       "weapon",
       "thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Noble's Estoc",
@@ -4582,7 +5035,8 @@
       "weapon",
       "thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rapier",
@@ -4592,7 +5046,8 @@
       "weapon",
       "thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Rogier's Rapier",
@@ -4602,7 +5057,8 @@
       "weapon",
       "thrusting sword",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Beast-Repellent Torch",
@@ -4612,7 +5068,8 @@
       "weapon",
       "torch",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Ghostflame Torch",
@@ -4622,7 +5079,8 @@
       "weapon",
       "torch",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Lamenting Visage",
@@ -4632,7 +5090,8 @@
       "weapon",
       "torch",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Nanaya's Torch",
@@ -4642,7 +5101,8 @@
       "weapon",
       "torch",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Sentry's Torch",
@@ -4652,7 +5112,8 @@
       "weapon",
       "torch",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "St. Trina's Torch",
@@ -4662,7 +5123,8 @@
       "weapon",
       "torch",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Steel-Wire Torch",
@@ -4672,7 +5134,8 @@
       "weapon",
       "torch",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Torch",
@@ -4682,7 +5145,8 @@
       "weapon",
       "torch",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Black Steel Twinblade",
@@ -4692,7 +5156,8 @@
       "weapon",
       "twinblade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Eleonora's Poleblade",
@@ -4702,7 +5167,8 @@
       "weapon",
       "twinblade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Euporia",
@@ -4712,7 +5178,8 @@
       "weapon",
       "twinblade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gargoyle's Black Blades",
@@ -4722,7 +5189,8 @@
       "weapon",
       "twinblade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Gargoyle's Twinblade",
@@ -4732,7 +5200,8 @@
       "weapon",
       "twinblade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Godskin Peeler",
@@ -4742,7 +5211,8 @@
       "weapon",
       "twinblade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Twinblade",
@@ -4752,7 +5222,8 @@
       "weapon",
       "twinblade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Twinned Knight Swords",
@@ -4762,7 +5233,8 @@
       "weapon",
       "twinblade",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Giant's Red Braid",
@@ -4772,7 +5244,8 @@
       "weapon",
       "whip",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Hoslow's Petal Whip",
@@ -4782,7 +5255,8 @@
       "weapon",
       "whip",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Magma Whip Candlestick",
@@ -4792,7 +5266,8 @@
       "weapon",
       "whip",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Thorned Whip",
@@ -4802,7 +5277,8 @@
       "weapon",
       "whip",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Tooth Whip",
@@ -4812,7 +5288,8 @@
       "weapon",
       "whip",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Urumi",
@@ -4822,7 +5299,8 @@
       "weapon",
       "whip",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   },
   {
     "title": "Whip",
@@ -4832,6 +5310,7 @@
       "weapon",
       "whip",
       "elden ring"
-    ]
+    ],
+    "category": "Weapon"
   }
 ]

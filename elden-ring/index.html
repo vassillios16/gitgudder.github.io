@@ -13,20 +13,26 @@
     <link rel="stylesheet" href="/style.css">
 
     <style>
-        /* --- FORCE SINGLE ROW GRID LAYOUT --- */
+        /* --- HUB GRID LAYOUT --- */
         .force-row-grid {
-            grid-template-columns: repeat(4, 1fr) !important;
+            grid-template-columns: repeat(3, 1fr) !important;
         }
 
-        /* Responsive fallback to let them stack nicely on mobile viewports */
-        @media (max-width: 1100px) {
-            .force-row-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
+        /* AR Buff Calculator spans full width on its own row */
+        .force-row-grid .wiki-card:last-child {
+            grid-column: 1 / -1;
+            max-width: calc(33.333% - 12px);
+            margin-left: auto;
+            margin-right: auto;
         }
-        @media (max-width: 600px) {
+
+        @media (max-width: 900px) {
             .force-row-grid {
                 grid-template-columns: 1fr !important;
+            }
+            .force-row-grid .wiki-card:last-child {
+                grid-column: unset;
+                max-width: none;
             }
         }
     </style>
