@@ -117,6 +117,7 @@ body::before {
     font-family: 'Fira Code', monospace;
     font-size: 12px;
     letter-spacing: 0.08em;
+    z-index: 10;
 }
 
 .top-bar-links a {
@@ -454,6 +455,97 @@ footer { border-top: 1px solid var(--border); background: var(--bg-deep); paddin
     color: var(--gold);
     border-bottom-color: var(--gold);
     text-shadow: 0 0 8px var(--gold-glow);
+}
+
+/* ==========================================================================
+   COMPONENTS: GUIDE / ARTICLE PAGE CONTENT
+   ========================================================================== */
+.guide-body {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.section-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: var(--gold-light);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+
+.lore-box {
+    background: var(--bg-mid);
+    border-left: 3px solid var(--gold-dim);
+    padding: 18px 22px;
+    margin-bottom: 32px;
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 36px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.guide-table th {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    background: var(--bg-surface);
+    padding: 12px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.guide-table td {
+    padding: 12px 18px;
+    font-size: 14px;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(201,168,76,0.06);
+    vertical-align: top;
+    line-height: 1.6;
+}
+
+.guide-table tr:last-child td { border-bottom: none; }
+.guide-table tr:hover td { background: rgba(201,168,76,0.03); }
+
+.guide-table td strong {
+    color: var(--gold-light);
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.guide-table td .reward-list {
+    color: var(--text-secondary);
+    font-size: 13px;
 }
 
 /* ==========================================================================
