@@ -67,11 +67,6 @@ def generate(w):
         req_rows = '<tr><td colspan="2" class="muted">No requirements</td></tr>'
 
     image_html = ""
-    if w.get("image"):
-        image_html = f'''
-        <div class="weapon-img-wrap">
-            <img src="{w["image"]}" alt="{w["name"]}" class="weapon-img" loading="lazy">
-        </div>'''
 
     dlc_badge = ""
 
