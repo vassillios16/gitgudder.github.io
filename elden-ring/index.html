@@ -15,11 +15,16 @@
     <style>
         /* --- FORCE SINGLE ROW GRID LAYOUT --- */
         .force-row-grid {
-            grid-template-columns: repeat(3, 1fr) !important;
+            grid-template-columns: repeat(4, 1fr) !important;
         }
 
         /* Responsive fallback to let them stack nicely on mobile viewports */
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
+            .force-row-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 600px) {
             .force-row-grid {
                 grid-template-columns: 1fr !important;
             }
@@ -38,6 +43,7 @@
             <ul class="subpage-nav-links">
                 <li><a href="/elden-ring/guides/index.html">Guides</a></li>
                 <li><a href="/elden-ring/items/index.html">Items Checklist</a></li>
+                <li><a href="/elden-ring/items/weapons/">Weapons Database</a></li>
                 <li><a href="/elden-ring/ar-buffs/index.html">AR Buff Calculator</a></li>
             </ul>
         </nav>
@@ -57,6 +63,14 @@
                 <p>Track 100% of the items in Elden Ring Tarnished Edition.</p>
                 <div class="sub-links">
                     <a href="/elden-ring/items/index.html">» Open Checklist</a>
+                </div>
+            </div>
+
+            <div class="wiki-card" id="weapons">
+                <h3>Weapons Database</h3>
+                <p>Stats, scaling grades, and requirements for all 479 weapons — base game and Shadow of the Erdtree.</p>
+                <div class="sub-links">
+                    <a href="/elden-ring/items/weapons/">» Browse Weapons</a>
                 </div>
             </div>
 

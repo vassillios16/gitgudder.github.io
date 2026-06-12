@@ -1,29 +1,4837 @@
 [
-  { "title": "Git Gudder — Wiki Hub",            "url": "/",                                                          "category": "Global Hub" },
-  { "title": "Elden Ring Database",              "url": "/elden-ring/",                                               "category": "Elden Ring" },
-  { "title": "Gameplay Guides",                  "url": "/elden-ring/guides/",                                        "category": "Elden Ring" },
-  { "title": "Imbued Sword Key Locations",       "url": "/elden-ring/guides/imbued-sword-key-locations.html",         "category": "Elden Ring Guides" },
-  { "title": "100% Item Checklist",              "url": "/elden-ring/items/",                                         "category": "Elden Ring" },
-  { "title": "Weapons Database",                 "url": "/elden-ring/items/weapons/",                                 "category": "Elden Ring Weapons" },
-  { "title": "Melee Weapons Database",           "url": "/elden-ring/items/weapons/melee-weapons.html",               "category": "Elden Ring Weapons" },
-  { "title": "AR Buff Calculator",               "url": "/elden-ring/ar-buffs/",                                      "category": "Elden Ring" },
-  { "title": "Privacy Policy",                   "url": "/privacy.html",                                              "category": "Site Meta" },
-  { "title": "Terms of Use",                     "url": "/terms.html",                                                "category": "Site Meta" },
-  { "title": "Black Knife",                      "url": "/elden-ring/items/weapons/weapon-black-knife.html",          "category": "Elden Ring Weapons" },
-  { "title": "Blade of Calling",                 "url": "/elden-ring/items/weapons/weapon-blade-of-calling.html",     "category": "Elden Ring Weapons" },
-  { "title": "Bloodstained Dagger",              "url": "/elden-ring/items/weapons/weapon-bloodstained-dagger.html",  "category": "Elden Ring Weapons" },
-  { "title": "Celebrant's Sickle",               "url": "/elden-ring/items/weapons/weapon-celebrants-sickle.html",    "category": "Elden Ring Weapons" },
-  { "title": "Cinquedea",                        "url": "/elden-ring/items/weapons/weapon-cinquedea.html",            "category": "Elden Ring Weapons" },
-  { "title": "Crystal Knife",                    "url": "/elden-ring/items/weapons/weapon-crystal-knife.html",        "category": "Elden Ring Weapons" },
-  { "title": "Dagger",                           "url": "/elden-ring/items/weapons/weapon-dagger.html",               "category": "Elden Ring Weapons" },
-  { "title": "Erdsteel Dagger",                  "url": "/elden-ring/items/weapons/weapon-erdsteel-dagger.html",      "category": "Elden Ring Weapons" },
-  { "title": "Glintstone Kris",                  "url": "/elden-ring/items/weapons/weapon-glintstone-kris.html",      "category": "Elden Ring Weapons" },
-  { "title": "Great Knife",                      "url": "/elden-ring/items/weapons/weapon-great-knife.html",          "category": "Elden Ring Weapons" },
-  { "title": "Ivory Sickle",                     "url": "/elden-ring/items/weapons/weapon-ivory-sickle.html",         "category": "Elden Ring Weapons" },
-  { "title": "Main-gauche",                      "url": "/elden-ring/items/weapons/weapon-main-gauche.html",          "category": "Elden Ring Weapons" },
-  { "title": "Misericorde",                      "url": "/elden-ring/items/weapons/weapon-misericorde.html",          "category": "Elden Ring Weapons" },
-  { "title": "Parrying Dagger",                  "url": "/elden-ring/items/weapons/weapon-parrying-dagger.html",      "category": "Elden Ring Weapons" },
-  { "title": "Reduvia",                          "url": "/elden-ring/items/weapons/weapon-reduvia.html",              "category": "Elden Ring Weapons" },
-  { "title": "Scorpion's Stinger",               "url": "/elden-ring/items/weapons/weapon-scorpions-stinger.html",    "category": "Elden Ring Weapons" },
-  { "title": "Wakizashi",                        "url": "/elden-ring/items/weapons/weapon-wakizashi.html",            "category": "Elden Ring Weapons" }
+  {
+    "title": "Git Gudder â€” Wiki Hub",
+    "url": "/",
+    "category": "Global Hub"
+  },
+  {
+    "title": "Elden Ring Database",
+    "url": "/elden-ring/",
+    "category": "Elden Ring"
+  },
+  {
+    "title": "Gameplay Guides",
+    "url": "/elden-ring/guides/",
+    "category": "Elden Ring"
+  },
+  {
+    "title": "Imbued Sword Key Locations",
+    "url": "/elden-ring/guides/imbued-sword-key-locations.html",
+    "category": "Elden Ring Guides"
+  },
+  {
+    "title": "100% Item Checklist",
+    "url": "/elden-ring/items/",
+    "category": "Elden Ring"
+  },
+  {
+    "title": "Weapons Database",
+    "url": "/elden-ring/items/weapons/",
+    "category": "Elden Ring Weapons"
+  },
+  {
+    "title": "AR Buff Calculator",
+    "url": "/elden-ring/ar-buffs/",
+    "category": "Elden Ring"
+  },
+  {
+    "title": "Privacy Policy",
+    "url": "/privacy.html",
+    "category": "Site Meta"
+  },
+  {
+    "title": "Terms of Use",
+    "url": "/terms.html",
+    "category": "Site Meta"
+  },
+  {
+    "title": "Battle Axe",
+    "url": "/elden-ring/items/weapons/weapon-battle-axe.html",
+    "description": "Axe — Battle Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Celebrant's Cleaver",
+    "url": "/elden-ring/items/weapons/weapon-celebrants-cleaver.html",
+    "description": "Axe — Celebrant's Cleaver stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Death Knight's Twin Axes",
+    "url": "/elden-ring/items/weapons/weapon-death-knights-twin-axes.html",
+    "description": "Axe — Death Knight's Twin Axes stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Forked Hatchet",
+    "url": "/elden-ring/items/weapons/weapon-forked-hatchet.html",
+    "description": "Axe — Forked Hatchet stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Forked-Tongue Hatchet",
+    "url": "/elden-ring/items/weapons/weapon-forked-tongue-hatchet.html",
+    "description": "Axe — Forked-Tongue Hatchet stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Hand Axe",
+    "url": "/elden-ring/items/weapons/weapon-hand-axe.html",
+    "description": "Axe — Hand Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Highland Axe",
+    "url": "/elden-ring/items/weapons/weapon-highland-axe.html",
+    "description": "Axe — Highland Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Icerind Hatchet",
+    "url": "/elden-ring/items/weapons/weapon-icerind-hatchet.html",
+    "description": "Axe — Icerind Hatchet stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Iron Cleaver",
+    "url": "/elden-ring/items/weapons/weapon-iron-cleaver.html",
+    "description": "Axe — Iron Cleaver stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Jawbone Axe",
+    "url": "/elden-ring/items/weapons/weapon-jawbone-axe.html",
+    "description": "Axe — Jawbone Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Messmer Soldier's Axe",
+    "url": "/elden-ring/items/weapons/weapon-messmer-soldiers-axe.html",
+    "description": "Axe — Messmer Soldier's Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ripple Blade",
+    "url": "/elden-ring/items/weapons/weapon-ripple-blade.html",
+    "description": "Axe — Ripple Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rosus' Axe",
+    "url": "/elden-ring/items/weapons/weapon-rosus-axe.html",
+    "description": "Axe — Rosus' Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sacrificial Axe",
+    "url": "/elden-ring/items/weapons/weapon-sacrificial-axe.html",
+    "description": "Axe — Sacrificial Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Smithscript Axe",
+    "url": "/elden-ring/items/weapons/weapon-smithscript-axe.html",
+    "description": "Axe — Smithscript Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Stormhawk Axe",
+    "url": "/elden-ring/items/weapons/weapon-stormhawk-axe.html",
+    "description": "Axe — Stormhawk Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Warped Axe",
+    "url": "/elden-ring/items/weapons/weapon-warped-axe.html",
+    "description": "Axe — Warped Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "axe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Backhand Blade",
+    "url": "/elden-ring/items/weapons/weapon-backhand-blade.html",
+    "description": "Backhand Blade — Backhand Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "backhand blade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Curseblade's Cirque",
+    "url": "/elden-ring/items/weapons/weapon-curseblades-cirque.html",
+    "description": "Backhand Blade — Curseblade's Cirque stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "backhand blade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Smithscript Cirque",
+    "url": "/elden-ring/items/weapons/weapon-smithscript-cirque.html",
+    "description": "Backhand Blade — Smithscript Cirque stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "backhand blade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Hand Ballista",
+    "url": "/elden-ring/items/weapons/weapon-hand-ballista.html",
+    "description": "Ballista — Hand Ballista stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "ballista",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Jar Cannon",
+    "url": "/elden-ring/items/weapons/weapon-jar-cannon.html",
+    "description": "Ballista — Jar Cannon stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "ballista",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rabbath's Cannon",
+    "url": "/elden-ring/items/weapons/weapon-rabbaths-cannon.html",
+    "description": "Ballista — Rabbath's Cannon stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "ballista",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Beast Claw",
+    "url": "/elden-ring/items/weapons/weapon-beast-claw.html",
+    "description": "Beast Claw — Beast Claw stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "beast claw",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Red Bear's Claw",
+    "url": "/elden-ring/items/weapons/weapon-red-bears-claw.html",
+    "description": "Beast Claw — Red Bear's Claw stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "beast claw",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Albinauric Bow",
+    "url": "/elden-ring/items/weapons/weapon-albinauric-bow.html",
+    "description": "Bow — Albinauric Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ansbach's Longbow",
+    "url": "/elden-ring/items/weapons/weapon-ansbachs-longbow.html",
+    "description": "Bow — Ansbach's Longbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Black Bow",
+    "url": "/elden-ring/items/weapons/weapon-black-bow.html",
+    "description": "Bow — Black Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Erdtree Bow",
+    "url": "/elden-ring/items/weapons/weapon-erdtree-bow.html",
+    "description": "Bow — Erdtree Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Horn Bow",
+    "url": "/elden-ring/items/weapons/weapon-horn-bow.html",
+    "description": "Bow — Horn Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Longbow",
+    "url": "/elden-ring/items/weapons/weapon-longbow.html",
+    "description": "Bow — Longbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Pulley Bow",
+    "url": "/elden-ring/items/weapons/weapon-pulley-bow.html",
+    "description": "Bow — Pulley Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Serpent Bow",
+    "url": "/elden-ring/items/weapons/weapon-serpent-bow.html",
+    "description": "Bow — Serpent Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bloodhound Claws",
+    "url": "/elden-ring/items/weapons/weapon-bloodhound-claws.html",
+    "description": "Claw — Bloodhound Claws stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "claw",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Claws of Night",
+    "url": "/elden-ring/items/weapons/weapon-claws-of-night.html",
+    "description": "Claw — Claws of Night stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "claw",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Hookclaws",
+    "url": "/elden-ring/items/weapons/weapon-hookclaws.html",
+    "description": "Claw — Hookclaws stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "claw",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Raptor Talons",
+    "url": "/elden-ring/items/weapons/weapon-raptor-talons.html",
+    "description": "Claw — Raptor Talons stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "claw",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Venomous Fang",
+    "url": "/elden-ring/items/weapons/weapon-venomous-fang.html",
+    "description": "Claw — Venomous Fang stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "claw",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ancient Meteoric Ore Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-ancient-meteoric-ore-greatsword.html",
+    "description": "Colossal Sword — Ancient Meteoric Ore Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Fire Knight's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-fire-knights-greatsword.html",
+    "description": "Colossal Sword — Fire Knight's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Godslayer's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-godslayers-greatsword.html",
+    "description": "Colossal Sword — Godslayer's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Grafted Blade Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-grafted-blade-greatsword.html",
+    "description": "Colossal Sword — Grafted Blade Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-greatsword.html",
+    "description": "Colossal Sword — Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Greatsword of Radahn (Light)",
+    "url": "/elden-ring/items/weapons/weapon-greatsword-of-radahn-light.html",
+    "description": "Colossal Sword — Greatsword of Radahn (Light) stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Greatsword of Radahn (Lord)",
+    "url": "/elden-ring/items/weapons/weapon-greatsword-of-radahn-lord.html",
+    "description": "Colossal Sword — Greatsword of Radahn (Lord) stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Maliketh's Black Blade",
+    "url": "/elden-ring/items/weapons/weapon-malikeths-black-blade.html",
+    "description": "Colossal Sword — Maliketh's Black Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Moonrithyll's Knight Sword",
+    "url": "/elden-ring/items/weapons/weapon-moonrithylls-knight-sword.html",
+    "description": "Colossal Sword — Moonrithyll's Knight Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Royal Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-royal-greatsword.html",
+    "description": "Colossal Sword — Royal Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ruins Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-ruins-greatsword.html",
+    "description": "Colossal Sword — Ruins Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Starscourge Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-starscourge-greatsword.html",
+    "description": "Colossal Sword — Starscourge Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Troll Knight's Sword",
+    "url": "/elden-ring/items/weapons/weapon-troll-knights-sword.html",
+    "description": "Colossal Sword — Troll Knight's Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Troll's Golden Sword",
+    "url": "/elden-ring/items/weapons/weapon-trolls-golden-sword.html",
+    "description": "Colossal Sword — Troll's Golden Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Watchdog's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-watchdogs-greatsword.html",
+    "description": "Colossal Sword — Watchdog's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Zweihander",
+    "url": "/elden-ring/items/weapons/weapon-zweihander.html",
+    "description": "Colossal Sword — Zweihander stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Anvil Hammer",
+    "url": "/elden-ring/items/weapons/weapon-anvil-hammer.html",
+    "description": "Colossal Weapon — Anvil Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Axe of Godfrey",
+    "url": "/elden-ring/items/weapons/weapon-axe-of-godfrey.html",
+    "description": "Colossal Weapon — Axe of Godfrey stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bloodfiend's Arm",
+    "url": "/elden-ring/items/weapons/weapon-bloodfiends-arm.html",
+    "description": "Colossal Weapon — Bloodfiend's Arm stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Devonia's Hammer",
+    "url": "/elden-ring/items/weapons/weapon-devonias-hammer.html",
+    "description": "Colossal Weapon — Devonia's Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dragon Greatclaw",
+    "url": "/elden-ring/items/weapons/weapon-dragon-greatclaw.html",
+    "description": "Colossal Weapon — Dragon Greatclaw stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Duelist Greataxe",
+    "url": "/elden-ring/items/weapons/weapon-duelist-greataxe.html",
+    "description": "Colossal Weapon — Duelist Greataxe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Envoy's Greathorn",
+    "url": "/elden-ring/items/weapons/weapon-envoys-greathorn.html",
+    "description": "Colossal Weapon — Envoy's Greathorn stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Fallingstar Beast Jaw",
+    "url": "/elden-ring/items/weapons/weapon-fallingstar-beast-jaw.html",
+    "description": "Colossal Weapon — Fallingstar Beast Jaw stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gazing Finger",
+    "url": "/elden-ring/items/weapons/weapon-gazing-finger.html",
+    "description": "Colossal Weapon — Gazing Finger stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ghiza's Wheel",
+    "url": "/elden-ring/items/weapons/weapon-ghizas-wheel.html",
+    "description": "Colossal Weapon — Ghiza's Wheel stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Giant-Crusher",
+    "url": "/elden-ring/items/weapons/weapon-giant-crusher.html",
+    "description": "Colossal Weapon — Giant-Crusher stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golem's Halberd",
+    "url": "/elden-ring/items/weapons/weapon-golems-halberd.html",
+    "description": "Colossal Weapon — Golem's Halberd stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Great Club",
+    "url": "/elden-ring/items/weapons/weapon-great-club.html",
+    "description": "Colossal Weapon — Great Club stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Prelate's Inferno Crozier",
+    "url": "/elden-ring/items/weapons/weapon-prelates-inferno-crozier.html",
+    "description": "Colossal Weapon — Prelate's Inferno Crozier stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rotten Greataxe",
+    "url": "/elden-ring/items/weapons/weapon-rotten-greataxe.html",
+    "description": "Colossal Weapon — Rotten Greataxe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rotten Staff",
+    "url": "/elden-ring/items/weapons/weapon-rotten-staff.html",
+    "description": "Colossal Weapon — Rotten Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Shadow Sunflower Blossom",
+    "url": "/elden-ring/items/weapons/weapon-shadow-sunflower-blossom.html",
+    "description": "Colossal Weapon — Shadow Sunflower Blossom stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Staff of the Avatar",
+    "url": "/elden-ring/items/weapons/weapon-staff-of-the-avatar.html",
+    "description": "Colossal Weapon — Staff of the Avatar stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Troll's Hammer",
+    "url": "/elden-ring/items/weapons/weapon-trolls-hammer.html",
+    "description": "Colossal Weapon — Troll's Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Watchdog's Staff",
+    "url": "/elden-ring/items/weapons/weapon-watchdogs-staff.html",
+    "description": "Colossal Weapon — Watchdog's Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "colossal weapon",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Arbalest",
+    "url": "/elden-ring/items/weapons/weapon-arbalest.html",
+    "description": "Crossbow — Arbalest stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Crepus's Black-Key Crossbow",
+    "url": "/elden-ring/items/weapons/weapon-crepuss-black-key-crossbow.html",
+    "description": "Crossbow — Crepus's Black-Key Crossbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Full Moon Crossbow",
+    "url": "/elden-ring/items/weapons/weapon-full-moon-crossbow.html",
+    "description": "Crossbow — Full Moon Crossbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Heavy Crossbow",
+    "url": "/elden-ring/items/weapons/weapon-heavy-crossbow.html",
+    "description": "Crossbow — Heavy Crossbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Light Crossbow",
+    "url": "/elden-ring/items/weapons/weapon-light-crossbow.html",
+    "description": "Crossbow — Light Crossbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Pulley Crossbow",
+    "url": "/elden-ring/items/weapons/weapon-pulley-crossbow.html",
+    "description": "Crossbow — Pulley Crossbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Repeating Crossbow",
+    "url": "/elden-ring/items/weapons/weapon-repeating-crossbow.html",
+    "description": "Crossbow — Repeating Crossbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Soldier's Crossbow",
+    "url": "/elden-ring/items/weapons/weapon-soldiers-crossbow.html",
+    "description": "Crossbow — Soldier's Crossbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spread Crossbow",
+    "url": "/elden-ring/items/weapons/weapon-spread-crossbow.html",
+    "description": "Crossbow — Spread Crossbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "crossbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Beastman's Cleaver",
+    "url": "/elden-ring/items/weapons/weapon-beastmans-cleaver.html",
+    "description": "Curved Greatsword — Beastman's Cleaver stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bloodhound's Fang",
+    "url": "/elden-ring/items/weapons/weapon-bloodhounds-fang.html",
+    "description": "Curved Greatsword — Bloodhound's Fang stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dismounter",
+    "url": "/elden-ring/items/weapons/weapon-dismounter.html",
+    "description": "Curved Greatsword — Dismounter stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Freyja's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-freyjas-greatsword.html",
+    "description": "Curved Greatsword — Freyja's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Horned Warrior's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-horned-warriors-greatsword.html",
+    "description": "Curved Greatsword — Horned Warrior's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Magma Wyrm's Scalesword",
+    "url": "/elden-ring/items/weapons/weapon-magma-wyrms-scalesword.html",
+    "description": "Curved Greatsword — Magma Wyrm's Scalesword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Monk's Flameblade",
+    "url": "/elden-ring/items/weapons/weapon-monks-flameblade.html",
+    "description": "Curved Greatsword — Monk's Flameblade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Morgott's Cursed Sword",
+    "url": "/elden-ring/items/weapons/weapon-morgotts-cursed-sword.html",
+    "description": "Curved Greatsword — Morgott's Cursed Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Omen Cleaver",
+    "url": "/elden-ring/items/weapons/weapon-omen-cleaver.html",
+    "description": "Curved Greatsword — Omen Cleaver stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Onyx Lord's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-onyx-lords-greatsword.html",
+    "description": "Curved Greatsword — Onyx Lord's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Zamor Curved Sword",
+    "url": "/elden-ring/items/weapons/weapon-zamor-curved-sword.html",
+    "description": "Curved Greatsword — Zamor Curved Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bandit's Curved Sword",
+    "url": "/elden-ring/items/weapons/weapon-bandits-curved-sword.html",
+    "description": "Curved Sword — Bandit's Curved Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Beastman's Curved Sword",
+    "url": "/elden-ring/items/weapons/weapon-beastmans-curved-sword.html",
+    "description": "Curved Sword — Beastman's Curved Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dancing Blade of Ranah",
+    "url": "/elden-ring/items/weapons/weapon-dancing-blade-of-ranah.html",
+    "description": "Curved Sword — Dancing Blade of Ranah stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Eclipse Shotel",
+    "url": "/elden-ring/items/weapons/weapon-eclipse-shotel.html",
+    "description": "Curved Sword — Eclipse Shotel stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Falchion",
+    "url": "/elden-ring/items/weapons/weapon-falchion.html",
+    "description": "Curved Sword — Falchion stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Falx",
+    "url": "/elden-ring/items/weapons/weapon-falx.html",
+    "description": "Curved Sword — Falx stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Flowing Curved Sword",
+    "url": "/elden-ring/items/weapons/weapon-flowing-curved-sword.html",
+    "description": "Curved Sword — Flowing Curved Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Grossmesser",
+    "url": "/elden-ring/items/weapons/weapon-grossmesser.html",
+    "description": "Curved Sword — Grossmesser stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Horned Warrior's Sword",
+    "url": "/elden-ring/items/weapons/weapon-horned-warriors-sword.html",
+    "description": "Curved Sword — Horned Warrior's Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Magma Blade",
+    "url": "/elden-ring/items/weapons/weapon-magma-blade.html",
+    "description": "Curved Sword — Magma Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Mantis Blade",
+    "url": "/elden-ring/items/weapons/weapon-mantis-blade.html",
+    "description": "Curved Sword — Mantis Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Nox Flowing Sword",
+    "url": "/elden-ring/items/weapons/weapon-nox-flowing-sword.html",
+    "description": "Curved Sword — Nox Flowing Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Scavenger's Curved Sword",
+    "url": "/elden-ring/items/weapons/weapon-scavengers-curved-sword.html",
+    "description": "Curved Sword — Scavenger's Curved Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Scimitar",
+    "url": "/elden-ring/items/weapons/weapon-scimitar.html",
+    "description": "Curved Sword — Scimitar stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Serpent-God's Curved Sword",
+    "url": "/elden-ring/items/weapons/weapon-serpent-gods-curved-sword.html",
+    "description": "Curved Sword — Serpent-God's Curved Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Shamshir",
+    "url": "/elden-ring/items/weapons/weapon-shamshir.html",
+    "description": "Curved Sword — Shamshir stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Shotel",
+    "url": "/elden-ring/items/weapons/weapon-shotel.html",
+    "description": "Curved Sword — Shotel stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spirit Sword",
+    "url": "/elden-ring/items/weapons/weapon-spirit-sword.html",
+    "description": "Curved Sword — Spirit Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Wing of Astel",
+    "url": "/elden-ring/items/weapons/weapon-wing-of-astel.html",
+    "description": "Curved Sword — Wing of Astel stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "curved sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Black Knife",
+    "url": "/elden-ring/items/weapons/weapon-black-knife.html",
+    "description": "Dagger — Black Knife stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Blade of Calling",
+    "url": "/elden-ring/items/weapons/weapon-blade-of-calling.html",
+    "description": "Dagger — Blade of Calling stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bloodstained Dagger",
+    "url": "/elden-ring/items/weapons/weapon-bloodstained-dagger.html",
+    "description": "Dagger — Bloodstained Dagger stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Celebrant's Sickle",
+    "url": "/elden-ring/items/weapons/weapon-celebrants-sickle.html",
+    "description": "Dagger — Celebrant's Sickle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Cinquedea",
+    "url": "/elden-ring/items/weapons/weapon-cinquedea.html",
+    "description": "Dagger — Cinquedea stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Crystal Knife",
+    "url": "/elden-ring/items/weapons/weapon-crystal-knife.html",
+    "description": "Dagger — Crystal Knife stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dagger",
+    "url": "/elden-ring/items/weapons/weapon-dagger.html",
+    "description": "Dagger — Dagger stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Erdsteel Dagger",
+    "url": "/elden-ring/items/weapons/weapon-erdsteel-dagger.html",
+    "description": "Dagger — Erdsteel Dagger stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Fire Knight's Shortsword",
+    "url": "/elden-ring/items/weapons/weapon-fire-knights-shortsword.html",
+    "description": "Dagger — Fire Knight's Shortsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Glintstone Kris",
+    "url": "/elden-ring/items/weapons/weapon-glintstone-kris.html",
+    "description": "Dagger — Glintstone Kris stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Great Knife",
+    "url": "/elden-ring/items/weapons/weapon-great-knife.html",
+    "description": "Dagger — Great Knife stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ivory Sickle",
+    "url": "/elden-ring/items/weapons/weapon-ivory-sickle.html",
+    "description": "Dagger — Ivory Sickle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Main-gauche",
+    "url": "/elden-ring/items/weapons/weapon-main-gauche.html",
+    "description": "Dagger — Main-gauche stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Misericorde",
+    "url": "/elden-ring/items/weapons/weapon-misericorde.html",
+    "description": "Dagger — Misericorde stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Parrying Dagger",
+    "url": "/elden-ring/items/weapons/weapon-parrying-dagger.html",
+    "description": "Dagger — Parrying Dagger stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Reduvia",
+    "url": "/elden-ring/items/weapons/weapon-reduvia.html",
+    "description": "Dagger — Reduvia stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Scorpion's Stinger",
+    "url": "/elden-ring/items/weapons/weapon-scorpions-stinger.html",
+    "description": "Dagger — Scorpion's Stinger stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Wakizashi",
+    "url": "/elden-ring/items/weapons/weapon-wakizashi.html",
+    "description": "Dagger — Wakizashi stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "dagger",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Caestus",
+    "url": "/elden-ring/items/weapons/weapon-caestus.html",
+    "description": "Fist — Caestus stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Cipher Pata",
+    "url": "/elden-ring/items/weapons/weapon-cipher-pata.html",
+    "description": "Fist — Cipher Pata stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Clinging Bone",
+    "url": "/elden-ring/items/weapons/weapon-clinging-bone.html",
+    "description": "Fist — Clinging Bone stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golem Fist",
+    "url": "/elden-ring/items/weapons/weapon-golem-fist.html",
+    "description": "Fist — Golem Fist stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Grafted Dragon",
+    "url": "/elden-ring/items/weapons/weapon-grafted-dragon.html",
+    "description": "Fist — Grafted Dragon stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Iron Ball",
+    "url": "/elden-ring/items/weapons/weapon-iron-ball.html",
+    "description": "Fist — Iron Ball stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Katar",
+    "url": "/elden-ring/items/weapons/weapon-katar.html",
+    "description": "Fist — Katar stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Madding Hand",
+    "url": "/elden-ring/items/weapons/weapon-madding-hand.html",
+    "description": "Fist — Madding Hand stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Pata",
+    "url": "/elden-ring/items/weapons/weapon-pata.html",
+    "description": "Fist — Pata stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Poisoned Hand",
+    "url": "/elden-ring/items/weapons/weapon-poisoned-hand.html",
+    "description": "Fist — Poisoned Hand stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spiked Caestus",
+    "url": "/elden-ring/items/weapons/weapon-spiked-caestus.html",
+    "description": "Fist — Spiked Caestus stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Star Fist",
+    "url": "/elden-ring/items/weapons/weapon-star-fist.html",
+    "description": "Fist — Star Fist stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Thiollier's Hidden Needle",
+    "url": "/elden-ring/items/weapons/weapon-thiolliers-hidden-needle.html",
+    "description": "Fist — Thiollier's Hidden Needle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Veteran's Prosthesis",
+    "url": "/elden-ring/items/weapons/weapon-veterans-prosthesis.html",
+    "description": "Fist — Veteran's Prosthesis stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "fist",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bastard's Stars",
+    "url": "/elden-ring/items/weapons/weapon-bastards-stars.html",
+    "description": "Flail — Bastard's Stars stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "flail",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Chainlink Flail",
+    "url": "/elden-ring/items/weapons/weapon-chainlink-flail.html",
+    "description": "Flail — Chainlink Flail stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "flail",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Family Heads",
+    "url": "/elden-ring/items/weapons/weapon-family-heads.html",
+    "description": "Flail — Family Heads stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "flail",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Flail",
+    "url": "/elden-ring/items/weapons/weapon-flail.html",
+    "description": "Flail — Flail stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "flail",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Nightrider Flail",
+    "url": "/elden-ring/items/weapons/weapon-nightrider-flail.html",
+    "description": "Flail — Nightrider Flail stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "flail",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Serpent Flail",
+    "url": "/elden-ring/items/weapons/weapon-serpent-flail.html",
+    "description": "Flail — Serpent Flail stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "flail",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Academy Glintstone Staff",
+    "url": "/elden-ring/items/weapons/weapon-academy-glintstone-staff.html",
+    "description": "Glintstone Staff — Academy Glintstone Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Albinauric Staff",
+    "url": "/elden-ring/items/weapons/weapon-albinauric-staff.html",
+    "description": "Glintstone Staff — Albinauric Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Astrologer's Staff",
+    "url": "/elden-ring/items/weapons/weapon-astrologers-staff.html",
+    "description": "Glintstone Staff — Astrologer's Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Azur's Glintstone Staff",
+    "url": "/elden-ring/items/weapons/weapon-azurs-glintstone-staff.html",
+    "description": "Glintstone Staff — Azur's Glintstone Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Carian Glintblade Staff",
+    "url": "/elden-ring/items/weapons/weapon-carian-glintblade-staff.html",
+    "description": "Glintstone Staff — Carian Glintblade Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Carian Glintstone Staff",
+    "url": "/elden-ring/items/weapons/weapon-carian-glintstone-staff.html",
+    "description": "Glintstone Staff — Carian Glintstone Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Carian Regal Scepter",
+    "url": "/elden-ring/items/weapons/weapon-carian-regal-scepter.html",
+    "description": "Glintstone Staff — Carian Regal Scepter stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Crystal Staff",
+    "url": "/elden-ring/items/weapons/weapon-crystal-staff.html",
+    "description": "Glintstone Staff — Crystal Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Demi-Human Queen's Staff",
+    "url": "/elden-ring/items/weapons/weapon-demi-human-queens-staff.html",
+    "description": "Glintstone Staff — Demi-Human Queen's Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Digger's Staff",
+    "url": "/elden-ring/items/weapons/weapon-diggers-staff.html",
+    "description": "Glintstone Staff — Digger's Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gelmir Glintstone Staff",
+    "url": "/elden-ring/items/weapons/weapon-gelmir-glintstone-staff.html",
+    "description": "Glintstone Staff — Gelmir Glintstone Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Glintstone Staff",
+    "url": "/elden-ring/items/weapons/weapon-glintstone-staff.html",
+    "description": "Glintstone Staff — Glintstone Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lusat's Glintstone Staff",
+    "url": "/elden-ring/items/weapons/weapon-lusats-glintstone-staff.html",
+    "description": "Glintstone Staff — Lusat's Glintstone Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Maternal Staff",
+    "url": "/elden-ring/items/weapons/weapon-maternal-staff.html",
+    "description": "Glintstone Staff — Maternal Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Meteorite Staff",
+    "url": "/elden-ring/items/weapons/weapon-meteorite-staff.html",
+    "description": "Glintstone Staff — Meteorite Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Prince of Death's Staff",
+    "url": "/elden-ring/items/weapons/weapon-prince-of-deaths-staff.html",
+    "description": "Glintstone Staff — Prince of Death's Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rotten Crystal Staff",
+    "url": "/elden-ring/items/weapons/weapon-rotten-crystal-staff.html",
+    "description": "Glintstone Staff — Rotten Crystal Staff stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Staff of Loss",
+    "url": "/elden-ring/items/weapons/weapon-staff-of-loss.html",
+    "description": "Glintstone Staff — Staff of Loss stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Staff of the Great Beyond",
+    "url": "/elden-ring/items/weapons/weapon-staff-of-the-great-beyond.html",
+    "description": "Glintstone Staff — Staff of the Great Beyond stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Staff of the Guilty",
+    "url": "/elden-ring/items/weapons/weapon-staff-of-the-guilty.html",
+    "description": "Glintstone Staff — Staff of the Guilty stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "glintstone staff",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Battle Hammer",
+    "url": "/elden-ring/items/weapons/weapon-battle-hammer.html",
+    "description": "Great Hammer — Battle Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Beastclaw Greathammer",
+    "url": "/elden-ring/items/weapons/weapon-beastclaw-greathammer.html",
+    "description": "Great Hammer — Beastclaw Greathammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Black Steel Greathammer",
+    "url": "/elden-ring/items/weapons/weapon-black-steel-greathammer.html",
+    "description": "Great Hammer — Black Steel Greathammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Brick Hammer",
+    "url": "/elden-ring/items/weapons/weapon-brick-hammer.html",
+    "description": "Great Hammer — Brick Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Celebrant's Skull",
+    "url": "/elden-ring/items/weapons/weapon-celebrants-skull.html",
+    "description": "Great Hammer — Celebrant's Skull stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Cranial Vessel Candlestand",
+    "url": "/elden-ring/items/weapons/weapon-cranial-vessel-candlestand.html",
+    "description": "Great Hammer — Cranial Vessel Candlestand stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Curved Great Club",
+    "url": "/elden-ring/items/weapons/weapon-curved-great-club.html",
+    "description": "Great Hammer — Curved Great Club stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Devourer's Scepter",
+    "url": "/elden-ring/items/weapons/weapon-devourers-scepter.html",
+    "description": "Great Hammer — Devourer's Scepter stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Envoy's Long Horn",
+    "url": "/elden-ring/items/weapons/weapon-envoys-long-horn.html",
+    "description": "Great Hammer — Envoy's Long Horn stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Great Mace",
+    "url": "/elden-ring/items/weapons/weapon-great-mace.html",
+    "description": "Great Hammer — Great Mace stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Great Stars",
+    "url": "/elden-ring/items/weapons/weapon-great-stars.html",
+    "description": "Great Hammer — Great Stars stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Greathorn Hammer",
+    "url": "/elden-ring/items/weapons/weapon-greathorn-hammer.html",
+    "description": "Great Hammer — Greathorn Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Large Club",
+    "url": "/elden-ring/items/weapons/weapon-large-club.html",
+    "description": "Great Hammer — Large Club stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Pickaxe",
+    "url": "/elden-ring/items/weapons/weapon-pickaxe.html",
+    "description": "Great Hammer — Pickaxe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rotten Battle Hammer",
+    "url": "/elden-ring/items/weapons/weapon-rotten-battle-hammer.html",
+    "description": "Great Hammer — Rotten Battle Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Smithscript Greathammer",
+    "url": "/elden-ring/items/weapons/weapon-smithscript-greathammer.html",
+    "description": "Great Hammer — Smithscript Greathammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dragon-Hunter's Great Katana",
+    "url": "/elden-ring/items/weapons/weapon-dragon-hunters-great-katana.html",
+    "description": "Great Katana — Dragon-Hunter's Great Katana stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Great Katana",
+    "url": "/elden-ring/items/weapons/weapon-great-katana.html",
+    "description": "Great Katana — Great Katana stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rakshasa's Great Katana",
+    "url": "/elden-ring/items/weapons/weapon-rakshasas-great-katana.html",
+    "description": "Great Katana — Rakshasa's Great Katana stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Barbed Staff-Spear",
+    "url": "/elden-ring/items/weapons/weapon-barbed-staff-spear.html",
+    "description": "Great Spear — Barbed Staff-Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bloodfiend's Sacred Spear",
+    "url": "/elden-ring/items/weapons/weapon-bloodfiends-sacred-spear.html",
+    "description": "Great Spear — Bloodfiend's Sacred Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lance",
+    "url": "/elden-ring/items/weapons/weapon-lance.html",
+    "description": "Great Spear — Lance stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Messmer Soldier's Spear",
+    "url": "/elden-ring/items/weapons/weapon-messmer-soldiers-spear.html",
+    "description": "Great Spear — Messmer Soldier's Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Mohgwyn's Sacred Spear",
+    "url": "/elden-ring/items/weapons/weapon-mohgwyns-sacred-spear.html",
+    "description": "Great Spear — Mohgwyn's Sacred Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Serpent-Hunter",
+    "url": "/elden-ring/items/weapons/weapon-serpent-hunter.html",
+    "description": "Great Spear — Serpent-Hunter stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Siluria's Tree",
+    "url": "/elden-ring/items/weapons/weapon-silurias-tree.html",
+    "description": "Great Spear — Siluria's Tree stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spear of the Impaler",
+    "url": "/elden-ring/items/weapons/weapon-spear-of-the-impaler.html",
+    "description": "Great Spear — Spear of the Impaler stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Treespear",
+    "url": "/elden-ring/items/weapons/weapon-treespear.html",
+    "description": "Great Spear — Treespear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Vyke's War Spear",
+    "url": "/elden-ring/items/weapons/weapon-vykes-war-spear.html",
+    "description": "Great Spear — Vyke's War Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "great spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Axe of Godrick",
+    "url": "/elden-ring/items/weapons/weapon-axe-of-godrick.html",
+    "description": "Greataxe — Axe of Godrick stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bonny Butchering Knife",
+    "url": "/elden-ring/items/weapons/weapon-bonny-butchering-knife.html",
+    "description": "Greataxe — Bonny Butchering Knife stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Butchering Knife",
+    "url": "/elden-ring/items/weapons/weapon-butchering-knife.html",
+    "description": "Greataxe — Butchering Knife stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Crescent Moon Axe",
+    "url": "/elden-ring/items/weapons/weapon-crescent-moon-axe.html",
+    "description": "Greataxe — Crescent Moon Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Death Knight's Longhaft Axe",
+    "url": "/elden-ring/items/weapons/weapon-death-knights-longhaft-axe.html",
+    "description": "Greataxe — Death Knight's Longhaft Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Executioner's Greataxe",
+    "url": "/elden-ring/items/weapons/weapon-executioners-greataxe.html",
+    "description": "Greataxe — Executioner's Greataxe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gargoyle's Black Axe",
+    "url": "/elden-ring/items/weapons/weapon-gargoyles-black-axe.html",
+    "description": "Greataxe — Gargoyle's Black Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gargoyle's Great Axe",
+    "url": "/elden-ring/items/weapons/weapon-gargoyles-great-axe.html",
+    "description": "Greataxe — Gargoyle's Great Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Great Omenkiller Cleaver",
+    "url": "/elden-ring/items/weapons/weapon-great-omenkiller-cleaver.html",
+    "description": "Greataxe — Great Omenkiller Cleaver stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Greataxe",
+    "url": "/elden-ring/items/weapons/weapon-greataxe.html",
+    "description": "Greataxe — Greataxe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Longhaft Axe",
+    "url": "/elden-ring/items/weapons/weapon-longhaft-axe.html",
+    "description": "Greataxe — Longhaft Axe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Putrescence Cleaver",
+    "url": "/elden-ring/items/weapons/weapon-putrescence-cleaver.html",
+    "description": "Greataxe — Putrescence Cleaver stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rusted Anchor",
+    "url": "/elden-ring/items/weapons/weapon-rusted-anchor.html",
+    "description": "Greataxe — Rusted Anchor stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Winged Greathorn",
+    "url": "/elden-ring/items/weapons/weapon-winged-greathorn.html",
+    "description": "Greataxe — Winged Greathorn stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greataxe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Erdtree Greatbow",
+    "url": "/elden-ring/items/weapons/weapon-erdtree-greatbow.html",
+    "description": "Greatbow — Erdtree Greatbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golem Greatbow",
+    "url": "/elden-ring/items/weapons/weapon-golem-greatbow.html",
+    "description": "Greatbow — Golem Greatbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Greatbow",
+    "url": "/elden-ring/items/weapons/weapon-greatbow.html",
+    "description": "Greatbow — Greatbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Igon's Greatbow",
+    "url": "/elden-ring/items/weapons/weapon-igons-greatbow.html",
+    "description": "Greatbow — Igon's Greatbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lion Greatbow",
+    "url": "/elden-ring/items/weapons/weapon-lion-greatbow.html",
+    "description": "Greatbow — Lion Greatbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatbow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ant's Skull Plate",
+    "url": "/elden-ring/items/weapons/weapon-ants-skull-plate.html",
+    "description": "Greatshield — Ant's Skull Plate stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Black Steel Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-black-steel-greatshield.html",
+    "description": "Greatshield — Black Steel Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Briar Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-briar-greatshield.html",
+    "description": "Greatshield — Briar Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Crossed-Tree Towershield",
+    "url": "/elden-ring/items/weapons/weapon-crossed-tree-towershield.html",
+    "description": "Greatshield — Crossed-Tree Towershield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Crucible Hornshield",
+    "url": "/elden-ring/items/weapons/weapon-crucible-hornshield.html",
+    "description": "Greatshield — Crucible Hornshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Cuckoo Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-cuckoo-greatshield.html",
+    "description": "Greatshield — Cuckoo Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Distinguished Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-distinguished-greatshield.html",
+    "description": "Greatshield — Distinguished Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dragon Towershield",
+    "url": "/elden-ring/items/weapons/weapon-dragon-towershield.html",
+    "description": "Greatshield — Dragon Towershield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dragonclaw Shield",
+    "url": "/elden-ring/items/weapons/weapon-dragonclaw-shield.html",
+    "description": "Greatshield — Dragonclaw Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Eclipse Crest Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-eclipse-crest-greatshield.html",
+    "description": "Greatshield — Eclipse Crest Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Erdtree Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-erdtree-greatshield.html",
+    "description": "Greatshield — Erdtree Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Fingerprint Stone Shield",
+    "url": "/elden-ring/items/weapons/weapon-fingerprint-stone-shield.html",
+    "description": "Greatshield — Fingerprint Stone Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gilded Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-gilded-greatshield.html",
+    "description": "Greatshield — Gilded Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golden Beast Crest Shield",
+    "url": "/elden-ring/items/weapons/weapon-golden-beast-crest-shield.html",
+    "description": "Greatshield — Golden Beast Crest Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golden Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-golden-greatshield.html",
+    "description": "Greatshield — Golden Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Haligtree Crest Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-haligtree-crest-greatshield.html",
+    "description": "Greatshield — Haligtree Crest Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Icon Shield",
+    "url": "/elden-ring/items/weapons/weapon-icon-shield.html",
+    "description": "Greatshield — Icon Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Inverted Hawk Towershield",
+    "url": "/elden-ring/items/weapons/weapon-inverted-hawk-towershield.html",
+    "description": "Greatshield — Inverted Hawk Towershield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Jellyfish Shield",
+    "url": "/elden-ring/items/weapons/weapon-jellyfish-shield.html",
+    "description": "Greatshield — Jellyfish Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lordsworn's Shield",
+    "url": "/elden-ring/items/weapons/weapon-lordsworns-shield.html",
+    "description": "Greatshield — Lordsworn's Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Manor Towershield",
+    "url": "/elden-ring/items/weapons/weapon-manor-towershield.html",
+    "description": "Greatshield — Manor Towershield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "One-Eyed Shield",
+    "url": "/elden-ring/items/weapons/weapon-one-eyed-shield.html",
+    "description": "Greatshield — One-Eyed Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Redmane Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-redmane-greatshield.html",
+    "description": "Greatshield — Redmane Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spiked Palisade Shield",
+    "url": "/elden-ring/items/weapons/weapon-spiked-palisade-shield.html",
+    "description": "Greatshield — Spiked Palisade Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Verdigris Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-verdigris-greatshield.html",
+    "description": "Greatshield — Verdigris Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Visage Shield",
+    "url": "/elden-ring/items/weapons/weapon-visage-shield.html",
+    "description": "Greatshield — Visage Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Wooden Greatshield",
+    "url": "/elden-ring/items/weapons/weapon-wooden-greatshield.html",
+    "description": "Greatshield — Wooden Greatshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatshield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Alabaster Lord's Sword",
+    "url": "/elden-ring/items/weapons/weapon-alabaster-lords-sword.html",
+    "description": "Greatsword — Alabaster Lord's Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Banished Knight's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-banished-knights-greatsword.html",
+    "description": "Greatsword — Banished Knight's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bastard Sword",
+    "url": "/elden-ring/items/weapons/weapon-bastard-sword.html",
+    "description": "Greatsword — Bastard Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Blasphemous Blade",
+    "url": "/elden-ring/items/weapons/weapon-blasphemous-blade.html",
+    "description": "Greatsword — Blasphemous Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Claymore",
+    "url": "/elden-ring/items/weapons/weapon-claymore.html",
+    "description": "Greatsword — Claymore stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dark Moon Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-dark-moon-greatsword.html",
+    "description": "Greatsword — Dark Moon Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Death's Poker",
+    "url": "/elden-ring/items/weapons/weapon-deaths-poker.html",
+    "description": "Greatsword — Death's Poker stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Flamberge",
+    "url": "/elden-ring/items/weapons/weapon-flamberge.html",
+    "description": "Greatsword — Flamberge stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Forked Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-forked-greatsword.html",
+    "description": "Greatsword — Forked Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gargoyle's Blackblade",
+    "url": "/elden-ring/items/weapons/weapon-gargoyles-blackblade.html",
+    "description": "Greatsword — Gargoyle's Blackblade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gargoyle's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-gargoyles-greatsword.html",
+    "description": "Greatsword — Gargoyle's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golden Order Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-golden-order-greatsword.html",
+    "description": "Greatsword — Golden Order Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Greatsword of Damnation",
+    "url": "/elden-ring/items/weapons/weapon-greatsword-of-damnation.html",
+    "description": "Greatsword — Greatsword of Damnation stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Greatsword of Solitude",
+    "url": "/elden-ring/items/weapons/weapon-greatsword-of-solitude.html",
+    "description": "Greatsword — Greatsword of Solitude stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Helphen's Steeple",
+    "url": "/elden-ring/items/weapons/weapon-helphens-steeple.html",
+    "description": "Greatsword — Helphen's Steeple stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Inseparable Sword",
+    "url": "/elden-ring/items/weapons/weapon-inseparable-sword.html",
+    "description": "Greatsword — Inseparable Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Iron Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-iron-greatsword.html",
+    "description": "Greatsword — Iron Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Knight's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-knights-greatsword.html",
+    "description": "Greatsword — Knight's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lizard Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-lizard-greatsword.html",
+    "description": "Greatsword — Lizard Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lordsworn's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-lordsworns-greatsword.html",
+    "description": "Greatsword — Lordsworn's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Marais Executioner's Sword",
+    "url": "/elden-ring/items/weapons/weapon-marais-executioners-sword.html",
+    "description": "Greatsword — Marais Executioner's Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ordovis's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-ordoviss-greatsword.html",
+    "description": "Greatsword — Ordovis's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sacred Relic Sword",
+    "url": "/elden-ring/items/weapons/weapon-sacred-relic-sword.html",
+    "description": "Greatsword — Sacred Relic Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sword of Milos",
+    "url": "/elden-ring/items/weapons/weapon-sword-of-milos.html",
+    "description": "Greatsword — Sword of Milos stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Banished Knight's Halberd",
+    "url": "/elden-ring/items/weapons/weapon-banished-knights-halberd.html",
+    "description": "Halberd — Banished Knight's Halberd stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Commander's Standard",
+    "url": "/elden-ring/items/weapons/weapon-commanders-standard.html",
+    "description": "Halberd — Commander's Standard stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dragon Halberd",
+    "url": "/elden-ring/items/weapons/weapon-dragon-halberd.html",
+    "description": "Halberd — Dragon Halberd stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gargoyle's Black Halberd",
+    "url": "/elden-ring/items/weapons/weapon-gargoyles-black-halberd.html",
+    "description": "Halberd — Gargoyle's Black Halberd stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gargoyle's Halberd",
+    "url": "/elden-ring/items/weapons/weapon-gargoyles-halberd.html",
+    "description": "Halberd — Gargoyle's Halberd stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Glaive",
+    "url": "/elden-ring/items/weapons/weapon-glaive.html",
+    "description": "Halberd — Glaive stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golden Halberd",
+    "url": "/elden-ring/items/weapons/weapon-golden-halberd.html",
+    "description": "Halberd — Golden Halberd stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Guardian's Swordspear",
+    "url": "/elden-ring/items/weapons/weapon-guardians-swordspear.html",
+    "description": "Halberd — Guardian's Swordspear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Halberd",
+    "url": "/elden-ring/items/weapons/weapon-halberd.html",
+    "description": "Halberd — Halberd stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Loretta's War Sickle",
+    "url": "/elden-ring/items/weapons/weapon-lorettas-war-sickle.html",
+    "description": "Halberd — Loretta's War Sickle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lucerne",
+    "url": "/elden-ring/items/weapons/weapon-lucerne.html",
+    "description": "Halberd — Lucerne stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Nightrider Glaive",
+    "url": "/elden-ring/items/weapons/weapon-nightrider-glaive.html",
+    "description": "Halberd — Nightrider Glaive stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Pest's Glaive",
+    "url": "/elden-ring/items/weapons/weapon-pests-glaive.html",
+    "description": "Halberd — Pest's Glaive stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Poleblade of the Bud",
+    "url": "/elden-ring/items/weapons/weapon-poleblade-of-the-bud.html",
+    "description": "Halberd — Poleblade of the Bud stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ripple Crescent Halberd",
+    "url": "/elden-ring/items/weapons/weapon-ripple-crescent-halberd.html",
+    "description": "Halberd — Ripple Crescent Halberd stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spirit Glaive",
+    "url": "/elden-ring/items/weapons/weapon-spirit-glaive.html",
+    "description": "Halberd — Spirit Glaive stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Vulgar Militia Saw",
+    "url": "/elden-ring/items/weapons/weapon-vulgar-militia-saw.html",
+    "description": "Halberd — Vulgar Militia Saw stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Vulgar Militia Shotel",
+    "url": "/elden-ring/items/weapons/weapon-vulgar-militia-shotel.html",
+    "description": "Halberd — Vulgar Militia Shotel stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "halberd",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Club",
+    "url": "/elden-ring/items/weapons/weapon-club.html",
+    "description": "Hammer — Club stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Curved Club",
+    "url": "/elden-ring/items/weapons/weapon-curved-club.html",
+    "description": "Hammer — Curved Club stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Envoy's Horn",
+    "url": "/elden-ring/items/weapons/weapon-envoys-horn.html",
+    "description": "Hammer — Envoy's Horn stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Flowerstone Gavel",
+    "url": "/elden-ring/items/weapons/weapon-flowerstone-gavel.html",
+    "description": "Hammer — Flowerstone Gavel stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Hammer",
+    "url": "/elden-ring/items/weapons/weapon-hammer.html",
+    "description": "Hammer — Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Mace",
+    "url": "/elden-ring/items/weapons/weapon-mace.html",
+    "description": "Hammer — Mace stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Marika's Hammer",
+    "url": "/elden-ring/items/weapons/weapon-marikas-hammer.html",
+    "description": "Hammer — Marika's Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Monk's Flamemace",
+    "url": "/elden-ring/items/weapons/weapon-monks-flamemace.html",
+    "description": "Hammer — Monk's Flamemace stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Morning Star",
+    "url": "/elden-ring/items/weapons/weapon-morning-star.html",
+    "description": "Hammer — Morning Star stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Nox Flowing Hammer",
+    "url": "/elden-ring/items/weapons/weapon-nox-flowing-hammer.html",
+    "description": "Hammer — Nox Flowing Hammer stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ringed Finger",
+    "url": "/elden-ring/items/weapons/weapon-ringed-finger.html",
+    "description": "Hammer — Ringed Finger stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Scepter of the All-Knowing",
+    "url": "/elden-ring/items/weapons/weapon-scepter-of-the-all-knowing.html",
+    "description": "Hammer — Scepter of the All-Knowing stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spiked Club",
+    "url": "/elden-ring/items/weapons/weapon-spiked-club.html",
+    "description": "Hammer — Spiked Club stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Stone Club",
+    "url": "/elden-ring/items/weapons/weapon-stone-club.html",
+    "description": "Hammer — Stone Club stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Varre's Bouquet",
+    "url": "/elden-ring/items/weapons/weapon-varres-bouquet.html",
+    "description": "Hammer — Varre's Bouquet stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Warpick",
+    "url": "/elden-ring/items/weapons/weapon-warpick.html",
+    "description": "Hammer — Warpick stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hammer",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dane's Footwork",
+    "url": "/elden-ring/items/weapons/weapon-danes-footwork.html",
+    "description": "Hand-to-Hand — Dane's Footwork stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hand-to-hand",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dryleaf Arts",
+    "url": "/elden-ring/items/weapons/weapon-dryleaf-arts.html",
+    "description": "Hand-to-Hand — Dryleaf Arts stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "hand-to-hand",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bloody Helice",
+    "url": "/elden-ring/items/weapons/weapon-bloody-helice.html",
+    "description": "Heavy Thrusting Sword — Bloody Helice stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "heavy thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dragon King's Cragblade",
+    "url": "/elden-ring/items/weapons/weapon-dragon-kings-cragblade.html",
+    "description": "Heavy Thrusting Sword — Dragon King's Cragblade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "heavy thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Godskin Stitcher",
+    "url": "/elden-ring/items/weapons/weapon-godskin-stitcher.html",
+    "description": "Heavy Thrusting Sword — Godskin Stitcher stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "heavy thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Great Epee",
+    "url": "/elden-ring/items/weapons/weapon-great-epee.html",
+    "description": "Heavy Thrusting Sword — Great Epee stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "heavy thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Queelign's Greatsword",
+    "url": "/elden-ring/items/weapons/weapon-queeligns-greatsword.html",
+    "description": "Heavy Thrusting Sword — Queelign's Greatsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "heavy thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sword Lance",
+    "url": "/elden-ring/items/weapons/weapon-sword-lance.html",
+    "description": "Heavy Thrusting Sword — Sword Lance stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "heavy thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dragonscale Blade",
+    "url": "/elden-ring/items/weapons/weapon-dragonscale-blade.html",
+    "description": "Katana — Dragonscale Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Hand of Malenia",
+    "url": "/elden-ring/items/weapons/weapon-hand-of-malenia.html",
+    "description": "Katana — Hand of Malenia stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Meteoric Ore Blade",
+    "url": "/elden-ring/items/weapons/weapon-meteoric-ore-blade.html",
+    "description": "Katana — Meteoric Ore Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Moonveil",
+    "url": "/elden-ring/items/weapons/weapon-moonveil.html",
+    "description": "Katana — Moonveil stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Nagakiba",
+    "url": "/elden-ring/items/weapons/weapon-nagakiba.html",
+    "description": "Katana — Nagakiba stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rivers of Blood",
+    "url": "/elden-ring/items/weapons/weapon-rivers-of-blood.html",
+    "description": "Katana — Rivers of Blood stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Serpentbone Blade",
+    "url": "/elden-ring/items/weapons/weapon-serpentbone-blade.html",
+    "description": "Katana — Serpentbone Blade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Star-Lined Sword",
+    "url": "/elden-ring/items/weapons/weapon-star-lined-sword.html",
+    "description": "Katana — Star-Lined Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sword of Night",
+    "url": "/elden-ring/items/weapons/weapon-sword-of-night.html",
+    "description": "Katana — Sword of Night stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Uchigatana",
+    "url": "/elden-ring/items/weapons/weapon-uchigatana.html",
+    "description": "Katana — Uchigatana stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "katana",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bone Bow",
+    "url": "/elden-ring/items/weapons/weapon-bone-bow.html",
+    "description": "Light Bow — Bone Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Composite Bow",
+    "url": "/elden-ring/items/weapons/weapon-composite-bow.html",
+    "description": "Light Bow — Composite Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Harp Bow",
+    "url": "/elden-ring/items/weapons/weapon-harp-bow.html",
+    "description": "Light Bow — Harp Bow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Misbegotten Shortbow",
+    "url": "/elden-ring/items/weapons/weapon-misbegotten-shortbow.html",
+    "description": "Light Bow — Misbegotten Shortbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Red Branch Shortbow",
+    "url": "/elden-ring/items/weapons/weapon-red-branch-shortbow.html",
+    "description": "Light Bow — Red Branch Shortbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Shortbow",
+    "url": "/elden-ring/items/weapons/weapon-shortbow.html",
+    "description": "Light Bow — Shortbow stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light bow",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Leda's Sword",
+    "url": "/elden-ring/items/weapons/weapon-ledas-sword.html",
+    "description": "Light Greatsword — Leda's Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Milady",
+    "url": "/elden-ring/items/weapons/weapon-milady.html",
+    "description": "Light Greatsword — Milady stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rellana's Twin Blades",
+    "url": "/elden-ring/items/weapons/weapon-rellanas-twin-blades.html",
+    "description": "Light Greatsword — Rellana's Twin Blades stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "light greatsword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Albinauric Shield",
+    "url": "/elden-ring/items/weapons/weapon-albinauric-shield.html",
+    "description": "Medium Shield — Albinauric Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Banished Knight's Shield",
+    "url": "/elden-ring/items/weapons/weapon-banished-knights-shield.html",
+    "description": "Medium Shield — Banished Knight's Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Beast Crest Heater Shield",
+    "url": "/elden-ring/items/weapons/weapon-beast-crest-heater-shield.html",
+    "description": "Medium Shield — Beast Crest Heater Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Beastman's Jar-Shield",
+    "url": "/elden-ring/items/weapons/weapon-beastmans-jar-shield.html",
+    "description": "Medium Shield — Beastman's Jar-Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Black Leather Shield",
+    "url": "/elden-ring/items/weapons/weapon-black-leather-shield.html",
+    "description": "Medium Shield — Black Leather Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Blue Crest Heater Shield",
+    "url": "/elden-ring/items/weapons/weapon-blue-crest-heater-shield.html",
+    "description": "Medium Shield — Blue Crest Heater Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Blue-Gold Kite Shield",
+    "url": "/elden-ring/items/weapons/weapon-blue-gold-kite-shield.html",
+    "description": "Medium Shield — Blue-Gold Kite Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Brass Shield",
+    "url": "/elden-ring/items/weapons/weapon-brass-shield.html",
+    "description": "Medium Shield — Brass Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Candletree Wooden Shield",
+    "url": "/elden-ring/items/weapons/weapon-candletree-wooden-shield.html",
+    "description": "Medium Shield — Candletree Wooden Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Carian Knight's Shield",
+    "url": "/elden-ring/items/weapons/weapon-carian-knights-shield.html",
+    "description": "Medium Shield — Carian Knight's Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Eclipse Crest Heater Shield",
+    "url": "/elden-ring/items/weapons/weapon-eclipse-crest-heater-shield.html",
+    "description": "Medium Shield — Eclipse Crest Heater Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Flame Crest Wooden Shield",
+    "url": "/elden-ring/items/weapons/weapon-flame-crest-wooden-shield.html",
+    "description": "Medium Shield — Flame Crest Wooden Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golden Lion Shield",
+    "url": "/elden-ring/items/weapons/weapon-golden-lion-shield.html",
+    "description": "Medium Shield — Golden Lion Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Great Turtle Shell",
+    "url": "/elden-ring/items/weapons/weapon-great-turtle-shell.html",
+    "description": "Medium Shield — Great Turtle Shell stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Hawk Crest Wooden Shield",
+    "url": "/elden-ring/items/weapons/weapon-hawk-crest-wooden-shield.html",
+    "description": "Medium Shield — Hawk Crest Wooden Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Heater Shield",
+    "url": "/elden-ring/items/weapons/weapon-heater-shield.html",
+    "description": "Medium Shield — Heater Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Horse Crest Wooden Shield",
+    "url": "/elden-ring/items/weapons/weapon-horse-crest-wooden-shield.html",
+    "description": "Medium Shield — Horse Crest Wooden Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Inverted Hawk Heater Shield",
+    "url": "/elden-ring/items/weapons/weapon-inverted-hawk-heater-shield.html",
+    "description": "Medium Shield — Inverted Hawk Heater Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Kite Shield",
+    "url": "/elden-ring/items/weapons/weapon-kite-shield.html",
+    "description": "Medium Shield — Kite Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Large Leather Shield",
+    "url": "/elden-ring/items/weapons/weapon-large-leather-shield.html",
+    "description": "Medium Shield — Large Leather Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Marred Leather Shield",
+    "url": "/elden-ring/items/weapons/weapon-marred-leather-shield.html",
+    "description": "Medium Shield — Marred Leather Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Marred Wooden Shield",
+    "url": "/elden-ring/items/weapons/weapon-marred-wooden-shield.html",
+    "description": "Medium Shield — Marred Wooden Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Messmer Soldier Shield",
+    "url": "/elden-ring/items/weapons/weapon-messmer-soldier-shield.html",
+    "description": "Medium Shield — Messmer Soldier Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Red Crest Heater Shield",
+    "url": "/elden-ring/items/weapons/weapon-red-crest-heater-shield.html",
+    "description": "Medium Shield — Red Crest Heater Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Round Shield",
+    "url": "/elden-ring/items/weapons/weapon-round-shield.html",
+    "description": "Medium Shield — Round Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Scorpion Kite Shield",
+    "url": "/elden-ring/items/weapons/weapon-scorpion-kite-shield.html",
+    "description": "Medium Shield — Scorpion Kite Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Serpent Crest Shield",
+    "url": "/elden-ring/items/weapons/weapon-serpent-crest-shield.html",
+    "description": "Medium Shield — Serpent Crest Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Silver Mirrorshield",
+    "url": "/elden-ring/items/weapons/weapon-silver-mirrorshield.html",
+    "description": "Medium Shield — Silver Mirrorshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sun Realm Shield",
+    "url": "/elden-ring/items/weapons/weapon-sun-realm-shield.html",
+    "description": "Medium Shield — Sun Realm Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Twinbird Kite Shield",
+    "url": "/elden-ring/items/weapons/weapon-twinbird-kite-shield.html",
+    "description": "Medium Shield — Twinbird Kite Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Wolf Crest Shield",
+    "url": "/elden-ring/items/weapons/weapon-wolf-crest-shield.html",
+    "description": "Medium Shield — Wolf Crest Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "medium shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Chilling Perfume Bottle",
+    "url": "/elden-ring/items/weapons/weapon-chilling-perfume-bottle.html",
+    "description": "Perfume Bottle — Chilling Perfume Bottle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "perfume bottle",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Deadly Poison Perfume Bottle",
+    "url": "/elden-ring/items/weapons/weapon-deadly-poison-perfume-bottle.html",
+    "description": "Perfume Bottle — Deadly Poison Perfume Bottle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "perfume bottle",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Firespark Perfume Bottle",
+    "url": "/elden-ring/items/weapons/weapon-firespark-perfume-bottle.html",
+    "description": "Perfume Bottle — Firespark Perfume Bottle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "perfume bottle",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Frenzyflame Perfume Bottle",
+    "url": "/elden-ring/items/weapons/weapon-frenzyflame-perfume-bottle.html",
+    "description": "Perfume Bottle — Frenzyflame Perfume Bottle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "perfume bottle",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lightning Perfume Bottle",
+    "url": "/elden-ring/items/weapons/weapon-lightning-perfume-bottle.html",
+    "description": "Perfume Bottle — Lightning Perfume Bottle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "perfume bottle",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Clawmark Seal",
+    "url": "/elden-ring/items/weapons/weapon-clawmark-seal.html",
+    "description": "Sacred Seal — Clawmark Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dragon Communion Seal",
+    "url": "/elden-ring/items/weapons/weapon-dragon-communion-seal.html",
+    "description": "Sacred Seal — Dragon Communion Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dryleaf Seal",
+    "url": "/elden-ring/items/weapons/weapon-dryleaf-seal.html",
+    "description": "Sacred Seal — Dryleaf Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Erdtree Seal",
+    "url": "/elden-ring/items/weapons/weapon-erdtree-seal.html",
+    "description": "Sacred Seal — Erdtree Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Finger Seal",
+    "url": "/elden-ring/items/weapons/weapon-finger-seal.html",
+    "description": "Sacred Seal — Finger Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Fire Knight's Seal",
+    "url": "/elden-ring/items/weapons/weapon-fire-knights-seal.html",
+    "description": "Sacred Seal — Fire Knight's Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Frenzied Flame Seal",
+    "url": "/elden-ring/items/weapons/weapon-frenzied-flame-seal.html",
+    "description": "Sacred Seal — Frenzied Flame Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Giant's Seal",
+    "url": "/elden-ring/items/weapons/weapon-giants-seal.html",
+    "description": "Sacred Seal — Giant's Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Godslayer's Seal",
+    "url": "/elden-ring/items/weapons/weapon-godslayers-seal.html",
+    "description": "Sacred Seal — Godslayer's Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golden Order Seal",
+    "url": "/elden-ring/items/weapons/weapon-golden-order-seal.html",
+    "description": "Sacred Seal — Golden Order Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gravel Stone Seal",
+    "url": "/elden-ring/items/weapons/weapon-gravel-stone-seal.html",
+    "description": "Sacred Seal — Gravel Stone Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spiraltree Seal",
+    "url": "/elden-ring/items/weapons/weapon-spiraltree-seal.html",
+    "description": "Sacred Seal — Spiraltree Seal stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "sacred seal",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Grave Scythe",
+    "url": "/elden-ring/items/weapons/weapon-grave-scythe.html",
+    "description": "Scythe — Grave Scythe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "scythe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Halo Scythe",
+    "url": "/elden-ring/items/weapons/weapon-halo-scythe.html",
+    "description": "Scythe — Halo Scythe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "scythe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Obsidian Lamina",
+    "url": "/elden-ring/items/weapons/weapon-obsidian-lamina.html",
+    "description": "Scythe — Obsidian Lamina stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "scythe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Scythe",
+    "url": "/elden-ring/items/weapons/weapon-scythe.html",
+    "description": "Scythe — Scythe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "scythe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Winged Scythe",
+    "url": "/elden-ring/items/weapons/weapon-winged-scythe.html",
+    "description": "Scythe — Winged Scythe stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "scythe",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Blue-White Wooden Shield",
+    "url": "/elden-ring/items/weapons/weapon-blue-white-wooden-shield.html",
+    "description": "Small Shield — Blue-White Wooden Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Buckler",
+    "url": "/elden-ring/items/weapons/weapon-buckler.html",
+    "description": "Small Shield — Buckler stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Coil Shield",
+    "url": "/elden-ring/items/weapons/weapon-coil-shield.html",
+    "description": "Small Shield — Coil Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gilded Iron Shield",
+    "url": "/elden-ring/items/weapons/weapon-gilded-iron-shield.html",
+    "description": "Small Shield — Gilded Iron Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ice Crest Shield",
+    "url": "/elden-ring/items/weapons/weapon-ice-crest-shield.html",
+    "description": "Small Shield — Ice Crest Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Iron Roundshield",
+    "url": "/elden-ring/items/weapons/weapon-iron-roundshield.html",
+    "description": "Small Shield — Iron Roundshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Man-Serpent's Shield",
+    "url": "/elden-ring/items/weapons/weapon-man-serpents-shield.html",
+    "description": "Small Shield — Man-Serpent's Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Perfumer's Shield",
+    "url": "/elden-ring/items/weapons/weapon-perfumers-shield.html",
+    "description": "Small Shield — Perfumer's Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Pillory Shield",
+    "url": "/elden-ring/items/weapons/weapon-pillory-shield.html",
+    "description": "Small Shield — Pillory Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Red Thorn Roundshield",
+    "url": "/elden-ring/items/weapons/weapon-red-thorn-roundshield.html",
+    "description": "Small Shield — Red Thorn Roundshield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rickety Shield",
+    "url": "/elden-ring/items/weapons/weapon-rickety-shield.html",
+    "description": "Small Shield — Rickety Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rift Shield",
+    "url": "/elden-ring/items/weapons/weapon-rift-shield.html",
+    "description": "Small Shield — Rift Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Riveted Wooden Shield",
+    "url": "/elden-ring/items/weapons/weapon-riveted-wooden-shield.html",
+    "description": "Small Shield — Riveted Wooden Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Scripture Wooden Shield",
+    "url": "/elden-ring/items/weapons/weapon-scripture-wooden-shield.html",
+    "description": "Small Shield — Scripture Wooden Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Shield of Night",
+    "url": "/elden-ring/items/weapons/weapon-shield-of-night.html",
+    "description": "Small Shield — Shield of Night stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Shield of the Guilty",
+    "url": "/elden-ring/items/weapons/weapon-shield-of-the-guilty.html",
+    "description": "Small Shield — Shield of the Guilty stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Smithscript Shield",
+    "url": "/elden-ring/items/weapons/weapon-smithscript-shield.html",
+    "description": "Small Shield — Smithscript Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Smoldering Shield",
+    "url": "/elden-ring/items/weapons/weapon-smoldering-shield.html",
+    "description": "Small Shield — Smoldering Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spiralhorn Shield",
+    "url": "/elden-ring/items/weapons/weapon-spiralhorn-shield.html",
+    "description": "Small Shield — Spiralhorn Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "small shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Smithscript Dagger",
+    "url": "/elden-ring/items/weapons/weapon-smithscript-dagger.html",
+    "description": "Smithscript (Dagger) — Smithscript Dagger stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "smithscript (dagger)",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bloodfiend's Fork",
+    "url": "/elden-ring/items/weapons/weapon-bloodfiends-fork.html",
+    "description": "Spear — Bloodfiend's Fork stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Bolt of Gransax",
+    "url": "/elden-ring/items/weapons/weapon-bolt-of-gransax.html",
+    "description": "Spear — Bolt of Gransax stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Celebrant's Rib-Rake",
+    "url": "/elden-ring/items/weapons/weapon-celebrants-rib-rake.html",
+    "description": "Spear — Celebrant's Rib-Rake stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Clayman's Harpoon",
+    "url": "/elden-ring/items/weapons/weapon-claymans-harpoon.html",
+    "description": "Spear — Clayman's Harpoon stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Cleanrot Spear",
+    "url": "/elden-ring/items/weapons/weapon-cleanrot-spear.html",
+    "description": "Spear — Cleanrot Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Cross-Naginata",
+    "url": "/elden-ring/items/weapons/weapon-cross-naginata.html",
+    "description": "Spear — Cross-Naginata stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Crystal Spear",
+    "url": "/elden-ring/items/weapons/weapon-crystal-spear.html",
+    "description": "Spear — Crystal Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Death Ritual Spear",
+    "url": "/elden-ring/items/weapons/weapon-death-ritual-spear.html",
+    "description": "Spear — Death Ritual Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Inquisitor's Girandole",
+    "url": "/elden-ring/items/weapons/weapon-inquisitors-girandole.html",
+    "description": "Spear — Inquisitor's Girandole stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Iron Spear",
+    "url": "/elden-ring/items/weapons/weapon-iron-spear.html",
+    "description": "Spear — Iron Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Partisan",
+    "url": "/elden-ring/items/weapons/weapon-partisan.html",
+    "description": "Spear — Partisan stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Pike",
+    "url": "/elden-ring/items/weapons/weapon-pike.html",
+    "description": "Spear — Pike stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rotten Crystal Spear",
+    "url": "/elden-ring/items/weapons/weapon-rotten-crystal-spear.html",
+    "description": "Spear — Rotten Crystal Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Short Spear",
+    "url": "/elden-ring/items/weapons/weapon-short-spear.html",
+    "description": "Spear — Short Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Smithscript Spear",
+    "url": "/elden-ring/items/weapons/weapon-smithscript-spear.html",
+    "description": "Spear — Smithscript Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spear",
+    "url": "/elden-ring/items/weapons/weapon-spear.html",
+    "description": "Spear — Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Spiked Spear",
+    "url": "/elden-ring/items/weapons/weapon-spiked-spear.html",
+    "description": "Spear — Spiked Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Swift Spear",
+    "url": "/elden-ring/items/weapons/weapon-swift-spear.html",
+    "description": "Spear — Swift Spear stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Torchpole",
+    "url": "/elden-ring/items/weapons/weapon-torchpole.html",
+    "description": "Spear — Torchpole stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "spear",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Broadsword",
+    "url": "/elden-ring/items/weapons/weapon-broadsword.html",
+    "description": "Straight Sword — Broadsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Cane Sword",
+    "url": "/elden-ring/items/weapons/weapon-cane-sword.html",
+    "description": "Straight Sword — Cane Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Carian Knight's Sword",
+    "url": "/elden-ring/items/weapons/weapon-carian-knights-sword.html",
+    "description": "Straight Sword — Carian Knight's Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Coded Sword",
+    "url": "/elden-ring/items/weapons/weapon-coded-sword.html",
+    "description": "Straight Sword — Coded Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Crystal Sword",
+    "url": "/elden-ring/items/weapons/weapon-crystal-sword.html",
+    "description": "Straight Sword — Crystal Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Golden Epitaph",
+    "url": "/elden-ring/items/weapons/weapon-golden-epitaph.html",
+    "description": "Straight Sword — Golden Epitaph stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lazuli Glintstone Sword",
+    "url": "/elden-ring/items/weapons/weapon-lazuli-glintstone-sword.html",
+    "description": "Straight Sword — Lazuli Glintstone Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Longsword",
+    "url": "/elden-ring/items/weapons/weapon-longsword.html",
+    "description": "Straight Sword — Longsword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lordsworn's Straight Sword",
+    "url": "/elden-ring/items/weapons/weapon-lordsworns-straight-sword.html",
+    "description": "Straight Sword — Lordsworn's Straight Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Miquellan Knight's Sword",
+    "url": "/elden-ring/items/weapons/weapon-miquellan-knights-sword.html",
+    "description": "Straight Sword — Miquellan Knight's Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Noble's Slender Sword",
+    "url": "/elden-ring/items/weapons/weapon-nobles-slender-sword.html",
+    "description": "Straight Sword — Noble's Slender Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ornamental Straight Sword",
+    "url": "/elden-ring/items/weapons/weapon-ornamental-straight-sword.html",
+    "description": "Straight Sword — Ornamental Straight Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Regalia of Eochaid",
+    "url": "/elden-ring/items/weapons/weapon-regalia-of-eochaid.html",
+    "description": "Straight Sword — Regalia of Eochaid stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rotten Crystal Sword",
+    "url": "/elden-ring/items/weapons/weapon-rotten-crystal-sword.html",
+    "description": "Straight Sword — Rotten Crystal Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Short Sword",
+    "url": "/elden-ring/items/weapons/weapon-short-sword.html",
+    "description": "Straight Sword — Short Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Stone-Sheathed Sword",
+    "url": "/elden-ring/items/weapons/weapon-stone-sheathed-sword.html",
+    "description": "Straight Sword — Stone-Sheathed Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sword of Darkness",
+    "url": "/elden-ring/items/weapons/weapon-sword-of-darkness.html",
+    "description": "Straight Sword — Sword of Darkness stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sword of Light",
+    "url": "/elden-ring/items/weapons/weapon-sword-of-light.html",
+    "description": "Straight Sword — Sword of Light stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sword of Night and Flame",
+    "url": "/elden-ring/items/weapons/weapon-sword-of-night-and-flame.html",
+    "description": "Straight Sword — Sword of Night and Flame stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sword of St. Trina",
+    "url": "/elden-ring/items/weapons/weapon-sword-of-st-trina.html",
+    "description": "Straight Sword — Sword of St. Trina stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Velvet Sword of St. Trina",
+    "url": "/elden-ring/items/weapons/weapon-velvet-sword-of-st-trina.html",
+    "description": "Straight Sword — Velvet Sword of St. Trina stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Warhawk's Talon",
+    "url": "/elden-ring/items/weapons/weapon-warhawks-talon.html",
+    "description": "Straight Sword — Warhawk's Talon stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Weathered Straight Sword",
+    "url": "/elden-ring/items/weapons/weapon-weathered-straight-sword.html",
+    "description": "Straight Sword — Weathered Straight Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "straight sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Carian Thrusting Shield",
+    "url": "/elden-ring/items/weapons/weapon-carian-thrusting-shield.html",
+    "description": "Thrusting Shield — Carian Thrusting Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Dueling Shield",
+    "url": "/elden-ring/items/weapons/weapon-dueling-shield.html",
+    "description": "Thrusting Shield — Dueling Shield stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting shield",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Antspur Rapier",
+    "url": "/elden-ring/items/weapons/weapon-antspur-rapier.html",
+    "description": "Thrusting Sword — Antspur Rapier stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Carian Sorcery Sword",
+    "url": "/elden-ring/items/weapons/weapon-carian-sorcery-sword.html",
+    "description": "Thrusting Sword — Carian Sorcery Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Cleanrot Knight's Sword",
+    "url": "/elden-ring/items/weapons/weapon-cleanrot-knights-sword.html",
+    "description": "Thrusting Sword — Cleanrot Knight's Sword stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Estoc",
+    "url": "/elden-ring/items/weapons/weapon-estoc.html",
+    "description": "Thrusting Sword — Estoc stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Frozen Needle",
+    "url": "/elden-ring/items/weapons/weapon-frozen-needle.html",
+    "description": "Thrusting Sword — Frozen Needle stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Noble's Estoc",
+    "url": "/elden-ring/items/weapons/weapon-nobles-estoc.html",
+    "description": "Thrusting Sword — Noble's Estoc stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rapier",
+    "url": "/elden-ring/items/weapons/weapon-rapier.html",
+    "description": "Thrusting Sword — Rapier stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Rogier's Rapier",
+    "url": "/elden-ring/items/weapons/weapon-rogiers-rapier.html",
+    "description": "Thrusting Sword — Rogier's Rapier stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "thrusting sword",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Beast-Repellent Torch",
+    "url": "/elden-ring/items/weapons/weapon-beast-repellent-torch.html",
+    "description": "Torch — Beast-Repellent Torch stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "torch",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Ghostflame Torch",
+    "url": "/elden-ring/items/weapons/weapon-ghostflame-torch.html",
+    "description": "Torch — Ghostflame Torch stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "torch",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Lamenting Visage",
+    "url": "/elden-ring/items/weapons/weapon-lamenting-visage.html",
+    "description": "Torch — Lamenting Visage stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "torch",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Nanaya's Torch",
+    "url": "/elden-ring/items/weapons/weapon-nanayas-torch.html",
+    "description": "Torch — Nanaya's Torch stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "torch",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Sentry's Torch",
+    "url": "/elden-ring/items/weapons/weapon-sentrys-torch.html",
+    "description": "Torch — Sentry's Torch stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "torch",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "St. Trina's Torch",
+    "url": "/elden-ring/items/weapons/weapon-st-trinas-torch.html",
+    "description": "Torch — St. Trina's Torch stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "torch",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Steel-Wire Torch",
+    "url": "/elden-ring/items/weapons/weapon-steel-wire-torch.html",
+    "description": "Torch — Steel-Wire Torch stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "torch",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Torch",
+    "url": "/elden-ring/items/weapons/weapon-torch.html",
+    "description": "Torch — Torch stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "torch",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Black Steel Twinblade",
+    "url": "/elden-ring/items/weapons/weapon-black-steel-twinblade.html",
+    "description": "Twinblade — Black Steel Twinblade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "twinblade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Eleonora's Poleblade",
+    "url": "/elden-ring/items/weapons/weapon-eleonoras-poleblade.html",
+    "description": "Twinblade — Eleonora's Poleblade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "twinblade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Euporia",
+    "url": "/elden-ring/items/weapons/weapon-euporia.html",
+    "description": "Twinblade — Euporia stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "twinblade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gargoyle's Black Blades",
+    "url": "/elden-ring/items/weapons/weapon-gargoyles-black-blades.html",
+    "description": "Twinblade — Gargoyle's Black Blades stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "twinblade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Gargoyle's Twinblade",
+    "url": "/elden-ring/items/weapons/weapon-gargoyles-twinblade.html",
+    "description": "Twinblade — Gargoyle's Twinblade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "twinblade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Godskin Peeler",
+    "url": "/elden-ring/items/weapons/weapon-godskin-peeler.html",
+    "description": "Twinblade — Godskin Peeler stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "twinblade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Twinblade",
+    "url": "/elden-ring/items/weapons/weapon-twinblade.html",
+    "description": "Twinblade — Twinblade stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "twinblade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Twinned Knight Swords",
+    "url": "/elden-ring/items/weapons/weapon-twinned-knight-swords.html",
+    "description": "Twinblade — Twinned Knight Swords stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "twinblade",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Giant's Red Braid",
+    "url": "/elden-ring/items/weapons/weapon-giants-red-braid.html",
+    "description": "Whip — Giant's Red Braid stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "whip",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Hoslow's Petal Whip",
+    "url": "/elden-ring/items/weapons/weapon-hoslows-petal-whip.html",
+    "description": "Whip — Hoslow's Petal Whip stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "whip",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Magma Whip Candlestick",
+    "url": "/elden-ring/items/weapons/weapon-magma-whip-candlestick.html",
+    "description": "Whip — Magma Whip Candlestick stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "whip",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Thorned Whip",
+    "url": "/elden-ring/items/weapons/weapon-thorned-whip.html",
+    "description": "Whip — Thorned Whip stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "whip",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Tooth Whip",
+    "url": "/elden-ring/items/weapons/weapon-tooth-whip.html",
+    "description": "Whip — Tooth Whip stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "whip",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Urumi",
+    "url": "/elden-ring/items/weapons/weapon-urumi.html",
+    "description": "Whip — Urumi stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "whip",
+      "elden ring"
+    ]
+  },
+  {
+    "title": "Whip",
+    "url": "/elden-ring/items/weapons/weapon-whip.html",
+    "description": "Whip — Whip stats, scaling and requirements in Elden Ring",
+    "tags": [
+      "weapon",
+      "whip",
+      "elden ring"
+    ]
+  }
 ]
