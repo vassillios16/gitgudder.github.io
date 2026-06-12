@@ -11,7 +11,10 @@ import sys
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 PARAM_CSV    = r"C:\Users\pmaci\Desktop\Elden Ring Mods\unpacked er\param\EquipParamWeapon.csv"
-FMG_JSON     = r"C:\Users\pmaci\Desktop\Elden Ring Mods\unpacked er\.smithbox\Workflow\Exported Text\base_weapons.json"
+FMG_FILES    = [
+    r"C:\Users\pmaci\Desktop\Elden Ring Mods\unpacked er\.smithbox\Workflow\Exported Text\base_weapons.json",
+    r"C:\Users\pmaci\Desktop\Elden Ring Mods\unpacked er\.smithbox\Workflow\Exported Text\dlc1_weapons.json",
+]
 OUT_DIR      = os.path.join(os.path.dirname(__file__), "..", "elden-ring", "items", "weapons", "data")
 OUT_FILE     = os.path.join(OUT_DIR, "weapons.json")
 
@@ -66,26 +69,27 @@ SCALING_GRADE = {
 }
 
 
-def load_fmg(path):
-    """Load names and captions from Smithbox FMG JSON export."""
+def load_fmg(paths):
+    """Load names and captions from one or more Smithbox FMG JSON exports."""
     names, captions = {}, {}
-    if not os.path.exists(path):
-        return names, captions
-    with open(path, encoding="utf-8") as f:
-        data = json.load(f)
-    for wrapper in data.get("FmgWrappers", []):
-        fmg_name = wrapper["Name"]
-        entries = wrapper["Fmg"]["Entries"]
-        if "WeaponName" in fmg_name:
-            for e in entries:
-                text = e.get("Text")
-                if text and text != "[ERROR]":
-                    names[str(e["ID"])] = text
-        elif "WeaponCaption" in fmg_name:
-            for e in entries:
-                text = e.get("Text")
-                if text and text != "[ERROR]":
-                    captions[str(e["ID"])] = text
+    for path in paths:
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        for wrapper in data.get("FmgWrappers", []):
+            fmg_name = wrapper["Name"]
+            entries = wrapper["Fmg"]["Entries"]
+            if "WeaponName" in fmg_name:
+                for e in entries:
+                    text = e.get("Text")
+                    if text and text != "[ERROR]":
+                        names[str(e["ID"])] = text
+            elif "WeaponCaption" in fmg_name:
+                for e in entries:
+                    text = e.get("Text")
+                    if text and text != "[ERROR]":
+                        captions[str(e["ID"])] = text
     return names, captions
 
 
@@ -113,7 +117,7 @@ def parse_scaling(val):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    names, captions = load_fmg(FMG_JSON)
+    names, captions = load_fmg(FMG_FILES)
 
     weapons = []
     with open(PARAM_CSV, encoding="utf-8") as f:

@@ -60,7 +60,7 @@
   {
     "id": 14510000,
     "name": "Death Knight's Twin Axes",
-    "description": "",
+    "description": "Golden war axes of the Death Knight.\nA pair of weapons made to be wielded in both hands.\nCrackles with lightning, the power of the capital's ancient dragon cult.\n\nThe knight, once the personal guard of Godwyn, was also the protector of the Prince of Death's cadaver surrogate.",
     "category": "Axe",
     "weight": 5.5,
     "attack": {
@@ -118,7 +118,7 @@
   {
     "id": 14540000,
     "name": "Forked-Tongue Hatchet",
-    "description": "",
+    "description": "A peculiar weapon wielded by imps.\nHatchet smithed in the shape of a fork-tongued dragon.\n\nThe gently undulating forked blade is known as an \"imp's tongue\" and causes blood loss.",
     "category": "Axe",
     "weight": 4.0,
     "attack": {
@@ -292,7 +292,7 @@
   {
     "id": 14520000,
     "name": "Messmer Soldier's Axe",
-    "description": "",
+    "description": "Weapon used by the soldiers who serve Messmer the Impaler.\nA steel axe, worn from use.\n\nA favorite of those who lost themselves utterly in their lord's war. Capable of performing powerful charge attacks.",
     "category": "Axe",
     "weight": 5.5,
     "attack": {
@@ -408,7 +408,7 @@
   {
     "id": 14500000,
     "name": "Smithscript Axe",
-    "description": "",
+    "description": "Axe engraved with a smithscript.\nA throwing weapon created through the smithing arts.\n\nExecute a strong attack or jumping strong attack to throw the axe.\n\nIncompatible with ashes of war that grant skills with an affinity.",
     "category": "Axe",
     "weight": 5.0,
     "attack": {
@@ -495,7 +495,7 @@
   {
     "id": 64500000,
     "name": "Backhand Blade",
-    "description": "",
+    "description": "Curved blade wielded with a backhand grip.\nA type of weapon wielded by hornsent for generations.\n\nThe style of combat associated with this weapon is marked by spinning slashes and gouging thrust attacks.",
     "category": "Backhand Blade",
     "weight": 2.0,
     "attack": {
@@ -524,7 +524,7 @@
   {
     "id": 64520000,
     "name": "Curseblade's Cirque",
-    "description": "",
+    "description": "Weapon of the masked Curseblades.\nCircular backhand blade with wave-like cutting edges, sharpened into points that incite blood loss.\n\nLong ago, this was employed by the ascetics who strove to become tutelary deities as a ritualistic object in their self-flagellating dances.",
     "category": "Backhand Blade",
     "weight": 4.5,
     "attack": {
@@ -553,7 +553,7 @@
   {
     "id": 64510000,
     "name": "Smithscript Cirque",
-    "description": "",
+    "description": "Circular backhand blade engraved with a smithscript.\nA throwing weapon created through the smithing arts.\n\nExecute a strong attack to throw the backhand blade, causing it to fly in a curved trajectory.\n\nIncompatible with ashes of war that grant skills with an affinity.",
     "category": "Backhand Blade",
     "weight": 2.0,
     "attack": {
@@ -640,7 +640,7 @@
   {
     "id": 44500000,
     "name": "Rabbath's Cannon",
-    "description": "",
+    "description": "A type of jar cannon used to fire greatbolts.\nA masterwork of Spellmachinist Rabbath.\n\nThe power of the glintstones that encircle the barrel imbues bolts with magic damage and guides shots toward their targets.",
     "category": "Ballista",
     "weight": 15.0,
     "attack": {
@@ -669,7 +669,7 @@
   {
     "id": 68500000,
     "name": "Beast Claw",
-    "description": "",
+    "description": "Weapon in the form of a carnivorous beast's vicious claws.\nUsed to perform bestial slashing attacks uncanny to humankind.\n\nAn imitation of the esoteric technique of the horned warriors. Those who carry this weapon wield it as though they have been possessed by a savage beast.",
     "category": "Beast Claw",
     "weight": 3.0,
     "attack": {
@@ -698,7 +698,7 @@
   {
     "id": 68510000,
     "name": "Red Bear's Claw",
-    "description": "",
+    "description": "Claw of a great red bear wielded without modification by Red Bear, whose name is lost to madness.\n\nAfter killing the great red bear in a blood-soaked bout, he became fascinated by the untainted glory of its naked strength.\n\"I wish to be a bear, no more, and no less.\"",
     "category": "Beast Claw",
     "weight": 4.0,
     "attack": {
@@ -756,7 +756,7 @@
   {
     "id": 41510000,
     "name": "Ansbach's Longbow",
-    "description": "",
+    "description": "Weapon of Sir Ansbach.\nA longbow consisting of two bow bodies and two strings.\n\nUnusually for a longbow, it can be wielded similarly to a light bow—provided that the wielder has the extraordinary dexterity demanded.",
     "category": "Bow",
     "weight": 4.5,
     "attack": {
@@ -988,7 +988,7 @@
   {
     "id": 22500000,
     "name": "Claws of Night",
-    "description": "",
+    "description": "Claws of a bottomless black from which no light can escape. Wielded by Anna, Swordhand of Night.\n\nEngraved with a smithscript enabling strong attack to launch all three claws at a target. The blades are only semicorporeal, and cannot be fully guarded against.",
     "category": "Claw",
     "weight": 3.0,
     "attack": {
@@ -1104,7 +1104,7 @@
   {
     "id": 4500000,
     "name": "Ancient Meteoric Ore Greatsword",
-    "description": "",
+    "description": "One of the treasures of the ruined forges.\nGreatsword of ancient meteoric ore, ending in a sharp point.\n\nFashioned from an excavated shard of an arrowhead that once was a part of the old gods' arsenal. A capable piercing weapon that excels at thrusting attacks.",
     "category": "Colossal Sword",
     "weight": 22.0,
     "attack": {
@@ -1133,7 +1133,7 @@
   {
     "id": 4520000,
     "name": "Fire Knight's Greatsword",
-    "description": "",
+    "description": "Greatsword of the Fire Knights.\nA long, slender blade that undulates like fire.\n\nBlessed with a flame incantation. Further flame imbuement will amplify the effect and greatly increase the armament's power.",
     "category": "Colossal Sword",
     "weight": 16.0,
     "attack": {
@@ -1249,7 +1249,7 @@
   {
     "id": 4550000,
     "name": "Greatsword of Radahn (Light)",
-    "description": "",
+    "description": "Greatswords of black steel wielded by Radahn in his youth.\nA pair of weapons decorated with a lion mane motif.\n\nThese were in his possession immediately before his triumph over the stars—the swords of a lord who does not rely on physical strength and gravity alone.",
     "category": "Colossal Sword",
     "weight": 19.0,
     "attack": {
@@ -1278,7 +1278,7 @@
   {
     "id": 4530000,
     "name": "Greatsword of Radahn (Lord)",
-    "description": "",
+    "description": "Greatswords of black steel wielded by Radahn in his youth.\nA pair of weapons decorated with a lion mane motif.\n\nThese were in his possession immediately before his triumph over the stars—the swords of a lord who does not rely on physical strength and gravity alone.",
     "category": "Colossal Sword",
     "weight": 19.0,
     "attack": {
@@ -1336,7 +1336,7 @@
   {
     "id": 4540000,
     "name": "Moonrithyll's Knight Sword",
-    "description": "",
+    "description": "Greatsword embedded with a blue glintstone.\nThe favored weapon of the steadfast Carian knight, Moonrithyll.\n\nMoonrithyll was the Twin Moon Knight's chamberlain. She was also a friend to the trolls, who served the royal family, and proudly wielded their weapons as she fought arm in arm with her gargantuan comrades.",
     "category": "Colossal Sword",
     "weight": 18.0,
     "attack": {
@@ -1568,7 +1568,7 @@
   {
     "id": 12510000,
     "name": "Anvil Hammer",
-    "description": "",
+    "description": "One of the treasures of the ruined forges.\nA tremendous hammer that incorporates as its head the red-hot anvil of the forge.\n\nIt is said that the anvil's shape is inspired by that of an altar, and that long ago, it was indeed used as such in rite and ritual.",
     "category": "Colossal Weapon",
     "weight": 22.0,
     "attack": {
@@ -1626,7 +1626,7 @@
   {
     "id": 12530000,
     "name": "Bloodfiend's Arm",
-    "description": "",
+    "description": "Weapon used by the bloodfiends.\nAn arm pulled from the corpse of one of their kin, and wielded as a makeshift weapon.\n\nHaving been sanctified by a blood ritual, this armament is capable of spraying blood stored within when executing a strong attack.",
     "category": "Colossal Weapon",
     "weight": 20.0,
     "attack": {
@@ -1655,7 +1655,7 @@
   {
     "id": 23500000,
     "name": "Devonia's Hammer",
-    "description": "",
+    "description": "Great hammer wielded by Devonia, longest-serving of the Crucible Knights.\n\nWeapon forged of primordial gold, marked by its reddish hue and inhabited by ancient holiness. A torrent of life is engraved upon the striking face.",
     "category": "Colossal Weapon",
     "weight": 20.0,
     "attack": {
@@ -1800,7 +1800,7 @@
   {
     "id": 23520000,
     "name": "Gazing Finger",
-    "description": "",
+    "description": "The head of Metyr, the finger-mother, wielded as a weapon without modification.\n\nFrom within the center of the fingerprint that wrinkles the creature's foremost protrusion, a tiny wart-like eye gazes vacantly into the beyond.",
     "category": "Colossal Weapon",
     "weight": 15.0,
     "attack": {
@@ -2032,7 +2032,7 @@
   {
     "id": 23510000,
     "name": "Shadow Sunflower Blossom",
-    "description": "",
+    "description": "The head of a monstrous shadow sunflower manifestation of the Scadutree. Then again, it might be just a flower, wielded as a weapon.\n\nMuch like the Scadutree itself in appearance, a second stalk winds tightly around the first, almost as if in a tender embrace.",
     "category": "Colossal Weapon",
     "weight": 16.0,
     "attack": {
@@ -2322,7 +2322,7 @@
   {
     "id": 43500000,
     "name": "Repeating Crossbow",
-    "description": "",
+    "description": "A mechanized crossbow that has been fitted with a fan-shaped contraption.\n\nThis metallic piece adds a reloading system used in the execution of a unique battle art.",
     "category": "Crossbow",
     "weight": 6.0,
     "attack": {
@@ -2380,7 +2380,7 @@
   {
     "id": 43510000,
     "name": "Spread Crossbow",
-    "description": "",
+    "description": "A modified crossbow made by combining two crossbows into one.\n\nCapable of loading multiple bolts and firing them simultaneously, enabling a spread of fire.",
     "category": "Crossbow",
     "weight": 5.0,
     "attack": {
@@ -2496,7 +2496,7 @@
   {
     "id": 8510000,
     "name": "Freyja's Greatsword",
-    "description": "",
+    "description": "Weapon of Freyja, a Redmane.\nGreatsword decorated with a mane, much like the weapons used by her liege.\n\nThe spirit of Freyja's training lingers in this sword, enhancing the power of Redmane battle skills.",
     "category": "Curved Greatsword",
     "weight": 14.0,
     "attack": {
@@ -2525,7 +2525,7 @@
   {
     "id": 8520000,
     "name": "Horned Warrior's Greatsword",
-    "description": "",
+    "description": "Curved greatsword of the horned warriors, keepers of the tower.\nA heavy weapon made to bring the deft strength of the warriors to bear.\n\nThe ornamental tangled horns allow the blade to serve as a medium for horn-calling.",
     "category": "Curved Greatsword",
     "weight": 13.0,
     "attack": {
@@ -2786,7 +2786,7 @@
   {
     "id": 7520000,
     "name": "Dancing Blade of Ranah",
-    "description": "",
+    "description": "Decorative swords ablaze with impassioned red.\nA pair of weapons made to be wielded in both hands.\n\nUsed by the dancers of Ranah.\nStrikes enemies with a dancing assault when executing a strong attack.",
     "category": "Curved Sword",
     "weight": 3.5,
     "attack": {
@@ -2873,7 +2873,7 @@
   {
     "id": 7510000,
     "name": "Falx",
-    "description": "",
+    "description": "Curved swords with long, sickle-like blades.\nA pair of weapons made to be wielded in both hands.\n\nForged by a hornsent in the name of revenge.\n\"In vengeance for the flames, my blade I wield...\"",
     "category": "Curved Sword",
     "weight": 4.0,
     "attack": {
@@ -2960,7 +2960,7 @@
   {
     "id": 7530000,
     "name": "Horned Warrior's Sword",
-    "description": "",
+    "description": "Curved sword of the horned warriors, keepers of the tower.\n\nThe ornamental tangled horns allow the blade to serve as a medium for horn-calling.",
     "category": "Curved Sword",
     "weight": 5.0,
     "attack": {
@@ -3221,7 +3221,7 @@
   {
     "id": 7500000,
     "name": "Spirit Sword",
-    "description": "",
+    "description": "Sharp blade sculpted into a twisted shape.\nA sword that has seen many years of use in the gravesite.\n\nSaid to serve as a medium for communion with spirits.",
     "category": "Curved Sword",
     "weight": 2.5,
     "attack": {
@@ -3511,7 +3511,7 @@
   {
     "id": 1510000,
     "name": "Fire Knight's Shortsword",
-    "description": "",
+    "description": "Shortsword used by the Fire Knights.\nA slender blade that undulates like fire.\n\nBlessed with a flame incantation. Further flame imbuement will amplify the effect and greatly increase the armament's power.",
     "category": "Dagger",
     "weight": 2.0,
     "attack": {
@@ -3627,7 +3627,7 @@
   {
     "id": 1500000,
     "name": "Main-gauche",
-    "description": "",
+    "description": "Dagger with a large hand guard.\n\nIntended to be used in the left hand, thereby complementing a piercing sword or identical blade held in the right to enable a distinctive style of fighting.",
     "category": "Dagger",
     "weight": 2.0,
     "attack": {
@@ -3888,7 +3888,7 @@
   {
     "id": 21540000,
     "name": "Golem Fist",
-    "description": "",
+    "description": "A giant fist of fractured rock. Taken from the body of a golem of the ruined forges.\n\nCarved with a smithscript enabling strong attacks to launch the entire fist straight ahead.",
     "category": "Fist",
     "weight": 6.0,
     "attack": {
@@ -4004,7 +4004,7 @@
   {
     "id": 21530000,
     "name": "Madding Hand",
-    "description": "",
+    "description": "A glove stitched together from the flayed skin of the victims of a butcherous bloodbath. Afflicts target with madness. Raises attack power when madness is triggered in the vicinity.\nForged of an unyielding, black impulse toward revenge fostered in those who were hunted down as heretics by their own brethren, these are the weapons of the utterly downtrodden.",
     "category": "Fist",
     "weight": 1.0,
     "attack": {
@@ -4033,7 +4033,7 @@
   {
     "id": 21510000,
     "name": "Pata",
-    "description": "",
+    "description": "A weapon comprised of a linear, double-sided blade attached to a substantial guard.\nWielded by the Oathseeker Knights.\n\nThis versatile armament can be swung about like a fist or used in the manner of a straight sword.",
     "category": "Fist",
     "weight": 4.0,
     "attack": {
@@ -4062,7 +4062,7 @@
   {
     "id": 21520000,
     "name": "Poisoned Hand",
-    "description": "",
+    "description": "A glove stitched together from the flayed skin of the victims of a butcherous bloodbath. Afflicts target with deadly poison. Raises attack power when poisoning occurs in the vicinity.\nForged of an unyielding, black impulse toward revenge fostered in those who have had everything burned or stolen from them, these are the weapons of the utterly downtrodden.",
     "category": "Fist",
     "weight": 1.0,
     "attack": {
@@ -4149,7 +4149,7 @@
   {
     "id": 21500000,
     "name": "Thiollier's Hidden Needle",
-    "description": "",
+    "description": "Concealed weapon used by Thiollier, of a design generally favored by poison-wielders for dark and subtle purposes.\n\nLike St. Trina, who blossomed in the deep-purple garden, a rich poison is secreted from within which sends its victims into an eternal sleep.",
     "category": "Fist",
     "weight": 0.5,
     "attack": {
@@ -4352,7 +4352,7 @@
   {
     "id": 13500000,
     "name": "Serpent Flail",
-    "description": "",
+    "description": "A flail with coiled snakes for bludgeoning heads.\nFire roars within the snakes' bodies, inflicting horrible burns.\n\nSome of Messmer's army used these flails to burn hornsent—to brand them with agony and fear.",
     "category": "Flail",
     "weight": 6.0,
     "attack": {
@@ -4758,7 +4758,7 @@
   {
     "id": 33520000,
     "name": "Maternal Staff",
-    "description": "",
+    "description": "Staff of Count Ymir, who made himself a Mother of Fingers.\nCarried for want of tail-fingers of his own.\nEnhances finger sorceries.\n\nThe crystal ball, though representative of a microcosm, would not receive any sign.",
     "category": "Glintstone Staff",
     "weight": 2.5,
     "attack": {
@@ -4903,7 +4903,7 @@
   {
     "id": 33510000,
     "name": "Staff of the Great Beyond",
-    "description": "",
+    "description": "Staff fashioned from the tail-fingers of Metyr, the Mother of Fingers, and the microcosm raised aloft over the crux they form.\nCatalyst for casting both sorceries and incantations.\nThe Mother received signs from the Greater Will from the beyond of the microcosm. Despite being broken and abandoned, she kept waiting for another message to come.",
     "category": "Glintstone Staff",
     "weight": 2.5,
     "attack": {
@@ -5019,7 +5019,7 @@
   {
     "id": 12520000,
     "name": "Black Steel Greathammer",
-    "description": "",
+    "description": "Weapon of the Black Knights, servants of Messmer the Impaler. Greathammer of black steel with decorative embellishments in gold.\nBlessed with an Erdtree incantation. Further holy imbuement will amplify the effect and greatly increase the armament's power. Guard Counters cause a burst of power.",
     "category": "Great Hammer",
     "weight": 12.0,
     "attack": {
@@ -5396,7 +5396,7 @@
   {
     "id": 12500000,
     "name": "Smithscript Greathammer",
-    "description": "",
+    "description": "Greathammer engraved with a smithscript.\nA throwing weapon created through the smithing arts.\n\nExecute a strong attack or dashing strong attack to spin and fling the greathammer.\n\nIncompatible with ashes of war that grant skills with an affinity.",
     "category": "Great Hammer",
     "weight": 9.0,
     "attack": {
@@ -5425,7 +5425,7 @@
   {
     "id": 66510000,
     "name": "Dragon-Hunter's Great Katana",
-    "description": "",
+    "description": "Great katana with spines of gravel stone along its blade, wielded by the Ancient Dragon-Man of the Dragon's Pit.\nHas an anti-dragon effect.\n\nFormerly a Dragon Communion warrior, the Ancient Dragon-Man was once arbiter of those worthy to devour the Dreaded One.",
     "category": "Great Katana",
     "weight": 10.5,
     "attack": {
@@ -5454,7 +5454,7 @@
   {
     "id": 66500000,
     "name": "Great Katana",
-    "description": "",
+    "description": "Large katana with a long, heavy blade.\nA weapon unique to warriors of the Land of Reeds.\n\nDesigned for aggression, this armament requires the wielder to throw their entire body into swinging it. The slashing attacks of its honed edge incite blood loss.",
     "category": "Great Katana",
     "weight": 9.0,
     "attack": {
@@ -5483,7 +5483,7 @@
   {
     "id": 66520000,
     "name": "Rakshasa's Great Katana",
-    "description": "",
+    "description": "A great katana with the tempering pattern of its blade forever stained red with blood. Weapon of Rakshasa, who cuts down and devours.\n\nA berserker's weapon used to endure enemy attacks and reply with one's full fury. When attacking, the wielder is less likely to stagger from counterattacks, but will also take increased damage.",
     "category": "Great Katana",
     "weight": 9.5,
     "attack": {
@@ -5512,7 +5512,7 @@
   {
     "id": 17520000,
     "name": "Barbed Staff-Spear",
-    "description": "",
+    "description": "Greatstaff of Jori, elder inquisitor.\nThe tip bristles with golden barbs symbolic of the inquisition's torture, allowing one to wield the staff as a greatspear.\n\nAttacks deal holy damage, and potency increases with faith.",
     "category": "Great Spear",
     "weight": 7.5,
     "attack": {
@@ -5541,7 +5541,7 @@
   {
     "id": 16550000,
     "name": "Bloodfiend's Sacred Spear",
-    "description": "",
+    "description": "Greatspear of the bloodfiend hexers.\nOne of the most significant implements used in their blood rituals.\n\nSacred spears of blood are the instruments of communion with an outer god. The mother of truth desires a wound.",
     "category": "Great Spear",
     "weight": 8.0,
     "attack": {
@@ -5599,7 +5599,7 @@
   {
     "id": 17510000,
     "name": "Messmer Soldier's Spear",
-    "description": "",
+    "description": "Weapon used by the soldiers who serve Messmer the Impaler.\nA greatspear with a steel blade worn from use.\n\nBeing made for overwhelming onslaughts, attacks with this weapon can be charged to unleash consecutive strikes.",
     "category": "Great Spear",
     "weight": 8.5,
     "attack": {
@@ -5715,7 +5715,7 @@
   {
     "id": 17500000,
     "name": "Spear of the Impaler",
-    "description": "",
+    "description": "Weapon of Messmer the Impaler.\nA greatspear with a warped blade in the shape of undulating flame.\nRemade by the forging arts of the realm of shadow, this weapon can be thrown by executing a strong attack, dashing strong attack, or mounted strong attack. Charge the attack to produce flame on impact.",
     "category": "Great Spear",
     "weight": 9.5,
     "attack": {
@@ -5831,7 +5831,7 @@
   {
     "id": 15510000,
     "name": "Bonny Butchering Knife",
-    "description": "",
+    "description": "Weapon of the greater potentates of Bonny Village.\nAn outsize butcher's cleaver used to dismember human bodies in the making of the great jars stored in the gaols.\n\nRestores a very small amount of HP when it squarely strikes an enemy.",
     "category": "Greataxe",
     "weight": 8.5,
     "attack": {
@@ -5918,7 +5918,7 @@
   {
     "id": 15500000,
     "name": "Death Knight's Longhaft Axe",
-    "description": "",
+    "description": "A long-hafted golden axe wielded by the Death Knight.\nBears a representation of a decayed golden ring.\nCrackles with lightning, the power of the capital's ancient dragon cult.\nThe knight, once the personal guard of Godwyn, was also the protector of the Prince of Death's cadaver surrogate.",
     "category": "Greataxe",
     "weight": 11.5,
     "attack": {
@@ -6121,7 +6121,7 @@
   {
     "id": 8500000,
     "name": "Putrescence Cleaver",
-    "description": "",
+    "description": "Weapon wielded by the Putrescent Knight.\nA great cleaver of hardened putrescence affixed to an arch fashioned from human bones.\n\nGains power from the wielder's arcane attribute.",
     "category": "Greataxe",
     "weight": 13.5,
     "attack": {
@@ -6295,7 +6295,7 @@
   {
     "id": 42500000,
     "name": "Igon's Greatbow",
-    "description": "",
+    "description": "Weapon of Igon, the broken drake warrior.\nA greatbow fashioned from two dragon bones bound with coarse rope.\nCovered in gashes left by claws.\n\nImbued with Igon's obsession, enhancing the power of Igon's Harpoon.",
     "category": "Greatbow",
     "weight": 12.5,
     "attack": {
@@ -6382,7 +6382,7 @@
   {
     "id": 32500000,
     "name": "Black Steel Greatshield",
-    "description": "",
+    "description": "Weighty shields carried by the Black Knights, servants of Messmer the Impaler. Made of black steel with decorative embellishments in gold.\n\nSymbolic of their iron conviction in their crusade, the Black Knights will never yield. Nor will they ever doubt their purpose.",
     "category": "Greatshield",
     "weight": 19.5,
     "attack": {
@@ -7049,7 +7049,7 @@
   {
     "id": 32520000,
     "name": "Verdigris Greatshield",
-    "description": "",
+    "description": "Greatshield made of the unusual metal known as verdigris.\n\nBoasts greater guard capacity than damage negation. To the extent that the shield will continue to protect its target even if its bearer should die.",
     "category": "Greatshield",
     "weight": 28.0,
     "attack": {
@@ -7484,7 +7484,7 @@
   {
     "id": 3510000,
     "name": "Greatsword of Damnation",
-    "description": "",
+    "description": "Golden greatsword that once pierced the body of Midra, master of the manse. Used by the hornsent in the execution of a damnation like no other.\n\nThe barbs that pierce the victim from within wind gently around the blade.",
     "category": "Greatsword",
     "weight": 8.0,
     "attack": {
@@ -7513,7 +7513,7 @@
   {
     "id": 3550000,
     "name": "Greatsword of Solitude",
-    "description": "",
+    "description": "Steel greatsword wielded by the Knights of the Solitary Gaol.\n\nThrough a secret rite, they relinquished their hearts for heightened battle prowess. Next, they engraved their blades with two crests: one depicting the light of birth, and the other, solitude.",
     "category": "Greatsword",
     "weight": 15.5,
     "attack": {
@@ -7658,7 +7658,7 @@
   {
     "id": 3520000,
     "name": "Lizard Greatsword",
-    "description": "",
+    "description": "A peculiar weapon carried by imps.\nGreatsword smithed in the shape of a fork-tongued lizard.\n\nStrong attacks allow the wielder to fire the forked tongue from the blade.",
     "category": "Greatsword",
     "weight": 9.5,
     "attack": {
@@ -8209,7 +8209,7 @@
   {
     "id": 18510000,
     "name": "Poleblade of the Bud",
-    "description": "",
+    "description": "Weapon of Romina, Saint of the Bud.\nA scarlet glaive with a dangling bud-like blade.\nAttacks cause buildup of rot.\nOnce, in the crumbling, burning church, Romina held the bud in speechless silence.\nThat bud would become her blade.",
     "category": "Halberd",
     "weight": 10.0,
     "attack": {
@@ -8267,7 +8267,7 @@
   {
     "id": 18500000,
     "name": "Spirit Glaive",
-    "description": "",
+    "description": "Sharp blade sculpted into a twisted shape.\nA glaive that has seen many years of use in the gravesite.\n\nSaid to serve as a medium for communion with spirits.",
     "category": "Halberd",
     "weight": 6.5,
     "attack": {
@@ -8441,7 +8441,7 @@
   {
     "id": 11500000,
     "name": "Flowerstone Gavel",
-    "description": "",
+    "description": "Weapon of the Dragon Communion priestess.\nA dragonstone hammer resembling an ancient flower.\n\nThe four petals and the flower's core are all sharp, ending in points, and are capable of dealing heavy damage to dragons.",
     "category": "Hammer",
     "weight": 6.0,
     "attack": {
@@ -8818,7 +8818,7 @@
   {
     "id": 60510000,
     "name": "Dane's Footwork",
-    "description": "",
+    "description": "A technique for hand-to-hand combat without the aid of a weapon. This martial art focuses on kicking techniques.\n\nThis kick-based martial art is unique to Dane, a Dryleaf and sworn ally of Leda. He acquired these skills by training with the aid of a waterfall; letting the water beat his body, and throwing himself into its basin.",
     "category": "Hand-to-Hand",
     "weight": 1.0,
     "attack": {
@@ -8847,7 +8847,7 @@
   {
     "id": 60500000,
     "name": "Dryleaf Arts",
-    "description": "",
+    "description": "A technique for hand-to-hand combat without the aid of a weapon.\nThis martial art combines fist strikes and kicks.\n\nThe teachings of a group of spiritual seekers known as the Dryleaf Sect, revealed only to those of worthy valor and character. The practice of this martial art marks the dawn of an ascetic's journey.",
     "category": "Hand-to-Hand",
     "weight": 1.0,
     "attack": {
@@ -8992,7 +8992,7 @@
   {
     "id": 6500000,
     "name": "Queelign's Greatsword",
-    "description": "",
+    "description": "Greatsword of the Fire Knight Queelign.\nA weighty piercing sword with a blade that undulates like fire.\n\nQueelign devoted his all to the crusade, and remade his greatsword in the shape of the lance wielded by his liege—aspiring to become a second Impaler.",
     "category": "Heavy Thrusting Sword",
     "weight": 7.5,
     "attack": {
@@ -9021,7 +9021,7 @@
   {
     "id": 3500000,
     "name": "Sword Lance",
-    "description": "",
+    "description": "Weapon once wielded by Commander Gaius.\nA combination of greatsword and lance.\n\nWeighty and capable of being brought to bear with great force, this armament shows its true potential when used astride a mount.\nGaius himself was never without his boar.",
     "category": "Heavy Thrusting Sword",
     "weight": 9.0,
     "attack": {
@@ -9253,7 +9253,7 @@
   {
     "id": 2520000,
     "name": "Star-Lined Sword",
-    "description": "",
+    "description": "Sword encrusted with a line of stars fashioned from small pieces of crude glintstone.\nWeapon of the demi-human swordsmen.\n\nWhen bestowed with this weapon by their queen, the swordsmen swear to find the truth that lies at the end of the procession of stars.",
     "category": "Katana",
     "weight": 5.0,
     "attack": {
@@ -9282,7 +9282,7 @@
   {
     "id": 9500000,
     "name": "Sword of Night",
-    "description": "",
+    "description": "Sword of an all-consuming, bottomless black that devours even the light that shines upon it.\nWielded by Jolán, Swordhand of Night.\n\nThe blade of the sword is only semicorporeal, and thus cannot be guarded against completely.",
     "category": "Katana",
     "weight": 6.5,
     "attack": {
@@ -9340,7 +9340,7 @@
   {
     "id": 40500000,
     "name": "Bone Bow",
-    "description": "",
+    "description": "A crude shortbow fashioned from sickly bone.\n\nA medium for spirit-calling, and a product of the ancient hexing arts of the tower.",
     "category": "Light Bow",
     "weight": 3.0,
     "attack": {
@@ -9514,7 +9514,7 @@
   {
     "id": 67510000,
     "name": "Leda's Sword",
-    "description": "",
+    "description": "Light greatsword with gold inlaid. \nWeapon of Leda, the Needle Knight.\nDeals holy damage.\n\nThough polished to a mirror sheen, this blade still reeks with the stench of crusted blood that lingers from the cull of her knightly comrades.",
     "category": "Light Greatsword",
     "weight": 7.5,
     "attack": {
@@ -9543,7 +9543,7 @@
   {
     "id": 67500000,
     "name": "Milady",
-    "description": "",
+    "description": "A light greatsword; that is, a sword whose blade matches the length of a greatsword, while being constrained to a minimal weight.\nNicknamed after ladies of noble status for its refined appearance.\n\nWith cultivated form, one can wield this weapon as swiftly as one might a straight sword.",
     "category": "Light Greatsword",
     "weight": 6.5,
     "attack": {
@@ -9572,7 +9572,7 @@
   {
     "id": 67520000,
     "name": "Rellana's Twin Blades",
-    "description": "",
+    "description": "Carian light greatsword embedded with blue glintstone.\nWeapon of Rellana, the Twin Moon Knight.\n\nTwo swords as a single armament. When two-handing, a straight sword engraved with golden flame will be carried in the left hand.\nHere, and here alone, were moon and fire ever together.",
     "category": "Light Greatsword",
     "weight": 8.0,
     "attack": {
@@ -9949,7 +9949,7 @@
   {
     "id": 31530000,
     "name": "Golden Lion Shield",
-    "description": "",
+    "description": "Shield made to resemble a fierce golden lion with a luxuriant mane. \n\nAwarded to especially valorous members of Radahn's personal guard on the occasion of its formation.",
     "category": "Medium Shield",
     "weight": 5.5,
     "attack": {
@@ -10239,7 +10239,7 @@
   {
     "id": 31500000,
     "name": "Messmer Soldier Shield",
-    "description": "",
+    "description": "Worn roundshield carried by soldiers loyal to Messmer, the Impaler.\n\nThe largest of all metal shields in their class.",
     "category": "Medium Shield",
     "weight": 5.0,
     "attack": {
@@ -10355,7 +10355,7 @@
   {
     "id": 31520000,
     "name": "Serpent Crest Shield",
-    "description": "",
+    "description": "A finely-made \"redshield\" featuring an engraving of a winged serpent. Excels at guarding against fire.\n\nSaid to have been made to commemorate the beginnings of the crusade started by Messmer, son of Marika.",
     "category": "Medium Shield",
     "weight": 6.0,
     "attack": {
@@ -10471,7 +10471,7 @@
   {
     "id": 31510000,
     "name": "Wolf Crest Shield",
-    "description": "",
+    "description": "A finely-made \"blueshield\" featuring an engraving of a wolf under the moon. Excels at fending off sorceries.\n\nThe wolf is the beast of the Carian royal covenant; a symbol of the moon's pride that none can forget, no matter what remote lands they may arrive in.",
     "category": "Medium Shield",
     "weight": 6.0,
     "attack": {
@@ -10500,7 +10500,7 @@
   {
     "id": 61510000,
     "name": "Chilling Perfume Bottle",
-    "description": "",
+    "description": "Perfume bottle remade into a weapon by perfumers of the realm of shadow.\n\nAttacks release perfumed powder, producing an icy chill.\n\nFrom time to time, perfumers set out on journeys to pursue new aromatics and flower gardens.",
     "category": "Perfume Bottle",
     "weight": 1.0,
     "attack": {
@@ -10529,7 +10529,7 @@
   {
     "id": 61540000,
     "name": "Deadly Poison Perfume Bottle",
-    "description": "",
+    "description": "Perfume bottle customized by Thiollier.\n\nAttacks release perfumed powder, producing deadly poison.\n\nThere are some techniques of the perfuming arts that employ poison. Upon learning of this, Thiollier threw himself into mastering those techniques, and he made them his own.",
     "category": "Perfume Bottle",
     "weight": 1.0,
     "attack": {
@@ -10558,7 +10558,7 @@
   {
     "id": 61500000,
     "name": "Firespark Perfume Bottle",
-    "description": "",
+    "description": "Perfume bottle remade into a weapon by perfumers of the realm of shadow.\n\nAttacks release perfumed powder, producing sparks of fire.\n\nThe crusade was a violent purge, and the perfumers were not called there to heal.",
     "category": "Perfume Bottle",
     "weight": 1.0,
     "attack": {
@@ -10587,7 +10587,7 @@
   {
     "id": 61520000,
     "name": "Frenzyflame Perfume Bottle",
-    "description": "",
+    "description": "Perfume bottle remade into a weapon by perfumers of the realm of shadow.\n\nAttacks release perfumed powder, producing frenzied flame.\n\nFrom time to time, perfumers set out on journeys to pursue new aromatics and flower gardens.",
     "category": "Perfume Bottle",
     "weight": 1.0,
     "attack": {
@@ -10616,7 +10616,7 @@
   {
     "id": 61530000,
     "name": "Lightning Perfume Bottle",
-    "description": "",
+    "description": "Perfume bottle remade into a weapon by perfumers of the realm of shadow.\n\nAttacks release perfumed powder, producing lightning.\n\nFrom time to time, perfumers set out on journeys to pursue new aromatics and flower gardens.",
     "category": "Perfume Bottle",
     "weight": 1.0,
     "attack": {
@@ -10703,7 +10703,7 @@
   {
     "id": 34500000,
     "name": "Dryleaf Seal",
-    "description": "",
+    "description": "Sacred seal of the spiritual seekers known as the Dryleaf Sect.\nEnhances incantations which conjure golden rings of light.\n\nThose who saw the decline of the Erdtree in the fallen leaves long ago braced themselves for the weakening of Order, and embraced a strict faith. And then, they made to serve a new god.",
     "category": "Sacred Seal",
     "weight": 1.5,
     "attack": {
@@ -10790,7 +10790,7 @@
   {
     "id": 34510000,
     "name": "Fire Knight's Seal",
-    "description": "",
+    "description": "Sacred seal of the Fire Knights, who answer directly to Messmer the Impaler.\n\nEnhances fire incantations of Messmer.\n\nThe emblem of Messmer's army depicts a golden ring and the fire of his sacred seal.",
     "category": "Sacred Seal",
     "weight": 1.5,
     "attack": {
@@ -10964,7 +10964,7 @@
   {
     "id": 34520000,
     "name": "Spiraltree Seal",
-    "description": "",
+    "description": "Sacred seal of soiled amber engraved with a spiral tree design.\n\nEnhances spiral incantations.\n\nThe majesty of the white tower, stretching to reach the gods, even inspired a secret faith in the invaders, the people of the Erdtree.",
     "category": "Sacred Seal",
     "weight": 1.5,
     "attack": {
@@ -11051,7 +11051,7 @@
   {
     "id": 19500000,
     "name": "Obsidian Lamina",
-    "description": "",
+    "description": "Signature weapon of the Pureblood Knight Ansbach. A viciously keen and slender scythe made for combat.\n\nThe obsidian edge relies not upon trickery to fulfil its violent purpose—only well-honed skill is required to rip and rend through foes, sowing blossoms of red upon the battlefield.",
     "category": "Scythe",
     "weight": 6.5,
     "attack": {
@@ -11544,7 +11544,7 @@
   {
     "id": 21550000,
     "name": "Shield of Night",
-    "description": "",
+    "description": "A shield awarded to Swordhands of Night, cast in a bottomless black from which no light can escape.\n\nThe outer surface is only semicorporeal, providing reliable defense against attacks that are not physical in nature.",
     "category": "Small Shield",
     "weight": 2.0,
     "attack": {
@@ -11602,7 +11602,7 @@
   {
     "id": 30510000,
     "name": "Smithscript Shield",
-    "description": "",
+    "description": "Roundshield engraved with a smithscript.\nA throwing weapon created through the smithing arts.\n\nCan be thrown by performing the armament's Skill.",
     "category": "Small Shield",
     "weight": 2.5,
     "attack": {
@@ -11689,7 +11689,7 @@
   {
     "id": 63500000,
     "name": "Smithscript Dagger",
-    "description": "",
+    "description": "Dagger engraved with a smithscript.\n\nReduced mass enhances the effects of the smithing arts, allowing this weapon to function as a throwing dagger for all attacks. Once thrown, the dagger instantly reappears in the wielder's hand. Incompatible with ashes of war that grant skills with an affinity.",
     "category": "Smithscript (Dagger)",
     "weight": 1.5,
     "attack": {
@@ -11718,7 +11718,7 @@
   {
     "id": 16540000,
     "name": "Bloodfiend's Fork",
-    "description": "",
+    "description": "Weapon used by the bloodfiends.\nThree tines of carved bone spear the victim to provoke blood loss.\n\nA ritual implement for blood offerings to the Formless Mother.\nAt times, the bloodfiends will spill even their own blood using these forks.",
     "category": "Spear",
     "weight": 4.5,
     "attack": {
@@ -12124,7 +12124,7 @@
   {
     "id": 16500000,
     "name": "Smithscript Spear",
-    "description": "",
+    "description": "Spear engraved with a smithscript.\nA throwing weapon created through the smithing arts.\n\nExecute a strong attack, a dashing strong attack, or a mounted strong attack to throw the spear.\n\nIncompatible with ashes of war that grant skills with an affinity.",
     "category": "Spear",
     "weight": 4.0,
     "attack": {
@@ -12211,7 +12211,7 @@
   {
     "id": 16520000,
     "name": "Swift Spear",
-    "description": "",
+    "description": "A metal-bodied spear of extremely lightweight make, being the result of a sophisticated molding technique.\n\nCapable of swift consecutive attacks.",
     "category": "Spear",
     "weight": 3.0,
     "attack": {
@@ -12704,7 +12704,7 @@
   {
     "id": 2540000,
     "name": "Stone-Sheathed Sword",
-    "description": "",
+    "description": "A sword that none can pull from its scabbard of cracked stone.\n\nRelic of a lost civilization from a time long past, said to have served a ritual purpose at altars of light and darkness.",
     "category": "Straight Sword",
     "weight": 5.0,
     "attack": {
@@ -12733,7 +12733,7 @@
   {
     "id": 2560000,
     "name": "Sword of Darkness",
-    "description": "",
+    "description": "Sword of darkness, pulled from its stone scabbard at an altar.\n\nFrom the quick of the root, wandering coils of darkness coalesce and release, their eddies and vortices giving form to the dark blade.",
     "category": "Straight Sword",
     "weight": 4.0,
     "attack": {
@@ -12762,7 +12762,7 @@
   {
     "id": 2550000,
     "name": "Sword of Light",
-    "description": "",
+    "description": "Sword of light, pulled from its stone scabbard at an altar.\n\nFrom the quick of the root, unswerving rays of light intersect and reflect to give the silver blade form.",
     "category": "Straight Sword",
     "weight": 4.0,
     "attack": {
@@ -12849,7 +12849,7 @@
   {
     "id": 2510000,
     "name": "Velvet Sword of St. Trina",
-    "description": "",
+    "description": "Silver sword of St. Trina, now stained the color of velvet.\nInflicts eternal sleep.\n\nWhen St. Trina was abandoned, the faint, light-purple mists coalesced into an intoxicating deep-purple cloud.",
     "category": "Straight Sword",
     "weight": 2.5,
     "attack": {
@@ -12936,7 +12936,7 @@
   {
     "id": 62510000,
     "name": "Carian Thrusting Shield",
-    "description": "",
+    "description": "Silver thrusting shield embedded with glintstones.\nEnables the wielder to attack and guard simultaneously.\n\nOnce wielded by Rellana, the Twin Moon Knight, during her sole entry into ritual combat—a demonstration of fidelity to the Erdtree.",
     "category": "Thrusting Shield",
     "weight": 10.5,
     "attack": {
@@ -12965,7 +12965,7 @@
   {
     "id": 62500000,
     "name": "Dueling Shield",
-    "description": "",
+    "description": "A \"thrusting shield,\" or combined weapon and shield.\nEnables the wielder to attack and guard simultaneously.\n\nAn armament once used in ritual combat performed to honor the Erdtree—a custom that had somehow remained within the realm of shadow.",
     "category": "Thrusting Shield",
     "weight": 9.0,
     "attack": {
@@ -13023,7 +13023,7 @@
   {
     "id": 2530000,
     "name": "Carian Sorcery Sword",
-    "description": "",
+    "description": "One of the Carian royal family's glintstone swords.\nA smaller piercing sword with a slender blade.\nFormerly used by the Carian knights of old before the full refinement of their sorcerous combat techniques, this armament functions as a catalyst for glintstone sorcery when executing strong attacks. ",
     "category": "Thrusting Sword",
     "weight": 2.5,
     "attack": {
@@ -13284,7 +13284,7 @@
   {
     "id": 24510000,
     "name": "Lamenting Visage",
-    "description": "",
+    "description": "A stone lantern carved to resemble a lamenting human head, the eyes vacantly beaming out light. Can be raised up when equipped in the left hand, illuminating more of the surrounding area.\n\nThe unusual expression somehow imparts a sense of contentment. The languid ease of one who needs not sight.",
     "category": "Torch",
     "weight": 2.0,
     "attack": {
@@ -13313,7 +13313,7 @@
   {
     "id": 24500000,
     "name": "Nanaya's Torch",
-    "description": "",
+    "description": "A torch made by attaching a dying flame of frenzy to a small spinal column.\n\nIn a distant land, in an age long past, was born a man who failed to become the Lord of Frenzied Flame. All that remains of him is cradled gently by Nanaya.",
     "category": "Torch",
     "weight": 3.5,
     "attack": {
@@ -13458,7 +13458,7 @@
   {
     "id": 10510000,
     "name": "Black Steel Twinblade",
-    "description": "",
+    "description": "Weapon of the Black Knights, servants of Messmer the Impaler. Twinblade of black steel with decorative embellishments in gold.\n\nBlessed with an Erdtree incantation. Further holy imbuement will amplify the effect and greatly increase the armament's power.",
     "category": "Twinblade",
     "weight": 8.0,
     "attack": {
@@ -13516,7 +13516,7 @@
   {
     "id": 10500000,
     "name": "Euporia",
-    "description": "",
+    "description": "Twinblade symbolizing abundance.\nThe secret treasure of the tower.\n\nThough the blades, fashioned from golden shoots, are largely wilted and darkened, their luster can be restored by dealing damage to foes. However, damage dealt to Those Who Live in Death will have no such effect.",
     "category": "Twinblade",
     "weight": 8.5,
     "attack": {
@@ -13806,7 +13806,7 @@
   {
     "id": 20500000,
     "name": "Tooth Whip",
-    "description": "",
+    "description": "Whip bestrewn with rotting, misshapen teeth. Filthy and seething with disease, the teeth are embedded in the whip and dose the victim with deadly poison upon each strike.\n\nAs the wounds ripen they grow inflamed and ooze pus. The flesh of shamans was said to meld harmoniously with others.",
     "category": "Whip",
     "weight": 3.0,
     "attack": {
