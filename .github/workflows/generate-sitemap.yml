@@ -20,6 +20,7 @@ jobs:
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://gitgudder.wiki/  # Your custom domain structure
+        exclude-urls: https://gitgudder.wiki/header.html https://gitgudder.wiki/footer.html
 
     - name: Commit and Push Updated Sitemap
       run: |
