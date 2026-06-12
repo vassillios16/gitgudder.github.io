@@ -79,46 +79,6 @@
             line-height: 1.5;
         }
 
-        .talisman-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 8px 14px;
-            font-family: 'Fira Code', monospace;
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-top: 18px;
-            transition: border-color 0.2s;
-        }
-        .talisman-badge.at-limit {
-            border-color: var(--red-light);
-            color: var(--red-light);
-        }
-        .talisman-badge.at-limit .tali-label { color: var(--red-light); }
-
-        .tali-slots {
-            display: flex;
-            gap: 4px;
-        }
-        .tali-slot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            border: 1px solid var(--text-muted);
-            background: transparent;
-            transition: background 0.2s, border-color 0.2s;
-        }
-        .tali-slot.filled {
-            background: var(--gold);
-            border-color: var(--gold);
-        }
-        .tali-slot.over {
-            background: var(--red-light);
-            border-color: var(--red-light);
-        }
 
         .result-card {
             display: flex;
@@ -305,12 +265,6 @@
             border-left: none;
             transform: rotate(45deg);
         }
-        /* Disabled (talisman limit hit) */
-        .buff-check-option.tali-blocked input[type="checkbox"]:not(:checked) {
-            opacity: 0.35;
-            cursor: not-allowed;
-        }
-        .buff-check-option.tali-blocked:not(:has(input:checked)) { opacity: 0.45; cursor: not-allowed; }
 
         .buff-name {
             font-size: 13px;
@@ -425,11 +379,6 @@
                         <input type="number" id="baseDamage" value="500" min="1" max="99999">
                         <span class="input-hint">Enter your weapon's<br>attack rating</span>
                     </div>
-                    <div class="talisman-badge" id="talismanBadge">
-                        <span class="tali-label">Talismans</span>
-                        <div class="tali-slots" id="taliSlots"></div>
-                        <span id="taliCount" style="font-size:11px;">0 / 4</span>
-                    </div>
                 </div>
 
                 <div class="result-card">
@@ -490,7 +439,7 @@
             id: 'status-proc',
             name: 'Status Trigger',
             pip: 'pip-purple',
-            exclusive: true,
+            exclusive: false,
             buffs: [
                 { name: 'None', mult: 0 },
                 { name: 'White Mask', mult: 0.10 },
@@ -506,7 +455,7 @@
             id: 'action-mod',
             name: 'Action Modifier',
             pip: 'pip-green',
-            exclusive: true,
+            exclusive: false,
             buffs: [
                 { name: 'None', mult: 0 },
                 { name: 'Two-Handed Sword Talisman', mult: 0.15, talisman: true },
@@ -519,7 +468,7 @@
             id: 'skill-boost',
             name: 'Skill / Element Boost',
             pip: 'pip-blue',
-            exclusive: true,
+            exclusive: false,
             buffs: [
                 { name: 'None', mult: 0 },
                 { name: 'Godfrey Icon', mult: 0.15, talisman: true },
@@ -560,9 +509,9 @@
         'weapon-art': 0,
         'buff-spell': 0,
         'aura': 0,
-        'status-proc': 0,
-        'action-mod': 0,
-        'skill-boost': 0,
+        'status-proc': new Set(),
+        'action-mod': new Set(),
+        'skill-boost': new Set(),
         'misc': new Set(),
     };
 
@@ -582,7 +531,7 @@
                 <span class="group-pip ${group.pip}"></span>
                 <span class="buff-group-title">${group.name}</span>
                 <span class="group-limit-badge ${group.exclusive ? 'limit-exclusive' : 'limit-free'}">
-                    ${group.exclusive ? 'Pick one' : 'Stack freely'}
+                    ${group.exclusive ? 'Pick one' : (group.id === 'misc' ? 'Stack freely' : 'Multi-select')}
                 </span>
             `;
             card.appendChild(header);
@@ -631,16 +580,10 @@
                         </span>
                     `;
                     label.querySelector('input').addEventListener('change', e => {
-                        const taliCount = countTalismans();
-                        if (e.target.checked && buff.talisman && taliCount >= 4) {
-                            e.target.checked = false;
-                            return;
-                        }
                         if (e.target.checked) state[group.id].add(buff.name);
                         else state[group.id].delete(buff.name);
                         calculate();
                         refreshMults();
-                        updateTalismanUI();
                     });
                     opts.appendChild(label);
                 });
@@ -651,51 +594,6 @@
         });
     }
 
-    // ── Talisman counting ──────────────────────────────────────────────────
-    function countTalismans() {
-        let count = 0;
-        GROUPS.forEach(group => {
-            if (group.exclusive) {
-                const i = state[group.id];
-                if (i > 0 && group.buffs[i].talisman) count++;
-            } else {
-                group.buffs.forEach(buff => {
-                    if (buff.talisman && state[group.id].has(buff.name)) count++;
-                });
-            }
-        });
-        return count;
-    }
-
-    function updateTalismanUI() {
-        const count = countTalismans();
-        const badge = document.getElementById('talismanBadge');
-        const countEl = document.getElementById('taliCount');
-        const slots = document.getElementById('taliSlots');
-
-        countEl.textContent = count + ' / 4';
-        badge.className = 'talisman-badge' + (count >= 4 ? ' at-limit' : '');
-
-        slots.innerHTML = '';
-        for (let i = 0; i < 4; i++) {
-            const dot = document.createElement('span');
-            dot.className = 'tali-slot' + (i < count ? (count > 4 ? ' over' : ' filled') : '');
-            slots.appendChild(dot);
-        }
-
-        // Disable unchecked talisman checkboxes when at limit
-        document.querySelectorAll('.buff-check-option').forEach(label => {
-            const isTali = label.dataset.talisman === '1';
-            const cb = label.querySelector('input[type="checkbox"]');
-            if (isTali && !cb.checked && count >= 4) {
-                label.classList.add('tali-blocked');
-                cb.disabled = true;
-            } else {
-                label.classList.remove('tali-blocked');
-                cb.disabled = false;
-            }
-        });
-    }
 
     // ── Calculation ────────────────────────────────────────────────────────
     function getActiveBuffs() {
@@ -735,8 +633,6 @@
             });
             document.getElementById('resultChain').textContent = parts.join('\n');
         }
-
-        updateTalismanUI();
     }
 
     function refreshMults() {
