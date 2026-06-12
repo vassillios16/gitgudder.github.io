@@ -14,7 +14,7 @@ OUT_DIR      = os.path.join(os.path.dirname(__file__), "..", "elden-ring", "item
 
 
 def slugify(name):
-    s = re.sub(r"[‘‘’`]", "", name)   # strip apostrophes before normalization
+    s = re.sub(u"[\u0027\u2018\u2019\u0060]", "", name)  # strip apostrophes
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
     s = s.lower()
     s = re.sub(r"[^a-z0-9]+", "-", s)
@@ -186,15 +186,26 @@ def main():
         weapons = json.load(f)
 
     os.makedirs(OUT_DIR, exist_ok=True)
+    valid_filenames = set()
     generated = 0
     for w in weapons:
         filename, html = generate(w)
+        valid_filenames.add(filename)
         path = os.path.join(OUT_DIR, filename)
         with open(path, "w", encoding="utf-8") as f:
             f.write(html)
         generated += 1
 
+    # Remove any stale weapon pages not produced by this run
+    removed = 0
+    for f in os.listdir(OUT_DIR):
+        if f.startswith("weapon-") and f.endswith(".html") and f not in valid_filenames:
+            os.remove(os.path.join(OUT_DIR, f))
+            removed += 1
+
     print(f"Generated {generated} weapon pages in {OUT_DIR}")
+    if removed:
+        print(f"Removed {removed} stale pages")
 
 
 if __name__ == "__main__":
