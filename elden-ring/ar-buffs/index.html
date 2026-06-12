@@ -441,7 +441,6 @@
             pip: 'pip-purple',
             exclusive: false,
             buffs: [
-                { name: 'None', mult: 0 },
                 { name: 'White Mask', mult: 0.10 },
                 { name: "Lord of Blood's Exultation", mult: 0.20, talisman: true },
                 { name: 'Mushroom Crown', mult: 0.10 },
@@ -457,7 +456,6 @@
             pip: 'pip-green',
             exclusive: false,
             buffs: [
-                { name: 'None', mult: 0 },
                 { name: 'Two-Handed Sword Talisman', mult: 0.15, talisman: true },
                 { name: 'Axe Talisman (charged attack)', mult: 0.10, talisman: true },
                 { name: 'Lance Talisman + Counter Hit', mult: 0.495, talisman: true },
@@ -470,7 +468,6 @@
             pip: 'pip-blue',
             exclusive: false,
             buffs: [
-                { name: 'None', mult: 0 },
                 { name: 'Godfrey Icon', mult: 0.15, talisman: true },
                 { name: 'Scorpion Charm', mult: 0.12, talisman: true },
                 { name: 'Warrior Jar Shard', mult: 0.10, talisman: true },
@@ -562,9 +559,9 @@
                 });
                 card.appendChild(opts);
             } else {
-                // Misc — free checkboxes in a grid
+                // Non-exclusive checkboxes
                 const opts = document.createElement('div');
-                opts.className = 'misc-grid';
+                opts.className = group.id === 'misc' ? 'misc-grid' : 'buff-options';
                 group.buffs.forEach(buff => {
                     const label = document.createElement('label');
                     label.className = 'buff-check-option';
