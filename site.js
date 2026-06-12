@@ -18,6 +18,8 @@
       initSearch();
     }
 
+    injectSubpageNav();
+
     if (footerEl && footerRes && footerRes.ok) {
       footerEl.innerHTML = await footerRes.text();
     }
@@ -33,6 +35,33 @@
       const trigger = header.querySelector('.nav-dropdown-trigger');
       if (trigger) trigger.classList.add('active');
     }
+  }
+
+  // ── Elden Ring Subpage Nav Injection ──────────────────────────────────────
+  const ER_NAV_LINKS = [
+    { key: 'guides',    label: 'Guides',           href: '/elden-ring/guides/' },
+    { key: 'checklist', label: 'Items Checklist',  href: '/elden-ring/items/' },
+    { key: 'weapons',   label: 'Weapons Database', href: '/elden-ring/items/weapons/' },
+    { key: 'ar-buffs',  label: 'AR Buff Calculator', href: '/elden-ring/ar-buffs/' },
+  ];
+
+  function injectSubpageNav() {
+    document.querySelectorAll('.subpage-nav-container[data-er-nav]').forEach(nav => {
+      const active = nav.dataset.erNav;
+      const ul = document.createElement('ul');
+      ul.className = 'subpage-nav-links';
+      ER_NAV_LINKS.forEach(({ key, label, href }) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = href;
+        a.textContent = label;
+        if (key === active) a.className = 'active';
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      nav.innerHTML = '';
+      nav.appendChild(ul);
+    });
   }
 
   // ── Elden Ring Dropdown ───────────────────────────────────────────────────

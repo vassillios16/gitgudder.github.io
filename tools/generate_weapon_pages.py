@@ -129,14 +129,7 @@ def generate(w):
     <header class="site-header" id="global-header"></header>
 
     <main class="content-section">
-        <nav class="subpage-nav-container">
-            <ul class="subpage-nav-links">
-                <li><a href="/elden-ring/guides/">Guides</a></li>
-                <li><a href="/elden-ring/items/">Items Checklist</a></li>
-                <li><a href="/elden-ring/items/weapons/" class="active">Weapons Database</a></li>
-                <li><a href="/elden-ring/ar-buffs/">AR Buff Calculator</a></li>
-            </ul>
-        </nav>
+        <nav class="subpage-nav-container" data-er-nav="weapons"></nav>
 
         <div class="weapon-wrap">
             <div class="weapon-header">
