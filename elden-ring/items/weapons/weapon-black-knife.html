@@ -3,102 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Gudder — Black Knife Guide</title>
+    <meta name="description" content="Black Knife stats, scaling, and requirements in Elden Ring.">
+    <title>Black Knife — Git Gudder Elden Ring</title>
+
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Black Knife \u2014 Stats, Scaling & Requirements",
+  "description": "Black Knife is a Dagger in Elden Ring.",
+  "mainEntity": {
+    "@type": "GameItem",
+    "name": "Black Knife",
+    "category": "Dagger"
+  }
+}</script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- AI Engine Structural Search Schema Mapping Footprint -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Black Knife Detailed Parameter Profiles & Scaling Stats",
-      "description": "Dagger wielded by the Assassins of the Night of the Black Knives....",
-      "mainEntity": {
-        "@type": "GameItem",
-        "name": "Black Knife",
-        "category": "Dagger",
-        "weight": "2.0"
-      }
-    }
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
     <style>
-        :root {
-            --gold: #C9A84C; --gold-light: #E8C96A; --gold-dim: #8A6E2F;
-            --bg-deepest: #0A0906; --bg-deep: #100E09; --bg-mid: #181410;
-            --bg-surface: #201C16; --bg-card: #241F18;
-            --text-primary: #E8DCC0; --text-secondary: #A89878; --text-muted: #665E4A;
-            --border: rgba(201,168,76,0.2); --radius: 4px; --radius-lg: 8px;
-        }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--bg-deepest); color: var(--text-primary); font-family: 'Crimson Pro', Georgia, serif; font-size: 17px; line-height: 1.7; min-height: 100vh; }
-        body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.06) 0%, transparent 70%); pointer-events: none; z-index: 0; }
-        .site-header { border-bottom: 1px solid var(--border); background: linear-gradient(to bottom, #0D0B07, var(--bg-deep)); }
-        .top-bar { display: flex; align-items: center; padding: 10px 40px; font-family: 'Fira Code', monospace; font-size: 11px; color: var(--text-muted); }
-        .top-bar a { color: var(--text-muted); text-decoration: none; }
-        .main-nav { padding: 20px 40px; }
-        .nav-container { display: flex; align-items: center; justify-content: space-between; }
-        .brand-logo { height: 50px; }
-        .item-dashboard { max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 1fr 360px; gap: 40px; position: relative; z-index: 1; }
-        @media (max-width: 850px) { .item-dashboard { grid-template-columns: 1fr; } }
-        .weapon-category { font-family: 'Fira Code', monospace; font-size: 12px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; }
-        .weapon-title { font-family: 'Cinzel', serif; font-size: 36px; color: var(--text-primary); }
-        .lore-box { background: var(--bg-mid); border-left: 2px solid var(--gold-dim); padding: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
-        .section-heading { font-family: 'Cinzel', serif; font-size: 18px; color: var(--gold-light); margin: 30px 0 15px; border-bottom: 1px solid rgba(201,168,76,0.1); padding-bottom: 6px; }
-        .stat-table { width: 100%; border-collapse: collapse; margin-bottom: 25px; background: var(--bg-card); border: 1px solid var(--border); }
-        .stat-table th, .stat-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(201,168,76,0.06); }
-        .stat-table th { font-family: 'Cinzel', serif; font-size: 11px; color: var(--text-secondary); background: var(--bg-surface); }
-        .stat-value { font-family: 'Fira Code', monospace; color: var(--text-primary); }
-        .video-box { background: var(--bg-card); border: 1px solid var(--border); padding: 20px; border-radius: var(--radius-lg); text-align: center; }
-        .video-viewport { width: 100%; aspect-ratio: 16/9; background: #000; margin-top: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Fira Code', monospace; font-size: 12px; color: var(--text-muted); }
-        footer { border-top: 1px solid var(--border); background: var(--bg-deep); padding: 30px; text-align: center; font-size: 13px; color: var(--text-muted); }
-        footer a { color: var(--text-muted); text-decoration: none; }
+        .weapon-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+        .weapon-header { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 32px; flex-wrap: wrap; }
+        .weapon-img-wrap { flex-shrink: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; }
+        .weapon-img { max-width: 120px; max-height: 120px; object-fit: contain; image-rendering: pixelated; }
+        .weapon-header-text { flex: 1; min-width: 200px; }
+        .weapon-category-label { font-family: 'Fira Code', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+        .weapon-title { font-family: 'Cinzel', serif; font-size: 36px; font-weight: 700; color: var(--text-primary); line-height: 1.1; margin-bottom: 10px; }
+        .weapon-meta { font-family: 'Fira Code', monospace; font-size: 12px; color: var(--text-muted); display: flex; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
+        .dlc-badge { font-family: 'Fira Code', monospace; font-size: 10px; background: rgba(201,168,76,0.12); border: 1px solid var(--gold-dim); color: var(--gold); border-radius: 3px; padding: 2px 7px; vertical-align: middle; }
+        .lore-box { background: var(--bg-mid); border-left: 2px solid var(--gold-dim); padding: 16px 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); border-radius: 0 var(--radius) var(--radius) 0; }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+        @media (max-width: 600px) { .stat-grid { grid-template-columns: 1fr; } }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+        .stat-card-title { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); background: var(--bg-surface); padding: 10px 16px; border-bottom: 1px solid var(--border); }
+        .stat-card table { width: 100%; border-collapse: collapse; }
+        .stat-card td { padding: 9px 16px; border-bottom: 1px solid rgba(201,168,76,0.05); font-size: 15px; }
+        .stat-card td:first-child { color: var(--text-secondary); }
+        .stat-value { font-family: 'Fira Code', monospace; color: var(--text-primary); text-align: right; }
+        .muted { color: var(--text-muted); font-style: italic; font-size: 13px; }
+        .scl-table { width: 100%; border-collapse: collapse; }
+        .scl-table th { font-family: 'Fira Code', monospace; font-size: 11px; color: var(--text-muted); padding: 8px 16px; text-align: center; background: var(--bg-surface); border-bottom: 1px solid var(--border); }
+        .scl-table td { padding: 10px 16px; text-align: center; font-family: 'Fira Code', monospace; font-size: 16px; font-weight: 500; }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="top-bar"><a href="melee-weapons.html">← Back to Melee Weapons List</a></div>
-    </header>
-    <main class="item-dashboard">
-        <section>
-            <div class="weapon-category">Dagger</div>
-            <h1 class="weapon-title">Black Knife</h1>
-            <div class="lore-box">"Dagger wielded by the Assassins of the Night of the Black Knives."</div>
+    <header class="site-header" id="global-header"></header>
 
-            <h2 class="section-heading">Wielding Requirements & Equipment Scaling Matrix</h2>
-            <table class="stat-table">
-                <thead>
-                    <tr><th>Parameter</th><th>STR</th><th>DEX</th><th>INT</th><th>FAI</th><th>ARC</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Required</td><td class="stat-value">8</td><td class="stat-value">12</td><td class="stat-value">0</td><td class="stat-value">18</td><td class="stat-value">0</td></tr>
-                    <tr><td>Scaling</td><td class="stat-value">E</td><td class="stat-value">D</td><td class="stat-value">-</td><td class="stat-value">D</td><td class="stat-value">-</td></tr>
-                </tbody>
-            </table>
+    <main class="content-section">
+        <nav class="subpage-nav-container">
+            <ul class="subpage-nav-links">
+                <li><a href="/elden-ring/guides/">Guides</a></li>
+                <li><a href="/elden-ring/items/" class="active">Items Checklist</a></li>
+                <li><a href="/elden-ring/ar-buffs/">AR Buff Calculator</a></li>
+            </ul>
+        </nav>
 
-            <h2 class="section-heading">Base Attack Power Profiles</h2>
-            <table class="stat-table">
-                <thead>
-                    <tr><th>Damage Element</th><th>Base Rating</th><th>Weight</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Physical</td><td class="stat-value">66</td><td class="stat-value" rowspan="5" style="vertical-align:middle; text-align:center;">2.0</td></tr>
-                    <tr><td>Magic</td><td class="stat-value">0</td></tr>
-                    <tr><td>Fire</td><td class="stat-value">0</td></tr>
-                    <tr><td>Lightning</td><td class="stat-value">0</td></tr>
-                    <tr><td>Holy</td><td class="stat-value">65</td></tr>
-                </tbody>
-            </table>
-        </section>
-        <aside>
-            <div class="video-box">
-                <h3 style="font-family:'Cinzel'; font-size:14px; color:var(--gold);">Walkthrough Guide</h3>
-                <div class="video-viewport">🎥 Integration Pending</div>
+        <div class="weapon-wrap">
+            <div class="weapon-header">
+                
+        <div class="weapon-img-wrap">
+            <img src="https://eldenring.fanapis.com/images/weapons/17f69bb7d32l0i1ou85ft99zwecdel.png" alt="Black Knife" class="weapon-img" loading="lazy">
+        </div>
+                <div class="weapon-header-text">
+                    <div class="weapon-category-label">Dagger</div>
+                    <h1 class="weapon-title">Black Knife</h1>
+                    <div class="weapon-meta">
+                        <span>Weight: 2.0</span>
+                    </div>
+                </div>
             </div>
-        </aside>
+
+            
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-card-title">Attack Power</div>
+                    <table><tbody>
+                        <tr><td>Physical</td><td class="stat-value">66</td></tr>
+<tr><td>Holy</td><td class="stat-value">65</td></tr>
+
+                    </tbody></table>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-title">Requirements</div>
+                    <table><tbody>
+                        <tr><td>STR</td><td class="stat-value">8</td></tr>
+<tr><td>DEX</td><td class="stat-value">12</td></tr>
+<tr><td>FAI</td><td class="stat-value">18</td></tr>
+
+                    </tbody></table>
+                </div>
+            </div>
+
+            
+            <div class="stat-card" style="margin-bottom:28px;">
+                <div class="stat-card-title">Attribute Scaling</div>
+                <table class="scl-table">
+                    <thead><tr><th>STR</th><th>DEX</th><th>FAI</th></tr></thead>
+                    <tbody><tr><td class="stat-value" style="color:var(--text-muted)">E</td><td class="stat-value" style="color:var(--text-secondary)">C</td><td class="stat-value" style="color:var(--text-muted)">D</td></tr></tbody>
+                </table>
+            </div>
+
+        </div>
     </main>
-    <footer><p>© 2026 Git Gudder · <a href="index.html">Portal Home</a></p></footer>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+    <script src="/site.js"></script>
 </body>
 </html>
