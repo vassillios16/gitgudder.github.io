@@ -1,5 +1,5 @@
 """
-Build weapon database JSON from Smithbox CSV exports.
+Build weapon database JSON from Smithbox exports.
 Run: python tools/build_weapon_db.py
 Outputs: elden-ring/items/weapons/data/weapons.json
 """
@@ -11,8 +11,7 @@ import sys
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 PARAM_CSV    = r"C:\Users\pmaci\Desktop\Elden Ring Mods\unpacked er\param\EquipParamWeapon.csv"
-NAMES_TXT    = r"C:\Users\pmaci\Desktop\Elden Ring Mods\unpacked er\msg\engus\WeaponName.csv"
-CAPTIONS_TXT = r"C:\Users\pmaci\Desktop\Elden Ring Mods\unpacked er\msg\engus\WeaponCaption.csv"
+FMG_JSON     = r"C:\Users\pmaci\Desktop\Elden Ring Mods\unpacked er\.smithbox\Workflow\Exported Text\base_weapons.json"
 OUT_DIR      = os.path.join(os.path.dirname(__file__), "..", "elden-ring", "items", "weapons", "data")
 OUT_FILE     = os.path.join(OUT_DIR, "weapons.json")
 
@@ -67,18 +66,25 @@ SCALING_GRADE = {
 }
 
 
-def load_csv(path):
+def load_fmg(path):
+    """Load names and captions from Smithbox FMG JSON export."""
+    names, captions = {}, {}
     if not os.path.exists(path):
-        return {}
-    result = {}
+        return names, captions
     with open(path, encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            id_col = row.get("ID") or row.get("id") or ""
-            text_col = row.get("Text") or row.get("text") or row.get("Name") or ""
-            if id_col.strip():
-                result[id_col.strip()] = text_col.strip()
-    return result
+        data = json.load(f)
+    for wrapper in data.get("FmgWrappers", []):
+        fmg_name = wrapper["Name"]
+        entries = wrapper["Fmg"]["Entries"]
+        if "WeaponName" in fmg_name:
+            for e in entries:
+                if e["Text"] and e["Text"] != "[ERROR]":
+                    names[str(e["ID"])] = e["Text"]
+        elif "WeaponCaption" in fmg_name:
+            for e in entries:
+                if e["Text"] and e["Text"] != "[ERROR]":
+                    captions[str(e["ID"])] = e["Text"]
+    return names, captions
 
 
 def parse_scaling(val):
@@ -105,9 +111,7 @@ def parse_scaling(val):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    # Load text lookups (optional — skip if not exported yet)
-    names    = load_csv(NAMES_TXT)
-    captions = load_csv(CAPTIONS_TXT)
+    names, captions = load_fmg(FMG_JSON)
 
     weapons = []
     with open(PARAM_CSV, encoding="utf-8") as f:
