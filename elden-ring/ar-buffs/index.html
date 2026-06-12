@@ -3,40 +3,774 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Git Gudder — Elden Ring AR Buff Calculator. Simulate attack rating scaling and spell buff optimization.">
+    <meta name="description" content="Elden Ring AR Buff Calculator — simulate attack rating multipliers, stack buffs, track talisman slots.">
     <title>AR Buff Calculator — Git Gudder Elden Ring</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+
+    <style>
+        /* ── Layout ─────────────────────────────────────────── */
+        .calc-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px 100px;
+        }
+
+        /* ── Top bar: input + result ─────────────────────────── */
+        .calc-top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 36px;
+            align-items: stretch;
+        }
+
+        .input-card, .result-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+        }
+
+        .input-card label {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .damage-input-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .damage-input-row input[type="number"] {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 10px 16px;
+            width: 180px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            -moz-appearance: textfield;
+        }
+        .damage-input-row input[type="number"]::-webkit-outer-spin-button,
+        .damage-input-row input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+        .damage-input-row input[type="number"]:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(201,168,76,0.12);
+        }
+
+        .input-hint {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .talisman-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 8px 14px;
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 18px;
+            transition: border-color 0.2s;
+        }
+        .talisman-badge.at-limit {
+            border-color: var(--red-light);
+            color: var(--red-light);
+        }
+        .talisman-badge.at-limit .tali-label { color: var(--red-light); }
+
+        .tali-slots {
+            display: flex;
+            gap: 4px;
+        }
+        .tali-slot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1px solid var(--text-muted);
+            background: transparent;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .tali-slot.filled {
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+        .tali-slot.over {
+            background: var(--red-light);
+            border-color: var(--red-light);
+        }
+
+        .result-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .result-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .result-number {
+            font-family: 'Cinzel', serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: var(--gold-light);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            text-shadow: 0 0 30px rgba(201,168,76,0.25);
+            transition: color 0.2s;
+        }
+
+        .result-multiplier {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+        }
+
+        .result-chain {
+            font-family: 'Fira Code', monospace;
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            line-height: 1.8;
+            word-break: break-all;
+        }
+
+        /* ── Buff Grid ───────────────────────────────────────── */
+        .buff-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .buff-group {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .buff-group-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(201,168,76,0.08);
+        }
+
+        .group-pip {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .buff-group-title {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+
+        .group-limit-badge {
+            font-family: 'Fira Code', monospace;
+            font-size: 9px;
+            letter-spacing: 0.06em;
+            padding: 2px 7px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .limit-exclusive {
+            background: rgba(201,168,76,0.08);
+            border: 1px solid rgba(201,168,76,0.2);
+            color: var(--gold-dim);
+        }
+        .limit-free {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: var(--text-muted);
+        }
+
+        .buff-options {
+            padding: 10px 8px;
+        }
+
+        /* Radio option (exclusive groups) */
+        .buff-radio-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 10px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background 0.15s;
+            user-select: none;
+        }
+        .buff-radio-option:hover { background: rgba(201,168,76,0.05); }
+
+        .buff-radio-option input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1px solid var(--text-muted);
+            background: transparent;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: border-color 0.15s, background 0.15s;
+            position: relative;
+        }
+        .buff-radio-option input[type="radio"]:checked {
+            border-color: var(--gold);
+            background: var(--gold-dim);
+        }
+        .buff-radio-option input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            border-radius: 50%;
+            background: var(--gold-light);
+        }
+
+        /* Checkbox option (free stack groups) */
+        .buff-check-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 10px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background 0.15s;
+            user-select: none;
+        }
+        .buff-check-option:hover { background: rgba(201,168,76,0.05); }
+
+        .buff-check-option input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 2px;
+            border: 1px solid var(--text-muted);
+            background: transparent;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: border-color 0.15s, background 0.15s;
+            position: relative;
+        }
+        .buff-check-option input[type="checkbox"]:checked {
+            border-color: var(--gold);
+            background: var(--gold-dim);
+        }
+        .buff-check-option input[type="checkbox"]:checked::after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 1px;
+            width: 5px;
+            height: 8px;
+            border: 2px solid var(--gold-light);
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg);
+        }
+        /* Disabled (talisman limit hit) */
+        .buff-check-option.tali-blocked input[type="checkbox"]:not(:checked) {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+        .buff-check-option.tali-blocked:not(:has(input:checked)) { opacity: 0.45; cursor: not-allowed; }
+
+        .buff-name {
+            font-size: 13px;
+            color: var(--text-primary);
+            flex: 1;
+            line-height: 1.3;
+        }
+        .buff-name.is-none { color: var(--text-muted); font-style: italic; }
+
+        .buff-meta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .buff-mult {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--gold-dim);
+            white-space: nowrap;
+        }
+        .buff-mult.active { color: var(--gold-light); }
+
+        .tali-pip {
+            font-size: 10px;
+            opacity: 0.5;
+            title: 'Uses a talisman slot';
+        }
+
+        /* Color pips per group */
+        .pip-cyan   { background: #00BFBF; }
+        .pip-red    { background: #C44444; }
+        .pip-yellow { background: #C9A84C; }
+        .pip-purple { background: #9B7FC4; }
+        .pip-green  { background: #6BA868; }
+        .pip-blue   { background: #6B9EC4; }
+        .pip-grey   { background: #665E4A; }
+
+        /* Reset button */
+        .calc-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .reset-btn {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .reset-btn:hover { border-color: var(--red-light); color: var(--red-light); }
+
+        /* Misc group spans full width */
+        .buff-group.full-width { grid-column: 1 / -1; }
+        .misc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 10px 8px;
+            gap: 0;
+        }
+
+        @media (max-width: 900px) {
+            .calc-wrap { padding: 0 20px 60px; }
+            .calc-top { grid-template-columns: 1fr; }
+            .buff-grid { grid-template-columns: 1fr; }
+            .buff-group.full-width { grid-column: 1; }
+            .misc-grid { grid-template-columns: 1fr 1fr; }
+            .result-number { font-size: 40px; }
+        }
+        @media (max-width: 600px) {
+            .misc-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
     <header class="site-header" id="global-header"></header>
 
-    <main class="content-section">
-        <h1 class="page-title">AR Buff Calculator</h1>
-        <p class="page-subtitle">Attack Rating Simulation & Spell Buff Optimizer</p>
+    <main>
+        <div class="content-section" style="padding-bottom:0;">
+            <h1 class="page-title">AR Buff Calculator</h1>
+            <p class="page-subtitle">Attack Rating Multiplier Simulator</p>
 
-        <nav class="subpage-nav-container">
-            <ul class="subpage-nav-links">
-                <li><a href="/elden-ring/guides/">Guides</a></li>
-                <li><a href="/elden-ring/items/">Items Checklist</a></li>
-                <li><a href="/elden-ring/ar-buffs/" class="active">AR Buff Calculator</a></li>
-            </ul>
-        </nav>
+            <nav class="subpage-nav-container">
+                <ul class="subpage-nav-links">
+                    <li><a href="/elden-ring/guides/">Guides</a></li>
+                    <li><a href="/elden-ring/items/">Items Checklist</a></li>
+                    <li><a href="/elden-ring/ar-buffs/" class="active">AR Buff Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        <div class="info-block" role="note">
-            <span class="info-icon" aria-hidden="true">⚙️</span>
-            <p class="info-text">
-                <strong>Calculator In Development:</strong> The AR Buff Calculator will simulate attack rating calculations, scaling breakdowns by stat threshold, and optimize active weapon spell buffs (Golden Vow, Flame Grant Me Strength, etc.) against your equipment loadout. It will be available alongside the Tarnished Edition database build-out.
-            </p>
+        <div class="calc-wrap">
+
+            <div class="calc-actions">
+                <button class="reset-btn" id="resetBtn">Reset All</button>
+            </div>
+
+            <!-- Top: Input + Result -->
+            <div class="calc-top">
+                <div class="input-card">
+                    <label>Base Damage (AR)</label>
+                    <div class="damage-input-row">
+                        <input type="number" id="baseDamage" value="500" min="1" max="99999">
+                        <span class="input-hint">Enter your weapon's<br>attack rating</span>
+                    </div>
+                    <div class="talisman-badge" id="talismanBadge">
+                        <span class="tali-label">Talismans</span>
+                        <div class="tali-slots" id="taliSlots"></div>
+                        <span id="taliCount" style="font-size:11px;">0 / 4</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-label">Final Damage</div>
+                    <div class="result-number" id="resultNumber">500</div>
+                    <div class="result-multiplier" id="resultMult">× 1.000 total</div>
+                    <div class="result-chain" id="resultChain"></div>
+                </div>
+            </div>
+
+            <!-- Buff Groups -->
+            <div class="buff-grid" id="buffGrid"></div>
+
         </div>
     </main>
 
     <footer role="contentinfo" id="global-footer"></footer>
 
     <script src="/site.js"></script>
+    <script>
+    // ── Buff Data ──────────────────────────────────────────────────────────
+    const GROUPS = [
+        {
+            id: 'weapon-art',
+            name: 'Weapon Art',
+            pip: 'pip-cyan',
+            exclusive: true,
+            buffs: [
+                { name: 'None', mult: 0 },
+                { name: 'Determination', mult: 0.60 },
+                { name: "Royal Knight's Resolve", mult: 0.80 },
+            ]
+        },
+        {
+            id: 'buff-spell',
+            name: 'Buff Spell / Consumable',
+            pip: 'pip-red',
+            exclusive: true,
+            buffs: [
+                { name: 'None', mult: 0 },
+                { name: 'Blood Boil Aromatic', mult: 0.30 },
+                { name: 'Flame, Grant Me Strength', mult: 0.20 },
+                { name: 'Howl of Shabriri', mult: 0.25 },
+            ]
+        },
+        {
+            id: 'aura',
+            name: 'Aura Buff',
+            pip: 'pip-yellow',
+            exclusive: true,
+            buffs: [
+                { name: 'None', mult: 0 },
+                { name: 'Golden Vow', mult: 0.15 },
+                { name: "Commander's Standard", mult: 0.20 },
+            ]
+        },
+        {
+            id: 'status-proc',
+            name: 'Status Trigger',
+            pip: 'pip-purple',
+            exclusive: true,
+            buffs: [
+                { name: 'None', mult: 0 },
+                { name: 'White Mask', mult: 0.10 },
+                { name: "Lord of Blood's Exultation", mult: 0.20, talisman: true },
+                { name: 'Mushroom Crown', mult: 0.10 },
+                { name: "Kindred of Rot's Exultation", mult: 0.20, talisman: true },
+                { name: 'Black Dumpling', mult: 0.10 },
+                { name: "Aged One's Exultation", mult: 0.20, talisman: true },
+                { name: "St. Trina's Smile", mult: 0.20, talisman: true },
+            ]
+        },
+        {
+            id: 'action-mod',
+            name: 'Action Modifier',
+            pip: 'pip-green',
+            exclusive: true,
+            buffs: [
+                { name: 'None', mult: 0 },
+                { name: 'Two-Handed Sword Talisman', mult: 0.15, talisman: true },
+                { name: 'Axe Talisman (charged attack)', mult: 0.10, talisman: true },
+                { name: 'Lance Talisman + Counter Hit', mult: 0.495, talisman: true },
+                { name: 'Stonebarb Cracked Tear', mult: 0.15 },
+            ]
+        },
+        {
+            id: 'skill-boost',
+            name: 'Skill / Element Boost',
+            pip: 'pip-blue',
+            exclusive: true,
+            buffs: [
+                { name: 'None', mult: 0 },
+                { name: 'Godfrey Icon', mult: 0.15, talisman: true },
+                { name: 'Scorpion Charm', mult: 0.12, talisman: true },
+                { name: 'Warrior Jar Shard', mult: 0.10, talisman: true },
+                { name: 'Shard of Alexander', mult: 0.15, talisman: true },
+                { name: 'Elemental Cracked Tear', mult: 0.20 },
+                { name: 'Terra Magica', mult: 0.225 },
+            ]
+        },
+        {
+            id: 'misc',
+            name: 'Situational & Misc',
+            pip: 'pip-grey',
+            exclusive: false,
+            buffs: [
+                { name: 'Red-Feathered Branchsword', mult: 0.20, talisman: true },
+                { name: 'Crimsonwhorl Bubbletear', mult: 0.20 },
+                { name: 'Rakshasa Set', mult: 0.08 },
+                { name: "Dancing Blade of Ranah Set", mult: 0.075 },
+                { name: 'Rock Heart', mult: 0.20 },
+                { name: 'Kite Shield (guard)', mult: 0.05 },
+                { name: 'Oil Pot', mult: 0.50 },
+                { name: 'Hefty Oil Pot', mult: 0.65 },
+                { name: 'Jellyfish Shield', mult: 0.125 },
+                { name: 'Sleeping Enemy Bonus', mult: 0.20 },
+                { name: 'Backstab Bonus', mult: 0.20 },
+                { name: "Sword of Milos (HP drain)", mult: 0.05 },
+                { name: 'Dagger Talisman (critical)', mult: 0.17, talisman: true },
+            ]
+        },
+    ];
+
+    // ── State ──────────────────────────────────────────────────────────────
+    // exclusive groups: selected index (0 = none)
+    // free groups: Set of selected buff names
+    const state = {
+        'weapon-art': 0,
+        'buff-spell': 0,
+        'aura': 0,
+        'status-proc': 0,
+        'action-mod': 0,
+        'skill-boost': 0,
+        'misc': new Set(),
+    };
+
+    // ── Build UI ───────────────────────────────────────────────────────────
+    function buildUI() {
+        const grid = document.getElementById('buffGrid');
+        grid.innerHTML = '';
+
+        GROUPS.forEach(group => {
+            const card = document.createElement('div');
+            card.className = 'buff-group' + (group.id === 'misc' ? ' full-width' : '');
+            card.id = 'group-' + group.id;
+
+            const header = document.createElement('div');
+            header.className = 'buff-group-header';
+            header.innerHTML = `
+                <span class="group-pip ${group.pip}"></span>
+                <span class="buff-group-title">${group.name}</span>
+                <span class="group-limit-badge ${group.exclusive ? 'limit-exclusive' : 'limit-free'}">
+                    ${group.exclusive ? 'Pick one' : 'Stack freely'}
+                </span>
+            `;
+            card.appendChild(header);
+
+            if (group.exclusive) {
+                const opts = document.createElement('div');
+                opts.className = 'buff-options';
+                group.buffs.forEach((buff, i) => {
+                    const label = document.createElement('label');
+                    label.className = 'buff-radio-option';
+                    const isNone = buff.name === 'None';
+                    label.innerHTML = `
+                        <input type="radio" name="${group.id}" value="${i}" ${state[group.id] === i ? 'checked' : ''}>
+                        <span class="buff-name ${isNone ? 'is-none' : ''}">${buff.name}</span>
+                        <span class="buff-meta">
+                            ${buff.talisman ? '<span class="tali-pip" title="Uses a talisman slot">💍</span>' : ''}
+                            <span class="buff-mult ${state[group.id] === i && !isNone ? 'active' : ''}">
+                                ${isNone ? '' : '+' + (buff.mult * 100).toFixed(1) + '%'}
+                            </span>
+                        </span>
+                    `;
+                    label.querySelector('input').addEventListener('change', () => {
+                        state[group.id] = i;
+                        calculate();
+                        refreshMults();
+                    });
+                    opts.appendChild(label);
+                });
+                card.appendChild(opts);
+            } else {
+                // Misc — free checkboxes in a grid
+                const opts = document.createElement('div');
+                opts.className = 'misc-grid';
+                group.buffs.forEach(buff => {
+                    const label = document.createElement('label');
+                    label.className = 'buff-check-option';
+                    label.dataset.talisman = buff.talisman ? '1' : '0';
+                    label.dataset.buffName = buff.name;
+                    const checked = state[group.id].has(buff.name);
+                    label.innerHTML = `
+                        <input type="checkbox" ${checked ? 'checked' : ''}>
+                        <span class="buff-name">${buff.name}</span>
+                        <span class="buff-meta">
+                            ${buff.talisman ? '<span class="tali-pip" title="Uses a talisman slot">💍</span>' : ''}
+                            <span class="buff-mult ${checked ? 'active' : ''}">+${(buff.mult * 100).toFixed(1)}%</span>
+                        </span>
+                    `;
+                    label.querySelector('input').addEventListener('change', e => {
+                        const taliCount = countTalismans();
+                        if (e.target.checked && buff.talisman && taliCount >= 4) {
+                            e.target.checked = false;
+                            return;
+                        }
+                        if (e.target.checked) state[group.id].add(buff.name);
+                        else state[group.id].delete(buff.name);
+                        calculate();
+                        refreshMults();
+                        updateTalismanUI();
+                    });
+                    opts.appendChild(label);
+                });
+                card.appendChild(opts);
+            }
+
+            grid.appendChild(card);
+        });
+    }
+
+    // ── Talisman counting ──────────────────────────────────────────────────
+    function countTalismans() {
+        let count = 0;
+        GROUPS.forEach(group => {
+            if (group.exclusive) {
+                const i = state[group.id];
+                if (i > 0 && group.buffs[i].talisman) count++;
+            } else {
+                group.buffs.forEach(buff => {
+                    if (buff.talisman && state[group.id].has(buff.name)) count++;
+                });
+            }
+        });
+        return count;
+    }
+
+    function updateTalismanUI() {
+        const count = countTalismans();
+        const badge = document.getElementById('talismanBadge');
+        const countEl = document.getElementById('taliCount');
+        const slots = document.getElementById('taliSlots');
+
+        countEl.textContent = count + ' / 4';
+        badge.className = 'talisman-badge' + (count >= 4 ? ' at-limit' : '');
+
+        slots.innerHTML = '';
+        for (let i = 0; i < 4; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'tali-slot' + (i < count ? (count > 4 ? ' over' : ' filled') : '');
+            slots.appendChild(dot);
+        }
+
+        // Disable unchecked talisman checkboxes when at limit
+        document.querySelectorAll('.buff-check-option').forEach(label => {
+            const isTali = label.dataset.talisman === '1';
+            const cb = label.querySelector('input[type="checkbox"]');
+            if (isTali && !cb.checked && count >= 4) {
+                label.classList.add('tali-blocked');
+                cb.disabled = true;
+            } else {
+                label.classList.remove('tali-blocked');
+                cb.disabled = false;
+            }
+        });
+    }
+
+    // ── Calculation ────────────────────────────────────────────────────────
+    function getActiveBuffs() {
+        const active = [];
+        GROUPS.forEach(group => {
+            if (group.exclusive) {
+                const i = state[group.id];
+                if (i > 0) active.push({ name: group.buffs[i].name, mult: group.buffs[i].mult });
+            } else {
+                group.buffs.forEach(buff => {
+                    if (state[group.id].has(buff.name)) active.push({ name: buff.name, mult: buff.mult });
+                });
+            }
+        });
+        return active;
+    }
+
+    function calculate() {
+        const base = parseFloat(document.getElementById('baseDamage').value) || 0;
+        const active = getActiveBuffs();
+        let total = 1;
+        active.forEach(b => { total *= (1 + b.mult); });
+        const final = Math.round(base * total);
+
+        document.getElementById('resultNumber').textContent = final.toLocaleString();
+        document.getElementById('resultMult').textContent = '× ' + total.toFixed(3) + ' total';
+
+        // Chain breakdown
+        if (active.length === 0) {
+            document.getElementById('resultChain').textContent = '';
+        } else {
+            let running = base;
+            const parts = ['Base: ' + base];
+            active.forEach(b => {
+                running *= (1 + b.mult);
+                parts.push('× ' + (1 + b.mult).toFixed(3) + ' (' + b.name + ') = ' + Math.round(running));
+            });
+            document.getElementById('resultChain').textContent = parts.join('\n');
+        }
+
+        updateTalismanUI();
+    }
+
+    function refreshMults() {
+        GROUPS.forEach(group => {
+            if (group.exclusive) {
+                const i = state[group.id];
+                document.querySelectorAll(`input[name="${group.id}"]`).forEach((radio, idx) => {
+                    const multEl = radio.closest('label').querySelector('.buff-mult');
+                    if (multEl) multEl.className = 'buff-mult' + (idx === i && idx > 0 ? ' active' : '');
+                });
+            }
+        });
+        document.querySelectorAll('.buff-check-option').forEach(label => {
+            const cb = label.querySelector('input[type="checkbox"]');
+            const multEl = label.querySelector('.buff-mult');
+            if (multEl) multEl.className = 'buff-mult' + (cb.checked ? ' active' : '');
+        });
+    }
+
+    function resetAll() {
+        GROUPS.forEach(group => {
+            if (group.exclusive) state[group.id] = 0;
+            else state[group.id].clear();
+        });
+        buildUI();
+        calculate();
+    }
+
+    // ── Init ───────────────────────────────────────────────────────────────
+    document.getElementById('baseDamage').addEventListener('input', calculate);
+    document.getElementById('resetBtn').addEventListener('click', resetAll);
+
+    buildUI();
+    calculate();
+    </script>
 </body>
 </html>
