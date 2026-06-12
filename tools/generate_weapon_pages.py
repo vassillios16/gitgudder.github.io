@@ -14,9 +14,9 @@ OUT_DIR      = os.path.join(os.path.dirname(__file__), "..", "elden-ring", "item
 
 
 def slugify(name):
-    s = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii")
+    s = re.sub(r"[‘‘’`]", "", name)   # strip apostrophes before normalization
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
     s = s.lower()
-    s = re.sub(r"[‘’’`]", "", s)
     s = re.sub(r"[^a-z0-9]+", "-", s)
     return s.strip("-")
 
