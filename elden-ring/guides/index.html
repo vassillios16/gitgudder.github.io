@@ -5,56 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Git Gudder — Elden Ring Strategy Guides & Walkthroughs.">
     <title>Git Gudder — Elden Ring Guides</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="/style.css">
 
     <style>
-        /* --- THEMED BULLET LIST STYLES --- */
-        .guides-list-wrapper {
-            max-width: 700px;
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
             margin: 0 auto;
-            text-align: left;
+        }
+        @media (max-width: 900px) {
+            .guides-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 580px) {
+            .guides-grid { grid-template-columns: 1fr; }
+        }
+        .guide-section-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
-            padding: 40px;
+            overflow: hidden;
         }
-
-        .guides-bullet-list {
+        .guide-section-header {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--bg-surface);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .guide-section-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+            margin: 0;
+            padding: 8px 0;
         }
-
-        .guides-bullet-list li {
-            font-size: 18px;
-            color: var(--text-primary);
+        .guide-section-list li {
             display: flex;
-            align-items: flex-start;
-            gap: 12px;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 16px;
+            font-size: 14px;
         }
-
-        /* Custom stylized gold bullet point indicators */
-        .guides-bullet-list li::before {
+        .guide-section-list li::before {
             content: "⚔";
             color: var(--gold);
-            font-size: 14px;
-            margin-top: 2px;
+            font-size: 11px;
+            flex-shrink: 0;
         }
-
-        .guides-bullet-list a {
-            color: var(--text-primary);
+        .guide-section-list a {
+            color: var(--text-secondary);
             text-decoration: none;
             transition: color 0.2s;
         }
-
-        .guides-bullet-list a:hover {
+        .guide-section-list a:hover {
             color: var(--gold-light);
+        }
+        .guide-section-list a.coming-soon {
+            color: var(--text-muted);
+            pointer-events: none;
+            font-style: italic;
+        }
+        .guide-section-list a.coming-soon::after {
+            content: " — soon";
+            font-family: 'Fira Code', monospace;
+            font-size: 10px;
+            color: var(--text-muted);
+            opacity: 0.6;
         }
     </style>
 </head>
@@ -64,23 +87,73 @@
 
     <main class="content-section">
         <h1 class="page-title">Gameplay Guides</h1>
-        <p class="page-subtitle">Walkthroughs & Strategy Compendiums</p>
-        
+        <p class="page-subtitle">Walkthroughs &amp; Strategy Compendiums</p>
+
         <nav class="subpage-nav-container" data-er-nav="guides"></nav>
-        
-        <div class="guides-list-wrapper">
-            <ul class="guides-bullet-list">
-                <li><a href="#">New Elden Ring Players Start Here Guide</a></li>
-                <li><a href="#">Tarnished Edition Everything we know video</a></li>
-                <li><a href="/elden-ring/guides/imbued-sword-key-locations.html">Imbued Sword Keys Locations</a></li>
-                <li><a href="/elden-ring/guides/larval-tear-locations.html">Larval Tear Locations</a></li>
-                <li><a href="#">Best Rune Farms</a></li>
-            </ul>
+
+        <div class="guides-grid">
+
+            <!-- Starter Guides -->
+            <div class="guide-section-card">
+                <div class="guide-section-header">Starter Guides</div>
+                <ul class="guide-section-list">
+                    <li><a href="#" class="coming-soon">New Players Start Here</a></li>
+                    <li><a href="#" class="coming-soon">How to Get OP Early</a></li>
+                    <li><a href="#" class="coming-soon">Waygates and Portals</a></li>
+                    <li><a href="#" class="coming-soon">Best Rune Farms</a></li>
+                </ul>
+            </div>
+
+            <!-- Upgrade Guides -->
+            <div class="guide-section-card">
+                <div class="guide-section-header">Upgrade Guides</div>
+                <ul class="guide-section-list">
+                    <li><a href="/elden-ring/guides/bell-bearing-locations.html">Somber &amp; Smithing Stone Bell Bearings</a></li>
+                    <li><a href="#" class="coming-soon">Glovewort Bell Bearings</a></li>
+                    <li><a href="#" class="coming-soon">Ancient Smithing &amp; Somber Stone Locations</a></li>
+                </ul>
+            </div>
+
+            <!-- NPC Quests -->
+            <div class="guide-section-card">
+                <div class="guide-section-header">NPC Quests</div>
+                <ul class="guide-section-list">
+                    <li><a href="#" class="coming-soon">Varre's Quest</a></li>
+                    <li><a href="#" class="coming-soon">Ranni's Quest</a></li>
+                    <li><a href="#" class="coming-soon">Millicent's Quest</a></li>
+                </ul>
+            </div>
+
+            <!-- Item Locations -->
+            <div class="guide-section-card">
+                <div class="guide-section-header">Item Locations</div>
+                <ul class="guide-section-list">
+                    <li><a href="/elden-ring/guides/imbued-sword-key-locations.html">Imbued Sword Key Locations</a></li>
+                    <li><a href="/elden-ring/guides/larval-tear-locations.html">Larval Tear Locations</a></li>
+                </ul>
+            </div>
+
+            <!-- Build / Boss Guides -->
+            <div class="guide-section-card">
+                <div class="guide-section-header">Build / Boss Guides</div>
+                <ul class="guide-section-list">
+                    <li><a href="#" class="coming-soon">How to Beat Godskin Duo Easily</a></li>
+                </ul>
+            </div>
+
+            <!-- Advanced Guides -->
+            <div class="guide-section-card">
+                <div class="guide-section-header">Advanced Guides</div>
+                <ul class="guide-section-list">
+                    <li><a href="#" class="coming-soon">How to Get All 6 Endings</a></li>
+                    <li><a href="#" class="coming-soon">Speedrunner Skips</a></li>
+                </ul>
+            </div>
+
         </div>
     </main>
 
     <footer role="contentinfo" id="global-footer"></footer>
-
     <script src="/site.js"></script>
 </body>
 </html>
