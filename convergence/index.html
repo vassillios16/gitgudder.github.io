@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Git Gudder — The Convergence Mod guides, class breakdowns, and strategy for Elden Ring's most popular overhaul mod.">
+    <title>Git Gudder — The Convergence Mod</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        .conv-sections {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        @media (max-width: 800px) {
+            .conv-sections { grid-template-columns: 1fr; }
+        }
+        .conv-section-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .conv-section-header {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--bg-surface);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .conv-section-list {
+            list-style: none;
+            margin: 0;
+            padding: 8px 0;
+        }
+        .conv-section-list li {
+            padding: 3px 16px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .conv-section-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .conv-section-list a:hover {
+            color: var(--gold-light);
+        }
+        .conv-section-list a.coming-soon {
+            color: var(--text-muted);
+            pointer-events: none;
+            font-style: italic;
+        }
+        .conv-section-list a.coming-soon::after {
+            content: " — soon";
+            font-family: 'Fira Code', monospace;
+            font-size: 10px;
+            opacity: 0.6;
+        }
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            padding: 12px;
+        }
+        @media (max-width: 600px) {
+            .class-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .class-grid-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 8px 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            text-align: center;
+            transition: border-color 0.2s, color 0.2s;
+            display: block;
+        }
+        .class-grid-item:hover {
+            border-color: var(--gold-dim);
+            color: var(--gold-light);
+        }
+        .class-grid-item.coming-soon {
+            color: var(--text-muted);
+            pointer-events: none;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="global-header"></header>
+
+    <main class="content-section">
+        <h1 class="page-title">The Convergence Mod</h1>
+        <p class="page-subtitle">Class Guides &amp; General Strategy</p>
+
+        <nav class="subpage-nav-container" data-conv-nav="home"></nav>
+
+        <div class="conv-sections">
+
+            <!-- General Guides -->
+            <div class="conv-section-card">
+                <div class="conv-section-header">General Guides</div>
+                <ul class="conv-section-list">
+                    <li><a href="#" class="coming-soon">Convergence Starter Guide</a></li>
+                    <li><a href="#" class="coming-soon">Secret Teleport Gear</a></li>
+                    <li><a href="#" class="coming-soon">Spellblade Set &amp; Rogier's Quest</a></li>
+                </ul>
+            </div>
+
+            <!-- Class Guides -->
+            <div class="conv-section-card">
+                <div class="conv-section-header">Class Guides</div>
+                <div class="class-grid">
+                    <a href="/convergence/guides/retainer.html" class="class-grid-item">Retainer</a>
+                    <a href="#" class="class-grid-item coming-soon">Glint Sorcerer</a>
+                    <a href="#" class="class-grid-item coming-soon">Underworld Mage</a>
+                    <a href="#" class="class-grid-item coming-soon">Servant of Rot</a>
+                    <a href="#" class="class-grid-item coming-soon">Frost Witch</a>
+                    <a href="#" class="class-grid-item coming-soon">Dragon Cultist</a>
+                    <a href="#" class="class-grid-item coming-soon">Stormcaller</a>
+                    <a href="#" class="class-grid-item coming-soon">Frenzied Zealot</a>
+                    <a href="#" class="class-grid-item coming-soon">Mystic</a>
+                    <a href="#" class="class-grid-item coming-soon">Marksman</a>
+                    <a href="#" class="class-grid-item coming-soon">Blood Initiate</a>
+                    <a href="#" class="class-grid-item coming-soon">Vanguard</a>
+                    <a href="#" class="class-grid-item coming-soon">Godskin Celebrant</a>
+                    <a href="#" class="class-grid-item coming-soon">Necromancer</a>
+                    <a href="#" class="class-grid-item coming-soon">Bestial Devout</a>
+                    <a href="#" class="class-grid-item coming-soon">Nox Oracle</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+    <script src="/site.js"></script>
+</body>
+</html>

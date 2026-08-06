@@ -19,6 +19,7 @@
     }
 
     injectSubpageNav();
+    injectConvNav();
 
     if (footerEl && footerRes && footerRes.ok) {
       footerEl.innerHTML = await footerRes.text();
@@ -35,6 +36,32 @@
       const trigger = header.querySelector('.nav-dropdown-trigger');
       if (trigger) trigger.classList.add('active');
     }
+  }
+
+  // ── Convergence Subpage Nav Injection ────────────────────────────────────
+  const CONV_NAV_LINKS = [
+    { key: 'home',    label: 'Convergence Home', href: '/convergence/' },
+    { key: 'general', label: 'General Guides',   href: '/convergence/#general' },
+    { key: 'classes', label: 'Class Guides',     href: '/convergence/#classes' },
+  ];
+
+  function injectConvNav() {
+    document.querySelectorAll('.subpage-nav-container[data-conv-nav]').forEach(nav => {
+      const active = nav.dataset.convNav;
+      const ul = document.createElement('ul');
+      ul.className = 'subpage-nav-links';
+      CONV_NAV_LINKS.forEach(({ key, label, href }) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = href;
+        a.textContent = label;
+        if (key === active) a.className = 'active';
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      nav.innerHTML = '';
+      nav.appendChild(ul);
+    });
   }
 
   // ── Elden Ring Subpage Nav Injection ──────────────────────────────────────
@@ -64,25 +91,30 @@
     });
   }
 
-  // ── Elden Ring Dropdown ───────────────────────────────────────────────────
+  // ── Nav Dropdowns ─────────────────────────────────────────────────────────
   function initDropdown() {
-    const wrap = document.querySelector('.nav-dropdown-wrap');
-    if (!wrap) return;
+    const wraps = document.querySelectorAll('.nav-dropdown-wrap');
+    if (!wraps.length) return;
 
-    const trigger = wrap.querySelector('.nav-dropdown-trigger');
-    if (!trigger) return;
+    wraps.forEach(wrap => {
+      const trigger = wrap.querySelector('.nav-dropdown-trigger');
+      if (!trigger) return;
 
-    // First click opens the dropdown; second click follows the link.
-    trigger.addEventListener('click', function (e) {
-      if (!wrap.classList.contains('open')) {
-        e.preventDefault();
-        wrap.classList.add('open');
-      }
-      // Second click: let the browser navigate to /elden-ring/
+      trigger.addEventListener('click', function (e) {
+        const isOpen = wrap.classList.contains('open');
+        // Close all other dropdowns first
+        wraps.forEach(w => w.classList.remove('open'));
+        if (!isOpen) {
+          e.preventDefault();
+          wrap.classList.add('open');
+        }
+      });
     });
 
     document.addEventListener('click', function (e) {
-      if (!wrap.contains(e.target)) wrap.classList.remove('open');
+      if (!e.target.closest('.nav-dropdown-wrap')) {
+        wraps.forEach(w => w.classList.remove('open'));
+      }
     });
   }
 

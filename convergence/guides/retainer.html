@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Retainer class guide for The Convergence Mod — all weapon and armor locations, starting stats, and strategy.">
+    <title>Retainer — Convergence Mod Class Guide — Git Gudder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        .class-layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+        }
+
+        /* ── Hover flip card ── */
+        .class-flip {
+            position: relative;
+            width: 260px;
+            flex-shrink: 0;
+            cursor: pointer;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .class-flip img {
+            display: block;
+            width: 100%;
+            border-radius: var(--radius-lg);
+            transition: opacity 0.35s ease;
+        }
+        .class-flip .stats-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+        }
+        .class-flip:hover .portrait-img,
+        .class-flip:focus .portrait-img {
+            opacity: 0;
+        }
+        .class-flip:hover .stats-img,
+        .class-flip:focus .stats-img {
+            opacity: 1;
+        }
+        .flip-hint {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        /* ── Stat table ── */
+        .class-info {
+            flex: 1;
+            min-width: 220px;
+        }
+        .class-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+        .class-title {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .stat-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .stat-table th {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: var(--bg-surface);
+            padding: 9px 14px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+        }
+        .stat-table td {
+            padding: 7px 14px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid rgba(201,168,76,0.05);
+        }
+        .stat-table td:last-child {
+            font-family: 'Fira Code', monospace;
+            color: var(--text-primary);
+            text-align: right;
+        }
+        .stat-table tr.level-row td {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        .stat-table tr.level-row td:last-child {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="global-header"></header>
+
+    <main class="content-section">
+        <nav class="subpage-nav-container" data-conv-nav="classes"></nav>
+
+        <div class="guide-body">
+
+            <div class="class-layout">
+
+                <div>
+                    <div class="class-flip" tabindex="0" aria-label="Hover to see Retainer starting stats">
+                        <img class="portrait-img" src="/convergence/images/retainer-portrait.jpg" alt="Retainer class portrait">
+                        <img class="stats-img" src="/convergence/images/retainer-stats.jpg" alt="Retainer starting stats">
+                    </div>
+                    <p class="flip-hint">Hover to see starting stats</p>
+                </div>
+
+                <div class="class-info">
+                    <div class="class-label">Convergence Mod · Starting Class</div>
+                    <h1 class="class-title">Retainer</h1>
+
+                    <table class="stat-table">
+                        <thead>
+                            <tr><th>Attribute</th><th>Base</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="level-row"><td>Level</td><td>9</td></tr>
+                            <tr><td>Vigor</td><td>15</td></tr>
+                            <tr><td>Mind</td><td>10</td></tr>
+                            <tr><td>Endurance</td><td>11</td></tr>
+                            <tr><td>Strength</td><td>14</td></tr>
+                            <tr><td>Dexterity</td><td>13</td></tr>
+                            <tr><td>Intelligence</td><td>9</td></tr>
+                            <tr><td>Faith</td><td>9</td></tr>
+                            <tr><td>Arcane</td><td>7</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/tYhtv8FEQ9s"
+                    title="Path of the Retainer in Elden Ring Convergence — Git Gudder"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+    </main>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+    <script src="/site.js"></script>
+</body>
+</html>
