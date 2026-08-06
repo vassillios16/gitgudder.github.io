@@ -13,18 +13,24 @@
 
     <style>
         .class-layout {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: stretch;
             margin-bottom: 36px;
-            flex-wrap: wrap;
+        }
+        @media (max-width: 700px) {
+            .class-layout { grid-template-columns: 1fr; }
         }
 
         /* ── Hover flip card ── */
+        .class-flip-wrap {
+            display: flex;
+            flex-direction: column;
+        }
         .class-flip {
             position: relative;
-            width: 260px;
-            flex-shrink: 0;
+            flex: 1;
             cursor: pointer;
             border-radius: var(--radius-lg);
             overflow: hidden;
@@ -32,6 +38,8 @@
         .class-flip img {
             display: block;
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: var(--radius-lg);
             transition: opacity 0.35s ease;
         }
@@ -40,29 +48,43 @@
             top: 0;
             left: 0;
             width: 100%;
+            height: 100%;
             opacity: 0;
         }
         .class-flip:hover .portrait-img,
-        .class-flip:focus .portrait-img {
-            opacity: 0;
-        }
+        .class-flip:focus .portrait-img { opacity: 0; }
         .class-flip:hover .stats-img,
-        .class-flip:focus .stats-img {
-            opacity: 1;
-        }
+        .class-flip:focus .stats-img { opacity: 1; }
         .flip-hint {
             font-family: 'Fira Code', monospace;
             font-size: 11px;
             color: var(--text-muted);
             text-align: center;
             margin-top: 6px;
+            flex-shrink: 0;
         }
 
-        /* ── Stat table ── */
-        .class-info {
-            flex: 1;
-            min-width: 220px;
+        /* ── Video panel ── */
+        .class-video-wrap {
+            display: flex;
+            flex-direction: column;
         }
+        .class-video-wrap .video-wrapper {
+            flex: 1;
+            margin: 0;
+            padding-bottom: 0;
+            position: relative;
+            height: 0;
+            padding-top: 56.25%;
+        }
+        .class-video-wrap .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-lg);
+        }
+
         .class-label {
             font-family: 'Fira Code', monospace;
             font-size: 11px;
@@ -79,43 +101,6 @@
             line-height: 1.1;
             margin-bottom: 20px;
         }
-        .stat-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-        }
-        .stat-table th {
-            font-family: 'Cinzel', serif;
-            font-size: 11px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            background: var(--bg-surface);
-            padding: 9px 14px;
-            border-bottom: 1px solid var(--border);
-            text-align: left;
-        }
-        .stat-table td {
-            padding: 7px 14px;
-            font-size: 14px;
-            color: var(--text-secondary);
-            border-bottom: 1px solid rgba(201,168,76,0.05);
-        }
-        .stat-table td:last-child {
-            font-family: 'Fira Code', monospace;
-            color: var(--text-primary);
-            text-align: right;
-        }
-        .stat-table tr.level-row td {
-            color: var(--gold);
-            font-weight: 600;
-        }
-        .stat-table tr.level-row td:last-child {
-            color: var(--gold);
-        }
     </style>
 </head>
 <body>
@@ -127,9 +112,12 @@
 
         <div class="guide-body">
 
+            <div class="class-label">Convergence Mod · Starting Class</div>
+            <h1 class="class-title">Retainer</h1>
+
             <div class="class-layout">
 
-                <div>
+                <div class="class-flip-wrap">
                     <div class="class-flip" tabindex="0" aria-label="Hover to see Retainer starting stats">
                         <img class="portrait-img" src="/convergence/images/retainer-portrait.png" alt="Retainer class portrait">
                         <img class="stats-img" src="/convergence/images/retainer-stats.png" alt="Retainer starting stats">
@@ -137,38 +125,18 @@
                     <p class="flip-hint">Hover to see starting stats</p>
                 </div>
 
-                <div class="class-info">
-                    <div class="class-label">Convergence Mod · Starting Class</div>
-                    <h1 class="class-title">Retainer</h1>
-
-                    <table class="stat-table">
-                        <thead>
-                            <tr><th>Attribute</th><th>Base</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr class="level-row"><td>Level</td><td>9</td></tr>
-                            <tr><td>Vigor</td><td>15</td></tr>
-                            <tr><td>Mind</td><td>10</td></tr>
-                            <tr><td>Endurance</td><td>11</td></tr>
-                            <tr><td>Strength</td><td>14</td></tr>
-                            <tr><td>Dexterity</td><td>13</td></tr>
-                            <tr><td>Intelligence</td><td>9</td></tr>
-                            <tr><td>Faith</td><td>9</td></tr>
-                            <tr><td>Arcane</td><td>7</td></tr>
-                        </tbody>
-                    </table>
+                <div class="class-video-wrap">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/tYhtv8FEQ9s"
+                            title="Path of the Retainer in Elden Ring Convergence — Git Gudder"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
 
-            </div>
-
-            <div class="video-wrapper">
-                <iframe
-                    src="https://www.youtube.com/embed/tYhtv8FEQ9s"
-                    title="Path of the Retainer in Elden Ring Convergence — Git Gudder"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
             </div>
 
         </div>
