@@ -12,21 +12,12 @@
     <link rel="stylesheet" href="/style.css">
 
     <style>
-        .conv-sections {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 24px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        @media (max-width: 800px) {
-            .conv-sections { grid-template-columns: 1fr; }
-        }
         .conv-section-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             overflow: hidden;
+            margin-bottom: 24px;
         }
         .conv-section-header {
             font-family: 'Cinzel', serif;
@@ -53,9 +44,7 @@
             text-decoration: none;
             transition: color 0.2s;
         }
-        .conv-section-list a:hover {
-            color: var(--gold-light);
-        }
+        .conv-section-list a:hover { color: var(--gold-light); }
         .conv-section-list a.coming-soon {
             color: var(--text-muted);
             pointer-events: none;
@@ -67,6 +56,19 @@
             font-size: 10px;
             opacity: 0.6;
         }
+
+        /* General guides: 2-column grid of category cards */
+        .general-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        @media (max-width: 700px) {
+            .general-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Class guides: 4-column grid of class buttons */
         .class-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -109,53 +111,84 @@
 
         <nav class="subpage-nav-container" data-conv-nav="home"></nav>
 
-        <div class="conv-sections">
+        <!-- General Guides: 4 categories in 2x2 grid -->
+        <div class="general-grid">
 
-            <!-- General Guides -->
             <div class="conv-section-card">
-                <div class="conv-section-header">General Guides</div>
+                <div class="conv-section-header">Getting Started</div>
                 <ul class="conv-section-list">
-                    <li><a href="#" class="coming-soon">Convergence Starter Guide</a></li>
-                    <li><a href="#" class="coming-soon">Secret Teleport Gear</a></li>
-                    <li><a href="#" class="coming-soon">Spellblade Set &amp; Rogier's Quest</a></li>
+                    <li><a href="/convergence/guides/starter-guide.html">Convergence Starter Guide</a></li>
+                    <li><a href="/convergence/guides/launcher-installation.html">New Launcher Installation</a></li>
+                    <li><a href="/convergence/guides/teleport-gear.html">Secret Teleport Gear</a></li>
                 </ul>
             </div>
 
-            <!-- Class Guides -->
             <div class="conv-section-card">
-                <div class="conv-section-header">Class Guides</div>
-                <div class="class-grid">
-                    <a href="/convergence/guides/retainer.html" class="class-grid-item">Retainer</a>
-                    <a href="#" class="class-grid-item coming-soon">Vanguard</a>
-                    <a href="#" class="class-grid-item coming-soon">Marksman</a>
-                    <a href="#" class="class-grid-item coming-soon">Berserker</a>
-                    <a href="#" class="class-grid-item coming-soon">Dreadnought</a>
-                    <a href="#" class="class-grid-item coming-soon">Sellsword</a>
-                    <a href="#" class="class-grid-item coming-soon">Rogue</a>
-                    <a href="#" class="class-grid-item coming-soon">Glint Sorcerer</a>
-                    <a href="#" class="class-grid-item coming-soon">Starcaller</a>
-                    <a href="#" class="class-grid-item coming-soon">Underworld Mage</a>
-                    <a href="#" class="class-grid-item coming-soon">Volcanist</a>
-                    <a href="#" class="class-grid-item coming-soon">Stormcaller</a>
-                    <a href="#" class="class-grid-item coming-soon">Nox Oracle</a>
-                    <a href="#" class="class-grid-item coming-soon">Necromancer</a>
-                    <a href="#" class="class-grid-item coming-soon">Frost Witch</a>
-                    <a href="#" class="class-grid-item coming-soon">Aberrant Heretic</a>
-                    <a href="#" class="class-grid-item coming-soon">Flame Prophet</a>
-                    <a href="#" class="class-grid-item coming-soon">Fundamentalist</a>
-                    <a href="#" class="class-grid-item coming-soon">Bestial Devout</a>
-                    <a href="#" class="class-grid-item coming-soon">Dragon Cultist</a>
-                    <a href="#" class="class-grid-item coming-soon">Godskin Celebrant</a>
-                    <a href="#" class="class-grid-item coming-soon">Frenzied Zealot</a>
-                    <a href="#" class="class-grid-item coming-soon">Blood Initiate</a>
-                    <a href="#" class="class-grid-item coming-soon">Servant of Rot</a>
-                    <a href="#" class="class-grid-item coming-soon">Mystic</a>
-                    <a href="#" class="class-grid-item coming-soon">Perfumer</a>
-                    <a href="#" class="class-grid-item coming-soon">Prisoner</a>
-                </div>
+                <div class="conv-section-header">Weapons &amp; Upgrades</div>
+                <ul class="conv-section-list">
+                    <li><a href="/convergence/guides/trick-weapons.html">New Trick Weapons</a></li>
+                    <li><a href="/convergence/guides/new-swords.html">New Swords</a></li>
+                    <li><a href="/convergence/guides/blades-claws-daggers.html">New Blades, Claws &amp; Daggers</a></li>
+                    <li><a href="/convergence/guides/prime-weapons.html">Prime Weapons</a></li>
+                    <li><a href="/convergence/guides/galvanic-culling-blade.html">Galvanic Culling Blade</a></li>
+                    <li><a href="/convergence/guides/get-to-plus-15.html">How to Get Weapons to +15</a></li>
+                    <li><a href="/convergence/guides/shadow-stone-bell-bearings.html">Shadow Stone Bell Bearings</a></li>
+                </ul>
+            </div>
+
+            <div class="conv-section-card">
+                <div class="conv-section-header">Walkthroughs &amp; Locations</div>
+                <ul class="conv-section-list">
+                    <li><a href="/convergence/guides/spellblade-set.html">Spellblade Set &amp; Rogier's Quest</a></li>
+                    <li><a href="/convergence/guides/noxumbra-walkthrough.html">Noxumbra Walkthrough</a></li>
+                    <li><a href="/convergence/guides/fog-rift-catacombs.html">Fog Rift Catacombs Walkthrough</a></li>
+                    <li><a href="/convergence/guides/vulgar-militia-stronghold.html">Vulgar Militia Stronghold</a></li>
+                </ul>
+            </div>
+
+            <div class="conv-section-card">
+                <div class="conv-section-header">Boss Guides</div>
+                <ul class="conv-section-list">
+                    <li><a href="/convergence/guides/daergraf-boss-guide.html">How to Fight Daergraf</a></li>
+                </ul>
             </div>
 
         </div>
+
+        <!-- Class Guides -->
+        <div class="conv-section-card">
+            <div class="conv-section-header">Class Guides</div>
+            <div class="class-grid">
+                <a href="/convergence/guides/retainer.html" class="class-grid-item">Retainer</a>
+                <a href="#" class="class-grid-item coming-soon">Vanguard</a>
+                <a href="#" class="class-grid-item coming-soon">Marksman</a>
+                <a href="#" class="class-grid-item coming-soon">Berserker</a>
+                <a href="#" class="class-grid-item coming-soon">Dreadnought</a>
+                <a href="#" class="class-grid-item coming-soon">Sellsword</a>
+                <a href="#" class="class-grid-item coming-soon">Rogue</a>
+                <a href="#" class="class-grid-item coming-soon">Glint Sorcerer</a>
+                <a href="#" class="class-grid-item coming-soon">Starcaller</a>
+                <a href="#" class="class-grid-item coming-soon">Underworld Mage</a>
+                <a href="#" class="class-grid-item coming-soon">Volcanist</a>
+                <a href="#" class="class-grid-item coming-soon">Stormcaller</a>
+                <a href="#" class="class-grid-item coming-soon">Nox Oracle</a>
+                <a href="#" class="class-grid-item coming-soon">Necromancer</a>
+                <a href="#" class="class-grid-item coming-soon">Frost Witch</a>
+                <a href="#" class="class-grid-item coming-soon">Aberrant Heretic</a>
+                <a href="#" class="class-grid-item coming-soon">Flame Prophet</a>
+                <a href="#" class="class-grid-item coming-soon">Fundamentalist</a>
+                <a href="#" class="class-grid-item coming-soon">Bestial Devout</a>
+                <a href="#" class="class-grid-item coming-soon">Dragon Cultist</a>
+                <a href="#" class="class-grid-item coming-soon">Godskin Celebrant</a>
+                <a href="#" class="class-grid-item coming-soon">Frenzied Zealot</a>
+                <a href="#" class="class-grid-item coming-soon">Blood Initiate</a>
+                <a href="#" class="class-grid-item coming-soon">Servant of Rot</a>
+                <a href="#" class="class-grid-item coming-soon">Mystic</a>
+                <a href="#" class="class-grid-item coming-soon">Perfumer</a>
+                <a href="#" class="class-grid-item coming-soon">Prisoner</a>
+            </div>
+        </div>
+
     </main>
 
     <footer role="contentinfo" id="global-footer"></footer>
