@@ -12,66 +12,6 @@
     <link rel="stylesheet" href="/style.css">
 
     <style>
-        .class-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            align-items: start;
-            margin-bottom: 36px;
-        }
-        @media (max-width: 700px) {
-            .class-layout { grid-template-columns: 1fr; }
-        }
-
-        /* ── Hover flip card ── */
-        .class-flip-wrap {
-            display: flex;
-            flex-direction: column;
-        }
-        .class-flip {
-            position: relative;
-            cursor: pointer;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-        }
-        .class-flip img {
-            display: block;
-            width: 100%;
-            border-radius: var(--radius-lg);
-            transition: opacity 0.35s ease;
-        }
-        .class-flip .stats-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-        }
-        .class-flip:hover .portrait-img,
-        .class-flip:focus .portrait-img { opacity: 0; }
-        .class-flip:hover .stats-img,
-        .class-flip:focus .stats-img { opacity: 1; }
-        .flip-hint {
-            font-family: 'Fira Code', monospace;
-            font-size: 11px;
-            color: var(--text-muted);
-            text-align: center;
-            margin-top: 6px;
-        }
-
-        /* ── Video panel ── */
-        .class-video-wrap .video-wrapper {
-            margin: 0;
-        }
-        .class-video-wrap .video-wrapper iframe {
-            display: block;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: var(--radius-lg);
-        }
-
         .class-label {
             font-family: 'Fira Code', monospace;
             font-size: 11px;
@@ -89,11 +29,104 @@
             margin-bottom: 20px;
         }
 
+        /* ── Two-column layout ── */
+        .class-layout {
+            display: flex;
+            gap: 24px;
+            align-items: stretch;
+            margin-bottom: 36px;
+        }
+        @media (max-width: 700px) {
+            .class-layout { flex-direction: column; }
+        }
+
+        /* ── Left: hover flip image ── */
+        .class-flip-wrap {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .class-flip {
+            position: relative;
+            flex: 1;
+            cursor: pointer;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .class-flip img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            transition: opacity 0.35s ease;
+        }
+        .class-flip .stats-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }
+        .class-flip:hover .portrait-img,
+        .class-flip:focus .portrait-img { opacity: 0; }
+        .class-flip:hover .stats-img,
+        .class-flip:focus .stats-img { opacity: 1; }
+        .flip-hint {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        /* ── Right: video + table stacked ── */
+        .class-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .class-right .video-wrapper {
+            margin: 0;
+            flex-shrink: 0;
+        }
+        .class-right .video-wrapper iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: var(--radius-lg);
+        }
+
         /* ── Locations table ── */
+        .loc-card {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .loc-card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--bg-surface);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        .loc-scroll {
+            overflow-y: auto;
+            flex: 1;
+        }
         .locations-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 8px;
         }
         .locations-table th {
             font-family: 'Cinzel', serif;
@@ -107,14 +140,14 @@
             text-align: left;
         }
         .locations-table td {
-            padding: 9px 16px;
+            padding: 8px 16px;
             border-bottom: 1px solid rgba(201,168,76,0.05);
             font-size: 14px;
             color: var(--text-secondary);
         }
         .locations-table tr:hover td {
             color: var(--text-primary);
-            background: var(--bg-card);
+            background: rgba(201,168,76,0.03);
         }
         .locations-table td:first-child {
             font-family: 'Fira Code', monospace;
@@ -125,9 +158,7 @@
             color: var(--gold);
             text-decoration: none;
         }
-        .locations-table td:first-child a:hover {
-            color: var(--gold-light);
-        }
+        .locations-table td:first-child a:hover { color: var(--gold-light); }
         .locations-table td:last-child {
             color: var(--text-muted);
             font-size: 13px;
@@ -140,23 +171,6 @@
             letter-spacing: 0.08em;
             text-transform: uppercase;
             padding: 6px 16px;
-            border-bottom: 1px solid var(--border);
-        }
-        .loc-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            margin-top: 32px;
-        }
-        .loc-card-title {
-            font-family: 'Cinzel', serif;
-            font-size: 13px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--gold);
-            background: var(--bg-surface);
-            padding: 12px 16px;
             border-bottom: 1px solid var(--border);
         }
     </style>
@@ -175,6 +189,7 @@
 
             <div class="class-layout">
 
+                <!-- Left: portrait image with hover-to-stats -->
                 <div class="class-flip-wrap">
                     <div class="class-flip" tabindex="0" aria-label="Hover to see Retainer starting stats">
                         <img class="portrait-img" src="/convergence/images/retainer-portrait.png" alt="Retainer class portrait">
@@ -183,7 +198,9 @@
                     <p class="flip-hint">Hover to see starting stats</p>
                 </div>
 
-                <div class="class-video-wrap">
+                <!-- Right: video + item locations table -->
+                <div class="class-right">
+
                     <div class="video-wrapper">
                         <iframe
                             src="https://www.youtube.com/embed/tYhtv8FEQ9s"
@@ -193,50 +210,53 @@
                             allowfullscreen>
                         </iframe>
                     </div>
+
+                    <div class="loc-card">
+                        <div class="loc-card-title">Item Locations</div>
+                        <div class="loc-scroll">
+                            <table class="locations-table">
+                                <thead>
+                                    <tr><th>Timestamp</th><th>Item</th><th>Location</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="section-row"><td colspan="3">Weapons</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=130" target="_blank" rel="noopener">00:02:10</a></td><td>Composite Bow</td><td>Bellum Merchant</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=270" target="_blank" rel="noopener">00:04:30</a></td><td>Osian's Greatsword</td><td>—</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=3855" target="_blank" rel="noopener">01:04:15</a></td><td>Phalanx Pike</td><td>—</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=6345" target="_blank" rel="noopener">01:45:45</a></td><td>Reaver's Odachi</td><td>Fort Faroth</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=7350" target="_blank" rel="noopener">02:02:30</a></td><td>Gargoyle's Great Axe</td><td>Altus Gargoyle</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=7470" target="_blank" rel="noopener">02:04:30</a></td><td>Greatbow</td><td>Highway Lookout Tower, Altus</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=7830" target="_blank" rel="noopener">02:10:30</a></td><td>Palm-Ax Twinblade</td><td>Auriza Side Tomb</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=8220" target="_blank" rel="noopener">02:17:00</a></td><td>Pulley Bow</td><td>Mt. Gelmir</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=8610" target="_blank" rel="noopener">02:23:30</a></td><td>Ghiza's Wheel</td><td>Volcano Manor</td></tr>
+
+                                    <tr class="section-row"><td colspan="3">Armor</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=880" target="_blank" rel="noopener">00:14:40</a></td><td>Oathseeker Knight Gauntlets</td><td>Stillwater Cave</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=1370" target="_blank" rel="noopener">00:22:50</a></td><td>Veteran's Gauntlets</td><td>Fort Gael</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=2475" target="_blank" rel="noopener">00:41:15</a></td><td>Veteran's Greaves &amp; Commander's Standard</td><td>Commander O'Neill</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=2725" target="_blank" rel="noopener">00:45:25</a></td><td>Godrick Knight Gauntlets</td><td>Stormfoot Catacombs</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=3000" target="_blank" rel="noopener">00:50:00</a></td><td>Godrick Knight Greaves</td><td>Stormveil Castle</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=4080" target="_blank" rel="noopener">01:08:00</a></td><td>Oathseeker Knight Greaves</td><td>Caria Manor</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=5365" target="_blank" rel="noopener">01:29:25</a></td><td>Oathseeker Knight Armor</td><td>Upper Siofra</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=7095" target="_blank" rel="noopener">01:58:15</a></td><td>Godrick Knight Armor</td><td>Golden Lineage Evergaol</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=9025" target="_blank" rel="noopener">02:30:25</a></td><td>Veteran's Armor</td><td>Redmane Castle</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=10420" target="_blank" rel="noopener">02:53:40</a></td><td>Veteran's Helm</td><td>Commander Niall</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=10870" target="_blank" rel="noopener">03:01:10</a></td><td>Godrick Knight Helm</td><td>Haligtree</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=11655" target="_blank" rel="noopener">03:14:15</a></td><td>Leda's Armor</td><td>Shadow Realm</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=12190" target="_blank" rel="noopener">03:23:10</a></td><td>Oathseeker Knight Helm</td><td>Mohgwyn Palace</td></tr>
+
+                                    <tr class="section-row"><td colspan="3">Other</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=1950" target="_blank" rel="noopener">00:32:30</a></td><td>Redmane Castle Waygate</td><td>Redmane Castle</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=2175" target="_blank" rel="noopener">00:36:15</a></td><td>Erdtree Portal Bosses</td><td>—</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=9815" target="_blank" rel="noopener">02:43:35</a></td><td>Bracelet of Gold</td><td>Altus</td></tr>
+                                    <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=10005" target="_blank" rel="noopener">02:46:45</a></td><td>Somber Bell Bearing 3</td><td>—</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
 
-            </div>
-
-            <div class="loc-card">
-                <div class="loc-card-title">Item Locations</div>
-                <table class="locations-table">
-                    <thead>
-                        <tr><th>Timestamp</th><th>Item</th><th>Location</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr class="section-row"><td colspan="3">Weapons</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=130" target="_blank" rel="noopener">00:02:10</a></td><td>Composite Bow</td><td>Bellum Merchant</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=270" target="_blank" rel="noopener">00:04:30</a></td><td>Osian's Greatsword</td><td>—</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=3855" target="_blank" rel="noopener">01:04:15</a></td><td>Phalanx Pike</td><td>—</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=6345" target="_blank" rel="noopener">01:45:45</a></td><td>Reaver's Odachi</td><td>Fort Faroth</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=7350" target="_blank" rel="noopener">02:02:30</a></td><td>Gargoyle's Great Axe</td><td>Altus Gargoyle</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=7470" target="_blank" rel="noopener">02:04:30</a></td><td>Greatbow</td><td>Highway Lookout Tower, Altus</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=7830" target="_blank" rel="noopener">02:10:30</a></td><td>Palm-Ax Twinblade</td><td>Auriza Side Tomb</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=8220" target="_blank" rel="noopener">02:17:00</a></td><td>Pulley Bow</td><td>Mt. Gelmir</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=8610" target="_blank" rel="noopener">02:23:30</a></td><td>Ghiza's Wheel</td><td>Volcano Manor</td></tr>
-
-                        <tr class="section-row"><td colspan="3">Armor</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=880" target="_blank" rel="noopener">00:14:40</a></td><td>Oathseeker Knight Gauntlets</td><td>Stillwater Cave</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=1370" target="_blank" rel="noopener">00:22:50</a></td><td>Veteran's Gauntlets</td><td>Fort Gael</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=2475" target="_blank" rel="noopener">00:41:15</a></td><td>Veteran's Greaves &amp; Commander's Standard</td><td>Commander O'Neill</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=2725" target="_blank" rel="noopener">00:45:25</a></td><td>Godrick Knight Gauntlets</td><td>Stormfoot Catacombs</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=3000" target="_blank" rel="noopener">00:50:00</a></td><td>Godrick Knight Greaves</td><td>Stormveil Castle</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=4080" target="_blank" rel="noopener">01:08:00</a></td><td>Oathseeker Knight Greaves</td><td>Caria Manor</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=5365" target="_blank" rel="noopener">01:29:25</a></td><td>Oathseeker Knight Armor</td><td>Upper Siofra</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=7095" target="_blank" rel="noopener">01:58:15</a></td><td>Godrick Knight Armor</td><td>Golden Lineage Evergaol</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=9025" target="_blank" rel="noopener">02:30:25</a></td><td>Veteran's Armor</td><td>Redmane Castle</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=10420" target="_blank" rel="noopener">02:53:40</a></td><td>Veteran's Helm</td><td>Commander Niall</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=10870" target="_blank" rel="noopener">03:01:10</a></td><td>Godrick Knight Helm</td><td>Haligtree</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=11655" target="_blank" rel="noopener">03:14:15</a></td><td>Leda's Armor</td><td>Shadow Realm</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=12190" target="_blank" rel="noopener">03:23:10</a></td><td>Oathseeker Knight Helm</td><td>Mohgwyn Palace</td></tr>
-
-                        <tr class="section-row"><td colspan="3">Other</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=1950" target="_blank" rel="noopener">00:32:30</a></td><td>Redmane Castle Waygate</td><td>Redmane Castle</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=2175" target="_blank" rel="noopener">00:36:15</a></td><td>Erdtree Portal Bosses</td><td>—</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=9815" target="_blank" rel="noopener">02:43:35</a></td><td>Bracelet of Gold</td><td>Altus</td></tr>
-                        <tr><td><a href="https://youtu.be/tYhtv8FEQ9s?t=10005" target="_blank" rel="noopener">02:46:45</a></td><td>Somber Bell Bearing 3</td><td>—</td></tr>
-                    </tbody>
-                </table>
             </div>
 
         </div>
