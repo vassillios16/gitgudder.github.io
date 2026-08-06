@@ -33,7 +33,7 @@
         .class-layout {
             display: flex;
             gap: 24px;
-            align-items: stretch;
+            align-items: flex-start;
             margin-bottom: 36px;
         }
         @media (max-width: 700px) {
@@ -42,13 +42,11 @@
 
         /* ── Left: hover flip image ── */
         .class-flip-wrap {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
+            width: 280px;
+            flex-shrink: 0;
         }
         .class-flip {
             position: relative;
-            flex: 1;
             cursor: pointer;
             border-radius: var(--radius-lg);
             overflow: hidden;
@@ -56,8 +54,7 @@
         .class-flip img {
             display: block;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             border-radius: var(--radius-lg);
             transition: opacity 0.35s ease;
         }
@@ -78,7 +75,6 @@
             color: var(--text-muted);
             text-align: center;
             margin-top: 6px;
-            flex-shrink: 0;
         }
 
         /* ── Right: video + table stacked ── */
@@ -90,7 +86,6 @@
         }
         .class-right .video-wrapper {
             margin: 0;
-            flex-shrink: 0;
         }
         .class-right .video-wrapper iframe {
             display: block;
@@ -101,13 +96,10 @@
 
         /* ── Locations table ── */
         .loc-card {
-            flex: 1;
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
         }
         .loc-card-title {
             font-family: 'Cinzel', serif;
@@ -122,7 +114,6 @@
         }
         .loc-scroll {
             overflow-y: auto;
-            flex: 1;
         }
         .locations-table {
             width: 100%;
