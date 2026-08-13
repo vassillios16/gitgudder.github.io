@@ -383,15 +383,24 @@ footer { border-top: 1px solid var(--border); background: var(--bg-deep); paddin
 .nav-dropdown-menu {
     display: none;
     position: absolute;
-    top: calc(100% + 10px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
+    padding-top: 10px;
+    min-width: 190px;
+    z-index: 200;
+}
+
+.nav-dropdown-menu::before {
+    content: '';
+    display: block;
     background: #14110C;
     border: 1px solid var(--gold-dim);
     border-radius: var(--radius);
-    min-width: 190px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.8);
-    z-index: 200;
+    position: absolute;
+    inset: 10px 0 0 0;
+    z-index: -1;
 }
 
 .nav-dropdown-wrap:hover .nav-dropdown-menu,
