@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vanguard class guide for The Convergence Mod — all weapon and armor locations, starting stats, and strategy.">
+    <title>Vanguard — Convergence Mod Class Guide — Git Gudder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        .class-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+        .class-title {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .class-layout {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            margin-bottom: 36px;
+        }
+        @media (max-width: 700px) {
+            .class-layout { flex-direction: column; }
+        }
+
+        .class-flip-wrap {
+            width: 280px;
+            flex-shrink: 0;
+        }
+        .class-flip {
+            position: relative;
+            cursor: pointer;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .class-flip img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            transition: opacity 0.35s ease;
+        }
+        .class-flip .stats-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }
+        .class-flip:hover .portrait-img,
+        .class-flip:focus .portrait-img { opacity: 0; }
+        .class-flip:hover .stats-img,
+        .class-flip:focus .stats-img { opacity: 1; }
+        .flip-hint {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        .class-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .class-right .video-wrapper {
+            margin: 0;
+        }
+        .class-right .video-wrapper iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: var(--radius-lg);
+        }
+
+        .loc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .loc-card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--bg-surface);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .loc-scroll {
+            overflow-y: auto;
+        }
+        .locations-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .locations-table th {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: var(--bg-surface);
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+        }
+        .locations-table td {
+            padding: 8px 16px;
+            border-bottom: 1px solid rgba(201,168,76,0.05);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .locations-table tr:hover td {
+            color: var(--text-primary);
+            background: rgba(201,168,76,0.03);
+        }
+        .locations-table td:first-child {
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        .locations-table td:first-child a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .locations-table td:first-child a:hover { color: var(--gold-light); }
+        .locations-table td:last-child {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .locations-table tr.section-row td {
+            background: var(--bg-surface);
+            color: var(--gold);
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="global-header"></header>
+
+    <main class="content-section">
+        <nav class="subpage-nav-container" data-conv-nav="classes"></nav>
+
+        <div class="guide-body">
+
+            <div class="class-label">Convergence Mod · Starting Class</div>
+            <h1 class="class-title">Vanguard</h1>
+
+            <div class="class-layout">
+
+                <div class="class-flip-wrap">
+                    <div class="class-flip" tabindex="0" aria-label="Hover to see Vanguard starting stats">
+                        <img class="portrait-img" src="/convergence/images/vanguard-portrait.png" alt="Vanguard class portrait">
+                        <img class="stats-img" src="/convergence/images/vanguard-stats.png" alt="Vanguard starting stats">
+                    </div>
+                    <p class="flip-hint">Hover to see starting stats</p>
+                </div>
+
+                <div class="class-right">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/oRFXEKGiWTE"
+                            title="Path of the Vanguard in Elden Ring Convergence — Git Gudder"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="loc-card">
+                <div class="loc-card-title">Item Locations</div>
+                <div class="loc-scroll">
+                    <table class="locations-table">
+                        <thead>
+                            <tr><th>Timestamp</th><th>Item</th><th>Location</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="section-row"><td colspan="3">Weapons</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=163" target="_blank" rel="noopener">02:43</a></td><td>Osian's Greatsword</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=1159" target="_blank" rel="noopener">19:19</a></td><td>Regal Splitblade</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=1286" target="_blank" rel="noopener">21:26</a></td><td>Smithscript Rosary</td><td>—</td></tr>
+
+                            <tr class="section-row"><td colspan="3">Armor</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=231" target="_blank" rel="noopener">03:51</a></td><td>Ronin's Gauntlets</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=294" target="_blank" rel="noopener">04:54</a></td><td>Ronin's Greaves</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=369" target="_blank" rel="noopener">06:09</a></td><td>Ronin's Armor</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=426" target="_blank" rel="noopener">07:06</a></td><td>Iron Kasa</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=481" target="_blank" rel="noopener">08:01</a></td><td>Scaled Gauntlets</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=561" target="_blank" rel="noopener">09:21</a></td><td>Scaled Greaves</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=631" target="_blank" rel="noopener">10:31</a></td><td>Scaled Armor</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=667" target="_blank" rel="noopener">11:07</a></td><td>Scaled Helm</td><td>Sanctum of Eiglay</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=860" target="_blank" rel="noopener">14:20</a></td><td>Night's Cavalry Gauntlets</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=898" target="_blank" rel="noopener">14:58</a></td><td>Night's Cavalry Greaves</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=936" target="_blank" rel="noopener">15:36</a></td><td>Night's Cavalry Armor</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=971" target="_blank" rel="noopener">16:11</a></td><td>Night's Cavalry Helm</td><td>—</td></tr>
+
+                            <tr class="section-row"><td colspan="3">Other</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=1029" target="_blank" rel="noopener">17:09</a></td><td>Bracelet of Gold</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=1057" target="_blank" rel="noopener">17:37</a></td><td>Bracelet of Shadow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/oRFXEKGiWTE?t=1362" target="_blank" rel="noopener">22:42</a></td><td>Jewel of the Valorous</td><td>—</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+    <script src="/site.js"></script>
+</body>
+</html>
