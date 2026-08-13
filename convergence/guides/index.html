@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convergence Mod general guides — getting started, weapons, walkthroughs, and boss strategies.">
+    <title>General Guides — Convergence Mod — Git Gudder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        .conv-section-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+        .conv-section-header {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--bg-surface);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .conv-section-list {
+            list-style: none;
+            margin: 0;
+            padding: 8px 0;
+        }
+        .conv-section-list li {
+            padding: 3px 16px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .conv-section-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .conv-section-list a:hover { color: var(--gold-light); }
+        .conv-section-list a.coming-soon {
+            color: var(--text-muted);
+            pointer-events: none;
+            font-style: italic;
+        }
+        .conv-section-list a.coming-soon::after {
+            content: " — soon";
+            font-family: 'Fira Code', monospace;
+            font-size: 10px;
+            opacity: 0.6;
+        }
+
+        .general-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        @media (max-width: 700px) {
+            .general-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="global-header"></header>
+
+    <main class="content-section">
+        <h1 class="page-title">General Guides</h1>
+        <p class="page-subtitle">The Convergence Mod</p>
+
+        <nav class="subpage-nav-container" data-conv-nav="general"></nav>
+
+        <div class="general-grid">
+
+            <div class="conv-section-card">
+                <div class="conv-section-header">Getting Started</div>
+                <ul class="conv-section-list">
+                    <li><a href="/convergence/guides/starter-guide.html">Convergence Starter Guide</a></li>
+                    <li><a href="/convergence/guides/launcher-installation.html">New Launcher Installation</a></li>
+                    <li><a href="/convergence/guides/teleport-gear.html">Secret Teleport Gear</a></li>
+                </ul>
+            </div>
+
+            <div class="conv-section-card">
+                <div class="conv-section-header">Weapons &amp; Upgrades</div>
+                <ul class="conv-section-list">
+                    <li><a href="/convergence/guides/trick-weapons.html">New Trick Weapons</a></li>
+                    <li><a href="/convergence/guides/new-swords.html">New Swords</a></li>
+                    <li><a href="/convergence/guides/blades-claws-daggers.html">New Blades, Claws &amp; Daggers</a></li>
+                    <li><a href="/convergence/guides/prime-weapons.html">Prime Weapons</a></li>
+                    <li><a href="/convergence/guides/galvanic-culling-blade.html">Galvanic Culling Blade</a></li>
+                    <li><a href="/convergence/guides/get-to-plus-15.html">How to Get Weapons to +15</a></li>
+                    <li><a href="/convergence/guides/shadow-stone-bell-bearings.html">Shadow Stone Bell Bearings</a></li>
+                </ul>
+            </div>
+
+            <div class="conv-section-card">
+                <div class="conv-section-header">Walkthroughs &amp; Locations</div>
+                <ul class="conv-section-list">
+                    <li><a href="/convergence/guides/spellblade-set.html">Spellblade Set &amp; Rogier's Quest</a></li>
+                    <li><a href="/convergence/guides/noxumbra-walkthrough.html">Noxumbra Walkthrough</a></li>
+                    <li><a href="/convergence/guides/fog-rift-catacombs.html">Fog Rift Catacombs Walkthrough</a></li>
+                    <li><a href="/convergence/guides/vulgar-militia-stronghold.html">Vulgar Militia Stronghold</a></li>
+                </ul>
+            </div>
+
+            <div class="conv-section-card">
+                <div class="conv-section-header">Boss Guides</div>
+                <ul class="conv-section-list">
+                    <li><a href="/convergence/guides/daergraf-boss-guide.html">How to Fight Daergraf</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+    <script src="/site.js"></script>
+</body>
+</html>

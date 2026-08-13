@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convergence Mod class guides — all 27 starting classes with stats, weapon locations, and full playthroughs.">
+    <title>Class Guides — Convergence Mod — Git Gudder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        .conv-section-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .conv-section-header {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--bg-surface);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            padding: 12px;
+        }
+        @media (max-width: 600px) {
+            .class-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .class-grid-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 8px 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            text-align: center;
+            transition: border-color 0.2s, color 0.2s;
+            display: block;
+        }
+        .class-grid-item:hover {
+            border-color: var(--gold-dim);
+            color: var(--gold-light);
+        }
+        .class-grid-item.coming-soon {
+            color: var(--text-muted);
+            pointer-events: none;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="global-header"></header>
+
+    <main class="content-section">
+        <h1 class="page-title">Class Guides</h1>
+        <p class="page-subtitle">The Convergence Mod</p>
+
+        <nav class="subpage-nav-container" data-conv-nav="classes"></nav>
+
+        <div class="conv-section-card">
+            <div class="conv-section-header">All Classes</div>
+            <div class="class-grid">
+                <a href="/convergence/guides/retainer.html" class="class-grid-item">Retainer</a>
+                <a href="#" class="class-grid-item coming-soon">Vanguard</a>
+                <a href="#" class="class-grid-item coming-soon">Marksman</a>
+                <a href="#" class="class-grid-item coming-soon">Berserker</a>
+                <a href="#" class="class-grid-item coming-soon">Dreadnought</a>
+                <a href="#" class="class-grid-item coming-soon">Sellsword</a>
+                <a href="#" class="class-grid-item coming-soon">Rogue</a>
+                <a href="#" class="class-grid-item coming-soon">Glint Sorcerer</a>
+                <a href="#" class="class-grid-item coming-soon">Starcaller</a>
+                <a href="#" class="class-grid-item coming-soon">Underworld Mage</a>
+                <a href="#" class="class-grid-item coming-soon">Volcanist</a>
+                <a href="#" class="class-grid-item coming-soon">Stormcaller</a>
+                <a href="#" class="class-grid-item coming-soon">Nox Oracle</a>
+                <a href="#" class="class-grid-item coming-soon">Necromancer</a>
+                <a href="#" class="class-grid-item coming-soon">Frost Witch</a>
+                <a href="#" class="class-grid-item coming-soon">Aberrant Heretic</a>
+                <a href="#" class="class-grid-item coming-soon">Flame Prophet</a>
+                <a href="#" class="class-grid-item coming-soon">Fundamentalist</a>
+                <a href="#" class="class-grid-item coming-soon">Bestial Devout</a>
+                <a href="#" class="class-grid-item coming-soon">Dragon Cultist</a>
+                <a href="#" class="class-grid-item coming-soon">Godskin Celebrant</a>
+                <a href="#" class="class-grid-item coming-soon">Frenzied Zealot</a>
+                <a href="#" class="class-grid-item coming-soon">Blood Initiate</a>
+                <a href="#" class="class-grid-item coming-soon">Servant of Rot</a>
+                <a href="#" class="class-grid-item coming-soon">Mystic</a>
+                <a href="#" class="class-grid-item coming-soon">Perfumer</a>
+                <a href="#" class="class-grid-item coming-soon">Prisoner</a>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+    <script src="/site.js"></script>
+</body>
+</html>

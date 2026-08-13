@@ -41,8 +41,8 @@
   // ── Convergence Subpage Nav Injection ────────────────────────────────────
   const CONV_NAV_LINKS = [
     { key: 'home',    label: 'Convergence Home', href: '/convergence/' },
-    { key: 'general', label: 'General Guides',   href: '/convergence/#general' },
-    { key: 'classes', label: 'Class Guides',     href: '/convergence/#classes' },
+    { key: 'general', label: 'General Guides',   href: '/convergence/guides/' },
+    { key: 'classes', label: 'Class Guides',     href: '/convergence/classes/' },
   ];
 
   function injectConvNav() {
