@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marksman class guide for The Convergence Mod — all weapon and armor locations, starting stats, and strategy.">
+    <title>Marksman — Convergence Mod Class Guide — Git Gudder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        .class-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+        .class-title {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .class-layout {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            margin-bottom: 36px;
+        }
+        @media (max-width: 700px) {
+            .class-layout { flex-direction: column; }
+        }
+
+        .class-flip-wrap {
+            width: 280px;
+            flex-shrink: 0;
+        }
+        .class-flip {
+            position: relative;
+            cursor: pointer;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .class-flip img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            transition: opacity 0.35s ease;
+        }
+        .class-flip .stats-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }
+        .class-flip:hover .portrait-img,
+        .class-flip:focus .portrait-img { opacity: 0; }
+        .class-flip:hover .stats-img,
+        .class-flip:focus .stats-img { opacity: 1; }
+        .flip-hint {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        .class-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .class-right .video-wrapper {
+            margin: 0;
+        }
+        .class-right .video-wrapper iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: var(--radius-lg);
+        }
+
+        .loc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .loc-card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--bg-surface);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .loc-scroll {
+            overflow-y: auto;
+        }
+        .locations-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .locations-table th {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: var(--bg-surface);
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+        }
+        .locations-table td {
+            padding: 8px 16px;
+            border-bottom: 1px solid rgba(201,168,76,0.05);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .locations-table tr:hover td {
+            color: var(--text-primary);
+            background: rgba(201,168,76,0.03);
+        }
+        .locations-table td:first-child {
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        .locations-table td:first-child a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .locations-table td:first-child a:hover { color: var(--gold-light); }
+        .locations-table td:last-child {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .locations-table tr.section-row td {
+            background: var(--bg-surface);
+            color: var(--gold);
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="global-header"></header>
+
+    <main class="content-section">
+        <nav class="subpage-nav-container" data-conv-nav="classes"></nav>
+
+        <div class="guide-body">
+
+            <div class="class-label">Convergence Mod · Starting Class</div>
+            <h1 class="class-title">Marksman</h1>
+
+            <div class="class-layout">
+
+                <div class="class-flip-wrap">
+                    <div class="class-flip" tabindex="0" aria-label="Hover to see Marksman starting stats">
+                        <img class="portrait-img" src="/convergence/images/marksman-portrait.png" alt="Marksman class portrait">
+                        <img class="stats-img" src="/convergence/images/marksman-stats.png" alt="Marksman starting stats">
+                    </div>
+                    <p class="flip-hint">Hover to see starting stats</p>
+                </div>
+
+                <div class="class-right">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/7hMV8koZtYg"
+                            title="Path of the Marksman in Elden Ring Convergence — Git Gudder"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="loc-card">
+                <div class="loc-card-title">Item Locations</div>
+                <div class="loc-scroll">
+                    <table class="locations-table">
+                        <thead>
+                            <tr><th>Timestamp</th><th>Item</th><th>Location</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="section-row"><td colspan="3">Weapons</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=120" target="_blank" rel="noopener">02:00</a></td><td>Shortbow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=248" target="_blank" rel="noopener">04:08</a></td><td>Longbow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=280" target="_blank" rel="noopener">04:40</a></td><td>Crepus' Black-Key Crossbow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=309" target="_blank" rel="noopener">05:09</a></td><td>Hand Ballista</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=568" target="_blank" rel="noopener">09:28</a></td><td>Red Branch Shortbow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=647" target="_blank" rel="noopener">10:47</a></td><td>Golem Greatbow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1269" target="_blank" rel="noopener">21:09</a></td><td>Greatbow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1399" target="_blank" rel="noopener">23:19</a></td><td>Pulley Bow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1446" target="_blank" rel="noopener">24:06</a></td><td>Jar Cannon</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1493" target="_blank" rel="noopener">24:53</a></td><td>BlackBow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1919" target="_blank" rel="noopener">31:59</a></td><td>Devonia's Longbow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1982" target="_blank" rel="noopener">33:02</a></td><td>Bone Bow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=2210" target="_blank" rel="noopener">36:50</a></td><td>Repeating Crossbow</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=2414" target="_blank" rel="noopener">40:14</a></td><td>Ansbach's Bow</td><td>—</td></tr>
+
+                            <tr class="section-row"><td colspan="3">Armor</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=180" target="_blank" rel="noopener">03:00</a></td><td>Ragged Gloves</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=379" target="_blank" rel="noopener">06:19</a></td><td>Page Gloves</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=774" target="_blank" rel="noopener">12:54</a></td><td>High Page Gloves</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=894" target="_blank" rel="noopener">14:54</a></td><td>Ragged Loincloth</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=946" target="_blank" rel="noopener">15:46</a></td><td>Page Trousers</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1059" target="_blank" rel="noopener">17:39</a></td><td>Ragged Armor</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1199" target="_blank" rel="noopener">19:59</a></td><td>High Page Trousers</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1329" target="_blank" rel="noopener">22:09</a></td><td>Page Garb</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1557" target="_blank" rel="noopener">25:57</a></td><td>High Page Clothes</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1626" target="_blank" rel="noopener">27:06</a></td><td>Page Hood</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1708" target="_blank" rel="noopener">28:28</a></td><td>High Page Hood</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=2266" target="_blank" rel="noopener">37:46</a></td><td>Ragged Hat</td><td>—</td></tr>
+
+                            <tr class="section-row"><td colspan="3">Other</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=1855" target="_blank" rel="noopener">30:55</a></td><td>Scadu Sapling</td><td>—</td></tr>
+                            <tr><td><a href="https://youtu.be/7hMV8koZtYg?t=2317" target="_blank" rel="noopener">38:37</a></td><td>Jewel of the Hunt</td><td>—</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer role="contentinfo" id="global-footer"></footer>
+    <script src="/site.js"></script>
+</body>
+</html>
