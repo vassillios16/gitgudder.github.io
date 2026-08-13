@@ -93,29 +93,7 @@
 
   // ── Nav Dropdowns ─────────────────────────────────────────────────────────
   function initDropdown() {
-    const wraps = document.querySelectorAll('.nav-dropdown-wrap');
-    if (!wraps.length) return;
-
-    wraps.forEach(wrap => {
-      const trigger = wrap.querySelector('.nav-dropdown-trigger');
-      if (!trigger) return;
-
-      trigger.addEventListener('click', function (e) {
-        const isOpen = wrap.classList.contains('open');
-        // Close all other dropdowns first
-        wraps.forEach(w => w.classList.remove('open'));
-        if (!isOpen) {
-          e.preventDefault();
-          wrap.classList.add('open');
-        }
-      });
-    });
-
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.nav-dropdown-wrap')) {
-        wraps.forEach(w => w.classList.remove('open'));
-      }
-    });
+    // Dropdowns are handled entirely by CSS :hover and :focus-within — no JS needed.
   }
 
   // ── Search ────────────────────────────────────────────────────────────────
